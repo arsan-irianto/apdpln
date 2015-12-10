@@ -1,0 +1,6 @@
+SELECT * FROM (
+             SELECT ROW_NUMBER() OVER(ORDER BY KODE) AS NUMBER,
+                    * FROM APDPLN.dbo.REKAP_SAIDI
+               ) AS TBL
+WHERE NUMBER BETWEEN (($posisi - 1) * $batas + 1) AND ($posisi * $batas)
+ORDER BY KODE

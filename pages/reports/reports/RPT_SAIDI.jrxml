@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RPT_SAIDI" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0e340d5-de6e-4bd4-98f3-5225a8c1690d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM REKAP_SAIDI]]>
+	</queryString>
+	<field name="KODE" class="java.lang.String"/>
+	<field name="KETSAIDI" class="java.lang.String"/>
+	<field name="JML_PLGN_PADAM" class="java.lang.Integer"/>
+	<field name="MENIT_PLGN_PADAM" class="java.lang.Integer"/>
+	<field name="JAM_PLGN_PADAM" class="java.lang.Integer"/>
+	<field name="LAMA_MENIT_RATA" class="java.lang.Double"/>
+	<field name="LAMA_JAM_RATA" class="java.lang.Double"/>
+	<field name="FREKUENSI_RATA" class="java.lang.Double"/>
+	<field name="JML_GANGGUAN" class="java.lang.Integer"/>
+	<field name="LAMA_PADAM_JAM" class="java.lang.Double"/>
+	<field name="BEBAN_PADAM" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="143" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="76" width="801" height="67" backcolor="#FFFFFF" uuid="b9c85f0b-72f5-4a59-bcb9-2315692c00d9"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="117" width="801" height="1" uuid="8736adc5-e862-4490-aa15-96fb994294a4"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="121" width="43" height="20" uuid="ba1537eb-c6e5-4578-9682-c70d47b7ec96"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="121" width="154" height="20" uuid="da82f4c0-73fc-4b2e-8318-85fd587d30c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(b)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="726" y="121" width="75" height="20" uuid="0eb9dc47-43ef-43a2-98b2-eaddd6a46d86"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(k)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="198" y="121" width="66" height="20" uuid="7ed16cbe-d140-49e3-9144-7566035d88fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(c)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="121" width="66" height="20" uuid="185de138-19cd-4b6d-a8de-4b7bc547f810"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(d)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="121" width="66" height="20" uuid="b75af263-9278-466c-b9d1-5825da50ac71"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(j)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="121" width="66" height="20" uuid="eb8a3831-2edf-4e94-98ae-21734ac6021a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(g)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="528" y="121" width="66" height="20" uuid="9fa8c252-ede2-44a7-ae8e-409b0f302b7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(h)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="594" y="121" width="66" height="20" uuid="2fda882f-1bda-4d4d-bf13-74c3d64c0040"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(i)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="121" width="66" height="20" uuid="7c974f43-f173-45ac-8686-eac3a2e29fc4"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(e)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="121" width="66" height="20" uuid="3b4c165b-d5da-4d1e-b1a5-b8194ceb78fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[(f)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="43" y="76" width="1" height="67" uuid="ab174f4e-fd32-40db-a799-66e73d59421e"/>
+			</line>
+			<line>
+				<reportElement x="198" y="76" width="1" height="67" uuid="f46056e0-b37f-446a-ab14-2760422cf0e8"/>
+			</line>
+			<line>
+				<reportElement x="264" y="76" width="1" height="67" uuid="d7e38cc9-4c42-4eb9-b6e4-44175e6c074a"/>
+			</line>
+			<line>
+				<reportElement x="330" y="76" width="1" height="67" uuid="5f85f6d5-c2e4-484c-9f38-765adc1e44d9"/>
+			</line>
+			<line>
+				<reportElement x="396" y="76" width="1" height="67" uuid="92501e24-fbb2-4dd0-a22d-24a63139d926"/>
+			</line>
+			<line>
+				<reportElement x="462" y="76" width="1" height="67" uuid="c3e7bd11-147c-4ace-bd50-e1522f6e5767"/>
+			</line>
+			<line>
+				<reportElement x="528" y="76" width="1" height="67" uuid="d21f4cd1-3192-4692-90e4-8e0f2dd01281"/>
+			</line>
+			<line>
+				<reportElement x="594" y="76" width="1" height="67" uuid="a602bbca-4ed7-448c-919f-78b67a452b52"/>
+			</line>
+			<line>
+				<reportElement x="660" y="76" width="1" height="67" uuid="538fb706-eacf-4651-966c-5c52a4611cb9"/>
+			</line>
+			<line>
+				<reportElement x="726" y="76" width="1" height="67" uuid="80a6bb91-738e-435c-afed-5dcd42230725"/>
+			</line>
+			<staticText>
+				<reportElement x="2" y="94" width="42" height="20" uuid="79d5d796-a444-4fab-b1ca-40abb2d55998"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[No. Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="94" width="155" height="20" uuid="3454dbce-9e32-467f-93c3-3e99d1ce5031"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PENYEBAB PEMADAMAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="199" y="82" width="65" height="30" uuid="faeb69ad-8008-40dd-8600-eb4005f19d89"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[JUMLAH PELANGGAN PADAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="265" y="82" width="65" height="30" uuid="b4394e4d-9129-4775-be54-9a75fef68805"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[MENIT  X PELANGGAN PADAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="331" y="82" width="65" height="30" uuid="88502604-f970-4f60-9446-6ea3c7e34f70"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[JAM  X PELANGGAN PADAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="397" y="82" width="65" height="30" uuid="d95310ad-fcf3-4cb8-be27-4b3881eb9cfd"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[LAMA MENIT PADAM RATA-RATA (SAIDI)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="463" y="82" width="65" height="30" uuid="58c513b4-e270-4b9f-ab94-8d60236c8aea"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[LAMA JAM PADAM RATA-RATA (SAIDI)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="529" y="82" width="65" height="30" uuid="9cf21ba4-d3c4-40f2-a6a6-bd75174a10f5"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[FREKUENSI PADAM RATA-RATA (SAIFI)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="595" y="82" width="65" height="30" uuid="f9f1f725-68c3-4420-8a16-b4026a99e164"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[JUMLAH GANGGUAN (KALI)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="660" y="82" width="66" height="30" uuid="9fca9083-9f07-4ec2-96cd-3183ab7ecb1a"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[LAMA PADAM (JAM)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="727" y="82" width="74" height="30" uuid="5a458aa5-bda7-4aa0-8151-7b5135d2a710"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[BEBAN PADAM (KWH)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="8" width="799" height="20" uuid="cd75f945-1fb0-4162-a2f4-6d4285a3ff39"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATA  DASAR LAPORAN  PEMADAMAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="27" width="801" height="20" uuid="2074bd9b-e092-4160-a7a5-41677ad600f4"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BULAN : OKTOBER 2015]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="47" width="197" height="20" uuid="4c5cd8e6-6dea-43da-932f-eaf23eaac18f"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PT. PLN (PERSERO) AREA ....................]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="43" height="27" uuid="93264221-6ef7-44df-8bd1-0f4faed023a7"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KODE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="44" y="0" width="154" height="27" uuid="f060fbf0-2c57-4566-83f3-f34d4d98fa13"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KETSAIDI}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="199" y="0" width="65" height="27" uuid="f41c0a20-2801-4da5-8334-4c962841a26d"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JML_PLGN_PADAM}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="264" y="0" width="66" height="27" uuid="f7696b63-0e7b-488d-b4c2-f835a5eaf873"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MENIT_PLGN_PADAM}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="330" y="0" width="66" height="27" uuid="fb73d902-d694-4a60-bc39-4b33986d1691"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JAM_PLGN_PADAM}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="396" y="0" width="66" height="27" uuid="b7a9a710-e537-4204-8de2-1114dfc80ffe"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LAMA_MENIT_RATA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="462" y="0" width="66" height="27" uuid="7857ad83-5fc1-4108-918b-9cf42089ec26"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LAMA_JAM_RATA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="528" y="0" width="66" height="27" uuid="4d0d39f5-1034-45f7-a2d9-a32aa3bea26b"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FREKUENSI_RATA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="594" y="0" width="66" height="27" uuid="642ceba3-1ac8-433e-9171-20f00490e4b6"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JML_GANGGUAN}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="660" y="0" width="66" height="27" uuid="2cd28919-e76d-4549-bb0e-32a1c3180bed"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LAMA_PADAM_JAM}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToBandHeight" x="726" y="0" width="75" height="27" uuid="8a757620-94cc-4b0c-81f2-58a08faa0f61"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BEBAN_PADAM}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="27" width="801" height="1" uuid="bf05d403-08f5-47d7-a213-ba82aca25e8b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="27" uuid="8f6d39f1-95f5-499b-add8-97a18ac331f2"/>
+			</line>
+			<line>
+				<reportElement x="43" y="0" width="1" height="27" uuid="baf45275-efc5-4758-a0c5-d307c0f4fffb"/>
+			</line>
+			<line>
+				<reportElement x="198" y="0" width="1" height="27" uuid="3429092b-9341-4db3-bf83-3315542834c7"/>
+			</line>
+			<line>
+				<reportElement x="264" y="0" width="1" height="27" uuid="adb72523-5c2e-47bb-9b05-20d17f26edff"/>
+			</line>
+			<line>
+				<reportElement x="330" y="0" width="1" height="27" uuid="33618b24-a039-44e1-b834-33c1860cdecf"/>
+			</line>
+			<line>
+				<reportElement x="396" y="0" width="1" height="27" uuid="903ab67f-f154-491f-a4b7-18bfbb1d2527"/>
+			</line>
+			<line>
+				<reportElement x="462" y="0" width="1" height="27" uuid="6bfbd36e-393c-4360-a39e-2944f656f415"/>
+			</line>
+			<line>
+				<reportElement x="528" y="0" width="1" height="27" uuid="3100853c-69b8-40cc-a152-c029ab06f8c5"/>
+			</line>
+			<line>
+				<reportElement x="594" y="0" width="1" height="27" uuid="f0dd4fec-bec2-4dab-92fe-5935ae276a05"/>
+			</line>
+			<line>
+				<reportElement x="660" y="0" width="1" height="27" uuid="cea68a82-fcca-493b-9ece-5a06989278e6"/>
+			</line>
+			<line>
+				<reportElement x="726" y="0" width="1" height="27" uuid="6b1d2dad-116d-42a1-8d33-22deb9a58f2b"/>
+			</line>
+			<line>
+				<reportElement x="801" y="0" width="1" height="27" uuid="70d57fb0-0b52-4898-9f23-6cedb55193b1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="801" height="1" uuid="7dca72dc-765f-4589-b581-4f944a09f19d"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="27" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="35" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="25" splitType="Stretch"/>
+	</summary>
+</jasperReport>

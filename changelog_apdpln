@@ -1,0 +1,20 @@
+CHANGE LOG:
+
+24 Nov 2015:
+- Add index.php
+- Modify header.php
+- Modify table_logsheet.php
+- Modify json_table_logsheet.php
+- Modify content.php
+- Add action_logsheet.php
+- Add path font-awesome
+
+25 Nov 2015:
+- Add table_logsheet.js
+- Modify add_logsheet.php
+
+26 Nov 2015:
+- Add path datetimepicker -> plugins/
+- Modify add_logsheet.php
+- Modify header.php
+- Modify footer.php

@@ -165,7 +165,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">PLBSRECGH</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="" name="PLBSRECGH" id="PLBSRECGH" type="text">
+                                            <input class="form-control input-sm typeahead" value="" name="PLBSRECGH" id="PLBSRECGH" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +229,7 @@
                             <br>
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <div class="form-group input-sm">
+                                    <div class="form-group input-sm" id="tanggal_check">
                                         <label class="col-sm-4 control-label">Tanggal</label>
                                         <div class="col-sm-8">
                                             <div class="input-group">
@@ -247,7 +247,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Trip</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="" name="TR" id="TR" type="text">
+                                            <input class="form-control input-sm dttime" value="" name="TR" id="TR" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +255,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Execute</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="" name="EX" id="EX" type="text">
+                                            <input class="form-control input-sm dttime" value="" name="EX" id="EX" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -263,7 +263,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Close</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="" name="CL" id="CL" type="text">
+                                            <input class="form-control input-sm dttime" value="" name="CL" id="CL" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -273,7 +273,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Reclose</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="" name="RC" id="RC" type="text">
+                                            <input class="form-control input-sm dttime" value="" name="RC" id="RC" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -281,7 +281,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Open</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="" name="OP" id="OP" type="text">
+                                            <input class="form-control input-sm dttime" value="" name="OP" id="OP" type="text">
                                         </div>
                                     </div>
                                 </div>

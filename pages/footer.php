@@ -32,6 +32,7 @@
 <!-- date-picker -->
 <script src="../plugins/datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
 <script src="../plugins/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="../plugins/bootstrap-ajax-typeahead/src/bootstrap-typeahead.js" type="text/javascript"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/app.min.js" type="text/javascript"></script>
 

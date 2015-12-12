@@ -193,4 +193,20 @@ if(isset($_GET['c'])=="persen"){
     $diff1 = ($pp/$tp) * 100 ;
     echo json_encode($diff1);
 }
+
+if(isset($_GET['ref'])=="fgtm"){
+    $sql = $conn->query("SELECT KETFGTM FROM GANGGUANFGTM WHERE KODE='".$_GET['id']."'");
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+    echo $data['KETFGTM'];
+}
+if(isset($_GET['ref'])=="saidi"){
+    $sql = $conn->query("SELECT KETSAIDI FROM PADAMSAIDI WHERE KODE='".$_GET['id']."'");
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+    echo $data['KETSAIDI'];
+}
+if(isset($_GET['ref'])=="plbsrecgh"){
+    $sql = $conn->query("SELECT KETSAIDI FROM PADAMSAIDI WHERE KODE='".$_GET['id']."'");
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+    echo $data['KETSAIDI'];
+}
 ?>

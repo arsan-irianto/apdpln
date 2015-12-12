@@ -261,10 +261,28 @@ $(function () {
     })
 
     $("#KODEFGTM").change(function(){
-        $("#KETFGTM").val($("#KODEFGTM :selected").text());
+        //$("#KETFGTM").val($("#KODEFGTM :selected").text());
+        $.ajax({
+            type: "GET",
+            url: "modules/crud_logsheet.php?ref=fgtm",
+            dataType: 'html',
+            data: "id=" + $(this).val(),
+            success: function(data) {
+                $("#KETFGTM").val(data);
+            }
+        });
     });
     $("#KODESAIDI").change(function(){
-        $("#KETSAIDI").val($("#KODESAIDI :selected").text());
+        //$("#KETSAIDI").val($("#KODESAIDI :selected").text());
+        $.ajax({
+            type: "GET",
+            url: "modules/crud_logsheet.php?ref=saidi",
+            dataType: 'html',
+            data: "id=" + $(this).val(),
+            success: function(data) {
+                $("#KETSAIDI").val(data);
+            }
+        });
     });
     $("#tanggal_check input").datepicker().on("changeDate", function () {
         $(this).datepicker("hide");
@@ -279,5 +297,34 @@ $(function () {
             reloadDatatable();
         }
         else {alert("Choose Month & Year Option");}
+    });
+
+    $("input.typeahead").typeahead({
+        onSelect: function(item) {
+            console.log(item);
+        },
+        ajax: {
+            url: "modules/crud_logsheet.php?ref=plbsrecgh",
+            timeout: 500,
+            displayField: "NAME",
+            triggerLength: 1,
+            method: "get",
+            loadingClass: "loading-circle",
+            preDispatch: function (query) {
+                showLoadingMask(true);
+                return {
+                    search: query
+                }
+            },
+            preProcess: function (data) {
+                showLoadingMask(false);
+                if (data.success === false) {
+                    // Hide the list, there was some error
+                    return false;
+                }
+                // We good!
+                return data.mylist;
+            }
+        }
     });
 });

@@ -299,32 +299,37 @@ $(function () {
         else {alert("Choose Month & Year Option");}
     });
 
+
     $("input.typeahead").typeahead({
         onSelect: function(item) {
-            console.log(item);
+            $("#PID").val(item.value);
         },
         ajax: {
             url: "modules/crud_logsheet.php?ref=plbsrecgh",
-            timeout: 500,
             displayField: "NAME",
-            triggerLength: 1,
-            method: "get",
-            loadingClass: "loading-circle",
-            preDispatch: function (query) {
-                showLoadingMask(true);
-                return {
-                    search: query
-                }
-            },
-            preProcess: function (data) {
-                showLoadingMask(false);
-                if (data.success === false) {
-                    // Hide the list, there was some error
-                    return false;
-                }
-                // We good!
-                return data.mylist;
-            }
+            valueField:"PID"
         }
     });
+
+/*
+    var typeaheadSource =   [{
+                                PID:"400013", NAME:'Arsan'}, {
+                                PID:"400022", NAME:'Anung'},{
+                                PID:"400031", NAME:'Armawi'},{
+                                PID:"400041", NAME:'Asrul'},{
+                                PID:"400042", NAME:'Arjun'
+                            }];*/
+    /*
+    var typeaheadSource = [{
+        id: 1, NAME: 'John'}, {
+        id: 2, NAME: 'Alex'}, {
+        id: 3, NAME: 'Terry'
+    }];*/
+    //var srcArray = [{"PID":"400013","NAME":"REC KOSTRAD "},{"PID":"400022","NAME":"REC UVRI "},{"PID":"400031","NAME":"INC TRAFO #2 GI SOPPENG "},{"PID":"400041","NAME":"P_CABENGE "},{"PID":"400042","NAME":"REC MAKKIO BAJI "}];
+    /*
+    $('input.typeahead').typeahead({
+        //source: "modules/crud_logsheet.php?ref=plbsrecgh",
+        ajax : "modules/crud_logsheet.php?ref=plbsrecgh",
+        displayField: 'NAME'
+    });*/
 });

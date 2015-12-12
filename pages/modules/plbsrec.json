@@ -1,0 +1,1437 @@
+[{"PID":"400013"},{"NAME":"REC
+ KOSTRAD                                       
+"},{"PID":"400022"},{"NAME":"REC UVRI                                   
+       "},{"PID":"400031"},{"NAME":"INC TRAFO #2 GI SOPPENG             
+              "},{"PID":"400041"},{"NAME":"P_CABENGE                    
+                     "},{"PID":"400042"},{"NAME":"REC MAKKIO BAJI       
+                            "},{"PID":"400045"},{"NAME":"P_SOPPENG      
+                                   
+"},{"PID":"400047"},{"NAME":"P_TAKALALLA                                
+       "},{"PID":"400058"},{"NAME":"P_MALAKA                            
+              "},{"PID":"400070"},{"NAME":"LBS DCC MARTADINATA          
+                     "},{"PID":"400072"},{"NAME":"REC BULUDUA           
+                            "},{"PID":"400130"},{"NAME":"LBS KP BARU 
+(P_LAPADDE\/P_RAPPANG)                 "},{"PID":"400146"},{"NAME":"LBS 
+JAWA                                          
+"},{"PID":"400150"},{"NAME":"P_CAPPAGALUNG                              
+       "},{"PID":"400153"},{"NAME":"GH PHB (GTC)                        
+              "},{"PID":"400155"},{"NAME":"GH PHB (ATMAJAYA)            
+                     "},{"PID":"400156"},{"NAME":"GH PHB (CENDRAWASIH 
+UTARA)                        "},{"PID":"400159"},{"NAME":"GH GTC (GH 
+AKKARENA)                              "},{"PID":"400161"},{"NAME":"GH 
+GTC (MATAHARI)                                 
+"},{"PID":"400162"},{"NAME":"GH GTC (PHB)                               
+       "},{"PID":"400166"},{"NAME":"LBS MALINGKANG                      
+              "},{"PID":"400262"},{"NAME":"REC PEMECAH BATU             
+                     "},{"PID":"400269"},{"NAME":"REC GOARIA            
+                            "},{"PID":"400285"},{"NAME":"REC HARTACO    
+                                   "},{"PID":"400290"},{"NAME":"REC 
+JEMBATAN DAYA                                 
+"},{"PID":"400294"},{"NAME":"REC SYEH YUSUF                             
+       "},{"PID":"400298"},{"NAME":"REC KERUNG2                         
+              "},{"PID":"400302"},{"NAME":"LBS PARA LOMPOA              
+                     "},{"PID":"400307"},{"NAME":"LBS MALAGA            
+                            "},{"PID":"400309"},{"NAME":"LBS ALI MALAKA 
+                                   "},{"PID":"400324"},{"NAME":"LBS 
+INHUTANI                                      
+"},{"PID":"400341"},{"NAME":"REC JENE TALLASA                           
+       "},{"PID":"400348"},{"NAME":"REC PATTALASANG                     
+              "},{"PID":"400352"},{"NAME":"REC PAKALU                   
+                     "},{"PID":"400398"},{"NAME":"REC BARANDASI         
+                            "},{"PID":"400400"},{"NAME":"REC PEMUDA     
+                                   "},{"PID":"400402"},{"NAME":"REC 
+ROTTERDAM                                     
+"},{"PID":"400404"},{"NAME":"REC PALALAKANG                             
+       "},{"PID":"400405"},{"NAME":"REC BULU DOANG                      
+              "},{"PID":"400406"},{"NAME":"REC TABO-TABO                
+                     "},{"PID":"400407"},{"NAME":"REC PADANGALLA        
+                            "},{"PID":"400408"},{"NAME":"REC ROSALINA   
+                                   "},{"PID":"400409"},{"NAME":"REC 
+TRIBUN                                        
+"},{"PID":"400410"},{"NAME":"REC RAJAWALI                               
+       "},{"PID":"400411"},{"NAME":"REC CADDIKA                         
+              "},{"PID":"400412"},{"NAME":"REC DATUK                    
+                     "},{"PID":"400418"},{"NAME":"LBS DAKOTA            
+                            "},{"PID":"400440"},{"NAME":"LBS DCC TALUDU 
+                                   "},{"PID":"400523"},{"NAME":"P_BOJO  
+                                          
+"},{"PID":"400527"},{"NAME":"REC DCC GANRANG BATU                       
+       "},{"PID":"400545"},{"NAME":"P_LOMPOE                            
+              "},{"PID":"400578"},{"NAME":"LBS LEMBAGA                  
+                     "},{"PID":"400579"},{"NAME":"LBS LALUPAN           
+                            "},{"PID":"400587"},{"NAME":"LBS TARING     
+                                   "},{"PID":"400594"},{"NAME":"LBS 
+SUKARNO                                       
+"},{"PID":"400603"},{"NAME":"LBS GUNUNG MERAPI                          
+       "},{"PID":"400606"},{"NAME":"LBS DCC BOJO                        
+              "},{"PID":"400607"},{"NAME":"LBS DCC JEMB TIMBANG         
+                     "},{"PID":"400635"},{"NAME":"GH BANDARA (GH MATSC) 
+                            "},{"PID":"400640"},{"NAME":"P_INDOLAND     
+                                   "},{"PID":"400679"},{"NAME":"LBS KP 
+AWU                                        
+"},{"PID":"400890"},{"NAME":"KOPEL #1 TALLO LAMA                        
+       "},{"PID":"400892"},{"NAME":"INC#3 TALLO LAMA                    
+              "},{"PID":"400895"},{"NAME":"INC#4 TALLO LAMA             
+                     "},{"PID":"400898"},{"NAME":"P_RANTEMARIO          
+                            "},{"PID":"400901"},{"NAME":"P_BARAWAJA     
+                                   "},{"PID":"400904"},{"NAME":"P_CARAKA
+                                          
+"},{"PID":"400906"},{"NAME":"LBS BINTANG                                
+       "},{"PID":"400907"},{"NAME":"P_TEUKU UMAR                        
+              "},{"PID":"400910"},{"NAME":"P_SUNU                       
+                     "},{"PID":"400918"},{"NAME":"P_INDOFOOD            
+                            "},{"PID":"400920"},{"NAME":"P_PELINDO      
+                                   "},{"PID":"400922"},{"NAME":"P_TOL   
+                                          
+"},{"PID":"400926"},{"NAME":"P_PAOTERE                                  
+       "},{"PID":"400927"},{"NAME":"P_PANAMPU                           
+              "},{"PID":"400930"},{"NAME":"KOPEL #2 TALLO LAMA          
+                     "},{"PID":"401016"},{"NAME":"KOPEL #1 BONTOALA     
+                            "},{"PID":"401017"},{"NAME":"KOPEL #2 
+BONTOALA                                 
+"},{"PID":"401019"},{"NAME":"INC#1 BONTOALA                             
+       "},{"PID":"401022"},{"NAME":"INC#2 BONTOALA                      
+              "},{"PID":"401025"},{"NAME":"INC#3 BONTOALA               
+                     "},{"PID":"401028"},{"NAME":"P_PELAMONIA           
+                            "},{"PID":"401030"},{"NAME":"P_POLDA        
+                                   
+"},{"PID":"401032"},{"NAME":"P_AKADEMIS                                 
+       "},{"PID":"401036"},{"NAME":"P_MESJID RAYA                       
+              "},{"PID":"401040"},{"NAME":"P_BAWAKARAENG                
+                     "},{"PID":"401042"},{"NAME":"P_SUDIRMAN            
+                            "},{"PID":"401044"},{"NAME":"P_MATTOANGIN   
+                                   
+"},{"PID":"401047"},{"NAME":"P_ANDALAS                                  
+       "},{"PID":"401050"},{"NAME":"P_ACHMAD YANI                       
+              "},{"PID":"401052"},{"NAME":"P_JBD                        
+                     "},{"PID":"401123"},{"NAME":"KOPEL #1 PANGKEP      
+                            "},{"PID":"401125"},{"NAME":"INC#1 PANGKEP  
+                                   "},{"PID":"401128"},{"NAME":"INC#2 
+PANGKEP                                     
+"},{"PID":"401130"},{"NAME":"KOPEL #4 TANJUNG BUNGA                     
+       "},{"PID":"401136"},{"NAME":"P_GUNUNG MAS                        
+              "},{"PID":"401138"},{"NAME":"P_PANGKEP                    
+                     "},{"PID":"401140"},{"NAME":"P_SEGERI              
+                            "},{"PID":"401142"},{"NAME":"P_SILORO       
+                                   
+"},{"PID":"401147"},{"NAME":"P_MINASATENE                               
+       "},{"PID":"401162"},{"NAME":"LBS GATOT SUBROTO                   
+              "},{"PID":"401192"},{"NAME":"LBS KORAMIL 
+(P_TAKALALLA\/P_WAJO)                  "},{"PID":"401196"},{"NAME":"LBS 
+LANDAK BARU                                   
+"},{"PID":"401207"},{"NAME":"LBS RAPPOCINI                              
+       "},{"PID":"401217"},{"NAME":"LBS ABLAM TIMUR                     
+              "},{"PID":"401225"},{"NAME":"REC BENTENG GAJAH            
+                     "},{"PID":"401230"},{"NAME":"REC TALA2             
+                            "},{"PID":"401235"},{"NAME":"REC TONASA     
+                                   "},{"PID":"401240"},{"NAME":"REC 
+BONTO GELANG                                  
+"},{"PID":"401250"},{"NAME":"REC LIMBANGAN                              
+       "},{"PID":"401256"},{"NAME":"GH PDAM (MALINO)                    
+              "},{"PID":"401257"},{"NAME":"GH PDAM (MAWANG)             
+                     "},{"PID":"401274"},{"NAME":"GH SUNGGUMINASA (GHSM)
+                            "},{"PID":"401420"},{"NAME":"LBS AENGTOA    
+                                   "},{"PID":"401452"},{"NAME":"REC 
+KALASERENA                                    
+"},{"PID":"401457"},{"NAME":"REC BATU MALONRO                           
+       "},{"PID":"401462"},{"NAME":"REC BILI2                           
+              "},{"PID":"401464"},{"NAME":"LBS LAN                      
+                     "},{"PID":"401484"},{"NAME":"LBS STIKI             
+                            "},{"PID":"401494"},{"NAME":"LBS DPRD       
+                                   "},{"PID":"401504"},{"NAME":"LBS 
+ADYAKSA BARU                                  
+"},{"PID":"401524"},{"NAME":"LBS DEPKES                                 
+       "},{"PID":"401534"},{"NAME":"LBS LANGGAU                         
+              "},{"PID":"401544"},{"NAME":"LBS TANGGUL                  
+                     "},{"PID":"401554"},{"NAME":"LBS IKIP              
+                            "},{"PID":"401574"},{"NAME":"LBS DIAZ       
+                                   "},{"PID":"401594"},{"NAME":"LBS 
+PAMANJENGAN                                   
+"},{"PID":"401610"},{"NAME":"LBS KAPASA                                 
+       "},{"PID":"401611"},{"NAME":"LBS ASINDO                          
+              "},{"PID":"401621"},{"NAME":"LBS PAMPANG                  
+                     "},{"PID":"401651"},{"NAME":"LBS BALAIKOTA         
+                            "},{"PID":"401676"},{"NAME":"P_BORONGLOE2   
+                                   
+"},{"PID":"401677"},{"NAME":"P_BORONGLOE1                               
+       "},{"PID":"401678"},{"NAME":"P_PAKATTO                           
+              "},{"PID":"401679"},{"NAME":"P_LANNA                      
+                     "},{"PID":"401680"},{"NAME":"KOPEL #2 PLTA BILI2   
+                            "},{"PID":"401681"},{"NAME":"KOPEL #1 PLTA 
+BILI2                               "},{"PID":"401691"},{"NAME":"GH UJBA
+ (MERPATI)                                 
+"},{"PID":"401701"},{"NAME":"INC#2 PLTA BILI2                           
+       "},{"PID":"401863"},{"NAME":"KOPEL #1 BORONGLOE                  
+              "},{"PID":"401865"},{"NAME":"P_UIN                        
+                     "},{"PID":"401868"},{"NAME":"P_EXPRESS BILI_2      
+                            "},{"PID":"401871"},{"NAME":"P_EXPRESS 
+BILI_1                                  
+"},{"PID":"401874"},{"NAME":"P_RINDAM                                   
+       "},{"PID":"401877"},{"NAME":"P_MAWANG                            
+              "},{"PID":"401880"},{"NAME":"P_KAMPILI                    
+                     "},{"PID":"401883"},{"NAME":"P_PALANGGA            
+                            "},{"PID":"402009"},{"NAME":"GH MAWANG 
+(INCOMING)                              "},{"PID":"402012"},{"NAME":"GH 
+MAWANG (OUT MAWANG)                            
+"},{"PID":"402018"},{"NAME":"LBS HASDIM                                 
+       "},{"PID":"402047"},{"NAME":"INC#1 PLTA BILI2                    
+              "},{"PID":"402072"},{"NAME":"GH ALMARKAZ                  
+                     "},{"PID":"402074"},{"NAME":"GH ALMARKAZ           
+                            "},{"PID":"402075"},{"NAME":"INC#2 BORONGLOE
+                                   "},{"PID":"402114"},{"NAME":"LBS 
+CLARION                                       
+"},{"PID":"402115"},{"NAME":"LBS BLOK AD                                
+       "},{"PID":"402116"},{"NAME":"LBS INDOSIAR                        
+              "},{"PID":"402117"},{"NAME":"LBS POMPA BENSIN             
+                     "},{"PID":"402119"},{"NAME":"LBS NURI              
+                            "},{"PID":"402120"},{"NAME":"LBS SMP 8      
+                                   "},{"PID":"402121"},{"NAME":"LBS 
+S.PAREMAN                                     
+"},{"PID":"402122"},{"NAME":"LBS_TELKOMAS                               
+       "},{"PID":"402136"},{"NAME":"KOPEL #3 TANJUNG BUNGA              
+              "},{"PID":"402140"},{"NAME":"P_GONTANG                    
+                     "},{"PID":"402144"},{"NAME":"P_AKKARENA            
+                            "},{"PID":"402148"},{"NAME":"P_ATMAJAYA     
+                                   "},{"PID":"402152"},{"NAME":"KOPEL #1
+ TANJUNG BUNGA                            
+"},{"PID":"402206"},{"NAME":"LBS PAKAN                                  
+       "},{"PID":"402212"},{"NAME":"GH BANDARA (AURI)                   
+              "},{"PID":"402214"},{"NAME":"GH BANDARA (AIRPORT)         
+                     "},{"PID":"402216"},{"NAME":"GH BANDARA (U.PANDANG)
+                            "},{"PID":"402218"},{"NAME":"GH BANDARA 
+(POWER AIRPORT)                        "},{"PID":"402221"},{"NAME":"GH 
+BANDARA (KOPEL)                                
+"},{"PID":"402223"},{"NAME":"GH KAREBOSI (SMP 6)                        
+       "},{"PID":"402225"},{"NAME":"GH KAREBOSI (ACHMAD YANI)           
+              "},{"PID":"402228"},{"NAME":"GH CCC (AKKARENA)            
+                     "},{"PID":"402232"},{"NAME":"GH CCC (DURIAN)       
+                            "},{"PID":"402235"},{"NAME":"GH WAHIDIN 
+(TAMALANREA)                           "},{"PID":"402237"},{"NAME":"GH 
+WAHIDIN (UNHAS)                                
+"},{"PID":"402291"},{"NAME":"P_PELANDUK                                 
+       "},{"PID":"402327"},{"NAME":"P_HARTACO                           
+              "},{"PID":"402330"},{"NAME":"REC CEMPA                    
+                     "},{"PID":"402332"},{"NAME":"LBS PACONGKANG        
+                            "},{"PID":"402336"},{"NAME":"LBS CENNA'E    
+                                   "},{"PID":"402338"},{"NAME":"LBS 
+TINUMBU                                       
+"},{"PID":"402350"},{"NAME":"GH MAWANG (OUT TRAFO)                      
+       "},{"PID":"402356"},{"NAME":"LBS TAROWANG                        
+              "},{"PID":"402359"},{"NAME":"GH MAROS (TURIKALE)          
+                     "},{"PID":"402382"},{"NAME":"GH PAM (INC PAM)      
+                            "},{"PID":"402385"},{"NAME":"GH PAM (INC 
+KODAM)                                "},{"PID":"402390"},{"NAME":"GH 
+MAROS (TAMBUA)                                 
+"},{"PID":"402396"},{"NAME":"GH MAROS (MAROS)                           
+       "},{"PID":"402409"},{"NAME":"LBS CINRANAE                        
+              "},{"PID":"402410"},{"NAME":"LBS PUMALILLING              
+                     "},{"PID":"402414"},{"NAME":"REC SALEKOWA          
+                            "},{"PID":"402420"},{"NAME":"REC MALINO     
+                                   "},{"PID":"402428"},{"NAME":"GH PAM 
+(OUT GOING)                                
+"},{"PID":"402433"},{"NAME":"LBS NIPA-NIPA                              
+       "},{"PID":"402512"},{"NAME":"LBS BONTOA                          
+              "},{"PID":"402620"},{"NAME":"LBS TONRO RITA               
+                     "},{"PID":"402637"},{"NAME":"LBS BATAS             
+                            "},{"PID":"402639"},{"NAME":"LBS LEBANG 
+MANAI                                  "},{"PID":"402660"},{"NAME":"LBS 
+LAMPA                                         
+"},{"PID":"402689"},{"NAME":"LBS PEKKAE                                 
+       "},{"PID":"402692"},{"NAME":"LBS KULAMPU                         
+              "},{"PID":"402694"},{"NAME":"LBS BARANG MAMASE            
+                     "},{"PID":"402696"},{"NAME":"LBS DOPIN             
+                            "},{"PID":"402697"},{"NAME":"LBS BOCCO      
+                                   "},{"PID":"402698"},{"NAME":"LBS 
+AMBOPAI                                       
+"},{"PID":"402701"},{"NAME":"LBS SAKKOLI                                
+       "},{"PID":"402702"},{"NAME":"LBS ALESILURUNGE                    
+              "},{"PID":"402704"},{"NAME":"LBS HOMEBASE                 
+                     "},{"PID":"402705"},{"NAME":"LBS TALUME            
+                            "},{"PID":"402707"},{"NAME":"REC PARIA      
+                                   "},{"PID":"402709"},{"NAME":"LBS 
+LAERUNG                                       
+"},{"PID":"402710"},{"NAME":"LBS URAIYANG                               
+       "},{"PID":"402715"},{"NAME":"LBS JONGKANG                        
+              "},{"PID":"402716"},{"NAME":"LBS ONGKOE                   
+                     "},{"PID":"402717"},{"NAME":"LBS LANCIRANG         
+                            "},{"PID":"402718"},{"NAME":"LBS MENGE      
+                                   "},{"PID":"402719"},{"NAME":"LBS 
+BONTOUSE                                      
+"},{"PID":"402720"},{"NAME":"LBS UJUNGE                                 
+       "},{"PID":"402722"},{"NAME":"LBS LAJOKKA                         
+              "},{"PID":"402725"},{"NAME":"LBS DATA                     
+                     "},{"PID":"402726"},{"NAME":"LBS LEPANGENG         
+                            "},{"PID":"402727"},{"NAME":"LBS LASANGKURU 
+                                   "},{"PID":"402730"},{"NAME":"LBS 
+TOSORA                                        
+"},{"PID":"402731"},{"NAME":"LBS MADUKELLENG                            
+       "},{"PID":"402733"},{"NAME":"LBS IRIAN                           
+              "},{"PID":"402735"},{"NAME":"LBS KAUNG                    
+                     "},{"PID":"402736"},{"NAME":"LBS SALOPOKO          
+                            "},{"PID":"402737"},{"NAME":"LBS WORONGE    
+                                   "},{"PID":"402740"},{"NAME":"LBS 
+PASERU                                        
+"},{"PID":"402741"},{"NAME":"LBS PAORAMBA                               
+       "},{"PID":"402742"},{"NAME":"LBS TAKKU                           
+              "},{"PID":"402743"},{"NAME":"LBS SUMPABAKA                
+                     "},{"PID":"402745"},{"NAME":"LBS ISCEN             
+                            "},{"PID":"402747"},{"NAME":"LBS KOBBAE     
+                                   "},{"PID":"402750"},{"NAME":"LBS 
+SALENG                                        
+"},{"PID":"402755"},{"NAME":"LBS BAJO                                   
+       "},{"PID":"402756"},{"NAME":"LBS OPPO                            
+              "},{"PID":"402757"},{"NAME":"LBS SULILIE                  
+                     "},{"PID":"402758"},{"NAME":"LBS CEMPA             
+                            "},{"PID":"402759"},{"NAME":"LBS SANGKURU   
+                                   "},{"PID":"402763"},{"NAME":"LBS 
+SAILONG                                       
+"},{"PID":"402765"},{"NAME":"LBS WIDE                                   
+       "},{"PID":"402766"},{"NAME":"LBS WAEMPUBU                        
+              "},{"PID":"402767"},{"NAME":"LBS AMALI                    
+                     "},{"PID":"402768"},{"NAME":"LBS AJALIRENG         
+                            "},{"PID":"402770"},{"NAME":"LBS KORAMIL 
+(P_BANDARA (WATAMPONE))               "},{"PID":"402771"},{"NAME":"LBS 
+ITTERUNG                                      
+"},{"PID":"402772"},{"NAME":"LBS BELLI                                  
+       "},{"PID":"402774"},{"NAME":"LBS LACIGAI                         
+              "},{"PID":"402775"},{"NAME":"LBS TACIPPI                  
+                     "},{"PID":"402776"},{"NAME":"LBS MADURI            
+                            "},{"PID":"402777"},{"NAME":"LBS BUNDARAN   
+                                   "},{"PID":"402782"},{"NAME":"LBS 
+MATANGO                                       
+"},{"PID":"402783"},{"NAME":"LBS CAMMING                                
+       "},{"PID":"402785"},{"NAME":"LBS CEBBA                           
+              "},{"PID":"402788"},{"NAME":"LBS MUTIARA                  
+                     "},{"PID":"402793"},{"NAME":"LBS SWADAYA           
+                            "},{"PID":"402794"},{"NAME":"LBS TANABATUE  
+                                   "},{"PID":"402796"},{"NAME":"LBS 
+BUARENG                                       
+"},{"PID":"402798"},{"NAME":"LBS NUSA                                   
+       "},{"PID":"402802"},{"NAME":"LBS MARE                            
+              "},{"PID":"402803"},{"NAME":"LBS SALOMEKKO                
+                     "},{"PID":"402804"},{"NAME":"LBS MASUMPU           
+                            "},{"PID":"402805"},{"NAME":"LBS CAGELU     
+                                   "},{"PID":"402807"},{"NAME":"LBS 
+DARAMPA                                       
+"},{"PID":"402809"},{"NAME":"LBS CAGUNI                                 
+       "},{"PID":"402812"},{"NAME":"LBS SAMAENRE                        
+              "},{"PID":"402815"},{"NAME":"LBS MAPPESANGKA              
+                     "},{"PID":"402817"},{"NAME":"LBS PARIPPUNG         
+                            "},{"PID":"402821"},{"NAME":"LBS WOLLANGI   
+                                   "},{"PID":"402822"},{"NAME":"LBS 
+PANYILI 2                                     
+"},{"PID":"402829"},{"NAME":"LBS TALUNGENG                              
+       "},{"PID":"402831"},{"NAME":"LBS MAJANG                          
+              "},{"PID":"402832"},{"NAME":"LBS AGUS SALIM               
+                     "},{"PID":"402837"},{"NAME":"LBS TIRONG            
+                            "},{"PID":"402839"},{"NAME":"LBS MACANANG   
+                                   "},{"PID":"402840"},{"NAME":"LBS 
+MAKMUR                                        
+"},{"PID":"402841"},{"NAME":"LBS PERINDUSTRIAN                          
+       "},{"PID":"402853"},{"NAME":"LBS PALAKKA                         
+              "},{"PID":"402878"},{"NAME":"LBS CARIMA                   
+                     "},{"PID":"402879"},{"NAME":"LBS JAMPU             
+                            "},{"PID":"402931"},{"NAME":"REC DCC 
+DOLANGENG                                 
+"},{"PID":"402938"},{"NAME":"REC DCC TEPPO                              
+       "},{"PID":"402984"},{"NAME":"LBS PARIGI                          
+              "},{"PID":"402991"},{"NAME":"LBS PARINRING                
+                     "},{"PID":"402992"},{"NAME":"LBS LALEMPARE         
+                            "},{"PID":"402993"},{"NAME":"LBS ABANUANG   
+                                   "},{"PID":"402996"},{"NAME":"LBS 
+KALEMPANG                                     
+"},{"PID":"402997"},{"NAME":"LBS MARIO INDAH                            
+       "},{"PID":"402998"},{"NAME":"LBS MATAHARI                        
+              "},{"PID":"403000"},{"NAME":"LBS BT MEMMANA               
+                     "},{"PID":"403001"},{"NAME":"LBS PAO MALIMPO       
+                            "},{"PID":"403002"},{"NAME":"LBS BAKKE      
+                                   "},{"PID":"403016"},{"NAME":"LBS 
+ALIMBANGENG                                   
+"},{"PID":"403018"},{"NAME":"LBS LENRANG                                
+       "},{"PID":"403020"},{"NAME":"LBS AKALI BATUE                     
+              "},{"PID":"403021"},{"NAME":"LBS DPN KTR                  
+                     "},{"PID":"403022"},{"NAME":"LBS BELO              
+                            "},{"PID":"403023"},{"NAME":"LBS AKKAMPENG  
+                                   "},{"PID":"403024"},{"NAME":"LBS KP 
+BARU (P_WAJO)                              
+"},{"PID":"403025"},{"NAME":"LBS ALLAPORENG                             
+       "},{"PID":"403026"},{"NAME":"LBS LIBBUKANG                       
+              "},{"PID":"403027"},{"NAME":"LBS PINCENG'E                
+                     "},{"PID":"403028"},{"NAME":"LBS LANGKEMME         
+                            "},{"PID":"403029"},{"NAME":"LBS PESANTREN  
+                                   "},{"PID":"403031"},{"NAME":"LBS 
+JANNA'E                                       
+"},{"PID":"403032"},{"NAME":"LBS LALANGE                                
+       "},{"PID":"403033"},{"NAME":"LBS KP JAWA                         
+              "},{"PID":"403034"},{"NAME":"LBS KUBBA                    
+                     "},{"PID":"403036"},{"NAME":"LBS PASAR (P_SOPPENG) 
+                            "},{"PID":"403037"},{"NAME":"LBS BALUBU     
+                                   "},{"PID":"403038"},{"NAME":"LBS 
+LABURAUNG                                     
+"},{"PID":"403039"},{"NAME":"LBS MADELLO                                
+       "},{"PID":"403040"},{"NAME":"LBS TAJJUNCU                        
+              "},{"PID":"403041"},{"NAME":"LBS BATU-BATU                
+                     "},{"PID":"403042"},{"NAME":"LBS BERA              
+                            "},{"PID":"403043"},{"NAME":"LBS KAWERANG   
+                                   "},{"PID":"403044"},{"NAME":"LBS 
+LARINGGI                                      
+"},{"PID":"403045"},{"NAME":"LBS PERSATUAN                              
+       "},{"PID":"403047"},{"NAME":"LBS MUTIARA                         
+              "},{"PID":"403048"},{"NAME":"LBS MATUMPU                  
+                     "},{"PID":"403049"},{"NAME":"LBS MANGOTTONG        
+                            "},{"PID":"403050"},{"NAME":"LBS KAMPALA    
+                                   "},{"PID":"403051"},{"NAME":"LBS 
+BILOPA                                        
+"},{"PID":"403053"},{"NAME":"LBS MANANTI                                
+       "},{"PID":"403055"},{"NAME":"LBS JATIE                           
+              "},{"PID":"403056"},{"NAME":"LBS APARENG                  
+                     "},{"PID":"403057"},{"NAME":"LBS BIKERU            
+                            "},{"PID":"403061"},{"NAME":"LBS MUNTE      
+                                   "},{"PID":"403062"},{"NAME":"LBS 
+TALLE                                         
+"},{"PID":"403063"},{"NAME":"LBS LANCIBUNG2                             
+       "},{"PID":"403065"},{"NAME":"LBS LANCIBUNG1                      
+              "},{"PID":"403066"},{"NAME":"LBS KOMPANG                  
+                     "},{"PID":"403069"},{"NAME":"LBS TIBONA            
+                            "},{"PID":"403070"},{"NAME":"LBS BALANGRIRI 
+                                   "},{"PID":"403071"},{"NAME":"LBS 
+TAMBANGAN                                     
+"},{"PID":"403073"},{"NAME":"LBS LOLISANG                               
+       "},{"PID":"403074"},{"NAME":"LBS HIDAYAT                         
+              "},{"PID":"403078"},{"NAME":"LBS TANUNTUNG                
+                     "},{"PID":"403088"},{"NAME":"LBS PARUKKU           
+                            "},{"PID":"403093"},{"NAME":"LBS BICARI     
+                                   "},{"PID":"403095"},{"NAME":"LBS 
+TERMINAL                                      
+"},{"PID":"403097"},{"NAME":"LBS LANTO                                  
+       "},{"PID":"403099"},{"NAME":"LBS ALLU                            
+              "},{"PID":"403100"},{"NAME":"LBS MANYAMPA                 
+                     "},{"PID":"403108"},{"NAME":"LBS LOBI              
+                            "},{"PID":"403111"},{"NAME":"LBS BASOKENG   
+                                   "},{"PID":"403113"},{"NAME":"LBS 
+SEPPANG                                       
+"},{"PID":"403114"},{"NAME":"LBS SALEBBA                                
+       "},{"PID":"403116"},{"NAME":"LBS BENJALA                         
+              "},{"PID":"403117"},{"NAME":"LBS LEMBANG                  
+                     "},{"PID":"403125"},{"NAME":"LBS BONO              
+                            "},{"PID":"403126"},{"NAME":"LBS PDAM       
+                                   "},{"PID":"403127"},{"NAME":"LBS 
+BORONGLOE                                     
+"},{"PID":"403130"},{"NAME":"LBS GARANTUNGAN                            
+       "},{"PID":"403131"},{"NAME":"LBS KINDANG                         
+              "},{"PID":"403132"},{"NAME":"LBS PANGGENTUNGAN            
+                     "},{"PID":"403133"},{"NAME":"LBS BANYORANG         
+                            "},{"PID":"403137"},{"NAME":"LBS JATIA      
+                                   "},{"PID":"403138"},{"NAME":"LBS 
+LAYOA                                         
+"},{"PID":"403140"},{"NAME":"LBS TANETEA1                               
+       "},{"PID":"403141"},{"NAME":"LBS TANETEA2                        
+              "},{"PID":"403142"},{"NAME":"LBS LAMALAKA                 
+                     "},{"PID":"403143"},{"NAME":"LBS RATULANGI         
+                            "},{"PID":"403145"},{"NAME":"LBS SASAYA     
+                                   "},{"PID":"403146"},{"NAME":"LBS 
+BISSAPU                                       
+"},{"PID":"403147"},{"NAME":"LBS TINO1                                  
+       "},{"PID":"403148"},{"NAME":"LBS TINO2                           
+              "},{"PID":"403152"},{"NAME":"LBS CAMPAGALOE1              
+                     "},{"PID":"403163"},{"NAME":"LBS CAMBAJAWA         
+                            "},{"PID":"403165"},{"NAME":"LBS RUMBIA     
+                                   "},{"PID":"403166"},{"NAME":"LBS BORO
+                                          
+"},{"PID":"403167"},{"NAME":"LBS CIKORO                                 
+       "},{"PID":"403168"},{"NAME":"LBS BUKKULU                         
+              "},{"PID":"403180"},{"NAME":"LBS SALASAE                  
+                     "},{"PID":"403182"},{"NAME":"LBS CINONG            
+                            "},{"PID":"403190"},{"NAME":"LBS BTN        
+                                   "},{"PID":"403191"},{"NAME":"LBS 
+KAPITA                                        
+"},{"PID":"403194"},{"NAME":"LBS SALO TUNGO                             
+       "},{"PID":"403196"},{"NAME":"GH UJBD (JBA)                       
+              "},{"PID":"403198"},{"NAME":"GH UJBD (KAKATUA)            
+                     "},{"PID":"403200"},{"NAME":"GH UJBD (KOLAM RENANG)
+                            "},{"PID":"403202"},{"NAME":"GH UJBD 
+(LANDAK)                                  
+"},{"PID":"403204"},{"NAME":"GH UJBD (GAGAK)                            
+       "},{"PID":"403206"},{"NAME":"GH UJBD (COUPLE)                    
+              "},{"PID":"403215"},{"NAME":"GH UJBD (TRAFO)              
+                     "},{"PID":"403231"},{"NAME":"LBS HASANUDDIN        
+                            "},{"PID":"403241"},{"NAME":"LBS YOSSUDARSO 
+                                   "},{"PID":"403248"},{"NAME":"P_BLPP  
+                                          
+"},{"PID":"403260"},{"NAME":"P_TRANS                                    
+       "},{"PID":"403266"},{"NAME":"P_BENTENG S. OPU                    
+              "},{"PID":"403278"},{"NAME":"INC#2 TANJUNG BUNGA          
+                     "},{"PID":"403288"},{"NAME":"KOPEL #2 TANJUNG BUNGA
+                            "},{"PID":"403368"},{"NAME":"LBS BUNG       
+                                   "},{"PID":"403391"},{"NAME":"LBS 
+TOPAZ                                         
+"},{"PID":"403414"},{"NAME":"LBS SUKARIA                                
+       "},{"PID":"403420"},{"NAME":"LBS B.INDAH                         
+              "},{"PID":"403421"},{"NAME":"LBS WALA                     
+                     "},{"PID":"403422"},{"NAME":"LBS EMPA GAE          
+                            "},{"PID":"403423"},{"NAME":"LBS BENDORA    
+                                   "},{"PID":"403424"},{"NAME":"LBS 
+PONRANGA'E                                    
+"},{"PID":"403425"},{"NAME":"LBS BELAWA                                 
+       "},{"PID":"403426"},{"NAME":"LBS PADANG LOANG                    
+              "},{"PID":"403428"},{"NAME":"LBS PASAR (P_TANRU TEDONG)   
+                     "},{"PID":"403429"},{"NAME":"LBS BULCEN            
+                            "},{"PID":"403430"},{"NAME":"LBS CAWIWI     
+                                   "},{"PID":"403432"},{"NAME":"LBS BILA
+ RIASE                                    
+"},{"PID":"403433"},{"NAME":"LBS ANAK BANNA                             
+       "},{"PID":"403434"},{"NAME":"LBS DOMBA                           
+              "},{"PID":"403435"},{"NAME":"LBS ALLAKUANG                
+                     "},{"PID":"403438"},{"NAME":"LBS BUPATI 
+(P_LASINRANG)                          "},{"PID":"403439"},{"NAME":"LBS 
+STADION                                       
+"},{"PID":"403440"},{"NAME":"LBS PASAR (P_PANGKAJENE)                   
+       "},{"PID":"403441"},{"NAME":"LBS SEDERHANA                       
+              "},{"PID":"403442"},{"NAME":"LBS SMEA                     
+                     "},{"PID":"403443"},{"NAME":"LBS LAMBAU            
+                            "},{"PID":"403444"},{"NAME":"LBS KANIE      
+                                   "},{"PID":"403445"},{"NAME":"LBS 
+PUSKESMAS                                     
+"},{"PID":"403446"},{"NAME":"LBS MONUMEN                                
+       "},{"PID":"403447"},{"NAME":"LBS BODDI                           
+              "},{"PID":"403449"},{"NAME":"LBS KULO                     
+                     "},{"PID":"403450"},{"NAME":"LBS PUNCAK            
+                            "},{"PID":"403451"},{"NAME":"LBS ULUALE     
+                                   "},{"PID":"403454"},{"NAME":"LBS 
+LT.SALO                                       
+"},{"PID":"403455"},{"NAME":"LBS LANRANG                                
+       "},{"PID":"403456"},{"NAME":"LBS MACCORA WALIE                   
+              "},{"PID":"403457"},{"NAME":"LBS TANGKOLI                 
+                     "},{"PID":"403458"},{"NAME":"LBS JEMBATAN          
+                            "},{"PID":"403459"},{"NAME":"LBS DATA'E     
+                                   "},{"PID":"403460"},{"NAME":"LBS KM 
+10\/ KAMIRIE                                
+"},{"PID":"403462"},{"NAME":"LBS BUA'E                                  
+       "},{"PID":"403463"},{"NAME":"LBS BULULOA                         
+              "},{"PID":"403464"},{"NAME":"LBS LARUA                    
+                     "},{"PID":"403465"},{"NAME":"LBS BILOKKA           
+                            "},{"PID":"403467"},{"NAME":"LBS KTR DESA   
+                                   "},{"PID":"403468"},{"NAME":"LBS 
+DOLOG                                         
+"},{"PID":"403470"},{"NAME":"LBS SIMPO                                  
+       "},{"PID":"403472"},{"NAME":"LBS ARESSI'E                        
+              "},{"PID":"403473"},{"NAME":"LBS SALO                     
+                     "},{"PID":"403474"},{"NAME":"LBS MADALLO           
+                            "},{"PID":"403475"},{"NAME":"LBS PALIRANG   
+                                   "},{"PID":"403476"},{"NAME":"LBS 
+BUNGI                                         
+"},{"PID":"403477"},{"NAME":"LBS WAKKA                                  
+       "},{"PID":"403478"},{"NAME":"LBS TEPPO                           
+              "},{"PID":"403480"},{"NAME":"LBS BINANGA                  
+                     "},{"PID":"403484"},{"NAME":"LBS PAKU              
+                            "},{"PID":"403485"},{"NAME":"LBS SENGAE     
+                                   "},{"PID":"403486"},{"NAME":"LBS 
+DURIAN                                        
+"},{"PID":"403487"},{"NAME":"LBS BITTOENG                               
+       "},{"PID":"403490"},{"NAME":"LBS MASALO                          
+              "},{"PID":"403491"},{"NAME":"LBS DARA BATU                
+                     "},{"PID":"403492"},{"NAME":"LBS CULLU             
+                            "},{"PID":"403493"},{"NAME":"LBS SUDIRMAN   
+                                   "},{"PID":"403495"},{"NAME":"LBS 
+LAPALAPAE                                     
+"},{"PID":"403496"},{"NAME":"LBS TIRTASARI                              
+       "},{"PID":"403497"},{"NAME":"LBS CORA                            
+              "},{"PID":"403498"},{"NAME":"LBS PAO                      
+                     "},{"PID":"403499"},{"NAME":"LBS BARUGAE           
+                            "},{"PID":"403500"},{"NAME":"LBS DOLANGAN   
+                                   "},{"PID":"403501"},{"NAME":"LBS 
+LAULENG                                       
+"},{"PID":"403503"},{"NAME":"LBS SUPPA                                  
+       "},{"PID":"403504"},{"NAME":"LBS DCC GARESSI                     
+              "},{"PID":"403505"},{"NAME":"LBS MONGINSIDI               
+                     "},{"PID":"403507"},{"NAME":"LBS KARTINI           
+                            "},{"PID":"403509"},{"NAME":"LBS BUPATI 
+(P_PANGKAJENE)                         "},{"PID":"403510"},{"NAME":"LBS 
+SORAJA                                        
+"},{"PID":"403511"},{"NAME":"LBS PINTU GERBANG                          
+       "},{"PID":"403512"},{"NAME":"LBS TIROANG                         
+              "},{"PID":"403513"},{"NAME":"LBS LASINRANG                
+                     "},{"PID":"403514"},{"NAME":"LBS TONRO SADDANG     
+                            "},{"PID":"403515"},{"NAME":"LBS SULILI     
+                                   "},{"PID":"403517"},{"NAME":"LBS 
+MALIMPUNG                                     
+"},{"PID":"403518"},{"NAME":"LBS LIBUKANG                               
+       "},{"PID":"403520"},{"NAME":"LBS JUANDA                          
+              "},{"PID":"403521"},{"NAME":"LBS BENRANGE                 
+                     "},{"PID":"403522"},{"NAME":"LBS JAMPUE            
+                            "},{"PID":"403523"},{"NAME":"LBS AWANGAWANG 
+                                   "},{"PID":"403524"},{"NAME":"LBS 
+CAPAKALA                                      
+"},{"PID":"403525"},{"NAME":"LBS KATEONG                                
+       "},{"PID":"403529"},{"NAME":"LBS MOTORIZE KAPPA                  
+              "},{"PID":"403532"},{"NAME":"LBS PINANG                   
+                     "},{"PID":"403534"},{"NAME":"LBS MALINO            
+                            "},{"PID":"403535"},{"NAME":"LBS MAIWA      
+                                   "},{"PID":"403536"},{"NAME":"REC 
+PAHLAWAN                                      
+"},{"PID":"403537"},{"NAME":"LBS AVR                                    
+       "},{"PID":"403538"},{"NAME":"LBS KTR CAMAT (P_BOJO)              
+              "},{"PID":"403539"},{"NAME":"LBS AMBO DAMING              
+                     "},{"PID":"403540"},{"NAME":"LBS DIPONEGORO        
+                            "},{"PID":"403541"},{"NAME":"LBS TALABANGI  
+                                   "},{"PID":"403566"},{"NAME":"LBS 
+BATRA                                         
+"},{"PID":"403567"},{"NAME":"LBS SEKOLAH                                
+       "},{"PID":"403569"},{"NAME":"LBS SINTAP                          
+              "},{"PID":"403573"},{"NAME":"LBS LABUANG                  
+                     "},{"PID":"403574"},{"NAME":"LBS KORAMIL (P_BOJO)  
+                            "},{"PID":"403579"},{"NAME":"LBS DCC LAPAS  
+                                   "},{"PID":"403580"},{"NAME":"LBS 
+PATUNG PEMUDA                                 
+"},{"PID":"403585"},{"NAME":"LBS KILLANGNGE                             
+       "},{"PID":"403616"},{"NAME":"LBS TAMAONA                         
+              "},{"PID":"403640"},{"NAME":"GH SAHID (JBD)               
+                     "},{"PID":"403738"},{"NAME":"LBS PANRENG           
+                            "},{"PID":"403769"},{"NAME":"LBS BT LAPPA   
+                                   "},{"PID":"403772"},{"NAME":"LBS 
+BATUPUTE                                      
+"},{"PID":"403773"},{"NAME":"LBS REMAJA                                 
+       "},{"PID":"403774"},{"NAME":"LBS POLEWALI                        
+              "},{"PID":"403776"},{"NAME":"LBS LAMPOKO                  
+                     "},{"PID":"403778"},{"NAME":"LBS MADELO            
+                            "},{"PID":"403779"},{"NAME":"LBS GEMPUNG'E  
+                                   "},{"PID":"403780"},{"NAME":"LBS 
+PARENRING                                     
+"},{"PID":"403781"},{"NAME":"LBS LAPANGAN                               
+       "},{"PID":"403782"},{"NAME":"LBS PANCANA                         
+              "},{"PID":"403783"},{"NAME":"LBS CILELLANG                
+                     "},{"PID":"403784"},{"NAME":"LBS AROPO'E           
+                            "},{"PID":"403786"},{"NAME":"LBS LUMPAJA    
+                                   "},{"PID":"403787"},{"NAME":"LBS 
+LASINRI                                       
+"},{"PID":"403788"},{"NAME":"LBS LIPUKASI                               
+       "},{"PID":"403789"},{"NAME":"LBS SUMPANG                         
+              "},{"PID":"403792"},{"NAME":"LBS CANNE                    
+                     "},{"PID":"403793"},{"NAME":"LBS MANGEMPANG        
+                            "},{"PID":"403794"},{"NAME":"LBS DACCIPONG  
+                                   "},{"PID":"403795"},{"NAME":"LBS 
+PAJAK                                         
+"},{"PID":"403801"},{"NAME":"LBS SARIMIN                                
+       "},{"PID":"403802"},{"NAME":"LBS LOMPO'E                         
+              "},{"PID":"403803"},{"NAME":"LBS TIMURAMA                 
+                     "},{"PID":"403814"},{"NAME":"LBS TG BUTUNG         
+                            "},{"PID":"403819"},{"NAME":"LBS BERINGIN   
+                                   "},{"PID":"403824"},{"NAME":"LBS DCC 
+PANROKO                                   
+"},{"PID":"403826"},{"NAME":"LBS TOYOTA (P_SOREANG)                     
+       "},{"PID":"403827"},{"NAME":"LBS LEMBAH                          
+              "},{"PID":"403828"},{"NAME":"LBS DCC LAHALEDE             
+                     "},{"PID":"403829"},{"NAME":"LBS SEKTOR            
+                            "},{"PID":"403835"},{"NAME":"GH SAHID 
+(KAKATUA)                                
+"},{"PID":"403844"},{"NAME":"LBS SERRE                                  
+       "},{"PID":"403846"},{"NAME":"LBS LABBO                           
+              "},{"PID":"403847"},{"NAME":"LBS PRAMUKA                  
+                     "},{"PID":"403848"},{"NAME":"LBS BARANG            
+                            "},{"PID":"403849"},{"NAME":"LBS LEMBANNA   
+                                   "},{"PID":"403850"},{"NAME":"LBS 
+SUKAMAJU                                      
+"},{"PID":"403851"},{"NAME":"LBS BORONG                                 
+       "},{"PID":"403860"},{"NAME":"LBS FLYOVER                         
+              "},{"PID":"403873"},{"NAME":"LBS PATIRO                   
+                     "},{"PID":"403881"},{"NAME":"LBS PELAYARAN         
+                            "},{"PID":"403886"},{"NAME":"LBS TAKKALASI  
+                                   "},{"PID":"403887"},{"NAME":"LBS 
+LEMPULE                                       
+"},{"PID":"403888"},{"NAME":"LBS KEBO                                   
+       "},{"PID":"403893"},{"NAME":"LBS PINTU 1 UNHAS                   
+              "},{"PID":"403901"},{"NAME":"LBS PERTAMA SALODONG         
+                     "},{"PID":"403912"},{"NAME":"LBS KUMALA            
+                            "},{"PID":"403919"},{"NAME":"LBS PESANTREN  
+                                   "},{"PID":"403927"},{"NAME":"LBS 
+KANTOR CAMAT                                  
+"},{"PID":"403937"},{"NAME":"LBS LIMA MUDA                              
+       "},{"PID":"403948"},{"NAME":"LBS PGA                             
+              "},{"PID":"403964"},{"NAME":"LBS KIMA                     
+                     "},{"PID":"403972"},{"NAME":"LBS PARANGLOE         
+                            "},{"PID":"403977"},{"NAME":"LBS KOLOLA     
+                                   "},{"PID":"403989"},{"NAME":"GH MAROS
+ (BANTIMURUNG)                            
+"},{"PID":"403993"},{"NAME":"LBS PAJAIANG                               
+       "},{"PID":"403994"},{"NAME":"LBS SALAPANRANGNGE                  
+              "},{"PID":"403995"},{"NAME":"LBS MALAUWE                  
+                     "},{"PID":"404003"},{"NAME":"LBS PANGKAL LIMO      
+                            "},{"PID":"404004"},{"NAME":"LBS SANREGO    
+                                   "},{"PID":"404023"},{"NAME":"LBS 
+ELLEKALUKUE                                   
+"},{"PID":"404055"},{"NAME":"LBS DCC DEPAG                              
+       "},{"PID":"404059"},{"NAME":"LBS DCC TELKOM                      
+              "},{"PID":"404063"},{"NAME":"REC DCC KALUBIBING           
+                     "},{"PID":"404065"},{"NAME":"LBS DCC MUTIARA       
+                            "},{"PID":"404081"},{"NAME":"REC DONRI-DONRI
+                                   "},{"PID":"404084"},{"NAME":"GH SAHID
+ (OUT GOING)                              
+"},{"PID":"404086"},{"NAME":"LBS ARMED                                  
+       "},{"PID":"404088"},{"NAME":"LBS PENGADILAN                      
+              "},{"PID":"404089"},{"NAME":"LBS P5                       
+                     "},{"PID":"404090"},{"NAME":"LBS P1                
+                            "},{"PID":"404092"},{"NAME":"LBS P3         
+                                   "},{"PID":"404093"},{"NAME":"LBS P6  
+                                          
+"},{"PID":"404094"},{"NAME":"LBS LEMMO'E                                
+       "},{"PID":"404095"},{"NAME":"LBS BNI                             
+              "},{"PID":"404096"},{"NAME":"LBS SULOLIPU                 
+                     "},{"PID":"404115"},{"NAME":"LBS DCC PAKKORO       
+                            "},{"PID":"404119"},{"NAME":"LBS DCC KAPPA  
+                                   "},{"PID":"404127"},{"NAME":"LBS DCC 
+TAQWA                                     
+"},{"PID":"404137"},{"NAME":"LBS BARUGA MUHAMMADIYAH                    
+       "},{"PID":"404139"},{"NAME":"LBS PANAMPU                         
+              "},{"PID":"404150"},{"NAME":"LBS LAWO                     
+                     "},{"PID":"404152"},{"NAME":"LBS DCC GARDU 10      
+                            "},{"PID":"404158"},{"NAME":"LBS UKKE'E     
+                                   "},{"PID":"404159"},{"NAME":"LBS 
+KALSIKALAU                                    
+"},{"PID":"404165"},{"NAME":"P_LEMPANGAN                                
+       "},{"PID":"404180"},{"NAME":"P_TAMBUA                            
+              "},{"PID":"404192"},{"NAME":"P_GTC                        
+                     "},{"PID":"404194"},{"NAME":"P_BOSOWA              
+                            "},{"PID":"404208"},{"NAME":"P_TURIKALE     
+                                   "},{"PID":"404219"},{"NAME":"INC#1 
+TANJUNG BUNGA                               
+"},{"PID":"404250"},{"NAME":"INC#1 MAROS                                
+       "},{"PID":"404265"},{"NAME":"P_IKIP                              
+              "},{"PID":"404280"},{"NAME":"P_UNM                        
+                     "},{"PID":"404295"},{"NAME":"P_PERUMNAS            
+                            "},{"PID":"404325"},{"NAME":"INC#1 
+PANAKUKANG 60                               
+"},{"PID":"404341"},{"NAME":"KOPEL # PANAKUKANG 60                      
+       "},{"PID":"404371"},{"NAME":"P_ADYAKSA                           
+              "},{"PID":"404386"},{"NAME":"P_CLARION                    
+                     "},{"PID":"404401"},{"NAME":"P_VETERAN             
+                            "},{"PID":"404416"},{"NAME":"P_LATANETE     
+                                   "},{"PID":"404432"},{"NAME":"LBS 
+PERTANI                                       
+"},{"PID":"404452"},{"NAME":"LBS TOMPE                                  
+       "},{"PID":"404550"},{"NAME":"GH PANGKEP                          
+              "},{"PID":"404556"},{"NAME":"GH PANGKEP (JL. JAMBU)       
+                     "},{"PID":"404571"},{"NAME":"LBS BRAVO             
+                            "},{"PID":"404585"},{"NAME":"GH MTOZ (INC 
+UNHAS)                               "},{"PID":"404589"},{"NAME":"LBS 
+BORONG UNTIA                                  
+"},{"PID":"404598"},{"NAME":"LBS PACCINONGAN                            
+       "},{"PID":"404606"},{"NAME":"GH MTOZ (INC MTOZ)                  
+              "},{"PID":"404609"},{"NAME":"GH MTOZ (OUT JKT INTILAND)   
+                     "},{"PID":"404612"},{"NAME":"GH MTOZ (OUT RAMAYANA)
+                            "},{"PID":"404616"},{"NAME":"LBS PERAWAT    
+                                   "},{"PID":"404625"},{"NAME":"LBS 
+AKPAR                                         
+"},{"PID":"404637"},{"NAME":"LBS MARANA                                 
+       "},{"PID":"404643"},{"NAME":"LBS_KIMA8                           
+              "},{"PID":"404652"},{"NAME":"LBS DENPASAR                 
+                     "},{"PID":"404660"},{"NAME":"LBS KALAMPA           
+                            "},{"PID":"404672"},{"NAME":"LBS LABUANG 
+BAJI                                  "},{"PID":"404674"},{"NAME":"LBS 
+KIPAS                                         
+"},{"PID":"404678"},{"NAME":"LBS BENTENG                                
+       "},{"PID":"404680"},{"NAME":"LBS BULUSIPONG                      
+              "},{"PID":"404682"},{"NAME":"LBS BONTOA                   
+                     "},{"PID":"404684"},{"NAME":"LBS MINASA UPA        
+                            "},{"PID":"404686"},{"NAME":"LBS MALENGKERI 
+                                   "},{"PID":"404688"},{"NAME":"LBS 
+DEPDAGRI                                      
+"},{"PID":"404690"},{"NAME":"REC GARESSI                                
+       "},{"PID":"404692"},{"NAME":"LBS WANIO                           
+              "},{"PID":"404702"},{"NAME":"LBS BATU PUALE               
+                     "},{"PID":"404704"},{"NAME":"LBS WARUE             
+                            "},{"PID":"404705"},{"NAME":"LBS KECAMATAN  
+                                   "},{"PID":"404708"},{"NAME":"LBS 
+KANNI                                         
+"},{"PID":"404713"},{"NAME":"LBS JAMESON                                
+       "},{"PID":"404724"},{"NAME":"LBS PADANG LAMPE                    
+              "},{"PID":"404738"},{"NAME":"LBS LAHONGKA                 
+                     "},{"PID":"404742"},{"NAME":"LBS H. KALLA          
+                            "},{"PID":"404746"},{"NAME":"LBS PERTOKOAN  
+                                   "},{"PID":"404755"},{"NAME":"LBS 
+LASIMING                                      
+"},{"PID":"404756"},{"NAME":"GH MTOZ (OUT MTOZ)                         
+       "},{"PID":"404760"},{"NAME":"GH TRANS (AKKARENA)                 
+              "},{"PID":"404771"},{"NAME":"GH TRANS (P_TRANS)           
+                     "},{"PID":"404777"},{"NAME":"GH TRANS (COUPLE)     
+                            "},{"PID":"404783"},{"NAME":"GH TRANS 
+(TRANS)                                  
+"},{"PID":"404802"},{"NAME":"LBS SWADAYA                                
+       "},{"PID":"404807"},{"NAME":"GH GUBERNUR (LATANETE)              
+              "},{"PID":"404813"},{"NAME":"GH GUBERNUR (KODAM)          
+                     "},{"PID":"404819"},{"NAME":"GH BOULEVARD 
+(ADHYAKSA)                           "},{"PID":"404825"},{"NAME":"GH 
+BOULEVARD (BOULEVARD)                          
+"},{"PID":"404831"},{"NAME":"GH BOULEVARD (DIAMOND)                     
+       "},{"PID":"404837"},{"NAME":"GH BOULEVARD (ACE)                  
+              "},{"PID":"404843"},{"NAME":"GH BOULEVARD (INDEX)         
+                     "},{"PID":"404849"},{"NAME":"GH BOULEVARD (BAJAMAS)
+                            "},{"PID":"404855"},{"NAME":"GH BOULEVARD 
+(RAMAYANA)                           "},{"PID":"404861"},{"NAME":"GH 
+BOULEVARD (CAREFOUR)                           
+"},{"PID":"404867"},{"NAME":"GH BOULEVARD (KOPEL)                       
+       "},{"PID":"404868"},{"NAME":"P_GANRA                             
+              "},{"PID":"404870"},{"NAME":"GH SUNGGUMINASA (EXP. 
+PANAKKUKANG)                "},{"PID":"404880"},{"NAME":"GH SUNGGUMINASA
+ (MALINO)                          "},{"PID":"404885"},{"NAME":"GH 
+SUNGGUMINASA (MANGASA)                         
+"},{"PID":"404892"},{"NAME":"GH SUNGGUMINASA (BASOI)                    
+       "},{"PID":"404910"},{"NAME":"GH POLDA (BADDOKA)                  
+              "},{"PID":"404911"},{"NAME":"LBS DCC ONANG                
+                     "},{"PID":"404916"},{"NAME":"GH POLDA (LAP. GOLF)  
+                            "},{"PID":"404921"},{"NAME":"GH WILAYAH 
+(TODOPULI)                             "},{"PID":"404926"},{"NAME":"LBS 
+BONTO RAMBA                                   
+"},{"PID":"404927"},{"NAME":"GH WILAYAH (WILAYAH)                       
+       "},{"PID":"404942"},{"NAME":"GH MALINO (INCOMING)                
+              "},{"PID":"404949"},{"NAME":"GH MALINO (KOTA MALINO)      
+                     "},{"PID":"404955"},{"NAME":"GH MALINO (KOTA 
+TAMAONA)                          "},{"PID":"404974"},{"NAME":"P_SOREANG
+                                         
+"},{"PID":"404987"},{"NAME":"P_LAPADDE                                  
+       "},{"PID":"405002"},{"NAME":"GH PANGKEP (MISTEN)                 
+              "},{"PID":"405006"},{"NAME":"LBS MANISA                   
+                     "},{"PID":"405007"},{"NAME":"LBS LAPRI             
+                            "},{"PID":"405008"},{"NAME":"GH TRANS (MEGA)
+                                   "},{"PID":"405019"},{"NAME":"LBS 
+SAPAYA                                        
+"},{"PID":"405021"},{"NAME":"LBS SALASAA                                
+       "},{"PID":"405035"},{"NAME":"LBS PABRIK KOREK                    
+              "},{"PID":"405040"},{"NAME":"KOPEL #2 TELLO               
+                     "},{"PID":"405044"},{"NAME":"P_GMTDC               
+                            "},{"PID":"405064"},{"NAME":"REC SAPAYA     
+                                   "},{"PID":"405094"},{"NAME":"REC 
+PATENE                                        
+"},{"PID":"405109"},{"NAME":"LBS NISSAN                                 
+       "},{"PID":"405114"},{"NAME":"LBS RAPPO KALELENG                  
+              "},{"PID":"405125"},{"NAME":"LBS USAH                     
+                     "},{"PID":"405135"},{"NAME":"LBS PURI              
+                            "},{"PID":"405154"},{"NAME":"LBS KALI BONE  
+                                   "},{"PID":"405169"},{"NAME":"LBS 
+DICCEKANG                                     
+"},{"PID":"405176"},{"NAME":"LBS GORO                                   
+       "},{"PID":"405184"},{"NAME":"LBS BANDARA                         
+              "},{"PID":"405191"},{"NAME":"LBS CIKOANG                  
+                     "},{"PID":"405202"},{"NAME":"LBS SIRI NA PACCE     
+                            "},{"PID":"405204"},{"NAME":"LBS WATU       
+                                   "},{"PID":"405214"},{"NAME":"REC 
+KAVALERI                                      
+"},{"PID":"405229"},{"NAME":"REC SILORO                                 
+       "},{"PID":"405247"},{"NAME":"LBS KODIM                           
+              "},{"PID":"405290"},{"NAME":"LBS COCA COLA                
+                     "},{"PID":"405530"},{"NAME":"LBS CITRALAND         
+                            "},{"PID":"405612"},{"NAME":"LBS TAMALATE   
+                                   
+"},{"PID":"405757"},{"NAME":null},{"PID":"405772"},{"NAME":"LBS PANCIRO 
+                                      "},{"PID":"406022"},{"NAME":"LBS 
+LAN                                           
+"},{"PID":"406099"},{"NAME":"LBS BONTO LEMPANGAN                        
+       "},{"PID":"406103"},{"NAME":"LBS KOMAT                           
+              "},{"PID":"406136"},{"NAME":"LBS TAMAN SEGITIGA           
+                     "},{"PID":"406145"},{"NAME":"LBS MACCINI           
+                            "},{"PID":"406153"},{"NAME":"LBS PESONA 
+BAROMBONG                              "},{"PID":"406160"},{"NAME":"LBS 
+DIAN HARAPAN                                  
+"},{"PID":"406206"},{"NAME":"LBS DICCEKANG                              
+       "},{"PID":"406258"},{"NAME":"GH CCC (RS SILOAM)                  
+              "},{"PID":"406283"},{"NAME":"LBS DPN KANTOR               
+                     "},{"PID":"406288"},{"NAME":"LBS_KIMA_RAYA_2       
+                            "},{"PID":"406294"},{"NAME":"LBS_KIMA_RAYA_4
+                                   
+"},{"PID":"406322"},{"NAME":"LBS_KAPASA RAYA                            
+       "},{"PID":"406327"},{"NAME":"LBS_KIMA_RAYA_10                    
+              "},{"PID":"406332"},{"NAME":"LBS SMP 30                   
+                     "},{"PID":"406337"},{"NAME":"LBS PERTAMINA         
+                            "},{"PID":"406342"},{"NAME":"LBS SULAWESI   
+                                   "},{"PID":"406347"},{"NAME":"LBS RM 
+PADANG                                     
+"},{"PID":"406352"},{"NAME":"LBS ADIPURA                                
+       "},{"PID":"406357"},{"NAME":"LBS RANGGONG                        
+              "},{"PID":"406362"},{"NAME":"LBS MANUNGGAL                
+                     "},{"PID":"406367"},{"NAME":"LBS UNITED TRACTOR    
+                            "},{"PID":"406372"},{"NAME":"LBS KHADIJAH   
+                                   "},{"PID":"406377"},{"NAME":"LBS 
+BOLANGI                                       
+"},{"PID":"406382"},{"NAME":"LBS CAMAT TAMALATE                         
+       "},{"PID":"406387"},{"NAME":"LBS TANAH KARAENG                   
+              "},{"PID":"406392"},{"NAME":"LBS KATANGKA                 
+                     "},{"PID":"406396"},{"NAME":"LBS TRIBUN TIMUR      
+                            "},{"PID":"406397"},{"NAME":"LBS BATANG 
+KALUKU                                 "},{"PID":"406402"},{"NAME":"LBS 
+SUNGAI SADDANG BARU                           
+"},{"PID":"406407"},{"NAME":"LBS INCE DAENG OYO                         
+       "},{"PID":"406412"},{"NAME":"LBS PASAR PBB                       
+              "},{"PID":"406417"},{"NAME":"LBS PASAR PBB                
+                     "},{"PID":"406422"},{"NAME":"LBS SERIGALA          
+                            "},{"PID":"406427"},{"NAME":"LBS PACUAN KUDA
+                                   "},{"PID":"406432"},{"NAME":"LBS 
+PASAR TODOPULI                                
+"},{"PID":"406442"},{"NAME":"LBS PAI                                    
+       "},{"PID":"406462"},{"NAME":"LBS SABBAMPARU                      
+              "},{"PID":"406467"},{"NAME":"LBS LATIMOJONG               
+                     "},{"PID":"406470"},{"NAME":"P_GOMBARA             
+                            "},{"PID":"406485"},{"NAME":"KOPEL # KIMA   
+                                   "},{"PID":"406488"},{"NAME":"LBS TPI 
+                                          
+"},{"PID":"406500"},{"NAME":"INC#2 KIMA                                 
+       "},{"PID":"406519"},{"NAME":"REC LAMPA                           
+              "},{"PID":"406529"},{"NAME":"INC#1 KIMA                   
+                     "},{"PID":"406544"},{"NAME":"P_MAROS               
+                            "},{"PID":"406559"},{"NAME":"P_UJUNG PANDANG
+                                   
+"},{"PID":"406574"},{"NAME":"P_AIRPORT                                  
+       "},{"PID":"406589"},{"NAME":"P_BANDARA                           
+              "},{"PID":"406592"},{"NAME":"REC SANRO BONE               
+                     "},{"PID":"406604"},{"NAME":"P_AURI                
+                            "},{"PID":"406619"},{"NAME":"P_PALISI       
+                                   "},{"PID":"406640"},{"NAME":"LBS 
+PESONA BAROMBONG                              
+"},{"PID":"406642"},{"NAME":"LBS PAM                                    
+       "},{"PID":"406643"},{"NAME":"REC BILA                            
+              "},{"PID":"406644"},{"NAME":"LBS KM 2 (P_LAPADDE)         
+                     "},{"PID":"406645"},{"NAME":"LBS JAWI2             
+                            "},{"PID":"406646"},{"NAME":"LBS KM 3       
+                                   "},{"PID":"406647"},{"NAME":"LBS KM 5
+                                          
+"},{"PID":"406648"},{"NAME":"LBS LUMPU'E                                
+       "},{"PID":"406650"},{"NAME":"LBS PAKKAPAO                        
+              "},{"PID":"406686"},{"NAME":"P_UNHAS                      
+                     "},{"PID":"406708"},{"NAME":"REC LEBONG            
+                            "},{"PID":"406754"},{"NAME":"LBS LAPOASE    
+                                   "},{"PID":"406766"},{"NAME":"LBS 
+AMPUTANG                                      
+"},{"PID":"406778"},{"NAME":"LBS BONTOSAPA                              
+       "},{"PID":"406790"},{"NAME":"LBS BATAS                           
+              "},{"PID":"406802"},{"NAME":"LBS BONE SEGERI              
+                     "},{"PID":"406814"},{"NAME":"LBS SAMANGGI          
+                            "},{"PID":"406838"},{"NAME":"LBS PERTAMA TOL
+                                   "},{"PID":"406843"},{"NAME":"LBS KTR 
+RANTING SUNGGUMINASA                      
+"},{"PID":"406871"},{"NAME":"REC BONTOPARANG                            
+       "},{"PID":"406886"},{"NAME":"LBS SUMUR                           
+              "},{"PID":"406941"},{"NAME":"REC LAMPOKO                  
+                     "},{"PID":"406943"},{"NAME":"LBS JOLENGNGE         
+                            "},{"PID":"406952"},{"NAME":"LBS BELAWAE    
+                                   "},{"PID":"406993"},{"NAME":"LBS 
+THAMRIN                                       
+"},{"PID":"407004"},{"NAME":"LBS TIPOLO                                 
+       "},{"PID":"407027"},{"NAME":"LBS MANIMPAHOI                      
+              "},{"PID":"407030"},{"NAME":"P_PBB                        
+                     "},{"PID":"407034"},{"NAME":"KOPEL #1 PANAKUKANG 30
+                            "},{"PID":"407042"},{"NAME":"KOPEL #1 
+PANAKUKANG 30                            
+"},{"PID":"407054"},{"NAME":"INC#2 PANAKUKANG 30                        
+       "},{"PID":"407067"},{"NAME":"INC#1 PANAKUKANG 30                 
+              "},{"PID":"407079"},{"NAME":"P_TODDOPULI                  
+                     "},{"PID":"407092"},{"NAME":"P_ALAUDDIN            
+                            "},{"PID":"407104"},{"NAME":"P_WILAYAH      
+                                   
+"},{"PID":"407116"},{"NAME":"P_BOULEVARD                                
+       "},{"PID":"407128"},{"NAME":"P_KAKATUA                           
+              "},{"PID":"407140"},{"NAME":"P_HERTASNING BARU            
+                     "},{"PID":"407159"},{"NAME":"P_BUKIT BARUGA        
+                            "},{"PID":"407163"},{"NAME":"P_PAROPO       
+                                   "},{"PID":"407171"},{"NAME":"P_KODAM 
+                                          
+"},{"PID":"407196"},{"NAME":"INC#1 TELLO                                
+       "},{"PID":"407208"},{"NAME":"P_MTOS                              
+              "},{"PID":"407221"},{"NAME":"P_RACING                     
+                     "},{"PID":"407233"},{"NAME":"P_TAMALANREA          
+                            "},{"PID":"407245"},{"NAME":"P_KASSI        
+                                   "},{"PID":"407257"},{"NAME":"P_POLTEK
+                                          
+"},{"PID":"407269"},{"NAME":"P_PAM                                      
+       "},{"PID":"407273"},{"NAME":"P_PARAMBANUA                        
+              "},{"PID":"407360"},{"NAME":"P_PENGAYOMAN                 
+                     "},{"PID":"407384"},{"NAME":"LBS SIRUA             
+                            "},{"PID":"407386"},{"NAME":"P_IPDN         
+                                   "},{"PID":"407398"},{"NAME":"KOPEL #1
+ SUNGGUMINASA                             
+"},{"PID":"407411"},{"NAME":"INC#1 SUNGGUMINASA                         
+       "},{"PID":"407456"},{"NAME":"LBS DAENG NGEPPE                    
+              "},{"PID":"407460"},{"NAME":"P_TAKALAR                    
+                     "},{"PID":"407491"},{"NAME":"LBS JEMBATAN PAOTERE  
+                            "},{"PID":"407502"},{"NAME":"P_BAROMBONG    
+                                   "},{"PID":"407514"},{"NAME":"KOPEL #2
+ SUNGGUMINASA                             
+"},{"PID":"407527"},{"NAME":"REC SUGIALLE                               
+       "},{"PID":"407531"},{"NAME":"LBS ATMAJAYA                        
+              "},{"PID":"407569"},{"NAME":"P_PABRIK GULA                
+                     "},{"PID":"407588"},{"NAME":"INC#3 TALLASA         
+                            "},{"PID":"407590"},{"NAME":"INC#1 KIMA     
+                                   "},{"PID":"407602"},{"NAME":"P_WIKA  
+                                          
+"},{"PID":"407615"},{"NAME":"P_ALUMINIUM                                
+       "},{"PID":"407627"},{"NAME":"P_BONTOA                            
+              "},{"PID":"407639"},{"NAME":"P_SALODONG                   
+                     "},{"PID":"407651"},{"NAME":"P_POKPHAND            
+                            "},{"PID":"407682"},{"NAME":"P_LENGKESE     
+                                   
+"},{"PID":"407688"},{"NAME":"P_EXPRESS JENEPONTO                        
+       "},{"PID":"407693"},{"NAME":"P_GALESONG                          
+              "},{"PID":"407726"},{"NAME":"KOPEL #1 TALLASA             
+                     "},{"PID":"407737"},{"NAME":"P_PALLEKO             
+                            "},{"PID":"407743"},{"NAME":"LBS ZAT ASAM   
+                                   "},{"PID":"407751"},{"NAME":"LBS 
+MUHAJIRIN                                     
+"},{"PID":"407759"},{"NAME":"LBS_TELKOMAS 2                             
+       "},{"PID":"407767"},{"NAME":"LBS PONGTIKU                        
+              "},{"PID":"407775"},{"NAME":"LBS BATARA BIRA              
+                     "},{"PID":"407783"},{"NAME":"LBS SATRIA            
+                            "},{"PID":"407791"},{"NAME":"LBS PAKKASALO  
+                                   "},{"PID":"407799"},{"NAME":"LBS 
+KOMPLEKS BARUGA                               
+"},{"PID":"407807"},{"NAME":"LBS IPDN                                   
+       "},{"PID":"407815"},{"NAME":"LBS PELNI                           
+              "},{"PID":"407823"},{"NAME":"LBS GELAEL                   
+                     "},{"PID":"407831"},{"NAME":"LBS VILA MAS          
+                            "},{"PID":"407839"},{"NAME":"LBS DOJA       
+                                   "},{"PID":"407867"},{"NAME":"LBS 
+SUMANTRI                                      
+"},{"PID":"408049"},{"NAME":"KOPEL #2 TALLASA                           
+       "},{"PID":"408060"},{"NAME":"INC#2 TALLASA                       
+              "},{"PID":"408091"},{"NAME":"P_METRO                      
+                     "},{"PID":"408094"},{"NAME":"INC#2 TELLO           
+                            "},{"PID":"408108"},{"NAME":"KOPEL #3 TELLO 
+                                   
+"},{"PID":"408132"},{"NAME":"P_UJUNGLOE                                 
+       "},{"PID":"408149"},{"NAME":"LBS SAPOANG                         
+              "},{"PID":"408179"},{"NAME":"LBS SARAMPU                  
+                     "},{"PID":"408192"},{"NAME":"P_EXPRESS BULUKUMBA   
+                            "},{"PID":"408214"},{"NAME":"P_SAPIRIA      
+                                   "},{"PID":"408239"},{"NAME":"LBS 
+MANURUNG                                      
+"},{"PID":"408242"},{"NAME":"P_PONRE                                    
+       "},{"PID":"408263"},{"NAME":"LBS PATOKE                          
+              "},{"PID":"408275"},{"NAME":"LBS TIRTA                    
+                     "},{"PID":"408325"},{"NAME":"LBS POKKO             
+                            "},{"PID":"408332"},{"NAME":"P_PASAR KARISA 
+                                   "},{"PID":"408337"},{"NAME":"P_TOLO  
+                                          
+"},{"PID":"408348"},{"NAME":"P_BANTAENG                                 
+       "},{"PID":"408418"},{"NAME":"P_BULUDUA                           
+              "},{"PID":"408431"},{"NAME":"LBS PARANGLABUA              
+                     "},{"PID":"408432"},{"NAME":"P_TAKKALASI           
+                            "},{"PID":"408451"},{"NAME":"LBS BELAKA     
+                                   
+"},{"PID":"408465"},{"NAME":"P_LALOLANG                                 
+       "},{"PID":"408476"},{"NAME":"P_BARRU                             
+              "},{"PID":"408513"},{"NAME":"LBS TAMANGAPA                
+                     "},{"PID":"408531"},{"NAME":"P_RRI                 
+                            "},{"PID":"408537"},{"NAME":"P_GHSM         
+                                   "},{"PID":"408543"},{"NAME":"KOPEL #3
+ SUNGGUMINASA                             
+"},{"PID":"408549"},{"NAME":"INC#2 SUNGGUMINASA                         
+       "},{"PID":"408660"},{"NAME":"P_KIMA                              
+              "},{"PID":"408672"},{"NAME":"INC#2 DAYA                   
+                     "},{"PID":"408683"},{"NAME":"P_BADDOKA             
+                            "},{"PID":"408689"},{"NAME":"KOPEL #3 DAYA  
+                                   
+"},{"PID":"408694"},{"NAME":"P_PACCERAKKANG                             
+       "},{"PID":"408705"},{"NAME":"P_EFFEM                             
+              "},{"PID":"408712"},{"NAME":"P_KAPASA                     
+                     "},{"PID":"408716"},{"NAME":"P_SANMARU             
+                            "},{"PID":"408727"},{"NAME":"KOPEL #1 DAYA  
+                                   
+"},{"PID":"408735"},{"NAME":"P_LAPANGAN GOLF                            
+       "},{"PID":"408738"},{"NAME":"KOPEL #2 DAYA                       
+              "},{"PID":"408765"},{"NAME":"P_SANRANGAN                  
+                     "},{"PID":"408776"},{"NAME":"INC#1 DAYA            
+                            "},{"PID":"409412"},{"NAME":"LBS GUDANG 30  
+                                   "},{"PID":"409441"},{"NAME":"REC DCC 
+TACCORONG                                 
+"},{"PID":"409454"},{"NAME":"REC DCC ELA-ELA                            
+       "},{"PID":"409467"},{"NAME":"REC DCC SAMAENRE                    
+              "},{"PID":"409480"},{"NAME":"REC DCC SAPIRI               
+                     "},{"PID":"409499"},{"NAME":"LBS ULAWENG           
+                            "},{"PID":"409500"},{"NAME":"LBS TANALE     
+                                   "},{"PID":"409501"},{"NAME":"LBS 
+BULUDUA                                       
+"},{"PID":"409519"},{"NAME":"LBS TEROWONGAN                             
+       "},{"PID":"409527"},{"NAME":"LBS KIMA 17                         
+              "},{"PID":"409535"},{"NAME":"LBS KIMA 16                  
+                     "},{"PID":"409551"},{"NAME":"LBS ASRAMA HAJI       
+                            "},{"PID":"409559"},{"NAME":"LBS CV DEWI    
+                                   "},{"PID":"409567"},{"NAME":"LBS 
+RADIO PANTAI                                  
+"},{"PID":"409583"},{"NAME":"LBS CONTINENT                              
+       "},{"PID":"409591"},{"NAME":"LBS PASAR DAYA                      
+              "},{"PID":"409599"},{"NAME":"LBS TERMINAL                 
+                     "},{"PID":"409607"},{"NAME":"LBS CENDRAWASIH 3     
+                            "},{"PID":"409615"},{"NAME":"LBS WISMA KARE 
+                                   "},{"PID":"409623"},{"NAME":"LBS 
+TALIA                                         
+"},{"PID":"409631"},{"NAME":"LBS ANUGERAH                               
+       "},{"PID":"409644"},{"NAME":"GH RAYON UTARA (ACHMAD YANI)        
+              "},{"PID":"409647"},{"NAME":"GH RAYON UTARA (POLDA)       
+                     "},{"PID":"409650"},{"NAME":"GH RAYON UTARA (OUT 
+APD)                          "},{"PID":"409658"},{"NAME":"LBS PENGHIBUR
+                                     "},{"PID":"409671"},{"NAME":"REC 
+AMPARITA                                      
+"},{"PID":"409674"},{"NAME":"LBS KARRANG                                
+       "},{"PID":"409675"},{"NAME":"REC CABENGE                         
+              "},{"PID":"409677"},{"NAME":"LBS KP BARU (P_TAKKALASI)    
+                     "},{"PID":"409679"},{"NAME":"REC LANCIRANG         
+                            "},{"PID":"409680"},{"NAME":"LBS PERTANIAN  
+                                   "},{"PID":"409829"},{"NAME":"LBS P8  
+                                          
+"},{"PID":"409831"},{"NAME":"LBS P7                                     
+       "},{"PID":"409835"},{"NAME":"LBS DONRI-DONRI                     
+              "},{"PID":"409841"},{"NAME":"LBS ANTARA                   
+                     "},{"PID":"409850"},{"NAME":"LBS BULU TELLU        
+                            "},{"PID":"409889"},{"NAME":"LBS PERTAMA 
+BOSOWA                                "},{"PID":"409924"},{"NAME":"LBS 
+SUMARORONG                                    
+"},{"PID":"409925"},{"NAME":"REC DCC SUMARORONG                         
+       "},{"PID":"409941"},{"NAME":"LBS SINDAGAMANIK                    
+              "},{"PID":"409945"},{"NAME":"P_RAPPANG                    
+                     "},{"PID":"409954"},{"NAME":"P_PANGKAJENE          
+                            "},{"PID":"409956"},{"NAME":"P_ENREKANG     
+                                   
+"},{"PID":"409961"},{"NAME":"P_GANGGAWA                                 
+       "},{"PID":"409973"},{"NAME":"LBS MANDING                         
+              "},{"PID":"409976"},{"NAME":"P_AMPARITA                   
+                     "},{"PID":"409980"},{"NAME":"LBS STKIP             
+                            "},{"PID":"409981"},{"NAME":"LBS MATAKALI   
+                                   "},{"PID":"409992"},{"NAME":"LBS 
+TIMORO                                        
+"},{"PID":"409994"},{"NAME":"LBS LUMIKO                                 
+       "},{"PID":"409995"},{"NAME":"P_BULETE                            
+              "},{"PID":"410004"},{"NAME":"LBS KEANG                    
+                     "},{"PID":"410027"},{"NAME":"LBS SALOKAYU          
+                            "},{"PID":"410029"},{"NAME":"LBS AMPALLAS   
+                                   "},{"PID":"410052"},{"NAME":"P_BIRU  
+                                          
+"},{"PID":"410057"},{"NAME":"LBS HUSNI THAMRIN                          
+       "},{"PID":"410063"},{"NAME":"LBS PONGTIKU                        
+              "},{"PID":"410068"},{"NAME":"LBS MAKKASAU                 
+                     "},{"PID":"410077"},{"NAME":"LBS TOYOTA (P_GALUNG) 
+                            "},{"PID":"410078"},{"NAME":"LBS BIN        
+                                   "},{"PID":"410087"},{"NAME":"P_WELADO
+                                          
+"},{"PID":"410091"},{"NAME":"P_TEMPE                                    
+       "},{"PID":"410094"},{"NAME":"LBS TALUDU                          
+              "},{"PID":"410099"},{"NAME":"LBS LIMBENG                  
+                     "},{"PID":"410105"},{"NAME":"LBS MALIAYA           
+                            "},{"PID":"410113"},{"NAME":"P_SOMPE        
+                                   "},{"PID":"410123"},{"NAME":"LBS 
+MOTORIZE MALUNDA                              
+"},{"PID":"410131"},{"NAME":"P_ULAWENG                                  
+       "},{"PID":"410135"},{"NAME":"LBS MALUNDA                         
+              "},{"PID":"410140"},{"NAME":"P_ABG                        
+                     "},{"PID":"410183"},{"NAME":"LBS LALAMPANUA        
+                            "},{"PID":"410189"},{"NAME":"LBS ALIYAH     
+                                   "},{"PID":"410202"},{"NAME":"LBS 
+PASAR (P_SOMBA)                               
+"},{"PID":"410225"},{"NAME":"LBS RANGAS                                 
+       "},{"PID":"410228"},{"NAME":"P_BALLE                             
+              "},{"PID":"410239"},{"NAME":"P_LAMATTIRILAU               
+                     "},{"PID":"410254"},{"NAME":"LBS 721 (P_KOTA)      
+                            "},{"PID":"410261"},{"NAME":"LBS GEREJA     
+                                   "},{"PID":"410271"},{"NAME":"LBS 
+KATITING                                      
+"},{"PID":"410272"},{"NAME":"LBS TANDUNG                                
+       "},{"PID":"410285"},{"NAME":"LBS GALUNG LOMBOK                   
+              "},{"PID":"410293"},{"NAME":"LBS KARAMA                   
+                     "},{"PID":"410298"},{"NAME":"P_MESJID AGUNG        
+                            "},{"PID":"410309"},{"NAME":"LBS LEKOPADIS  
+                                   "},{"PID":"410314"},{"NAME":"LBS 
+TUTALLU                                       
+"},{"PID":"410316"},{"NAME":"P_BAJOE                                    
+       "},{"PID":"410318"},{"NAME":"LBS TINAMBUNG                       
+              "},{"PID":"410334"},{"NAME":"LBS PAPPANG                  
+                     "},{"PID":"410335"},{"NAME":"LBS PAREPPE           
+                            "},{"PID":"410337"},{"NAME":"LBS PANYAMPA   
+                                   "},{"PID":"410342"},{"NAME":"LBS DESA
+ BARU                                     
+"},{"PID":"410346"},{"NAME":"LBS SIDODADI                               
+       "},{"PID":"410353"},{"NAME":"P_ULOE                              
+              "},{"PID":"410416"},{"NAME":"P_TANRU TEDONG               
+                     "},{"PID":"410417"},{"NAME":"LBS KUNINGAN          
+                            "},{"PID":"410431"},{"NAME":"REC WONOMULYO  
+                                   "},{"PID":"410443"},{"NAME":"REC 
+SOMBA                                         
+"},{"PID":"410444"},{"NAME":"REC RANGAS                                 
+       "},{"PID":"410464"},{"NAME":"LBS DCC TASIU                       
+              "},{"PID":"410504"},{"NAME":"LBS DCC LEBENG               
+                     "},{"PID":"410516"},{"NAME":"LBS DCC KODIM         
+                            "},{"PID":"410609"},{"NAME":"LBS BARAMBANG  
+                                   "},{"PID":"410659"},{"NAME":"LBS USA 
+                                          
+"},{"PID":"410763"},{"NAME":"LBS PLTD                                   
+       "},{"PID":"410770"},{"NAME":"LBS SOMBA                           
+              "},{"PID":"410773"},{"NAME":"LBS GALUNG (P_KOTA)          
+                     "},{"PID":"410813"},{"NAME":"LBS BATAS (P_RANTEPAO)
+                            "},{"PID":"410814"},{"NAME":"LBS MASSILIANA 
+                                   "},{"PID":"410820"},{"NAME":"LBS KM 2
+ (P_EXPRESS MAKALE)                       
+"},{"PID":"410841"},{"NAME":"GH RANTEPAO (INC P_RANTEPAO)               
+       "},{"PID":"410842"},{"NAME":"GH RANTEPAO (JUR TONDON)            
+              "},{"PID":"410843"},{"NAME":"GH RANTEPAO (JUR T2)         
+                     "},{"PID":"410844"},{"NAME":"GH RANTEPAO (JUR TVRI)
+                            "},{"PID":"410845"},{"NAME":"GH RANTEPAO 
+(JUR RANTEPAO KOTA)                   "},{"PID":"410846"},{"NAME":"GH 
+RANTEPAO (INC P_PONGTIKU)                      
+"},{"PID":"410847"},{"NAME":"GH MAKALE (P_LAKIPADADA)                   
+       "},{"PID":"410848"},{"NAME":"P_BANDARA (WATAMPONE)               
+              "},{"PID":"410849"},{"NAME":"GH MAKALE (P_EXPRESS MALEA)  
+                     "},{"PID":"410850"},{"NAME":"GH MAKALE (P_TINORING)
+                            "},{"PID":"410853"},{"NAME":"LBS CAPKAR     
+                                   "},{"PID":"410854"},{"NAME":"LBS 
+LAMASI PANTAI                                 
+"},{"PID":"410855"},{"NAME":"LBS LAMASI KOTA                            
+       "},{"PID":"410856"},{"NAME":"LBS PERTIGAAN LAMASI                
+              "},{"PID":"410858"},{"NAME":"VCB SABANG                   
+                     "},{"PID":"410865"},{"NAME":"VCB KURI-KURI         
+                            "},{"PID":"410866"},{"NAME":"LBS KAPIDI     
+                                   "},{"PID":"410867"},{"NAME":"REC 
+KAPIDI                                        
+"},{"PID":"410874"},{"NAME":"LBS 721 P(P_A.ADJEMA)                      
+       "},{"PID":"410876"},{"NAME":"LBS PATTIMURA (P_A.DJEMMA)          
+              "},{"PID":"410877"},{"NAME":"LBS A.RAZAK                  
+                     "},{"PID":"410878"},{"NAME":"LBS H.KALLA 
+(P_MERDEKA)                           "},{"PID":"410879"},{"NAME":"LBS 
+MUNGKASA                                      
+"},{"PID":"410881"},{"NAME":"LBS JEND.SUDIRMAN (P_LAGALIGO)             
+       "},{"PID":"410883"},{"NAME":"LBS SONGKA                          
+              "},{"PID":"410884"},{"NAME":"LBS BUA                      
+                     "},{"PID":"410885"},{"NAME":"LBS MARIO BARU        
+                            "},{"PID":"410886"},{"NAME":"LBS PURANGI    
+                                   "},{"PID":"410891"},{"NAME":"LBS 
+PAMMANU                                       
+"},{"PID":"410893"},{"NAME":"REC NOLING (P_NOLING)                      
+       "},{"PID":"410896"},{"NAME":"LBS LAROMPONG                       
+              "},{"PID":"410897"},{"NAME":"LBS SALUKALUKU               
+                     "},{"PID":"410901"},{"NAME":"LBS SAMPEANG          
+                            "},{"PID":"410912"},{"NAME":"LBS TARENGGE   
+                                   "},{"PID":"410969"},{"NAME":"LBS 
+LAGALIGO                                      
+"},{"PID":"410975"},{"NAME":"LBS  S.RONGKONG                            
+       "},{"PID":"410976"},{"NAME":"LBS TEMMA LEBBA                     
+              "},{"PID":"410980"},{"NAME":"LBS PANGKAL KIMA             
+                     "},{"PID":"410989"},{"NAME":"GH MAROS (GH POWER 
+HOUSE)                         "},{"PID":"410994"},{"NAME":"LBS TUWUNG  
+                                      "},{"PID":"411024"},{"NAME":"LBS 
+DATO PATIMANG                                 
+"},{"PID":"411070"},{"NAME":"P_BUA                                      
+       "},{"PID":"411091"},{"NAME":"P_A.DJEMMA                          
+              "},{"PID":"411098"},{"NAME":"P_MAWA                       
+                     "},{"PID":"411110"},{"NAME":"P_MERDEKA             
+                            "},{"PID":"411119"},{"NAME":"P_SABANG       
+                                   
+"},{"PID":"411132"},{"NAME":"P_BINANGA                                  
+       "},{"PID":"411134"},{"NAME":"P_LAGALIGO                          
+              "},{"PID":"411145"},{"NAME":"P_LATUPA                     
+                     "},{"PID":"411171"},{"NAME":"P_BELOPA              
+                            "},{"PID":"411200"},{"NAME":"P_TANDIPAU     
+                                   "},{"PID":"411262"},{"NAME":"P_GALUNG
+                                          
+"},{"PID":"411269"},{"NAME":"P_KELAPA TUJUH                             
+       "},{"PID":"411281"},{"NAME":"P_SUDIRMAN (PALOPO)                 
+              "},{"PID":"411315"},{"NAME":"P_HUSNI THAMRIN              
+                     "},{"PID":"411401"},{"NAME":"LBS ALLUPANG          
+                            "},{"PID":"411413"},{"NAME":"P_RANGAS       
+                                   "},{"PID":"411544"},{"NAME":"GH MATSC
+ (GH POWER HOUSE)                         
+"},{"PID":"411551"},{"NAME":"GH MATSC (GH BANDARA)                      
+       "},{"PID":"411556"},{"NAME":"GH MATSC (OUTGOING)                 
+              "},{"PID":"411560"},{"NAME":"P_JAMPUE                     
+                     "},{"PID":"411561"},{"NAME":"INC TRAFO #2 GI 
+PINRANG                           "},{"PID":"411585"},{"NAME":"P_LANGNGA
+                                         
+"},{"PID":"411599"},{"NAME":"P_KARTINI                                  
+       "},{"PID":"411610"},{"NAME":"P_PEKKABATA                         
+              "},{"PID":"411618"},{"NAME":"P_LASINRANG                  
+                     "},{"PID":"411628"},{"NAME":"P_TIROANG             
+                            "},{"PID":"411644"},{"NAME":"P_KARIANGO     
+                                   "},{"PID":"411650"},{"NAME":"INC 
+TRAFO #1 GI PINRANG                           
+"},{"PID":"411670"},{"NAME":"P_CEMPA                                    
+       "},{"PID":"411691"},{"NAME":"REC DCC BELO                        
+              "},{"PID":"411711"},{"NAME":"GH POWER HOUSE (GH MATSC)    
+                     "},{"PID":"411718"},{"NAME":"GH POWER HOUSE (GH 
+BANDARA)                       "},{"PID":"411722"},{"NAME":"REC PATIDI  
+                                      "},{"PID":"411723"},{"NAME":"GH 
+POWER HOUSE (OUTGOING)                         
+"},{"PID":"411726"},{"NAME":"LBS SAPOTA                                 
+       "},{"PID":"411728"},{"NAME":"LBS MARAWI                          
+              "},{"PID":"411731"},{"NAME":"P_TINAMBUNG                  
+                     "},{"PID":"411735"},{"NAME":"GH POWER HOUSE (GH 
+MAROS)                         "},{"PID":"411783"},{"NAME":"LBS PEO     
+                                      "},{"PID":"411796"},{"NAME":"LBS 
+JEMBATAN LENGKESE                             
+"},{"PID":"411816"},{"NAME":"P_SOMBA                                    
+       "},{"PID":"411840"},{"NAME":"LBS PARIRISI                        
+              "},{"PID":"411848"},{"NAME":"LBS SUTAMI                   
+                     "},{"PID":"411864"},{"NAME":"LBS LANDASAN PACU     
+                            "},{"PID":"411876"},{"NAME":"LBS ANTANG     
+                                   "},{"PID":"411888"},{"NAME":"LBS 
+MANGEMPANG                                    
+"},{"PID":"411900"},{"NAME":"LBS PAJUKUKANG                             
+       "},{"PID":"411921"},{"NAME":"P_LANTORA                           
+              "},{"PID":"412193"},{"NAME":"LBS UJUNG BULO               
+                     "},{"PID":"412218"},{"NAME":"LBS TOL LAMA          
+                            "},{"PID":"412319"},{"NAME":"LBS UJUNG TOL  
+                                   "},{"PID":"412379"},{"NAME":"LBS 
+SEMPANG                                       
+"},{"PID":"412382"},{"NAME":"LBS AKA-AKAE                               
+       "},{"PID":"412384"},{"NAME":"LBS KASERALAU                       
+              "},{"PID":"412386"},{"NAME":"LBS WODDI                    
+                     "},{"PID":"412414"},{"NAME":"LBS LANIPA            
+                            "},{"PID":"412415"},{"NAME":"LBS CILALANG   
+                                   "},{"PID":"412438"},{"NAME":"REC DCC 
+TOGO-TOGO                                 
+"},{"PID":"412491"},{"NAME":"P_EXPRESS MAKALE                           
+       "},{"PID":"412510"},{"NAME":"P_RANTEPAO                          
+              "},{"PID":"412556"},{"NAME":"P_SANGALLA                   
+                     "},{"PID":"412571"},{"NAME":"P_PONGTIKU            
+                            "},{"PID":"412598"},{"NAME":"P_WALMAS       
+                                   
+"},{"PID":"412607"},{"NAME":"P_SAMPODDO                                 
+       "},{"PID":"412745"},{"NAME":"P_PAPPANG                           
+              "},{"PID":"412756"},{"NAME":"P_MAMASA                     
+                     "},{"PID":"412768"},{"NAME":"P_PAKU                
+                            "},{"PID":"412860"},{"NAME":"LBS ARAWA      
+                                   "},{"PID":"413088"},{"NAME":"LBS 
+AMARANG                                       
+"},{"PID":"413131"},{"NAME":"LBS WISMA KARE                             
+       "},{"PID":"413258"},{"NAME":"P_KOTA                              
+              "},{"PID":"413459"},{"NAME":"GB INDOFOOD (INC PELINDO)    
+                     "},{"PID":"413463"},{"NAME":"GH INDOFOOD (OUT 
+KALIMANTAN)                      "},{"PID":"413467"},{"NAME":"GH 
+INDOFOOD (INC CARAKA)                          
+"},{"PID":"413471"},{"NAME":"GB INDOFOOD (INC INDOFOOD)                 
+       "},{"PID":"413479"},{"NAME":"GB INDOFOOD (OUTGOING)              
+              "},{"PID":"413483"},{"NAME":"GH INDOFOOD (KOPEL)          
+                     "},{"PID":"413487"},{"NAME":"GH IMMIM (OUT 
+VICTORIA)                           "},{"PID":"413491"},{"NAME":"GH 
+IMMIM (INC PELAMONIA)                          
+"},{"PID":"413495"},{"NAME":"GH IMMIM (OUT SENTOSA)                     
+       "},{"PID":"413499"},{"NAME":"GH ISTANA (INC LATANETE)            
+              "},{"PID":"413503"},{"NAME":"GH ISTANA (INC SUDIRMAN)     
+                     "},{"PID":"413507"},{"NAME":"GH ISTANA (INC 
+PELAMONIA)                         "},{"PID":"413519"},{"NAME":"GH 
+SILOAM (OUT INDOLINE)                          
+"},{"PID":"413523"},{"NAME":"GH SILOAM (INC GH CCC)                     
+       "},{"PID":"413531"},{"NAME":"GB WISMA KALLA (MERPATI)            
+              "},{"PID":"413535"},{"NAME":"GB WISMA KALLA (GH UJBA)     
+                     "},{"PID":"413552"},{"NAME":"GH WILAYAH (WILAYAH)  
+                            "},{"PID":"413589"},{"NAME":"GH 
+NUSAKAMBANGAN (OUT APD)                        
+"},{"PID":"413593"},{"NAME":"GH NUSAKAMBANGAN (INC ACHMAD YANI BAWAH)   
+       "},{"PID":"413597"},{"NAME":"GH NUSAKAMBANGAN (OUT ACHMAD YANI 
+ATAS)           "},{"PID":"413601"},{"NAME":"GH NUSAKAMBANGAN (OUT 
+BINTANG)                    "},{"PID":"600001"},{"NAME":"CO BUJUNG LOMPO
+                                   "},{"PID":"600002"},{"NAME":"CO 
+PACIRO                                         
+"},{"PID":"600003"},{"NAME":"CO WIRINGTASI                              
+       "},{"PID":"600004"},{"NAME":"FAI PARENRING                       
+              "},{"PID":"600005"},{"NAME":"FI AKKAJENG                  
+                     "},{"PID":"600006"},{"NAME":"FI ALLEPORENG         
+                            "},{"PID":"600007"},{"NAME":"FI BILAJENG    
+                                   "},{"PID":"600008"},{"NAME":"FI BULU 
+ULAWENG                                   
+"},{"PID":"600009"},{"NAME":"FI CORAWALI                                
+       "},{"PID":"600010"},{"NAME":"FI EXIM KUPA                        
+              "},{"PID":"600011"},{"NAME":"FI KARAWANG                  
+                     "},{"PID":"600012"},{"NAME":"FI LOMPOE             
+                            "},{"PID":"600013"},{"NAME":"FI PEKKAE      
+                                   "},{"PID":"600014"},{"NAME":"FI 
+PESANTREN                                      
+"},{"PID":"600015"},{"NAME":"FI SAMBAMPARU                              
+       "},{"PID":"600016"},{"NAME":"FI TANALLE                          
+              "},{"PID":"600017"},{"NAME":"FI TUPPU                     
+                     "},{"PID":"600018"},{"NAME":"GH BELOPA ( JUR BELOPA
+ KOTA)                      "},{"PID":"600019"},{"NAME":"GH BELOPA ( JUR
+ BELOPA UTARA)                     "},{"PID":"600020"},{"NAME":"GH 
+BELOPA (INC P_BELOPA)                          
+"},{"PID":"600021"},{"NAME":"GH BUNDE                                   
+       "},{"PID":"600022"},{"NAME":"GH CAKKARUDU (P_BONE-BONE)          
+              "},{"PID":"600023"},{"NAME":"GH CAKKARUDU (P_MASAMBA)     
+                     "},{"PID":"600024"},{"NAME":"GH CAKKARUDU 
+(P_SUKAMAJU)                         "},{"PID":"600025"},{"NAME":"GH 
+ENREKANG (INC P_ENREKANG)                      
+"},{"PID":"600026"},{"NAME":"GH ENREKANG (JUR BATILI)                   
+       "},{"PID":"600027"},{"NAME":"GH ENREKANG (JUR PENGADILAN)        
+              "},{"PID":"600028"},{"NAME":"GH MASAMBA (INC P_SABANG)    
+                     "},{"PID":"600029"},{"NAME":"GH PADANG SAPPA (JUR 
+NOLING)                      "},{"PID":"600030"},{"NAME":"GH PADANG 
+SAPPA (JUR PATEDONG)                    "},{"PID":"600031"},{"NAME":"GH 
+PADANG SAPPA (JUR PATTEDONG)                   
+"},{"PID":"600032"},{"NAME":"GH RAPPANG (INC P_ENREKANG)                
+       "},{"PID":"600033"},{"NAME":"GH RAPPANG (INC P_RAPPANG)          
+              "},{"PID":"600034"},{"NAME":"GH RAPPANG (JUR P_TANRU 
+TEDONG)                   "},{"PID":"600035"},{"NAME":"GH RAPPANG (JUR 
+P_TIROANG)                        "},{"PID":"600036"},{"NAME":"GH 
+SINYONYO (INC HUSNI THAMRIN)                   
+"},{"PID":"600037"},{"NAME":"GH SINYONYO (JUR LEBENG)                   
+       "},{"PID":"600038"},{"NAME":"GH SINYONYO (JUR TASIU)             
+              "},{"PID":"600039"},{"NAME":"GH TAKALALLA (JUR BULUDUA)   
+                     "},{"PID":"600040"},{"NAME":"GH TAKALALLA (JUR 
+MUTIARA)                        "},{"PID":"600041"},{"NAME":"GH TANJONGE
+ (INC P_CABENGE)                       "},{"PID":"600042"},{"NAME":"GH 
+TANJONGE (INC P_WAJO)                          
+"},{"PID":"600043"},{"NAME":"GH TANJONGE (JUR TAKKU)                    
+       "},{"PID":"600044"},{"NAME":"INC TRAFO #1 GI BARRU               
+              "},{"PID":"600045"},{"NAME":"INC TRAFO #1 GI PARE         
+                     "},{"PID":"600046"},{"NAME":"INC TRAFO #1 GI 
+SOPPENG                           "},{"PID":"600047"},{"NAME":"INC TRAFO
+ #2 GI PARE                              
+"},{"PID":"600048"},{"NAME":"KOPEL (GI PARE)                            
+       "},{"PID":"600049"},{"NAME":"KOPEL 1 (GI SOPPENG)                
+              "},{"PID":"600050"},{"NAME":"LBS A. CAMMI                 
+                     "},{"PID":"600051"},{"NAME":"LBS BALLA BAJO        
+                            "},{"PID":"600052"},{"NAME":"LBS BALULU     
+                                   "},{"PID":"600053"},{"NAME":"LBS 
+BARANTI RAPPANG                               
+"},{"PID":"600054"},{"NAME":"LBS BARUGA                                 
+       "},{"PID":"600055"},{"NAME":"LBS BATU SITANDUK                   
+              "},{"PID":"600056"},{"NAME":"LBS BONTO BUAYA              
+                     "},{"PID":"600057"},{"NAME":"LBS BUMI ASIH         
+                            "},{"PID":"600058"},{"NAME":"LBS CAPGAR     
+                                   "},{"PID":"600059"},{"NAME":"LBS 
+DEPAN KANTOR                                  
+"},{"PID":"600060"},{"NAME":"LBS EXPRESS CAMBA                          
+       "},{"PID":"600061"},{"NAME":"LBS KAENG                           
+              "},{"PID":"600062"},{"NAME":"LBS KALLANG BARU             
+                     "},{"PID":"600063"},{"NAME":"LBS KANDOA            
+                            "},{"PID":"600064"},{"NAME":"LBS KANTOR 
+MAMBI                                  "},{"PID":"600065"},{"NAME":"LBS 
+KAPPA                                         
+"},{"PID":"600066"},{"NAME":"LBS KODIM                                  
+       "},{"PID":"600067"},{"NAME":"LBS KTR                             
+              "},{"PID":"600068"},{"NAME":"LBS KTR CAMAT (P_TAKALALLA)  
+                     "},{"PID":"600069"},{"NAME":"LBS KUD               
+                            "},{"PID":"600070"},{"NAME":"LBS LAPADDE MAS
+                                   "},{"PID":"600071"},{"NAME":"LBS 
+LEBANO                                        
+"},{"PID":"600072"},{"NAME":"LBS LEMO SUSU                              
+       "},{"PID":"600073"},{"NAME":"LBS MAMARA                          
+              "},{"PID":"600074"},{"NAME":"LBS MAMASA                   
+                     "},{"PID":"600075"},{"NAME":"LBS MASILA            
+                            "},{"PID":"600076"},{"NAME":"LBS PAMPLY     
+                                   "},{"PID":"600077"},{"NAME":"LBS 
+PANYINGKULU                                   
+"},{"PID":"600078"},{"NAME":"LBS PASAR (P_TAKALALLA)                    
+       "},{"PID":"600079"},{"NAME":"LBS PATENE                          
+              "},{"PID":"600080"},{"NAME":"LBS PATOBONG                 
+                     "},{"PID":"600081"},{"NAME":"LBS PERTAMINA 
+(P_KARIANGO)                        "},{"PID":"600082"},{"NAME":"LBS 
+PERTAMINA (P_MAWA)                            
+"},{"PID":"600083"},{"NAME":"LBS PINCARA                                
+       "},{"PID":"600084"},{"NAME":"LBS RAMPOANG                        
+              "},{"PID":"600085"},{"NAME":"LBS SALETO                   
+                     "},{"PID":"600086"},{"NAME":"LBS TALIDU            
+                            "},{"PID":"600087"},{"NAME":"LBS TALUNG LIPU
+                                   "},{"PID":"600088"},{"NAME":"LBS 
+TAMALEBBA                                     
+"},{"PID":"600089"},{"NAME":"LBS TMP (P_TANDIPAU)                       
+       "},{"PID":"600090"},{"NAME":"LBS YOSDAR                          
+              "},{"PID":"600091"},{"NAME":"REC BOJO                     
+                     "},{"PID":"600092"},{"NAME":"REC PUNCAK            
+                            "},{"PID":"600093"},{"NAME":"REC TAKKALASI  
+                                   "},{"PID":"600094"},{"NAME":"REC 
+TEPOE                                         
+"},{"PID":"600095"},{"NAME":"REC WAKA                                   
+       "},{"PID":"600096"},{"NAME":"VCB MALANGKE                        
+              "},{"PID":"600097"},{"NAME":"VCB SULI                     
+                     "}]

@@ -206,31 +206,7 @@ if(isset($_GET['ref'])=="saidi"){
     $data = $sql->fetch(PDO::FETCH_ASSOC);
     echo $data['KETSAIDI'];
 }
-/*
-if(isset($_GET['ref'])=="garea"){
-    $return = array();
-    $sql = $conn->query("SELECT	A.[GIID], B.[GI], A.[AREAID], C.[AREA], E.[DCC]
-		                ,A.[ASUHANID1],D.[NAME] AS ASUHAN
-            FROM PLBSRECGH A
-            LEFT JOIN GI B ON A.GIID = B.GIID
-            LEFT JOIN AREA C ON A.AREAID = C.AREAID
-            LEFT JOIN ASUHAN D ON A.ASUHANID1 = D.ASUHANID
-            LEFT JOIN DCC E ON C.DCCID =E.DCCID
-            WHERE A.PID = '400013'");
-    //$data = $sql->fetch(PDO::FETCH_ASSOC);
-    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-        $dt = array('GIID'      =>  $row['GIID'],
-            'GI'        =>  rtrim($row['GI']),
-            'AREAID'    =>  rtrim($row['AREAID']),
-            'AREA'      =>  rtrim($row['AREA']),
-            'DCC'       =>  rtrim($row['DCC']),
-            'ASUHANID1' =>  rtrim($row['ASUHANID1']),
-            'ASUHAN'    =>  rtrim($row['ASUHAN'])
-        );
-        array_push($return, $dt);
-    }
-    echo json_encode($return);
-}*/
+
 if(isset($_GET['ref'])=="plbsrecgh"){
     $return = array();
     $sql = $conn->query("SELECT	TOP 10 [NAME]
@@ -245,3 +221,27 @@ if(isset($_GET['ref'])=="plbsrecgh"){
     echo json_encode($return);
 }
 
+if(isset($_GET['plb'])=="garea"){
+    $sql = $conn->query("SELECT	A.[GIID], B.[GI], A.[AREAID], C.[AREA], E.[DCC]
+		                ,D.[NAME] AS ASUHAN
+            FROM PLBSRECGH A
+            LEFT JOIN GI B ON A.GIID = B.GIID
+            LEFT JOIN AREA C ON A.AREAID = C.AREAID
+            LEFT JOIN ASUHAN D ON A.ASUHANID1 = D.ASUHANID
+            LEFT JOIN DCC E ON C.DCCID =E.DCCID
+            WHERE A.PID = '".$_GET['id']."'");
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+    /*
+    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+        $dt = array('GIID'      =>  $row['GIID'],
+            'GI'        =>  rtrim($row['GI']),
+            'AREAID'    =>  rtrim($row['AREAID']),
+            'AREA'      =>  rtrim($row['AREA']),
+            'DCC'       =>  rtrim($row['DCC']),
+            'ASUHANID1' =>  rtrim($row['ASUHANID1']),
+            'ASUHAN'    =>  rtrim($row['ASUHAN'])
+        );
+        array_push($return, $dt);
+    }*/
+    echo json_encode($data);
+}

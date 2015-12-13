@@ -17,10 +17,20 @@ $act    = ( isset($_GET['act']) ? $_GET['act'] : '' );
 switch($modules){
     case "dashboard":
         include('dashboard.php');break;
+    case "dcc":
+        include('modules/dcc.php');break;
+    case "area":
+        include('modules/area.php');break;
+    case "gi":
+        include('modules/gi.php');break;
+    case "asuhan":
+        include('modules/asuhan.php');break;
+    case "plbsrecgh":
+        include('modules/plbsrecgh.php');break;
     case "fgtm":
         include('modules/table_fgtm.php');break;
     case "saidi":
-        include('modules/table_saidi.php');break;
+        include('modules/saidi.php');break;
     case "logsheet":
         switch($act){
             default:
@@ -35,4 +45,5 @@ switch($modules){
         include('modules/alert_test.php');break;
 }
 ?>
+
 

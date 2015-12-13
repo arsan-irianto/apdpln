@@ -303,6 +303,20 @@ $(function () {
     $("input.typeahead").typeahead({
         onSelect: function(item) {
             $("#PID").val(item.value);
+            $.ajax({
+                type: "GET",
+                url: "modules/crud_logsheet.php?plb=garea",
+                dataType: 'json',
+                data: "id=" + $("#PID").val(),
+                success: function(data) {
+                    $("#GIPID").val(data.GIID);
+                    $("#GI").val(data.GI);
+                    $("#AREAID").val(data.AREAID);
+                    $("#AREA").val(data.AREA);
+                    $("#ASUHAN").val(data.ASUHAN);
+                    $("#WILAYAH").val(data.DCC);
+                }
+            });
         },
         ajax: {
             url: "modules/crud_logsheet.php?ref=plbsrecgh",

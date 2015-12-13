@@ -25,6 +25,22 @@
                     <i class="fa fa-home"></i> <span>Home</span></i>
                 </a>
             </li>
+
+            <li <?php if( ($_GET['modules']=='dcc') || ($_GET['modules']=='area') ||
+                    ($_GET['modules']=='gi') || ($_GET['modules']=='asuhan') || ($_GET['modules']=='plbsrecgh') ) echo "class='treeview active'";?>>
+                <a href="#">
+                    <i class="fa fa-table"></i> <span>Data Master</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li <?php if($_GET['modules']=='dcc') echo "class='active'";?>><a href="?modules=dcc"><i class="fa fa-angle-double-right"></i> DCC</a></li>
+                    <li <?php if($_GET['modules']=='area') echo "class='active'";?>><a href="?modules=area"><i class="fa fa-angle-double-right"></i> Area</a></li>
+                    <li <?php if($_GET['modules']=='gi') echo "class='active'";?>><a href="?modules=gi"><i class="fa fa-angle-double-right"></i> GI</a></li>
+                    <li <?php if($_GET['modules']=='asuhan') echo "class='active'";?>><a href="?modules=asuhan"><i class="fa fa-angle-double-right"></i> Asuhan</a></li>
+                    <li <?php if($_GET['modules']=='plbsrecgh') echo "class='active'";?>><a href="?modules=plbsrecgh"><i class="fa fa-angle-double-right"></i> PLBSRECGH</a></li>
+                </ul>
+            </li>
+
             <li <?php if( ($_GET['modules']=='fgtm') || ($_GET['modules']=='saidi') ||
                 ($_GET['modules']=='logsheet')) echo "class='treeview active'";?>>
                 <a href="#">

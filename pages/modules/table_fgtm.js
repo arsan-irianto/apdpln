@@ -14,7 +14,10 @@ function reloadDatatable(){
                 text:"Change Columns",
                 visible: false
             }],
-            destroy: true
+            destroy: true,
+            language: {
+                zeroRecords: "Data FGTM bulan "+ $("#cbo_month").val()+" tahun " +$("#cbo_year").val() + " Kosong"
+            }
         });
         $("#tfgtm_wrapper > .dt-buttons").appendTo("#btnTable");
         $("#btnPdf").attr("href", "reports/rpt_generator.php?name=fgtm&type=pdf&month="+

@@ -50,7 +50,7 @@
         <a href="index2.html" class="logo"><img src="../dist/img/PLN.jpg">&nbsp;&nbsp;&nbsp;&nbsp;<b>APD</b> PLN</a>
 
         <!-- Header Navbar -->
-        <nav class="navbar navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>

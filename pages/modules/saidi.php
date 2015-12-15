@@ -5,7 +5,7 @@
  * Date: 14/12/2015
  * Time: 6:17
  */
-session_start();
+//session_start();
 ?>
 <script src="modules/saidi.js" type="text/javascript"></script>
 <style>
@@ -42,6 +42,16 @@ session_start();
                                    </div>
                                </div>
                            </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-8"></div>
+                            <div class="col-md-2">
+                                <?php echo combonamabln(1, 12, "cbo_month", "-Month-","form-control input-sm");?>
+                            </div>
+                            <div class="col-md-2">
+                                <?php echo combothn(date("Y")-2, date("Y"), "cbo_year", "-Year-","form-control input-sm");?>
+                            </div>
+                        </div>
                        </div><!-- /.box-header -->
                     <div class="box-body">
                         <div class="table-responsive">

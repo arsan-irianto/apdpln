@@ -32,7 +32,7 @@ SELECT [WILAYAH]
       ,[KECIL5]
   FROM [APDPLN].[dbo].[V_FGTM_FULL]) as a";
 */
-$sp = "{:retval = CALL PCDR_FGTM_MAKASSAR_MONTH (@BULAN=:bulan,@TAHUN=:tahun)}";
+$sp = "{:retval = CALL PCDR_FGTM_FULL (@BULAN=:bulan,@TAHUN=:tahun)}";
 $result = $conn->prepare($sp);
 
 $retval = null;

@@ -43,6 +43,12 @@ switch($modules){
         break;
     case "test":
         include('modules/alert_test.php');break;
+
+    // Grafik //
+    case "xtp":
+        include('modules/grafik_xtp.php');break;
+    case "xtt":
+        include('modules/grafik_xtt.php');break;
 }
 ?>
 

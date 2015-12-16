@@ -15,6 +15,12 @@
         overflow-y: auto;
     }
     td{white-space: nowrap}
+
+    #myModals .modal-body
+    {
+        height:350px;
+        overflow:auto;
+    }
 </style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -82,3 +88,173 @@
 
     </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
+
+<div class="modal fade" id="delModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" name="form_delete" id="form_delete" autocomplete="off">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Delete Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="act" id="act" value="delete">
+                    <input type="hidden" id="delid" name="delid">
+                    <p>Yakin akan menghapus data ? </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onClick="submitDelete()" class="btn btn-sm btn-danger" data-dismiss="modal"><i class="fa fa-trash-o"></i> Ya</button>
+                    <button type="button" id="closeDel" class="btn btn-sm btn-default" data-dismiss="modal" aria-hidden="true"><i class="fa fa-sign-out"></i> Tidak</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="myModals" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 50%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Form PLBSRECGH</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" id="form_plbsrecgh" name="form_plbsrecgh" class="form-horizontal">
+                    <input type="hidden" id="type" name="type">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">PID</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$PID=isset($PID)? $PID : '';?>" name="PID" id="PID" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">STPOINTNAME</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm" value="<?=$STPOINTNAME=isset($STPOINTNAME)? $STPOINTNAME : '';?>" name="STPOINTNAME" id="STPOINTNAME" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">ANALOGID</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$ANALOGID=isset($ANALOGID)? $ANALOGID : '';?>" name="ANALOGID" id="ANALOGID" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">ANPOINTNAME</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm" value="<?=$ANPOINTNAME=isset($ANPOINTNAME)? $ANPOINTNAME : '';?>" name="ANPOINTNAME" id="ANPOINTNAME" type="text">                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">RTUID</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$RTUID=isset($RTUID)? $RTUID : '';?>" name="RTUID" id="RTUID" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">RTUNAME</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm" value="<?=$RTUNAME=isset($RTUNAME)? $RTUNAME : '';?>" name="RTUNAME" id="RTUNAME" type="text">                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">NAME</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm" value="<?=$NAME=isset($NAME)? $NAME : '';?>" name="NAME" id="NAME" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">NORMALLYCLOSED</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$NORMALLYCLOSED=isset($NORMALLYCLOSED)? $NORMALLYCLOSED : '';?>" name="NORMALLYCLOSED" id="NORMALLYCLOSED" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">ASUHAN ID 1</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$ASUHANID1=isset($ASUHANID1)? $ASUHANID1 : '';?>" name="ASUHANID1" id="ASUHANID1" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">ASUHAN ID 2</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$ASUHANID2=isset($ASUHANID2)? $ASUHANID2 : '';?>" name="ASUHANID2" id="ASUHANID2" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">GIID</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$GIID=isset($GIID)? $GIID : '';?>" name="GIID" id="GIID" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">AREA ID</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$AREAID=isset($AREAID)? $AREAID : '';?>" name="AREAID" id="AREAID" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">Description</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm" value="<?=$DESC=isset($DESC)? $DESC : '';?>" name="DESC" id="DESC" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onClick="submitPlbsrecgh()" class="btn btn-sm btn-primary" data-dismiss="modal">Submit</button>
+                <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

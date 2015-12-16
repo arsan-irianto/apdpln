@@ -1,7 +1,8 @@
 /**
  * Created by Arsan Irianto on 12/12/2015.
  */
-$(document).ready(function(){
+
+function reloadDataTable(){
     $('#tarea').DataTable({
         ajax: "modules/json_area.php",
         pagingType: "full_numbers",
@@ -9,8 +10,106 @@ $(document).ready(function(){
         scrollX: true,
         buttons: [
             'copy', 'csv', 'excel'
-        ]
+        ],
+        destroy : true
     });
     $("#tarea_wrapper > .dt-buttons").appendTo("#btnTable");
+}
+
+function showModals( id ){
+    waitingDialog.show();
+    // Untuk Eksekusi Data Yang Ingin di Edit
+    if( id ){
+        $.ajax({
+            type: "POST",
+            url: "modules/crud_area.php",
+            dataType: 'json',
+            data: {id:id,type:"get"},
+            success: function(res) {
+                waitingDialog.hide();
+                setModalData( res );
+                //$("#LAMAconv").val(lm);
+            }
+        });
+    }
+    // Form Add new
+    else{
+        clearModals();
+        $("#myModals").modal("show");
+        //$("#myModalLabel").html("New User");
+        $("#type").val("new");
+        waitingDialog.hide();
+    }
+}
+
+function submitArea() {
+    var formData = $("#form_dcc").serialize();
+    waitingDialog.show();
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_area.php",
+        dataType: 'json',
+        data: formData,
+        success: function(data) {
+            reloadDataTable();
+            waitingDialog.hide();
+        }
+    });
+}
+
+function submitDelete() {
+    var formData = $("#form_delete").serialize();
+    waitingDialog.show();
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_area.php",
+        dataType: 'json',
+        data: formData,
+        success: function(data){
+            reloadDatatable();
+            waitingDialog.hide();
+        }
+    });
+    //clearModals();
+}
+
+function deleteArea( id ) {
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_area.php",
+        dataType: 'json',
+        data: {id:id,type:"get"},
+        success: function(data) {
+            $('#delModal').modal('show');
+            $('#delid').val(id);
+            waitingDialog.hide();
+        }
+    });
+}
+
+function clearModals() {
+    $("#AREAID").val("");
+    $("#AREA").val("");
+    $("#JUMPENYULANG").val(0);
+    $("#PANJANGPENYULANG").val(0);
+    $("#DCCID").val("");
+    $("#DESC").val("");
+}
+
+//Show Data to edit
+function setModalData( data ){
+    $("#type").val("edit");
+    $("#AREAID").val(data.AREAID);
+    $("#AREA").val(data.AREA.trim());
+    $("#JUMPENYULANG").val(data.JUMPENYULANG);
+    $("#PANJANGPENYULANG").val(data.PANJANGPENYULANG);
+    $("#DCCID").val(data.DCCID);
+    DESCR = (data.DESCR == null) ? "" : data.DESCR.trim();
+    $("#DESC").val(DESCR);
+    $("#myModals").modal("show");
+}
+
+$(document).ready(function(){
+    reloadDataTable();
 });
 

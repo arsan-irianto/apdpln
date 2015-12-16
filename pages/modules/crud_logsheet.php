@@ -150,7 +150,7 @@ switch ($type) {
         break;
 
     //Hapus Data
-
+    /*
     case "delete":
 
         $sql = "DELETE FROM LOGSHEET WHERE ID = :ID";
@@ -162,6 +162,7 @@ switch ($type) {
             echo json_encode("OK");
         }
         break;
+    */
 }
 
 

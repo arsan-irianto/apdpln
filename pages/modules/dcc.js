@@ -57,6 +57,36 @@ function submitDcc() {
     });
 }
 
+function submitDelete() {
+    var formData = $("#form_delete").serialize();
+    waitingDialog.show();
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_dcc.php",
+        dataType: 'json',
+        data: formData,
+        success: function(data){
+            reloadDatatable();
+            waitingDialog.hide();
+        }
+    });
+    //clearModals();
+}
+
+function deleteDcc( id ) {
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_dcc.php",
+        dataType: 'json',
+        data: {id:id,type:"get"},
+        success: function(data) {
+            $('#delModal').modal('show');
+            $('#delid').val(id);
+            waitingDialog.hide();
+        }
+    });
+}
+
 function clearModals() {
     $("#DCCID").val("");
     $("#DCC").val("");

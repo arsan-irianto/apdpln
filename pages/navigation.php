@@ -53,6 +53,20 @@
                     <li <?php if($_GET['modules']=='logsheet') echo "class='active'";?>><a href="?modules=logsheet"><i class="fa fa-angle-double-right"></i> Rekap Logsheet</a></li>
                 </ul>
             </li>
+
+            <li <?php if( ($_GET['modules']=='xtp') || ($_GET['modules']=='xtt') ||
+                ($_GET['modules']=='xtpt') || ($_GET['modules']=='xtpir') ) echo "class='treeview active'";?>>
+                <a href="#">
+                    <i class="fa fa-pie-chart"></i> <span>Grafik</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li <?php if($_GET['modules']=='xtp') echo "class='active'";?>><a href="?modules=xtp"><i class="fa fa-angle-double-right"></i> X Trip Permanen</a></li>
+                    <li <?php if($_GET['modules']=='xtt') echo "class='active'";?>><a href="?modules=xtt"><i class="fa fa-angle-double-right"></i> X Trip Temporer</a></li>
+                    <li <?php if($_GET['modules']=='xtpt') echo "class='active'";?>><a href="?modules=xtpt"><i class="fa fa-angle-double-right"></i> X Trip Permanen & Temporer</a></li>
+                    <li <?php if($_GET['modules']=='xtpir') echo "class='active'";?>><a href="?modules=xtpir"><i class="fa fa-angle-double-right"></i> X Trip Per Indikasi Relay</a></li>
+                </ul>
+            </li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

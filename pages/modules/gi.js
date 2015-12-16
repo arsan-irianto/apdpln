@@ -1,7 +1,8 @@
 /**
  * Created by Arsan Irianto on 12/12/2015.
  */
-$(document).ready(function(){
+
+function reloadDataTable(){
     $('#tgi').DataTable({
         ajax: "modules/json_gi.php",
         pagingType: "full_numbers",
@@ -12,5 +13,96 @@ $(document).ready(function(){
         ]
     });
     $("#tgi_wrapper > .dt-buttons").appendTo("#btnTable");
+}
+
+function showModals( id ){
+    waitingDialog.show();
+    // Untuk Eksekusi Data Yang Ingin di Edit
+    if( id ){
+        $.ajax({
+            type: "POST",
+            url: "modules/crud_gi.php",
+            dataType: 'json',
+            data: {id:id,type:"get"},
+            success: function(res) {
+                waitingDialog.hide();
+                setModalData( res );
+            }
+        });
+    }
+    // Form Add new
+    else{
+        clearModals();
+        $("#myModals").modal("show");
+        //$("#myModalLabel").html("New User");
+        $("#type").val("new");
+        waitingDialog.hide();
+    }
+}
+
+function submitGi() {
+    var formData = $("#form_gi").serialize();
+    waitingDialog.show();
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_gi.php",
+        dataType: 'json',
+        data: formData,
+        success: function(data) {
+            reloadDataTable();
+            waitingDialog.hide();
+        }
+    });
+}
+
+function submitDelete() {
+    var formData = $("#form_delete").serialize();
+    waitingDialog.show();
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_gi.php",
+        dataType: 'json',
+        data: formData,
+        success: function(data){
+            reloadDatatable();
+            waitingDialog.hide();
+        }
+    });
+    //clearModals();
+}
+
+function deleteArea( id ) {
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_gi.php",
+        dataType: 'json',
+        data: {id:id,type:"get"},
+        success: function(data) {
+            $('#delModal').modal('show');
+            $('#delid').val(id);
+            waitingDialog.hide();
+        }
+    });
+}
+
+function clearModals() {
+    $("#GIID").val("");
+    $("#GI").val("");
+    $("#DCCID").val("");
+    $("#DESC").val("");
+}
+
+//Show Data to edit
+function setModalData( data ){
+    $("#type").val("edit");
+    $("#GIID").val(data.GIID);
+    $("#GI").val(data.GI.trim());
+    $("#DCCID").val(data.DCCID);
+    DESCR = (data.DESCR == null) ? "" : data.DESCR.trim();
+    $("#DESC").val(DESCR);
+    $("#myModals").modal("show");
+}
+$(document).ready(function(){
+    reloadDataTable();
 });
 

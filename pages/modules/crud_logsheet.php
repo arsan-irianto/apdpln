@@ -16,18 +16,19 @@ extract($_POST);
 $SC=isset($SC)? $SC : '';
 $MC=isset($MC)? $MC : '';
 $CHK=isset($CHK)? $CHK : '';
-$PID=isset($PID)? $PID : '';
-$GIPID=isset($GIPID)? $GIPID : '';
-$OE=isset($OE)? $OE : '';
-$CE=isset($CE)? $CE : '';
+$PID=isset($PID)? $PID : NULL;
+$GIPID=isset($GIPID)? $GIPID : NULL;
+$GI=isset($GI)? $GI : NULL;
+$OE=isset($OE)? $OE : 0;
+$CE=isset($CE)? $CE : 0;
 $EOT=!empty($EOT)? $EOT : NULL;
 $ECT=!empty($ECT)? $ECT : NULL;
 $OO=isset($OO)? $OO : '';
 $CO=isset($CO)? $CO : '';
 $OT=!empty($OT)? $OT : NULL;
 $CT=!empty($CT)? $CT : NULL;
-$AE=isset($AE)? $AE : '';
-$DE=isset($DE)? $DE : '';
+$AE=isset($AE)? $AE : 0;
+$DE=isset($DE)? $DE : 0;
 $AT=!empty($AT)? $AT : NULL;
 $DT=!empty($DT)? $DT : NULL;
 $AR=isset($AR)? $AR : '';
@@ -38,23 +39,25 @@ $RC=!empty($RC)? $RC : NULL;
 $OP=!empty($OP)? $OP : NULL;
 $CL=!empty($CL)? $CL : NULL;
 $TANGGAL=!empty($TANGGAL)? $TANGGAL : NULL;
-$PLBSREC=isset($PLBSREC)? $PLBSREC : '';
+$PLBSRECGH=isset($PLBSRECGH)? $PLBSRECGH : '';
 $ASUHAN=isset($ASUHAN)? $ASUHAN : '';
-$AREA=isset($AREA)? $AREA : '';
-$BEBANPADAM=isset($BEBANPADAM)? $BEBANPADAM : '';
-$RELAY=isset($RELAY)? $RELAY : '';
-$LAMA=isset($LAMA)? $LAMA : '';
-$KWH=isset($KWH)? $KWH : '';
+$AREA=isset($AREA)? $AREA : NULL;
+$AREAID=isset($AREAID)? $AREAID : NULL;
+$WILAYAH=isset($WILAYAH)? $WILAYAH : NULL;
+$BEBANPADAM=isset($BEBANPADAM)? $BEBANPADAM : 0;
+$RELAY=isset($RELAY)? $RELAY : NULL;
+$LAMA=isset($LAMA)? $LAMA : 0;
+$KWH=isset($KWH)? $KWH : NULL;
 $MRF=isset($MRF)? $MRF : '';
-$JEDARC1=isset($JEDARC1)? $JEDARC1 : '';
+$JEDARC1=isset($JEDARC1)? $JEDARC1 : 0;
 $KODEFGTM=isset($KODEFGTM)? $KODEFGTM : '';
 $KETFGTM=isset($KETFGTM)? $KETFGTM : '';
 $KETERANGAN=isset($KETERANGAN)? $KETERANGAN : '';
 $KORDINASI=isset($KORDINASI)? $KORDINASI : '';
 $SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';
-$TOTALPELANGGAN=isset($TOTALPELANGGAN)? $TOTALPELANGGAN : '';
-$PELANGGANPADAM=isset($PELANGGANPADAM)? $PELANGGANPADAM : '';
-$PERSENPELANGGANPADAM=isset($PERSENPELANGGANPADAM)? $PERSENPELANGGANPADAM : '';
+$TOTALPELANGGAN=isset($TOTALPELANGGAN)? $TOTALPELANGGAN : 0;
+$PELANGGANPADAM=isset($PELANGGANPADAM)? $PELANGGANPADAM : 0;
+$PERSENPELANGGANPADAM=isset($PERSENPELANGGANPADAM)? $PERSENPELANGGANPADAM : 0;
 $KODESAIDI=isset($KODESAIDI)? $KODESAIDI : '';
 $KETSAIDI=isset($KETSAIDI)? $KETSAIDI : '';
 $EKSEKUTOR=isset($EKSEKUTOR)? $EKSEKUTOR : '';
@@ -65,6 +68,7 @@ $formData = array('SC'=>$SC,
     'CHK'=>$CHK,
     'PID'=>$PID,
     'GIPID'=>$GIPID,
+    'GI'=>$GI,
     'OE'=>$OE,
     'CE'=>$CE,
     'EOT'=>$EOT,
@@ -85,9 +89,11 @@ $formData = array('SC'=>$SC,
     'OP'=>$OP,
     'CL'=>$CL,
     'TANGGAL'=>$TANGGAL,
-    'PLBSREC'=>$PLBSREC,
+    'PLBSREC'=>$PLBSRECGH,
     'ASUHAN'=>$ASUHAN,
     'AREA'=>$AREA,
+    'AREAID'=>$AREAID,
+    'WIL'=>$WILAYAH,
     'BEBANPADAM'=>$BEBANPADAM,
     'RELAY'=>$RELAY,
     'LAMA'=>$LAMA,
@@ -196,15 +202,23 @@ if(isset($_GET['c'])=="persen"){
     echo json_encode($diff1);
 }
 
-if(isset($_GET['ref'])=="fgtm"){
+if(isset($_GET['rf'])=="fgtm"){
     $sql = $conn->query("SELECT KETFGTM FROM GANGGUANFGTM WHERE KODE='".$_GET['id']."'");
     $data = $sql->fetch(PDO::FETCH_ASSOC);
     echo $data['KETFGTM'];
 }
-if(isset($_GET['ref'])=="saidi"){
-    $sql = $conn->query("SELECT KETSAIDI FROM PADAMSAIDI WHERE KODE='".$_GET['id']."'");
-    $data = $sql->fetch(PDO::FETCH_ASSOC);
-    echo $data['KETSAIDI'];
+if(isset($_GET['q'])=="saidi"){
+    $return = array();
+    $sql = $conn->query("SELECT	TOP 10 [KODE]
+                                ,[KETSAIDI]
+                                FROM PADAMSAIDI
+                                WHERE [KETSAIDI] LIKE '%".$_GET['query']."%'");
+    //$data = $sql->fetch(PDO::FETCH_ASSOC);
+    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+        $dt = array('ID'=>$row['KODE'],'NAME'=>rtrim($row['KETSAIDI'])) ;
+        array_push($return, $dt);
+    }
+    echo json_encode($return);
 }
 
 if(isset($_GET['ref'])=="plbsrecgh"){
@@ -231,17 +245,5 @@ if(isset($_GET['plb'])=="garea"){
             LEFT JOIN DCC E ON C.DCCID =E.DCCID
             WHERE A.PID = '".$_GET['id']."'");
     $data = $sql->fetch(PDO::FETCH_ASSOC);
-    /*
-    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-        $dt = array('GIID'      =>  $row['GIID'],
-            'GI'        =>  rtrim($row['GI']),
-            'AREAID'    =>  rtrim($row['AREAID']),
-            'AREA'      =>  rtrim($row['AREA']),
-            'DCC'       =>  rtrim($row['DCC']),
-            'ASUHANID1' =>  rtrim($row['ASUHANID1']),
-            'ASUHAN'    =>  rtrim($row['ASUHAN'])
-        );
-        array_push($return, $dt);
-    }*/
     echo json_encode($data);
 }

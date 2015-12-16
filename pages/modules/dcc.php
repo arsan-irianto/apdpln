@@ -72,3 +72,44 @@
 
     </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
+
+<div class="modal fade" id="myModals" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog" style="width: 40%">
+<div class="modal-content">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Form DCC</h4>
+</div>
+<div class="modal-body">
+<form role="form" id="form_dcc" name="form_dcc" class="form-horizontal">
+    <input type="hidden" id="type" name="type">
+    <input type="hidden" id="DCCID" name="DCCID" value="<?=$DCCID=isset($DCCID)? $DCCID : '';?>">
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="form-group input-sm">
+                <label class="col-sm-4 control-label">DCC Name</label>
+                <div class="col-sm-8">
+                    <input class="form-control input-sm" value="<?=$DCC=isset($DCC)? $DCC : '';?>" name="DCC" id="DCC" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="form-group input-sm">
+                <label class="col-sm-4 control-label">Description</label>
+                <div class="col-sm-8">
+                    <input class="form-control input-sm" value="<?=$DESC=isset($DESC)? $DESC : '';?>" name="DESC" id="DESC" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<div class="modal-footer">
+    <button type="button" onClick="submitDcc()" class="btn btn-sm btn-primary" data-dismiss="modal">Submit</button>
+    <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>

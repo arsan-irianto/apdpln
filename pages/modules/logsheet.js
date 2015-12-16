@@ -22,10 +22,11 @@ function reloadDatatable(){
         });
         $("#tlogsheet_wrapper > .dt-buttons").appendTo("#btnTable");
 
+        /*
         $('#tlogsheet tbody').on( 'click', '.btn_edit', function () {
             var data = dTable.row( $(this).parents('tr') ).data();
             $("#LAMAconv").val(data[12]);
-        });
+        });*/
     }
     else{
         $('#tlogsheet').DataTable({
@@ -79,13 +80,17 @@ function setModalData( data ){
     $("#SC").val(data.SC);
     $("#MC").val(data.MC);
     $("#CHK").val(data.CHK);
+    $("#PID").val(data.PID);
     //tgl = data.TANGGAL.substr(0,10);
     $("#TANGGAL").val(data.TANGGAL.substr(0,10));
-    $("#PLBSREC").val(data.PLBSREC);
+    $("#PLBSRECGH").val(data.PLBSREC.trim());
     //$("#PLBSREC").attr('readonly',true);
-    $("#ASUHAN").val(data.ASUHAN);
-    $("#AREA").val(data.AREA);
+    $("#ASUHAN").val(data.ASUHAN.trim());
+    $("#AREA").val(data.AREA.trim());
+    $("#AREAID").val(data.AREAID);
     $("#GIPID").val(data.GIPID);
+    $("#GI").val(data.GI.trim());
+    $("#WILAYAH").val(data.WIL.trim());
     $("#BEBANPADAM").val(data.BEBANPADAM);
     $("#OE").val(data.OE);
     $("#CE").val(data.CE);
@@ -111,26 +116,26 @@ function setModalData( data ){
     $("#RC").val(RC);
     $("#OP").val(OP);
     $("#CL").val(CL);
-    $("#RELAY").val(data.RELAY);
+    $("#RELAY").val(data.RELAY.trim());
     $("#LAMA").val(data.LAMA);
     //$("#LAMAconv").val(data.a2);
     $("#KWH").val(data.KWH);
-    $("#MRF").val(data.MRF);
+    $("#MRF").val(data.MRF.trim());
     $("#JEDARC1").val(data.JEDARC1);
     $("#KODEFGTM").val(data.KODEFGTM);
-    $("#KETFGTM").val(data.KETFGTM);
-    $("#KETERANGAN").val(data.KETERANGAN);
-    $("#KORDINASI").val(data.KORDINASI);
-    $("#SEGMENGANGGUAN").val(data.SEGMENGANGGUAN);
+    $("#KETFGTM").val(data.KETFGTM.trim());
+    $("#KETERANGAN").val(data.KETERANGAN.trim());
+    $("#KORDINASI").val(data.KORDINASI.trim());
+    $("#SEGMENGANGGUAN").val(data.SEGMENGANGGUAN.trim());
     $("#TOTALPELANGGAN").val(data.TOTALPELANGGAN);
     $("#PELANGGANPADAM").val(data.PELANGGANPADAM);
     $("#PERSENPELANGGANPADAM").val(data.PERSENPELANGGANPADAM);
     $("#KODESAIDI").val(data.KODESAIDI);
-    $("#KETSAIDI").val(data.KETSAIDI);
-    $("#EKSEKUTOR").val(data.EKSEKUTOR);
-    $("#SHIFT").val(data.SHIFT);
+    $("#KETSAIDI").val(data.KETSAIDI.trim());
+    $("#EKSEKUTOR").val(data.EKSEKUTOR.trim());
+    $("#SHIFT").val(data.SHIFT.trim());
     $("#myModals").modal("show");
-    ("#RELAY").trigger("focus");
+    //("#RELAY").trigger("focus");
 }
 
 //Submit Untuk Eksekusi Tambah/Edit/Hapus Data
@@ -214,7 +219,7 @@ function clearModals()
     $("#CL").val("");
     $("#RELAY").val("");
     $("#LAMA").val(0);
-    $("#LAMAconv").val("");
+    //$("#LAMAconv").val("");
     $("#KWH").val(0);
     $("#MRF").val("");
     $("#JEDARC1").val("");
@@ -235,7 +240,7 @@ $(function () {
     $('.modal').on('hidden.bs.modal',function(e){
         $(this).removeData('bs.modal');
     })
-    $("#RELAY").focus(function(){
+    $("#EKSEKUTOR").focus(function(){
         $.ajax({
             type: "GET",
             url: "modules/crud_logsheet.php?diff=yes",
@@ -243,12 +248,12 @@ $(function () {
             data: "op=" + $("#OP").val() + "&cl=" + $("#CL").val(),
             success: function(data) {
                 $("#LAMA").val(data.a1);
-                $("#LAMAconv").val(data.a2);
+                //$("#LAMAconv").val(data.a2);
             }
         });
     });
 
-    $("#PELANGGANPADAM").blur(function(){
+    $("#PELANGGANPADAM").change(function(){
         $.ajax({
             type: "GET",
             url: "modules/crud_logsheet.php?c=persen",
@@ -264,7 +269,7 @@ $(function () {
         //$("#KETFGTM").val($("#KODEFGTM :selected").text());
         $.ajax({
             type: "GET",
-            url: "modules/crud_logsheet.php?ref=fgtm",
+            url: "modules/crud_logsheet.php?rf=fgtm",
             dataType: 'html',
             data: "id=" + $(this).val(),
             success: function(data) {
@@ -310,11 +315,11 @@ $(function () {
                 data: "id=" + $("#PID").val(),
                 success: function(data) {
                     $("#GIPID").val(data.GIID);
-                    $("#GI").val(data.GI);
+                    $("#GI").val(data.GI.trim());
                     $("#AREAID").val(data.AREAID);
-                    $("#AREA").val(data.AREA);
-                    $("#ASUHAN").val(data.ASUHAN);
-                    $("#WILAYAH").val(data.DCC);
+                    $("#AREA").val(data.AREA.trim());
+                    $("#ASUHAN").val(data.ASUHAN.trim());
+                    $("#WILAYAH").val(data.DCC.trim());
                 }
             });
         },
@@ -322,6 +327,19 @@ $(function () {
             url: "modules/crud_logsheet.php?ref=plbsrecgh",
             displayField: "NAME",
             valueField:"PID"
+        }
+    });
+
+    //var typeaheadSource = [{ id: 1, name: 'John'}, { id: 2, name: 'Alex'}, { id: 3, name: 'Terry'}];
+
+    $('input.typeahead_saidi').typeahead({
+        onSelect: function(item) {
+            $("#KODESAIDI").val(item.value);
+        },
+        ajax: {
+            url: "modules/crud_logsheet.php?q=saidi",
+            displayField: "NAME",
+            valueField:"ID"
         }
     });
 

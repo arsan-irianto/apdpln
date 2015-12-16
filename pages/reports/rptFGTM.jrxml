@@ -10,7 +10,7 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<queryString language="plsql">
-		<![CDATA[PCDR_FGTM_MAKASSAR_MONTH $P{bulan},$P{tahun}]]>
+		<![CDATA[PCDR_FGTM_FULL $P{bulan},$P{tahun}]]>
 	</queryString>
 	<field name="AREA" class="java.lang.String"/>
 	<field name="PENYULANG" class="java.lang.Integer"/>

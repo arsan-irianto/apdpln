@@ -10,7 +10,8 @@ function reloadDataTable(){
         scrollX: true,
         buttons: [
             'copy', 'csv', 'excel'
-        ]
+        ],
+        destroy : true
     });
     $("#tgi_wrapper > .dt-buttons").appendTo("#btnTable");
 }

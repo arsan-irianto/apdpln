@@ -6,7 +6,7 @@
  * Time: 7:07
  */
 
-error_reporting( error_reporting() & ~E_NOTICE );
+error_reporting(0);
 session_start();
 include('../../config/connect.php');
 include('../../library/functions.php');

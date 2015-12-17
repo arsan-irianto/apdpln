@@ -27,6 +27,8 @@ switch($modules){
         include('modules/asuhan.php');break;
     case "plbsrecgh":
         include('modules/plbsrecgh.php');break;
+    case "pkb":
+        include('modules/pkb.php');break;
     case "fgtm":
         include('modules/table_fgtm.php');break;
     case "saidi":

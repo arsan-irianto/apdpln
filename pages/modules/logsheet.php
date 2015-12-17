@@ -141,9 +141,9 @@
                     <input name="periode" id="periode" value="" type="hidden">
                     <input type="hidden" id="type" name="type">
                     <input name="ID" id="ID" value="" type="hidden">
-                    <input name="SC" id="SC" value="1" type="hidden">
-                    <input name="MC" id="MC" value="1" type="hidden">
-                    <input name="CHK" id="CHK" value="1" type="hidden">
+                    <input name="SC" id="SC" value="" type="hidden">
+                    <input name="MC" id="MC" value="" type="hidden">
+                    <input name="CHK" id="CHK" value="" type="hidden">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab">Gardu & Area</a></li>
                         <li><a href="#tab_2" data-toggle="tab">Detail Pemadaman</a></li>

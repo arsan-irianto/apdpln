@@ -18,7 +18,10 @@ function reloadDatatable(){
                 text: "Change Columns",
                 visible: false
             }],
-            destroy: true
+            destroy: true,
+            language: {
+                zeroRecords: "Records Not Found"
+            }
         });
         $("#tlogsheet_wrapper > .dt-buttons").appendTo("#btnTable");
 

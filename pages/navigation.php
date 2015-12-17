@@ -42,12 +42,13 @@
             </li>
 
             <li <?php if( ($_GET['modules']=='fgtm') || ($_GET['modules']=='saidi') ||
-                ($_GET['modules']=='logsheet')) echo "class='treeview active'";?>>
+                ($_GET['modules']=='logsheet') || ($_GET['modules']=='pkb')) echo "class='treeview active'";?>>
                 <a href="#">
                     <i class="fa fa-table"></i> <span>Rekap Laporan</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
+                    <li <?php if($_GET['modules']=='pkb') echo "class='active'";?>><a href="?modules=pkb"><i class="fa fa-angle-double-right"></i> Pelanggan KWH Bulanan</a></li>
                     <li <?php if($_GET['modules']=='fgtm') echo "class='active'";?>><a href="?modules=fgtm"><i class="fa fa-angle-double-right"></i> Rekap FGTM</a></li>
                     <li <?php if($_GET['modules']=='saidi') echo "class='active'";?>><a href="?modules=saidi"><i class="fa fa-angle-double-right"></i> Rekap Saidi</a></li>
                     <li <?php if($_GET['modules']=='logsheet') echo "class='active'";?>><a href="?modules=logsheet"><i class="fa fa-angle-double-right"></i> Rekap Logsheet</a></li>

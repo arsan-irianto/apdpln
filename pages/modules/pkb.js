@@ -1,19 +1,22 @@
 /**
- * Created by Arsan Irianto on 12/12/2015.
+ * Created by Arsan Irianto on 17/12/2015.
  */
 
 function reloadDataTable(){
-    $('#tarea').DataTable({
-        ajax: "modules/json_area.php",
+    $('#tpkb').DataTable({
+        ajax: "modules/json_pkb.php",
         pagingType: "full_numbers",
         dom: "B<'row'<'col-sm-8'l><'col-sm-4'f>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-8'><'col-sm-4'>>tipr",
         scrollX: true,
         buttons: [
             'copy', 'csv', 'excel'
         ],
-        destroy : true
+        destroy: true,
+        language: {
+            zeroRecords: "Records Not Found"
+        }
     });
-    $("#tarea_wrapper > .dt-buttons").appendTo("#btnTable");
+    $("#tpkb_wrapper > .dt-buttons").appendTo("#btnTable");
 }
 
 function showModals( id ){
@@ -22,7 +25,7 @@ function showModals( id ){
     if( id ){
         $.ajax({
             type: "POST",
-            url: "modules/crud_area.php",
+            url: "modules/crud_pkb.php",
             dataType: 'json',
             data: {id:id,type:"get"},
             success: function(res) {
@@ -42,12 +45,12 @@ function showModals( id ){
     }
 }
 
-function submitArea() {
-    var formData = $("#form_area").serialize();
+function submitPkb() {
+    var formData = $("#form_pkb").serialize();
     waitingDialog.show();
     $.ajax({
         type: "POST",
-        url: "modules/crud_area.php",
+        url: "modules/crud_pkb.php",
         dataType: 'json',
         data: formData,
         success: function(data) {
@@ -62,7 +65,7 @@ function submitDelete() {
     waitingDialog.show();
     $.ajax({
         type: "POST",
-        url: "modules/crud_area.php",
+        url: "modules/crud_pkb.php",
         dataType: 'json',
         data: formData,
         success: function(data){
@@ -73,10 +76,10 @@ function submitDelete() {
     //clearModals();
 }
 
-function deleteArea( id ) {
+function deletePkb( id ) {
     $.ajax({
         type: "POST",
-        url: "modules/crud_area.php",
+        url: "modules/crud_pkb.php",
         dataType: 'json',
         data: {id:id,type:"get"},
         success: function(data) {
@@ -88,28 +91,26 @@ function deleteArea( id ) {
 }
 
 function clearModals() {
-    $("#AREAID").val("");
-    $("#AREA").val("");
-    $("#JUMPENYULANG").val(0);
-    $("#PANJANGPENYULANG").val(0);
-    $("#DCCID").val("");
-    $("#DESC").val("");
+    $("#BULAN").val("");
+    $("#TAHUN").val("");
+    $("#TOTALPELANGGAN").val(0);
+    $("#KWHRATARATAHARIANPELANGGAN").val(0);
+    $("#KWHRATARATAJAMPELANGGAN").val(0);
 }
 
 //Show Data to edit
 function setModalData( data ){
     $("#type").val("edit");
-    $("#AREAID").val(data.AREAID);
-    $("#AREA").val(data.AREA.trim());
-    $("#JUMPENYULANG").val(data.JUMPENYULANG);
-    $("#PANJANGPENYULANG").val(data.PANJANGPENYULANG);
-    $("#DCCID").val(data.DCCID);
-    DESCR = (data.DESCR == null) ? "" : data.DESCR.trim();
-    $("#DESC").val(DESCR);
+    $("#PKEY").val(data.PKEY);
+    $("#BULAN").val(data.BULAN);
+    $("#TAHUN").val(data.TAHUN);
+    $("#TOTALPELANGGAN").val(data.TOTALPELANGGAN);
+    $("#KWHRATARATAHARIANPELANGGAN").val(data.KWHRATARATAHARIANPELANGGAN);
+    $("#KWHRATARATAJAMPELANGGAN").val(data.KWHRATARATAJAMPELANGGAN);
     $("#myModals").modal("show");
 }
 
-$(document).ready(function(){
+$(function () {
     reloadDataTable();
 });
 

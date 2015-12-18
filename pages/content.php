@@ -46,11 +46,21 @@ switch($modules){
     case "test":
         include('modules/alert_test.php');break;
 
-    // Grafik //
-    case "xtp":
-        include('modules/grafik_xtp.php');break;
-    case "xtt":
-        include('modules/grafik_xtt.php');break;
+    // Grafik Area//
+    case "xtp_area":
+        include('modules/grafik_xtp_area.php');break;
+    case "xtt_area":
+        include('modules/grafik_xtt_area.php');break;
+    case "xtpt_area":
+        include('modules/grafik_xtpt_area.php');break;
+
+    // Grafik Gardu Induk//
+    case "xtp_gardu":
+        include('modules/grafik_xtp_gardu.php');break;
+    case "xtt_gardu":
+        include('modules/grafik_xtt_gardu.php');break;
+    case "xtpt_gardu":
+        include('modules/grafik_xtpt_gardu.php');break;
 }
 ?>
 

@@ -22,11 +22,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            DCC
-            <small>Master Pelanggan KWH Bulanan</small>
+            Rekap Laporan
+            <small>Pelanggan KWH Bulanan</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Master</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Rekap Laporan</a></li>
             <li class="active">Pelanggan KWH Bulanan</li>
         </ol>
     </section>

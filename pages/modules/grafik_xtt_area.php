@@ -43,7 +43,7 @@ if ($result) {
     // The `$arrData` array holds the chart attributes and data
     $arrData = array(
         "chart" => array(
-            "caption" => "Jumlah Gangguan Penyulang > 5 menit Per Area Dist",
+            "caption" => "Jumlah Gangguan Penyulang < 5 menit Per Area Dist",
             "bgColor" => "#ffffff",
             "borderAlpha"=> "20",
             "canvasBorderAlpha"=> "0",
@@ -91,12 +91,12 @@ if ($result) {
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Kali Trip Temporer
-            <small></small>
+            Grafik Per Area
+            <small>Kali Trip Temporer</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-            <li class="active">Here</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Grafik Per Area</a></li>
+            <li class="active">Kali Trip Temporer</li>
         </ol>
     </section>
 
@@ -113,7 +113,7 @@ if ($result) {
                             <div class="row">
                                 <div class="col-md-7">
                                     <form name="period" id="period" method="get" >
-                                        <input type="hidden" name="modules" id="modules" value="xtt">
+                                        <input type="hidden" name="modules" id="modules" value="xtt_area">
                                         <?php
                                         echo combonamabln(1, 12, "cbo_month", "-Month-","form-control input-sm");
                                         ?>

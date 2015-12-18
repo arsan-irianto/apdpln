@@ -29,6 +29,9 @@ $sp = "{:retval = CALL PCDR_AREA_TRIP (@BULAN=:bulan,@TAHUN=:tahun)}";
 $result = $conn->prepare($sp);
 
 $retval = null;
+//$bulan = 10;
+//$tahun = 2015;
+
 $bulan = isset($_GET['cbo_month']) ? $_GET['cbo_month'] : "";
 $tahun = isset($_GET['cbo_year']) ? $_GET['cbo_year'] : "";
 
@@ -43,7 +46,7 @@ if ($result) {
     // The `$arrData` array holds the chart attributes and data
     $arrData = array(
         "chart" => array(
-            "caption" => "Jumlah Gangguan Penyulang > 5 menit Per Area Dist",
+            "caption" => "Kali Trip Permanen & Temporer Per Area Dist",
             "bgColor" => "#ffffff",
             "borderAlpha"=> "20",
             "canvasBorderAlpha"=> "0",
@@ -58,16 +61,27 @@ if ($result) {
         )
     );
 
-    $arrData["data"] = array();
+    // Define Chart DataSource
+    $category = array();
+    $seriesname = array();
+    $data_permanen = array();
+    $data_temporer = array();
 
-    // Push the data into the array
     while( $row = $result->fetch() ) {
-        array_push($arrData["data"], array(
-                "label" => $row["AREA"],
-                "value" => $row["PERMANEN"]
-            )
-        );
+        array_push($category, array("label" => $row["AREA"]));
+        array_push($data_permanen, array("value" => $row["PERMANEN"]));
+        array_push($data_temporer, array("value" => $row["TEMPORER"]));
     }
+
+    // Plotting Categories
+    $arrData["categories"][] = array("category" => $category);
+
+    // Plotting Series & Data
+    array_push($seriesname, array("seriesname"=>"PERMANEN", "data" => $data_permanen));
+    array_push($seriesname, array("seriesname"=>"TEMPORER", "data" => $data_temporer));
+
+    // Plotting Series & Data to Dataset
+    $arrData["dataset"] = $seriesname;
 
     /*JSON Encode the data to retrieve the string containing the JSON representation of the data in the array. */
 
@@ -75,7 +89,7 @@ if ($result) {
 
     /*Create an object for the column chart using the FusionCharts PHP class constructor. Syntax for the constructor is ` FusionCharts("type of chart", "unique chart id", width of the chart, height of the chart, "div id to render the chart", "data format", "data source")`. Because we are using JSON data to render the chart, the data format will be `json`. The variable `$jsonEncodeData` holds all the JSON data for the chart, and will be passed as the value for the data source parameter of the constructor.*/
 
-    $columnChart = new FusionCharts("column2D", "myFirstChart" , 700, 350, "chartContainer", "json", $jsonEncodedData);
+    $columnChart = new FusionCharts("mscolumn2d", "myFirstChart" , 700, 350, "chartContainer", "json", $jsonEncodedData);
 
     // Render the chart
     $columnChart->render();
@@ -85,18 +99,17 @@ if ($result) {
 }
 ?>
 
-
-<title> Kali Trip Permanen</title>
+<title> Kali Trip Permanen & Temporer</title>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Kali Trip Permanen
-            <small></small>
+            Grafik Per Area
+            <small>Kali Trip Permanen & Temporer</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-            <li class="active">Here</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Grafik Per Area</a></li>
+            <li class="active">Kali Trip Permanen & Temporer</li>
         </ol>
     </section>
 
@@ -113,7 +126,7 @@ if ($result) {
                             <div class="row">
                                 <div class="col-md-7">
                                     <form name="period" id="period" method="get" >
-                                        <input type="hidden" name="modules" id="modules" value="xtp">
+                                        <input type="hidden" name="modules" id="modules" value="xtpt_area">
                                         <?php
                                         echo combonamabln(1, 12, "cbo_month", "-Month-","form-control input-sm");
                                         ?>

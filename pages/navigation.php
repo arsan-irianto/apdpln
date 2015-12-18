@@ -29,7 +29,7 @@
             <li <?php if( ($_GET['modules']=='dcc') || ($_GET['modules']=='area') ||
                     ($_GET['modules']=='gi') || ($_GET['modules']=='asuhan') || ($_GET['modules']=='plbsrecgh') ) echo "class='treeview active'";?>>
                 <a href="#">
-                    <i class="fa fa-table"></i> <span>Data Master</span>
+                    <i class="fa fa-edit"></i> <span>Data Master</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
@@ -44,7 +44,7 @@
             <li <?php if( ($_GET['modules']=='fgtm') || ($_GET['modules']=='saidi') ||
                 ($_GET['modules']=='logsheet') || ($_GET['modules']=='pkb')) echo "class='treeview active'";?>>
                 <a href="#">
-                    <i class="fa fa-table"></i> <span>Rekap Laporan</span>
+                    <i class="fa fa-book"></i> <span>Rekap Laporan</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
@@ -55,17 +55,31 @@
                 </ul>
             </li>
 
-            <li <?php if( ($_GET['modules']=='xtp') || ($_GET['modules']=='xtt') ||
-                ($_GET['modules']=='xtpt') || ($_GET['modules']=='xtpir') ) echo "class='treeview active'";?>>
+            <li <?php if( ($_GET['modules']=='xtp_area') || ($_GET['modules']=='xtt_area') ||
+                ($_GET['modules']=='xtpt_area') || ($_GET['modules']=='xtpir_area') ) echo "class='treeview active'";?>>
                 <a href="#">
-                    <i class="fa fa-pie-chart"></i> <span>Grafik</span>
+                    <i class="fa fa-pie-chart"></i> <span>Grafik Per Area</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li <?php if($_GET['modules']=='xtp') echo "class='active'";?>><a href="?modules=xtp"><i class="fa fa-angle-double-right"></i> X Trip Permanen</a></li>
-                    <li <?php if($_GET['modules']=='xtt') echo "class='active'";?>><a href="?modules=xtt"><i class="fa fa-angle-double-right"></i> X Trip Temporer</a></li>
-                    <li <?php if($_GET['modules']=='xtpt') echo "class='active'";?>><a href="?modules=xtpt"><i class="fa fa-angle-double-right"></i> X Trip Permanen & Temporer</a></li>
-                    <li <?php if($_GET['modules']=='xtpir') echo "class='active'";?>><a href="?modules=xtpir"><i class="fa fa-angle-double-right"></i> X Trip Per Indikasi Relay</a></li>
+                    <li <?php if($_GET['modules']=='xtp_area') echo "class='active'";?>><a href="?modules=xtp_area"><i class="fa fa-angle-double-right"></i> X Trip Permanen</a></li>
+                    <li <?php if($_GET['modules']=='xtt_area') echo "class='active'";?>><a href="?modules=xtt_area"><i class="fa fa-angle-double-right"></i> X Trip Temporer</a></li>
+                    <li <?php if($_GET['modules']=='xtpt_area') echo "class='active'";?>><a href="?modules=xtpt_area"><i class="fa fa-angle-double-right"></i> X Trip Permanen & Temporer</a></li>
+                    <li <?php if($_GET['modules']=='xtpir_area') echo "class='active'";?>><a href="?modules=xtpir_area"><i class="fa fa-angle-double-right"></i> X Trip Per Indikasi Relay</a></li>
+                </ul>
+            </li>
+
+            <li <?php if( ($_GET['modules']=='xtp_gardu') || ($_GET['modules']=='xtt_gardu') ||
+                ($_GET['modules']=='xtpt_gardu') || ($_GET['modules']=='xtpir_gardu') ) echo "class='treeview active'";?>>
+                <a href="#">
+                    <i class="fa fa-bar-chart-o"></i> <span>Grafik Per Gardu Induk</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li <?php if($_GET['modules']=='xtp_gardu') echo "class='active'";?>><a href="?modules=xtp_gardu"><i class="fa fa-angle-double-right"></i> X Trip Permanen</a></li>
+                    <li <?php if($_GET['modules']=='xtt_gardu') echo "class='active'";?>><a href="?modules=xtt_gardu"><i class="fa fa-angle-double-right"></i> X Trip Temporer</a></li>
+                    <li <?php if($_GET['modules']=='xtpt_gardu') echo "class='active'";?>><a href="?modules=xtpt_gardu"><i class="fa fa-angle-double-right"></i> X Trip Permanen & Temporer</a></li>
+                    <li <?php if($_GET['modules']=='xtpir_gardu') echo "class='active'";?>><a href="?modules=xtpir_gardu"><i class="fa fa-angle-double-right"></i> X Trip Per Indikasi Relay</a></li>
                 </ul>
             </li>
         </ul><!-- /.sidebar-menu -->

@@ -41,8 +41,9 @@ if(!empty($_POST)){
         $_SESSION['USERNAME'] = $row['USERNAME'];
         $_SESSION['PASSWORD'] = $row['PASSWORD'];
         $_SESSION['DESCR'] = $row['DESCR'];
-        header("Location: ../index.php");
+        //header("Location: ../index.php");
         //die("Redirecting to: secret.php");
+        header("Location:" . $_SERVER['HTTP_REFERER']);
     }
     else{
         echo messageAlert("Login Gagal, Username dan Password yang dimasukkan tidak sesuai");

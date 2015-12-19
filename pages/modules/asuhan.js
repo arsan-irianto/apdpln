@@ -51,7 +51,10 @@ function submitAsuhan() {
         dataType: 'json',
         data: formData,
         success: function(data) {
-            reloadDataTable();
+            if(data=="OK"){
+                reloadDataTable();
+            }
+            else{alert(data);}
             waitingDialog.hide();
         }
     });
@@ -66,7 +69,7 @@ function submitDelete() {
         dataType: 'json',
         data: formData,
         success: function(data){
-            reloadDatatable();
+            reloadDataTable();
             waitingDialog.hide();
         }
     });
@@ -89,6 +92,7 @@ function deleteAsuhan( id ) {
 
 function clearModals() {
     $("#ASUHANID").val("");
+    $("#ASUHANID").attr('readonly', false);
     $("#SCADANAME").val("");
     $("#NAME").val("");
     $("#AREAID").val("");
@@ -103,6 +107,7 @@ function clearModals() {
 function setModalData( data ){
     $("#type").val("edit");
     $("#ASUHANID").val(data.ASUHANID);
+    $("#ASUHANID").attr('readonly', true);
     $("#SCADANAME").val(data.SCADANAME.trim());
     $("#NAME").val(data.NAME.trim());
     $("#AREAID").val(data.AREAID);

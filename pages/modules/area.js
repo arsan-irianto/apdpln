@@ -51,7 +51,10 @@ function submitArea() {
         dataType: 'json',
         data: formData,
         success: function(data) {
-            reloadDataTable();
+            if(data=="OK"){
+                reloadDataTable();
+            }
+            else{alert(data);}
             waitingDialog.hide();
         }
     });
@@ -66,7 +69,7 @@ function submitDelete() {
         dataType: 'json',
         data: formData,
         success: function(data){
-            reloadDatatable();
+            reloadDataTable();
             waitingDialog.hide();
         }
     });
@@ -89,6 +92,7 @@ function deleteArea( id ) {
 
 function clearModals() {
     $("#AREAID").val("");
+    $("#AREAID").attr('readonly',false);
     $("#AREA").val("");
     $("#JUMPENYULANG").val(0);
     $("#PANJANGPENYULANG").val(0);
@@ -100,9 +104,12 @@ function clearModals() {
 function setModalData( data ){
     $("#type").val("edit");
     $("#AREAID").val(data.AREAID);
+    $("#AREAID").attr('readonly',true);
     $("#AREA").val(data.AREA.trim());
-    $("#JUMPENYULANG").val(data.JUMPENYULANG);
-    $("#PANJANGPENYULANG").val(data.PANJANGPENYULANG);
+    JUMPENYULANG = (data.JUMPENYULANG == null) ? 0 : data.JUMPENYULANG;
+    PANJANGPENYULANG = (data.PANJANGPENYULANG == null) ? 0 : data.PANJANGPENYULANG;
+    $("#JUMPENYULANG").val(JUMPENYULANG);
+    $("#PANJANGPENYULANG").val(PANJANGPENYULANG);
     $("#DCCID").val(data.DCCID);
     DESCR = (data.DESCR == null) ? "" : data.DESCR.trim();
     $("#DESC").val(DESCR);

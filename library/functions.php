@@ -192,6 +192,22 @@ function combothn($awal, $akhir, $var, $terpilih, $class=""){
     echo "</select> ";
 }
 
+/**
+ * @param $var
+ * @param $arr_data
+ * @param string $default
+ * @param string $class
+ */
+function cboFillFromArray($var,$arr_data,$default="--Choose--",$class=""){
+    echo "<select name=$var id=$var class=$class>";
+    echo "<option value='' selected>$default</option>";
+    foreach($arr_data as $val => $name)
+    {
+        echo "<option value='$val'>$name</option>";
+    }
+    echo "</select> ";
+}
+
 /*
  * PHP Parsing Date
  $old=new DateTime("2015-10-16 08:29:17");

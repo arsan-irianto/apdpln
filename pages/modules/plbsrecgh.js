@@ -51,7 +51,10 @@ function submitPlbsrecgh() {
         dataType: 'json',
         data: formData,
         success: function(data) {
-            reloadDataTable();
+            if(data=="OK"){
+                reloadDataTable();
+            }
+            else{alert(data);}
             waitingDialog.hide();
         }
     });
@@ -66,7 +69,7 @@ function submitDelete() {
         dataType: 'json',
         data: formData,
         success: function(data){
-            reloadDatatable();
+            reloadDataTable();
             waitingDialog.hide();
         }
     });
@@ -88,18 +91,18 @@ function deletePlbsrecgh( id ) {
 }
 
 function clearModals() {
-    $("#PID").val(0);
+    $("#PID").val("");
     $("#STPOINTNAME").val("");
-    $("#ANALOGID").val(0);
+    $("#ANALOGID").val("");
     $("#ANPOINTNAME").val("");
-    $("#RTUID").val(0);
+    $("#RTUID").val("");
     $("#RTUNAME").val("");
     $("#NAME").val("");
-    $("#NORMALLYCLOSED").val(0);
-    $("#ASUHANID1").val(0);
-    $("#ASUHANID2").val(0);
-    $("#GIID").val(0);
-    $("#AREAID").val(0);
+    $("#NORMALLYCLOSED").val("");
+    $("#ASUHANID1").val("");
+    $("#ASUHANID2").val("");
+    $("#GIID").val("");
+    $("#AREAID").val("");
     $("#DESC").val("");
 }
 
@@ -111,7 +114,7 @@ function setModalData( data ){
     $("#ANALOGID").val(data.ANALOGID);
 
     ANPOINTNAME=(data.ANPOINTNAME == null) ? "" : data.ANPOINTNAME;
-    RTUID=(data.RTUID == null) ? 0 : data.RTUID;
+    RTUID=(data.RTUID == null) ? "" : data.RTUID;
     $("#ANPOINTNAME").val(ANPOINTNAME.trim());
     $("#RTUID").val(RTUID);
 
@@ -121,10 +124,10 @@ function setModalData( data ){
     $("#NAME").val(NAME.trim());
 
     NORMALLYCLOSED = (data.NORMALLYCLOSED == null) ? 0 : data.NORMALLYCLOSED;
-    ASUHANID1 = (data.ASUHANID1 == null) ? 0 : data.ASUHANID1;
-    ASUHANID2 = (data.ASUHANID2 == null) ? 0 : data.ASUHANID2;
-    GIID = (data.GIID == null) ? 0 : data.GIID;
-    AREAID = (data.AREAID == null) ? 0 : data.AREAID;
+    ASUHANID1 = (data.ASUHANID1 == null) ? "" : data.ASUHANID1;
+    ASUHANID2 = (data.ASUHANID2 == null) ? "" : data.ASUHANID2;
+    GIID = (data.GIID == null) ? "" : data.GIID;
+    AREAID = (data.AREAID == null) ? "" : data.AREAID;
     $("#NORMALLYCLOSED").val(NORMALLYCLOSED);
     $("#ASUHANID1").val(ASUHANID1);
     $("#ASUHANID2").val(ASUHANID2);
@@ -138,5 +141,38 @@ function setModalData( data ){
 
 $(document).ready(function(){
     reloadDataTable();
+
+    $('input.typeahead_asuhan1').typeahead({
+        onSelect: function(item) {
+            $("#ASUHANID1").val(item.value);
+        },
+        ajax: {
+            url: "modules/crud_plbsrecgh.php?q=asuhan",
+            displayField: "NAME",
+            valueField:"ID"
+        }
+    });
+
+    $('input.typeahead_asuhan2').typeahead({
+        onSelect: function(item) {
+            $("#ASUHANID2").val(item.value);
+        },
+        ajax: {
+            url: "modules/crud_plbsrecgh.php?q=asuhan",
+            displayField: "NAME",
+            valueField:"ID"
+        }
+    });
+
+    $("input.typeahead_gi").typeahead({
+        onSelect: function(item) {
+            $("#GIID").val(item.value);
+        },
+        ajax: {
+            url: "modules/crud_plbsrecgh.php?ref=gi",
+            displayField: "NAME",
+            valueField:"ID"
+        }
+    });
 });
 

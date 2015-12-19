@@ -50,7 +50,10 @@ function submitGi() {
         dataType: 'json',
         data: formData,
         success: function(data) {
-            reloadDataTable();
+            if(data=="OK"){
+                reloadDataTable();
+            }
+            else{alert(data);}
             waitingDialog.hide();
         }
     });
@@ -65,14 +68,14 @@ function submitDelete() {
         dataType: 'json',
         data: formData,
         success: function(data){
-            reloadDatatable();
+            reloadDataTable();
             waitingDialog.hide();
         }
     });
     //clearModals();
 }
 
-function deleteArea( id ) {
+function deleteGi( id ) {
     $.ajax({
         type: "POST",
         url: "modules/crud_gi.php",
@@ -88,6 +91,7 @@ function deleteArea( id ) {
 
 function clearModals() {
     $("#GIID").val("");
+    $("#GIID").attr('readonly', false);
     $("#GI").val("");
     $("#DCCID").val("");
     $("#DESC").val("");
@@ -97,6 +101,7 @@ function clearModals() {
 function setModalData( data ){
     $("#type").val("edit");
     $("#GIID").val(data.GIID);
+    $("#GIID").attr('readonly', true);
     $("#GI").val(data.GI.trim());
     $("#DCCID").val(data.DCCID);
     DESCR = (data.DESCR == null) ? "" : data.DESCR.trim();

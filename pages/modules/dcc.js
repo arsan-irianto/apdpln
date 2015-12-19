@@ -66,7 +66,7 @@ function submitDelete() {
         dataType: 'json',
         data: formData,
         success: function(data){
-            reloadDatatable();
+            reloadDataTable();
             waitingDialog.hide();
         }
     });

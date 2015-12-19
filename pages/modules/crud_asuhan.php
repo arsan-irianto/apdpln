@@ -22,7 +22,8 @@ $TYPE=isset($TYPE) ? $TYPE : '';
 $DESC=isset($DESC)? $DESC : '';
 $PANJANGPENYULANG=isset($PANJANGPENYULANG) ? $PANJANGPENYULANG : '';
 
-$formData = array('SCADANAME'=>$SCADANAME,
+$formData = array('ASUHANID'=>$ASUHANID,
+                    'SCADANAME'=>$SCADANAME,
                     'NAME'=>$NAME,
                     'AREAID'=>$AREAID,
                     'GIID'=>$GIID,

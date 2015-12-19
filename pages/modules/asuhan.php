@@ -14,7 +14,7 @@
     .modal-open {
         overflow-y: auto;
     }
-    /*td{white-space: nowrap}*/
+    td{white-space: nowrap}
 </style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -62,6 +62,7 @@
                                     <th width="80px"><div align="center">Area ID</div></th>
                                     <th width="50px"><div align="center">GIID</div></th>
                                     <th width="50px"><div align="center">Type</div></th>
+                                    <th><div align="center">Panjang Penyulang</div></th>
                                     <th><div align="center">DESC</div></th>
                                 </tr>
                                 </thead>
@@ -109,7 +110,16 @@
             <div class="modal-body">
                 <form role="form" id="form_asuhan" name="form_asuhan" class="form-horizontal">
                     <input type="hidden" id="type" name="type">
-                    <input type="hidden" id="ASUHANID" name="ASUHANID" value="<?=$ASUHANID=isset($ASUHANID)? $ASUHANID : '';?>">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">ASUHAN ID</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$ASUHANID=isset($ASUHANID)? $ASUHANID : '';?>" name="ASUHANID" id="ASUHANID" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">
@@ -133,7 +143,7 @@
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">
-                                <label class="col-sm-4 control-label">Panjang Penyulang</label>
+                                <label class="col-sm-4 control-label">Area</label>
                                 <div class="col-sm-8">
                                     <?php
                                     $queryAREA = "SELECT AREAID,AREA FROM AREA";
@@ -169,7 +179,10 @@
                             <div class="form-group input-sm">
                                 <label class="col-sm-4 control-label">Type</label>
                                 <div class="col-sm-4">
-                                    <input class="form-control input-sm" value="<?=$TYPE=isset($TYPE)? $TYPE : '';?>" name="TYPE" id="TYPE" type="text">
+                                    <?php
+                                        $types = array(0=>"GARDU INDUK", 1=>"PENYULANG");
+                                        echo cboFillFromArray("TYPE", $types, "--Choose--", "form-control input-sm");
+                                    ?>
                                 </div>
                             </div>
                         </div>

@@ -33,7 +33,7 @@
 		<band height="58" splitType="Stretch">
 			<image>
 				<reportElement x="0" y="0" width="40" height="58" uuid="174e5870-685c-450d-a154-50fee287c03a"/>
-				<imageExpression><![CDATA["C:\\xampp\\htdocs\\PHPJasper\\pln_logo.jpg"]]></imageExpression>
+				<imageExpression><![CDATA["C:\\xampp\\htdocs\\apdpln\\dist\\img\\PLN.jpg"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="45" y="1" width="296" height="20" uuid="ad9a6fa0-d258-4326-95f3-8f4eedb9e1e8"/>

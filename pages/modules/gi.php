@@ -106,7 +106,16 @@
             <div class="modal-body">
                 <form role="form" id="form_gi" name="form_gi" class="form-horizontal">
                     <input type="hidden" id="type" name="type">
-                    <input type="hidden" id="GIID" name="GIID" value="<?=$GIID=isset($GIID)? $GIID : '';?>">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">GIID</label>
+                                <div class="col-sm-4">
+                                    <input class="form-control input-sm" value="<?=$GIID=isset($GIID)? $GIID : '';?>" name="GIID" id="GIID" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">

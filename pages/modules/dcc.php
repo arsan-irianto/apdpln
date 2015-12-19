@@ -111,7 +111,7 @@
             <div class="form-group input-sm">
                 <label class="col-sm-4 control-label">DCC Name</label>
                 <div class="col-sm-8">
-                    <input class="form-control input-sm" value="<?=$DCC=isset($DCC)? $DCC : '';?>" name="DCC" id="DCC" type="text">
+                    <input class="form-control input-sm" value="<?=$DCC=isset($DCC)? $DCC : '';?>" name="DCC" id="DCC" type="text" required>
                 </div>
             </div>
         </div>

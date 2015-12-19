@@ -14,12 +14,13 @@ extract($_POST);
 
 $AREAID=isset($AREAID)? $AREAID : '';
 $AREA=isset($AREA)? $AREA : '';
-$JUMPENYULANG=isset($JUMPENYULANG) ? $JUMPENYULANG : '';
-$PANJANGPENYULANG=isset($PANJANGPENYULANG) ? $PANJANGPENYULANG : '';
+$JUMPENYULANG=isset($JUMPENYULANG) ? $JUMPENYULANG : NULL;
+$PANJANGPENYULANG=isset($PANJANGPENYULANG) ? $PANJANGPENYULANG : NULL;
 $DCCID=isset($DCCID) ? $DCCID : '';
 $DESC=isset($DESC)? $DESC : '';
 
-$formData = array('AREA'=>$AREA,
+$formData = array('AREAID'=>$AREAID,
+                    'AREA'=>$AREA,
                     'JUMPENYULANG'=>$JUMPENYULANG,
                     'PANJANGPENYULANG'=>$PANJANGPENYULANG,
                     'DCCID'=>$DCCID,
@@ -46,11 +47,22 @@ switch ($type) {
     case "new":
 
         try{
-            $conn->insertArray("AREA", $formData);
-            echo json_encode("OK");
+            /*
+            $stmt = $conn->prepare('SELECT * FROM AREA WHERE AREAID=?');
+            $stmt->bindParam(1, $_POST['id'], PDO::PARAM_INT);
+            $stmt->execute();
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if($row) {
+                echo json_encode("Record Exist");
+            }
+            else {*/
+                $conn->insertArray("AREA", $formData);
+                echo json_encode("OK");
+            //}
         }
         catch (PDOException $e){
-            echo json_encode( "Failed to get DB handle : " . $e->getMessage());
+            echo json_encode( "Error Code : " . $e->getMessage() );
         }
         break;
 

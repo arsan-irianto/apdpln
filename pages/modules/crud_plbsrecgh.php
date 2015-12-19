@@ -13,18 +13,18 @@ include('../../library/functions.php');
 $_GET['query'] = isset($_GET['query']) ? $_GET['query'] : "";
 extract($_POST);
 
-$PID			= isset($PID) ? $PID : 0 ;
+$PID			= isset($PID) ? $PID : "" ;
 $STPOINTNAME    = isset($STPOINTNAME) ? $STPOINTNAME : "";
-$ANALOGID       = isset($ANALOGID) ? $ANALOGID : 0;
+$ANALOGID       = !empty($ANALOGID) ? $ANALOGID : NULL;
 $ANPOINTNAME    = isset($ANPOINTNAME)? $ANPOINTNAME : "";
-$RTUID          = isset($RTUID) ? $RTUID : 0 ;
+$RTUID          = !empty($RTUID) ? $RTUID : NULL ;
 $RTUNAME        = isset($RTUNAME) ? $RTUNAME : "";
 $NAME           = isset($NAME) ? $NAME : "";
 $NORMALLYCLOSED = isset($NORMALLYCLOSED) ? $NORMALLYCLOSED : 0;
-$ASUHANID1      = isset($ASUHANID1) ? $ASUHANID1 : 0;
-$ASUHANID2      = isset($ASUHANID2) ? $ASUHANID2 : 0;
-$GIID           = isset($GIID) ? $GIID : 0;
-$AREAID         = isset($AREAID) ? $AREAID : 0;
+$ASUHANID1      = !empty($ASUHANID1) ? $ASUHANID1 : NULL;
+$ASUHANID2      = !empty($ASUHANID2) ? $ASUHANID2 : NULL;
+$GIID           = !empty($GIID) ? $GIID : NULL;
+$AREAID         = !empty($AREAID) ? $AREAID : NULL;
 $DESC           = isset($DESC) ? $DESC : "";
 
 $formData = array('PID' => $PID,
@@ -101,4 +101,30 @@ if (isset($_POST['act'])=='delete'){
     if($stmt){
         echo json_encode("OK");
     }
+}
+
+if(isset($_GET['q'])=="asuhan"){
+    $return = array();
+    $sql = $conn->query("SELECT	TOP 10 [ASUHANID]
+                                ,[NAME]
+                                FROM [ASUHAN]
+                                WHERE [NAME] LIKE '%".$_GET['query']."%'");
+    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+        $dt = array('ID'=>$row['ASUHANID'],'NAME'=>rtrim($row['NAME'])) ;
+        array_push($return, $dt);
+    }
+    echo json_encode($return);
+}
+
+if(isset($_GET['ref'])=="gi"){
+    $return = array();
+    $sql = $conn->query("SELECT	TOP 10 [GIID]
+                                ,[GI]
+                                FROM GI
+                                WHERE [GI] LIKE '%".$_GET['query']."%'");
+    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+        $dt = array('ID'=>$row['GIID'],'NAME'=>rtrim($row['GI'])) ;
+        array_push($return, $dt);
+    }
+    echo json_encode($return);
 }

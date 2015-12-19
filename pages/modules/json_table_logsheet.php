@@ -11,10 +11,25 @@ session_start();
 include('../../config/connect.php');
 include('../../library/functions.php');
 
-$query ="select * from LOGSHEET WHERE Month(TANGGAL)='".$_GET['month']."' AND Year(TANGGAL) ='".$_GET['year']."'";
+
+$sp = "{:retval = CALL PCDR_LOGSHEET (@BULAN=:bulan,@TAHUN=:tahun)}";
+$result = $conn->prepare($sp);
+
+$retval = null;
+$bulan = isset($_GET['month']) ? $_GET['month'] : "";
+$tahun = isset($_GET['year']) ? $_GET['year'] : "";
+
+$result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4);
+$result->bindParam('bulan', $bulan, PDO::PARAM_INT);
+$result->bindParam('tahun', $tahun, PDO::PARAM_INT);
+
+$result->execute();
+
+//$query ="select * from LOGSHEET WHERE Month(TANGGAL)='".$_GET['month']."' AND Year(TANGGAL) ='".$_GET['year']."'";
 //$query = "select * from LOGSHEET WHERE MONTH(TANGGAL)='09' AND YEAR(TANGGAL)='2015'";
-$result = $conn->query($query);
+//$result = $conn->query($query);
 //$result->execute();
+
 $i = 0;
 $n = 1;
 while( $row = $result->fetch(PDO::FETCH_ASSOC) )

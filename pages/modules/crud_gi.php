@@ -16,7 +16,8 @@ $GI=isset($GI)? $GI : '';
 $DCCID=isset($DCCID) ? $DCCID : '';
 $DESC=isset($DESC)? $DESC : '';
 
-$formData = array('GI'=>$GI,
+$formData = array('GIID'=>$GIID,
+    'GI'=>$GI,
     'DCCID'=>$DCCID,
     '[DESC]'=>$DESC);
 

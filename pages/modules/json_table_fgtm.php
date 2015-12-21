@@ -58,7 +58,7 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC)){
         $n,
         $row["AREA"],
         $row["PENYULANG"],
-        $row["PANJANG"],
+        number_format($row["PANJANG"],2,".",","),
         $row["I1"],
         $row["I2"],
         $row["I3"],
@@ -72,8 +72,8 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC)){
         $row["BESAR5"],
         $row["KECIL5"],
         $JUMLAH_GANGGUAN,
-        $GANGGUANBESAR,
-        $GANGGUANTOTAL);
+        number_format($GANGGUANBESAR,2,".",","),
+        number_format($GANGGUANTOTAL,2,".",","));
     $i++;
     $n++;
 }

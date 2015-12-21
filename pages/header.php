@@ -47,7 +47,7 @@
     <header class="main-header">
 
         <!-- Logo -->
-        <a href="index2.html" class="logo"><img src="../dist/img/PLN.jpg">&nbsp;&nbsp;&nbsp;&nbsp;<b>APD</b> PLN</a>
+        <a href="index2.html" class="logo"><img src="../dist/img/PLN_logo.jpg">&nbsp;&nbsp;&nbsp;&nbsp;<b>APD</b> PLN</a>
 
         <!-- Header Navbar -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -99,8 +99,8 @@
                             <li class="user-header">
                                 <img src="../dist/img/user.png" class="img-circle" alt="User Image" />
                                 <p>
-                                    <?php echo $_SESSION['DESCR']; ?>
-                                    <small>Member since Nov. 2012</small>
+                                    <?php echo $_SESSION['USERNAME']; ?>
+                                    <small><?php echo $_SESSION['DESCR']; ?></small>
                                 </p>
                             </li>
                             <!-- Menu Footer-->

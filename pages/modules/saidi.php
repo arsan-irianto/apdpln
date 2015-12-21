@@ -21,7 +21,7 @@
             <small>Saidi</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Rekap Laporan</a></li>
+            <li><a href="#"><i class="fa fa-book"></i> Rekap Laporan</a></li>
             <li class="active">Saidi</li>
         </ol>
     </section>
@@ -38,7 +38,7 @@
                             <div class="col-md-4"><h3 class="box-title">Data SAIDI</h3></div>
                             <div class="col-md-8" align="right">
                                 <div class="btn-group" id="btnTable">
-                                    <!--   <a href="reports/rpt_generator.php?name=saidi&type=pdf" target="_blank" class="btn btn-default">Pdf</a>-->
+                                       <a href="#" id="btnPdf" target="_blank" class="btn btn-default">Pdf</a>
                                    </div>
                                </div>
                            </div>

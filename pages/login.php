@@ -40,6 +40,7 @@ if(!empty($_POST)){
         session_start();
         $_SESSION['USERNAME'] = $row['USERNAME'];
         $_SESSION['PASSWORD'] = $row['PASSWORD'];
+        $_SESSION['TYPE'] = $row['TYPE'];
         $_SESSION['DESCR'] = $row['DESCR'];
         //header("Location: ../index.php");
         //die("Redirecting to: secret.php");

@@ -12,7 +12,7 @@ switch($_GET['name']){
     case "fgtm":
         $xml =  simplexml_load_file("rptFGTM.jrxml");break;
     case "saidi":
-        $xml =  simplexml_load_file("RPT_SAIDI.jrxml");break;
+        $xml =  simplexml_load_file("rptSAIDI.jrxml");break;
     case "sample":
         $xml =  simplexml_load_file("report6.jrxml");break;
 }

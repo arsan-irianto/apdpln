@@ -20,8 +20,8 @@ function reloadDatatable(){
             }
         });
         $("#tsaidi_wrapper > .dt-buttons").appendTo("#btnTable");
-        //$("#btnPdf").attr("href", "reports/rpt_generator.php?name=fgtm&type=pdf&month="+
-        //$("#cbo_month").val()+"&year="+$("#cbo_year").val());
+        $("#btnPdf").attr("href", "reports/rpt_generator.php?name=saidi&type=pdf&month="+
+        $("#cbo_month").val()+"&year="+$("#cbo_year").val());
     }
     else{
         $('#tsaidi').DataTable({

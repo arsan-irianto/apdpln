@@ -16,6 +16,7 @@
         overflow-y: auto;
     }
     td{white-space: nowrap}
+    .datepicker{z-index:1200 !important;}
 </style>
 <title> LogSheet</title>
 <div class="content-wrapper">
@@ -26,7 +27,7 @@
         <small>Logsheet</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i>Rekap Laporan</a></li>
+        <li><a href="#"><i class="fa fa-book"></i>Rekap Laporan</a></li>
         <li class="active">Logsheet</li>
     </ol>
 </section>
@@ -43,7 +44,7 @@
                     <div class="col-md-4"><h3 class="box-title">Data Logsheet</h3></div>
                     <div class="col-md-8" align="right">
                         <div class="btn-group" id="btnTable">
-                            <?php if ($_SESSION['USERNAME'] != "") { ?>
+                            <?php if(($TYPE == 1) || ($TYPE == 2))  { ?>
                                 <a href="#" onClick="showModals()" class="btn btn-default">Add</a>
                             <?php }?>
                         </div>
@@ -66,6 +67,7 @@
                         <thead>
                         <tr>
                             <th><div align="center">ACTION</div></th>
+                            <th><div align="center">CHECK</div></th>
                             <th><div align="center">TANGGAL</div></th>
                             <th><div align="center">PENYULANG</div></th>
                             <th><div align="center">ASUHAN</div></th>
@@ -80,10 +82,12 @@
                             <th><div align="center">CLOSE</div></th>
 
                             <th><div align="center">LAMA</div></th>
+                            <th><div align="center">MW</div></th>
                             <th><div align="center">KWH</div></th>
                             <th><div align="center">MRF</div></th>
                             <th><div align="center">RC 1</div></th>
                             <th><div align="center">KODE FGTM</div></th>
+                            <th><div align="center">KODE SIKLUS</div></th>
                             <th><div align="center">KELOMPOK GANGGUAN</div></th>
                             <th><div align="center">KETERANGAN</div></th>
                             <th><div align="center">KOORDINASI</div></th>
@@ -142,7 +146,7 @@
                     <input type="hidden" id="type" name="type">
                     <input name="ID" id="ID" value="" type="hidden">
                     <input name="SC" id="SC" value="" type="hidden">
-                    <input name="MC" id="MC" value="" type="hidden">
+                    <input name="MC" id="MC" value="1" type="hidden">
                     <input name="CHK" id="CHK" value="" type="hidden">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab">Gardu & Area</a></li>
@@ -183,7 +187,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Gardu Induk (GI)</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$GI=isset($GI)? $GI : '';?>" name="GI" id="GI" type="text" readonly>
+                                            <input class="form-control input-sm typeahead_gi" value="<?=$GI=isset($GI)? $GI : '';?>" name="GI" id="GI" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -201,7 +205,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Area</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$AREA=isset($AREA)? $AREA : '';?>" name="AREA" id="AREA" type="text" readonly>
+                                            <input class="form-control input-sm typeahead_area" value="<?=$AREA=isset($AREA)? $AREA : '';?>" name="AREA" id="AREA" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -209,17 +213,17 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Asuhan</label>
+                                        <label class="col-sm-4 control-label">Wilayah</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$ASUHAN=isset($ASUHAN)? $ASUHAN : '';?>" name="ASUHAN" id="ASUHAN" type="text" readonly>
+                                            <input class="form-control input-sm" value="<?=$WILAYAH=isset($WILAYAH)? $WILAYAH : '';?>" name="WILAYAH" id="WILAYAH" type="text" readonly>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Wilayah</label>
+                                        <label class="col-sm-4 control-label">Asuhan</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$WILAYAH=isset($WILAYAH)? $WILAYAH : '';?>" name="WILAYAH" id="WILAYAH" type="text" readonly>
+                                            <input class="form-control input-sm typeahead_asuhan" value="<?=$ASUHAN=isset($ASUHAN)? $ASUHAN : '';?>" name="ASUHAN" id="ASUHAN" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -328,7 +332,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">KWH</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$KWH=isset($KWH)? $KWH : '0';?>" placeholder="0.000" name="KWH" id="KWH" type="text">
+                                            <input class="form-control input-sm" value="<?=$KWH=isset($KWH)? $KWH : '0';?>" placeholder="0.000" name="KWH" id="KWH" type="text" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -343,6 +347,14 @@
                                             <input name="CE" id="CE" type="hidden" value="<?=$CE=isset($CE)? $CE : '';?>">
                                             <input name="EOT" id="EOT" type="hidden" value="<?=$EOT=isset($EOT)? $EOT : '';?>">
                                             <input name="ECT" id="ECT" type="hidden" value="<?=$ECT=isset($ECT)? $ECT : '';?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group input-sm">
+                                        <label class="col-sm-4 control-label">MW</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control input-sm" value="0" placeholder="0.000" name="MW" id="MW" type="text" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -385,11 +397,26 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Keterangan</label>
                                         <div class="col-sm-8">
-                                            <textarea class="form-control input-sm"  name="KETERANGAN" id="KETERANGAN" rows="3" placeholder="Masukkan Keterangan ..."><?=isset($KETERANGAN)? $KETERANGAN : '';?></textarea>
+                                            <textarea class="form-control input-sm"  name="KETERANGAN" id="KETERANGAN" rows="2" placeholder="Masukkan Keterangan ..."><?=isset($KETERANGAN)? $KETERANGAN : '';?></textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group input-sm">
+                                        <label class="col-sm-4 control-label">Kode Siklus</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control input-sm" value="<?=$KODESIKLUS=isset($KODESIKLUS)? $KODESIKLUS : '';?>"  name="KODESIKLUS" id="KODESIKLUS" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">

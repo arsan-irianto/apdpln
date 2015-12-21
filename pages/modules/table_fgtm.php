@@ -23,7 +23,7 @@
             <small>FGTM</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Rekap Laporan</a></li>
+            <li><a href="#"><i class="fa fa-book"></i> Rekap Laporan</a></li>
             <li class="active">FGTM</li>
         </ol>
     </section>

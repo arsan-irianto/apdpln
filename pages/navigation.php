@@ -5,6 +5,8 @@
  * Date: 06/11/2015
  * Time: 22:22
  */
+//session_start();
+$TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
 ?>
 
 
@@ -25,7 +27,13 @@
                     <i class="fa fa-home"></i> <span>Home</span></i>
                 </a>
             </li>
-
+            <?php if ( $TYPE == 1) { ?>
+            <li <?php if($_GET['modules']=='users') echo "class='active'";?> >
+                <a href="?modules=users">
+                    <i class="fa fa-users"></i> <span>Users</span></i>
+                </a>
+            </li>
+            <?php } ?>
             <li <?php if( ($_GET['modules']=='dcc') || ($_GET['modules']=='area') ||
                     ($_GET['modules']=='gi') || ($_GET['modules']=='asuhan') || ($_GET['modules']=='plbsrecgh') ) echo "class='treeview active'";?>>
                 <a href="#">

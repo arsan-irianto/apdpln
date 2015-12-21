@@ -2,11 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: Arsan Irianto
- * Date: 12/12/2015
- * Time: 23:01
+ * Date: 21/12/2015
+ * Time: 10:27
  */
 ?>
-<script src="modules/gi.js" type="text/javascript"></script>
+
+<script src="modules/users.js" type="text/javascript"></script>
 <style>
     body {
         padding-right: 0px !important
@@ -21,12 +22,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            GI
-            <small>Master GI</small>
+            Users
+            <small>Data User</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-edit"></i> Master</a></li>
-            <li class="active">GI</li>
+            <li><a href="#"><i class="fa fa-users"></i> Users</a></li>
+            <li class="active">Data User</li>
         </ol>
     </section>
 
@@ -39,10 +40,10 @@
                 <div class="box box-warning">
                     <div class="box-header">
                         <div class="row">
-                            <div class="col-md-4"><h3 class="box-title">Data GI</h3></div>
+                            <div class="col-md-4"><h3 class="box-title">Data User</h3></div>
                             <div class="col-md-8" align="right">
                                 <div class="btn-group" id="btnTable">
-                                    <?php if ($TYPE == 1) { ?>
+                                    <?php if ($_SESSION['USERNAME'] != "") { ?>
                                         <a href="#" onClick="showModals()" class="btn btn-default">Add</a>
                                     <?php }?>
                                 </div>
@@ -52,14 +53,14 @@
                     </div><!-- /.box-header -->
                     <div class="box-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover" id="tgi" style="font-size: 0.9em;">
+                            <table class="table table-bordered table-striped table-hover" id="tusers" style="font-size: 0.9em;">
                                 <thead>
                                 <tr>
                                     <th width="30px"><div align="center">ACTION</div></th>
-                                    <th width="30px"><div align="center">GIID</div></th>
-                                    <th width="350px"><div align="center">GI</div></th>
-                                    <th width="30"><div align="center">DCCID</div></th>
-                                    <th width="200"><div align="center">DESC</div></th>
+                                    <th width="20px"><div align="center">NO</div></th>
+                                    <th width="200px"><div align="center">USERNAME</div></th>
+                                    <th width="30"><div align="center">TYPE</div></th>
+                                    <th width="250"><div align="center">DESCRIPTION</div></th>
                                 </tr>
                                 </thead>
                                 <tbody></tbody>
@@ -101,27 +102,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Form GI</h4>
+                <h4 class="modal-title" id="myModalLabel">Form Users</h4>
             </div>
             <div class="modal-body">
-                <form role="form" id="form_gi" name="form_gi" class="form-horizontal">
+                <form role="form" id="form_users" name="form_users" class="form-horizontal">
                     <input type="hidden" id="type" name="type">
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">
-                                <label class="col-sm-4 control-label">GIID</label>
-                                <div class="col-sm-4">
-                                    <input class="form-control input-sm" value="<?=$GIID=isset($GIID)? $GIID : '';?>" name="GIID" id="GIID" type="text">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-10">
-                            <div class="form-group input-sm">
-                                <label class="col-sm-4 control-label">GI Name</label>
+                                <label class="col-sm-4 control-label">Username</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control input-sm" value="<?=$GI=isset($GI)? $GI : '';?>" name="GI" id="GI" type="text">
+                                    <input class="form-control input-sm" value="<?=$USERNAME=isset($USERNAME)? $USERNAME : '';?>" name="USERNAME" id="USERNAME" type="text" required>
                                 </div>
                             </div>
                         </div>
@@ -129,11 +120,21 @@
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">
-                                <label class="col-sm-4 control-label">DCC</label>
+                                <label class="col-sm-4 control-label">Password</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm" value="<?=$PASSWORD=isset($PASSWORD)? $PASSWORD : '';?>" name="PASSWORD" id="PASSWORD" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">Type</label>
                                 <div class="col-sm-8">
                                     <?php
-                                    $queryDCC = "SELECT DCCID,DCC FROM DCC";
-                                    $conn->cboFillFromTable("DCCID",$queryDCC,"DCCID","DCC", "--Choose--","form-control input-sm","addnew");
+                                    $items = array(1=>"Administrator", 2=>"Operator");
+                                    echo cboFillFromArray("TYPE", $items, "--Choose--", "form-control input-sm");
                                     ?>
                                 </div>
                             </div>
@@ -152,7 +153,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" onClick="submitGi()" class="btn btn-sm btn-primary" data-dismiss="modal">Submit</button>
+                <button type="button" onClick="submitUsers()" class="btn btn-sm btn-primary" data-dismiss="modal">Submit</button>
                 <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
             </div>
         </div>

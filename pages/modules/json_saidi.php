@@ -54,13 +54,13 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC)){
         $row["B_KETSAIDI"],
         $row["C_PELANGGANPADAM"],
         $row["D_MENIT_X_PELANGGANPADAM"],
-        $row["E_JAM_X_PELANGGANPADAM"],
-        $row["F_MENIT_SAIDI"],
-        $row["G_JAM_SAIDI"],
-        $row["H_SAIFI"],
+        number_format($row["E_JAM_X_PELANGGANPADAM"],2,".",","),
+        number_format($row["F_MENIT_SAIDI"],2,".",","),
+        number_format($row["G_JAM_SAIDI"],2,".",","),
+        number_format($row["H_SAIFI"],2,".",","),
         $row["I_JUMLAHGANGGUAN"],
-        $row["J_LAMAPADAM"],
-        $row["K_BEBAN_PADAM_KWH"]
+        number_format($row["J_LAMAPADAM"],2,".",","),
+        number_format($row["K_BEBAN_PADAM_KWH"],2,".",",")
     );
     $i++;
     //$n++;

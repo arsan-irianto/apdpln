@@ -14,9 +14,13 @@ include('../library/fusioncharts.php');
 $modules = ( isset($_GET['modules']) ? $_GET['modules'] : '' );
 $act    = ( isset($_GET['act']) ? $_GET['act'] : '' );
 
+$TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
+
 switch($modules){
     case "dashboard":
         include('dashboard.php');break;
+    case "users":
+        include('modules/users.php');break;
     case "dcc":
         include('modules/dcc.php');break;
     case "area":
@@ -53,6 +57,8 @@ switch($modules){
         include('modules/grafik_xtt_area.php');break;
     case "xtpt_area":
         include('modules/grafik_xtpt_area.php');break;
+    case "xtpir_area":
+        include('modules/grafik_xtpir_area.php');break;
 
     // Grafik Gardu Induk//
     case "xtp_gardu":
@@ -61,6 +67,8 @@ switch($modules){
         include('modules/grafik_xtt_gardu.php');break;
     case "xtpt_gardu":
         include('modules/grafik_xtpt_gardu.php');break;
+    case "xtpir_gardu":
+        include('modules/grafik_xtpir_gardu.php');break;
 }
 ?>
 

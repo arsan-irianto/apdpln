@@ -95,7 +95,7 @@ if ($result) {
             <small>Kali Trip Temporer</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Grafik Per Area</a></li>
+            <li><a href="#"><i class="fa fa-pie-chart"></i> Grafik Per Area</a></li>
             <li class="active">Kali Trip Temporer</li>
         </ol>
     </section>

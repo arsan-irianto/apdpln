@@ -52,6 +52,7 @@ function reloadDatatable(){
 
 function showModals( id ){
     waitingDialog.show();
+    clearModals();
     // Untuk Eksekusi Data Yang Ingin di Edit
     if( id ){
         $.ajax({
@@ -68,7 +69,7 @@ function showModals( id ){
     }
     // Form Add new
     else{
-        clearModals();
+        //clearModals();
         $("#myModals").modal("show");
         //$("#myModalLabel").html("New User");
         $("#type").val("new");
@@ -80,9 +81,10 @@ function showModals( id ){
 function setModalData( data ){
     $("#type").val("edit");
     $("#ID").val(data.ID);
+    $("#KODESIKLUS").val(data.KODESIKLUS);
     $("#SC").val(data.SC);
-    $("#MC").val(data.MC);
-    $("#CHK").val(data.CHK);
+    $("#MC").val(1);
+    $("#CHK").val(1);
     $("#PID").val(data.PID);
     //tgl = data.TANGGAL.substr(0,10);
     $("#TANGGAL").val(data.TANGGAL.substr(0,10));
@@ -129,7 +131,8 @@ function setModalData( data ){
     $("#KETFGTM").val(data.KETFGTM.trim());
     $("#KETERANGAN").val(data.KETERANGAN.trim());
     $("#KORDINASI").val(data.KORDINASI.trim());
-    $("#SEGMENGANGGUAN").val(data.SEGMENGANGGUAN.trim());
+    SEGMENGANGGUAN = (data.SEGMENGANGGUAN == null) ? "" : data.SEGMENGANGGUAN;
+    $("#SEGMENGANGGUAN").val(SEGMENGANGGUAN);
     $("#TOTALPELANGGAN").val(data.TOTALPELANGGAN);
     $("#PELANGGANPADAM").val(data.PELANGGANPADAM);
     $("#PERSENPELANGGANPADAM").val(data.PERSENPELANGGANPADAM);
@@ -190,12 +193,17 @@ function deleteLogsheet( id ) {
 
 function clearModals()
 {
+    $("#PID").val("");
+    $("#KODESIKLUS").val("");
     $("#ID").val("");
     $("#SC").val(1);
     $("#MC").val(1);
     $("#CHK").val(1);
     $("#TANGGAL").val("");
-    $("#PLBSREC").val("");
+    $("#PLBSRECGH").val("");
+    $("#GI").val("");
+    $("#AREAID").val("");
+    $("#WILAYAH").val("");
     //$("#PLBSREC").attr('readonly',false);
     $("#ASUHAN").val("");
     $("#AREA").val("");
@@ -346,6 +354,44 @@ $(function () {
         }
     });
 
+    $("input.typeahead_gi").typeahead({
+        onSelect: function(item) {
+            $("#GIPID").val(item.value);
+        },
+        ajax: {
+            url: "modules/crud_logsheet.php?r=gi",
+            displayField: "NAME",
+            valueField:"ID"
+        }
+    });
+
+    $("input.typeahead_area").typeahead({
+        onSelect: function(item) {
+            $("#AREAID").val(item.value);
+            $.ajax({
+                type: "GET",
+                url: "modules/crud_logsheet.php?g=dcc",
+                dataType: 'json',
+                data: "id=" + $("#AREAID").val(),
+                success: function(data) {
+                    $("#WILAYAH").val(data.DCC.trim());
+                }
+            });
+        },
+        ajax: {
+            url: "modules/crud_logsheet.php?a=area",
+            displayField: "NAME",
+            valueField:"ID"
+        }
+    });
+
+    $('input.typeahead_asuhan').typeahead({
+        ajax: {
+            url: "modules/crud_logsheet.php?qs=asuhan",
+            displayField: "NAME",
+            valueField:"ID"
+        }
+    });
 /*
     var typeaheadSource =   [{
                                 PID:"400013", NAME:'Arsan'}, {

@@ -59,6 +59,7 @@ $TOTALPELANGGAN=isset($TOTALPELANGGAN)? $TOTALPELANGGAN : 0;
 $PELANGGANPADAM=isset($PELANGGANPADAM)? $PELANGGANPADAM : 0;
 $PERSENPELANGGANPADAM=isset($PERSENPELANGGANPADAM)? $PERSENPELANGGANPADAM : 0;
 $KODESAIDI=isset($KODESAIDI)? $KODESAIDI : '';
+$KODESIKLUS=isset($KODESIKLUS)? $KODESIKLUS : '';
 $KETSAIDI=isset($KETSAIDI)? $KETSAIDI : '';
 $EKSEKUTOR=isset($EKSEKUTOR)? $EKSEKUTOR : '';
 $SHIFT=isset($SHIFT)? $SHIFT : '';
@@ -109,6 +110,7 @@ $formData = array('SC'=>$SC,
     'PELANGGANPADAM'=>$PELANGGANPADAM,
     'PERSENPELANGGANPADAM'=>$PERSENPELANGGANPADAM,
     'KODESAIDI'=>$KODESAIDI,
+    'KODESIKLUS'=>$KODESIKLUS,
     'KETSAIDI'=>$KETSAIDI,
     'EKSEKUTOR'=>$EKSEKUTOR,
     'SHIFT'=>$SHIFT);
@@ -247,4 +249,54 @@ if(isset($_GET['plb'])=="garea"){
             WHERE A.PID = '".$_GET['id']."'");
     $data = $sql->fetch(PDO::FETCH_ASSOC);
     echo json_encode($data);
+}
+
+if(isset($_GET['r'])=="gi"){
+    $return = array();
+    $sql = $conn->query("SELECT	TOP 10 [GIID]
+                                ,[GI]
+                                FROM GI
+                                WHERE [GI] LIKE '%".$_GET['query']."%'");
+    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+        $dt = array('ID'=>$row['GIID'],'NAME'=>rtrim($row['GI'])) ;
+        array_push($return, $dt);
+    }
+    echo json_encode($return);
+}
+
+if(isset($_GET['a'])=="area"){
+    $return = array();
+    $sql = $conn->query("SELECT TOP 10 A.AREAID
+                          ,A.AREA
+                          ,B.DCC
+                      FROM [AREA] A
+                      INNER JOIN [DCC] B ON A.DCCID = B.DCCID
+                                WHERE [AREA] LIKE '%".$_GET['query']."%'");
+    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+        $dt = array('ID'=>$row['AREAID'],'NAME'=>rtrim($row['AREA'])) ;
+        array_push($return, $dt);
+    }
+    echo json_encode($return);
+}
+
+if(isset($_GET['g'])=="dcc"){
+    $sql = $conn->query("SELECT B.DCC
+                          FROM [AREA] A
+                          INNER JOIN [DCC] B ON A.DCCID = B.DCCID
+                          WHERE AREAID = '".$_GET['id']."'");
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+    echo json_encode($data);
+}
+
+if(isset($_GET['qs'])=="asuhan"){
+    $return = array();
+    $sql = $conn->query("SELECT	TOP 10 [ASUHANID]
+                                ,[NAME]
+                                FROM [ASUHAN]
+                                WHERE [NAME] LIKE '%".$_GET['query']."%'");
+    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
+        $dt = array('ID'=>$row['ASUHANID'],'NAME'=>rtrim($row['NAME'])) ;
+        array_push($return, $dt);
+    }
+    echo json_encode($return);
 }

@@ -32,7 +32,7 @@
             <small>Master PLBSRECGH</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Master</a></li>
+            <li><a href="#"><i class="fa fa-edit"></i> Master</a></li>
             <li class="active">PLBSRECGH</li>
         </ol>
     </section>
@@ -49,7 +49,7 @@
                             <div class="col-md-4"><h3 class="box-title">Data PLBSRECGH</h3></div>
                             <div class="col-md-8" align="right">
                                 <div class="btn-group" id="btnTable">
-                                    <?php if ($_SESSION['USERNAME'] != "") { ?>
+                                    <?php if ($TYPE == 1) { ?>
                                         <a href="#" onClick="showModals()" class="btn btn-default">Add</a>
                                     <?php }?>
                                 </div>

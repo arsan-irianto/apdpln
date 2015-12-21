@@ -95,7 +95,7 @@ if ($result) {
             <small>Kali Trip Permanen</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Grafik Per Gardu Induk</a></li>
+            <li><a href="#"><i class="fa fa-bar-chart-o"></i> Grafik Per Gardu Induk</a></li>
             <li class="active">Kali Trip Permanen</li>
         </ol>
     </section>

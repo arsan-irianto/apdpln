@@ -21,11 +21,11 @@
 /**
  * Created by PhpStorm.
  * User: Arsan Irianto
- * Date: 16/12/2015
- * Time: 23:41
+ * Date: 20/12/2015
+ * Time: 18:04
  */
 
-$sp = "{:retval = CALL PCDR_AREA_TRIP (@BULAN=:bulan,@TAHUN=:tahun)}";
+$sp = "{:retval = CALL PCDR_RELAY_AREA_TRIP (@BULAN=:bulan,@TAHUN=:tahun)}";
 $result = $conn->prepare($sp);
 
 $retval = null;
@@ -46,7 +46,7 @@ if ($result) {
     // The `$arrData` array holds the chart attributes and data
     $arrData = array(
         "chart" => array(
-            "caption" => "Kali Trip Permanen & Temporer Per Area Dist",
+            "caption" => "Kali Trip Per Indikasi Relay by Area Dist",
             "bgColor" => "#ffffff",
             "borderAlpha"=> "20",
             "canvasBorderAlpha"=> "0",
@@ -64,21 +64,30 @@ if ($result) {
     // Define Chart DataSource
     $category = array();
     $seriesname = array();
-    $data_permanen = array();
-    $data_temporer = array();
+    $data_ocr = array();
+    $data_gfr = array();
+    $data_ufr = array();
+    $data_ocr_gfr = array();
+    $data_ufr_gfr = array();
 
     while( $row = $result->fetch() ) {
         array_push($category, array("label" => $row["AREA"]));
-        array_push($data_permanen, array("value" => $row["PERMANEN"]));
-        array_push($data_temporer, array("value" => $row["TEMPORER"]));
+        array_push($data_ocr, array("value" => $row["OCR"]));
+        array_push($data_gfr, array("value" => $row["GFR"]));
+        array_push($data_ufr, array("value" => $row["UFR"]));
+        array_push($data_ocr_gfr, array("value" => $row["OCR-GFR"]));
+        array_push($data_ufr_gfr, array("value" => $row["UFR-GFR"]));
     }
 
     // Plotting Categories
     $arrData["categories"][] = array("category" => $category);
 
     // Plotting Series & Data
-    array_push($seriesname, array("seriesname"=>"PERMANEN", "data" => $data_permanen));
-    array_push($seriesname, array("seriesname"=>"TEMPORER", "data" => $data_temporer));
+    array_push($seriesname, array("seriesname"=>"OCR", "data" => $data_ocr));
+    array_push($seriesname, array("seriesname"=>"GFR", "data" => $data_gfr));
+    array_push($seriesname, array("seriesname"=>"UFR", "data" => $data_ufr));
+    array_push($seriesname, array("seriesname"=>"OCR-GFR", "data" => $data_ocr_gfr));
+    array_push($seriesname, array("seriesname"=>"UFR-GFR", "data" => $data_ufr_gfr));
 
     // Plotting Series & Data to Dataset
     $arrData["dataset"] = $seriesname;
@@ -105,11 +114,11 @@ if ($result) {
     <section class="content-header">
         <h1>
             Grafik Per Area
-            <small>Kali Trip Permanen & Temporer</small>
+            <small>Kali Trip Per Indikasi Relay</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-pie-chart"></i> Grafik Per Area</a></li>
-            <li class="active">Kali Trip Permanen & Temporer</li>
+            <li class="active">Kali Trip Per Indikasi Relay</li>
         </ol>
     </section>
 
@@ -126,7 +135,7 @@ if ($result) {
                             <div class="row">
                                 <div class="col-md-7">
                                     <form name="period" id="period" method="get" >
-                                        <input type="hidden" name="modules" id="modules" value="xtpt_area">
+                                        <input type="hidden" name="modules" id="modules" value="xtpir_area">
                                         <?php
                                         echo combonamabln(1, 12, "cbo_month", "-Month-","form-control input-sm");
                                         ?>

@@ -39,10 +39,13 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
     //$checkData = "<div class='text-center'><input type='checkbox' id='titleCheckdel'><input type='hidden' class='deldata' name='item[$n][deldata]' value='$row[ID]' disabled></div>";
     //$rowEdit = "<a href='home.php?modules=logsheet&periode=$row[periode]&act=edit&id=$row[ID]' class='btn btn-xs btn-default' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
     //$rowDelete = "<a href='modules/action_logsheet.php?act=delete&id=$row[ID]' onclick='return confirm(\"Sure to Delete?\");' class='alertdel btn btn-xs btn-danger'><i class='fa fa-times'></i></a>";
+
     $rowEdit = "<a href='#' onClick='showModals($row[ID])' class='btn_edit btn btn-xs btn-primary' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
     $tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteLogsheet($row[ID])'><i class='fa fa-times'></i></a>";
-    $session_act = ( ($_SESSION['USERNAME'] <> '') ? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
+    $session_act = ( ($_SESSION['TYPE'] == 1) || ($_SESSION['TYPE'] == 2)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
     $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
+
+    $chk = ( $row['MC']==1 ) ? "<span class='label label-success'>Checked</span>" : "<span class='label label-warning'>Uncheked</span>";
 
     $TANGGAL = (is_null($row['TANGGAL']) ? "" : substr($row['TANGGAL'],0,10));
     $TR = (is_null($row['TR']) ? "" : substr($row['TR'],11,8));
@@ -52,10 +55,10 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
     $CL = (is_null($row['CL']) ? "" : substr($row['CL'],11,8));
 
 
-    $rows['data'][$i] = array( $action, $TANGGAL, $row['PLBSREC'],
+    $rows['data'][$i] = array( $action, $chk, $TANGGAL, $row['PLBSREC'],
         $row['ASUHAN'], $row['AREA'], $row['BEBANPADAM'], $row['RELAY'],$TR, $EX,
         $RC, $OP, $CL, $lama,
-        $row['KWH'], $row['MRF'], $row['JEDARC1'], $row['KODEFGTM'],$row['KETFGTM'],$row['KETERANGAN'],$row['KORDINASI'],
+        $row['MW'], $row['KWH'], $row['MRF'], $row['JEDARC1'], $row['KODEFGTM'],$row['KETFGTM'],$row['KODESIKLUS'],$row['KETERANGAN'],$row['KORDINASI'],
         $row['SEGMENGANGGUAN'], $row['TOTALPELANGGAN'],$row['PELANGGANPADAM'],$row['PERSENPELANGGANPADAM'],
         $row['KODESAIDI'], $row['KETSAIDI'], $row['EKSEKUTOR'], $row['SHIFT']
     );

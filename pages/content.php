@@ -47,6 +47,10 @@ switch($modules){
                 include('modules/add_logsheet.php');break;
         }
         break;
+    case "ufr":
+        include('modules/ufr.php');break;
+    case "transmisi":
+        include('modules/transmisi.php');break;
     case "test":
         include('modules/alert_test.php');break;
 

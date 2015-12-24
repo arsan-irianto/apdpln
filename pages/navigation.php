@@ -50,7 +50,9 @@ $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
             </li>
 
             <li <?php if( ($_GET['modules']=='fgtm') || ($_GET['modules']=='saidi') ||
-                ($_GET['modules']=='logsheet') || ($_GET['modules']=='pkb')) echo "class='treeview active'";?>>
+                ($_GET['modules']=='logsheet') || ($_GET['modules']=='pkb') ||
+                ($_GET['modules']=='ufr') || ($_GET['modules']=='transmisi'))
+                echo "class='treeview active'";?>>
                 <a href="#">
                     <i class="fa fa-book"></i> <span>Rekap Laporan</span>
                     <i class="fa fa-angle-left pull-right"></i>
@@ -60,6 +62,8 @@ $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
                     <li <?php if($_GET['modules']=='fgtm') echo "class='active'";?>><a href="?modules=fgtm"><i class="fa fa-angle-double-right"></i> Rekap FGTM</a></li>
                     <li <?php if($_GET['modules']=='saidi') echo "class='active'";?>><a href="?modules=saidi"><i class="fa fa-angle-double-right"></i> Rekap Saidi</a></li>
                     <li <?php if($_GET['modules']=='logsheet') echo "class='active'";?>><a href="?modules=logsheet"><i class="fa fa-angle-double-right"></i> Rekap Logsheet</a></li>
+                    <li <?php if($_GET['modules']=='ufr') echo "class='active'";?>><a href="?modules=ufr"><i class="fa fa-angle-double-right"></i> Report UFR</a></li>
+                    <li <?php if($_GET['modules']=='transmisi') echo "class='active'";?>><a href="?modules=transmisi"><i class="fa fa-angle-double-right"></i> Report Transmisi</a></li>
                 </ul>
             </li>
 

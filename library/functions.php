@@ -199,7 +199,7 @@ function combothn($awal, $akhir, $var, $terpilih, $class=""){
  * @param string $class
  */
 function cboFillFromArray($var,$arr_data,$default="--Choose--",$class=""){
-    echo "<select name=$var id=$var class=$class>";
+    echo "<select name='$var' id='$var' class='$class'>";
     echo "<option value='' selected>$default</option>";
     foreach($arr_data as $val => $name)
     {

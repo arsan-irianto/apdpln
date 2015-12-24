@@ -51,8 +51,8 @@ switch ($type) {
     case "edit":
 
         try{
-            $conn->updateArray("USER", "USERNAME", $USERNAME, $formData);
-            $conn->insertArray("USERS", $formData);
+            $conn->updateArray("USERS", "USERNAME", $USERNAME, $formData);
+            //$conn->insertArray("USERS", $formData);
             $conn->query("UPDATE [USERS] SET [PASSWORD] = HASHBYTES('md5','".$PASSWORD."')
                           WHERE [USERNAME] = '".$USERNAME."'");
             echo json_encode("OK");

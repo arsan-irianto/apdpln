@@ -35,6 +35,7 @@
     <!-- jQuery 2.1.3 -->
     <script src="../plugins/jQuery/jQuery-2.1.3.min.js"></script>
     <script src="../plugins/datatables/datatables.min.js" type="text/javascript"></script>
+    <script src="../plugins/datatables/datatables_sum.js" type="text/javascript"></script>
     <script type="text/javascript" language="javascript" src="../dist/js/common.js"></script>
 
     <script type="text/javascript" src="../plugins/fusioncharts/js/fusioncharts.js"></script>

@@ -65,36 +65,59 @@
                             <table class="table table-bordered table-striped table-hover" id="tlogsheet" style="font-size: 0.9em;">
                                 <thead>
                                 <tr>
-                                    <th><div align="center">ACTION</div></th>
-                                    <th><div align="center">TANGGAL</div></th>
-                                    <th><div align="center">PENYULANG</div></th>
-                                    <th><div align="center">ASUHAN</div></th>
-                                    <th><div align="center">AREA</div></th>
-                                    <th><div align="center">BEBAN PADAM</div></th>
-                                    <th><div align="center">RELAY</div></th>
-
-                                    <th><div align="center">TRIP</div></th>
-                                    <th><div align="center">EXECUTE</div></th>
-                                    <th><div align="center">RECLOSE</div></th>
-                                    <th><div align="center">OPEN</div></th>
-                                    <th><div align="center">CLOSE</div></th>
-
-                                    <th><div align="center">LAMA</div></th>
-                                    <th><div align="center">KWH</div></th>
-                                    <th><div align="center">MRF</div></th>
-                                    <th><div align="center">RC 1</div></th>
-                                    <th><div align="center">KODE FGTM</div></th>
-                                    <th><div align="center">KELOMPOK GANGGUAN</div></th>
-                                    <th><div align="center">KETERANGAN</div></th>
-                                    <th><div align="center">KOORDINASI</div></th>
-                                    <th><div align="center">SEGMEN GANGGUAN</div></th>
-                                    <th><div align="center">TOTAL PELANGGAN</div></th>
-                                    <th><div align="center">PELANGGAN PADAM</div></th>
-                                    <th><div align="center">% PELANGGAN PADAM</div></th>
-                                    <th><div align="center">KODE SAIDI</div></th>
-                                    <th><div align="center">KETERANGAN KODE PADAM</div></th>
-                                    <th><div align="center">EKSEKUTOR</div></th>
-                                    <th><div align="center">SHIFT</div></th>
+                                    <th>ID</th>
+                                    <th>SC</th>
+                                    <th>MC</th>
+                                    <th>CHK</th>
+                                    <th>PID</th>
+                                    <th>GIPID</th>
+                                    <th>STPID</th>
+                                    <th>AREAID</th>
+                                    <th>OE</th>
+                                    <th>CE</th>
+                                    <th>EOT</th>
+                                    <th>ECT</th>
+                                    <th>OO</th>
+                                    <th>CO</th>
+                                    <th>OT</th>
+                                    <th>CT</th>
+                                    <th>AE</th>
+                                    <th>DE</th>
+                                    <th>AT</th>
+                                    <th>DT</th>
+                                    <th>AR</th>
+                                    <th>DR</th>
+                                    <th>TR</th>
+                                    <th>EX</th>
+                                    <th>RC</th>
+                                    <th>OP</th>
+                                    <th>CL</th>
+                                    <th>TANGGAL</th>
+                                    <th>PLBSREC</th>
+                                    <th>ASUHAN</th>
+                                    <th>GI</th>
+                                    <th>AREA</th>
+                                    <th>WIL</th>
+                                    <th>BEBANPADAM</th>
+                                    <th>RELAY</th>
+                                    <th>LAMA</th>
+                                    <th>MW</th>
+                                    <th>KWH</th>
+                                    <th>MRF</th>
+                                    <th>JEDARC1</th>
+                                    <th>KODEFGTM</th>
+                                    <th>KETFGTM</th>
+                                    <th>KODESIKLUS</th>
+                                    <th>KETERANGAN</th>
+                                    <th>KORDINASI</th>
+                                    <th>SEGMENGANGGUAN</th>
+                                    <th>TOTALPELANGGAN</th>
+                                    <th>PELANGGANPADAM</th>
+                                    <th>PERSENPELANGGANPADAM</th>
+                                    <th>KODESAIDI</th>
+                                    <th>KETSAIDI</th>
+                                    <th>EKSEKUTOR</th>
+                                    <th>SHIFT</th>
                                 </tr>
                                 </thead>
                                 <tbody></tbody>

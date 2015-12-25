@@ -70,7 +70,12 @@ function dateDiff($time1, $time2, $precision = 6) {
     }
 
     // Return string with times
-    return implode(" ", $times);
+    if( ($time1==0) || ($time2==0) || ($time1=="") || ($time2=="") || (is_null($time1)) || (is_null($time2)) ){
+        return 0;
+    }
+    else {
+        return implode(" ", $times);
+    }
 }
 
 

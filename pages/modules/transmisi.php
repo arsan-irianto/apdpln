@@ -66,30 +66,31 @@ Rekap Laporan
 </div><!-- /.box-header -->
 <div class="box-body">
     <div class="table-responsive">
-        <table class="table table-bordered table-striped table-hover" id="ttransmisi" style="width: 100%;font-size: 0.9em;">
-            <thead>
-            <tr>
-                <th rowspan="2">No</th>
-                <th rowspan="2">Nama Feeder</th>
-                <th>Load</th>
-                <th colspan="2">Waktu</th>
-                <th rowspan="2" >Lama(Menit)</th>
-                <th >Daya</th>
-                <th rowspan="2" class="sum">MWH</th>
-            </tr>
-            <tr>
-                <th>(Ampere)</th>
-                <th>Lepas</th>
-                <th>Masuk</th>
-                <th>(MW)</th>
-            </tr>
-            </thead>
-            <tfoot>
-            <th colspan="6">Total</th>
-            <th></th>
-            <th></th>
-            </tfoot>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover" id="ttransmisi" style="width: 100%;font-size: 0.9em;">
+                <thead>
+                <tr>
+                    <th rowspan="2">No</th>
+                    <th rowspan="2">Nama Feeder</th>
+                    <th><div align="center">Load</div></th>
+                    <th colspan="2"><div align="center">Waktu</div></th>
+                    <th rowspan="2" >Lama(Menit)</th>
+                    <th rowspan="2" class="sum">Daya (MW)</th>
+                    <th rowspan="2" class="sum">MWH</th>
+                </tr>
+                <tr>
+                    <th>(Ampere)</th>
+                    <th>Lepas</th>
+                    <th>Masuk</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <th colspan="6">Total</th>
+                <th></th>
+                <th></th>
+                </tfoot>
+            </table>
+        </div><!-- /.box-body -->
     </div><!-- /.box-body -->
 </div>
 </div><!-- /.box -->

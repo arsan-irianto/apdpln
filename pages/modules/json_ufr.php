@@ -33,12 +33,15 @@ $result->execute();
 $i = 0;
 $n = 1;
 while( $row = $result->fetch(PDO::FETCH_ASSOC)){
+    $WAKTU_LEPAS = (is_null($row['WAKTU_LEPAS']) ? "" : substr($row['WAKTU_LEPAS'],0,16));
+    $WAKTU_MASUK = (is_null($row['WAKTU_MASUK']) ? "" : substr($row['WAKTU_MASUK'],0,16));
+
     $rows['data'][$i] = array(
         $n,
         $row["NAMA_FEEDER"],
         $row["LOAD_AMPERE"],
-        $row["WAKTU_LEPAS"],
-        $row["WAKTU_MASUK"],
+        $WAKTU_LEPAS,
+        $WAKTU_MASUK,
         $row["LAMA"],
         $row["MW"],
         $row["KWH"]);

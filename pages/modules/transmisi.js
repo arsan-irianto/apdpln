@@ -26,10 +26,9 @@ function reloadDatatable(){
                     var sum = column
                         .data()
                         .reduce(function (a, b) {
-                            return a.float() + b.float();
+                            return parseFloat(a) + parseFloat(b);
                         });
-                    //console.log(sum);
-                    $(column.footer()).html(sum);
+                    $(column.footer()).html(sum.toFixed(2));
                 });
             }
         });

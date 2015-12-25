@@ -70,17 +70,16 @@ Rekap Laporan
                 <tr>
                     <th rowspan="2">No</th>
                     <th rowspan="2">Nama Feeder</th>
-                    <th>Load</th>
-                    <th colspan="2">Waktu</th>
+                    <th><div align="center">Load</div></th>
+                    <th colspan="2"><div align="center">Waktu</div></th>
                     <th rowspan="2" >Lama(Menit)</th>
-                    <th >Daya</th>
+                    <th rowspan="2" class="sum">Daya (MW)</th>
                     <th rowspan="2" class="sum">MWH</th>
                 </tr>
                 <tr>
                     <th>(Ampere)</th>
                     <th>Lepas</th>
                     <th>Masuk</th>
-                    <th>(MW)</th>
                 </tr>
                 </thead>
                 <tfoot>

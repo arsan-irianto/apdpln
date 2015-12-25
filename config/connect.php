@@ -45,13 +45,13 @@ class dbConnection extends PDO {
     }
 
     /**
-     * * Function to return table rows count
      * @param $table
+     * @param string $criteria
      * @return int
      */
-    function numRows($table)
+    function numRows($table, $criteria="")
     {
-        $query = "SELECT * from ". $table;
+        $query = "SELECT * from ". $table. " ". $criteria;
         $rResult = parent::query($query)->fetchAll();
         return count($rResult);
     }
@@ -143,13 +143,14 @@ class dbConnection extends PDO {
     /**
      * @param $orderField
      * @param $table
+     * @param $criteria
      * @param $page
      * @param $offset
      * @return PDOStatement
      */
-    function queryPaging($orderField, $table, $page, $offset){
+    function queryPaging($orderField, $table, $criteria=" ", $page, $offset){
         return parent::prepare("SELECT  * FROM(
-                                  SELECT ROW_NUMBER() OVER(ORDER BY $orderField) AS NUMBER, * FROM $table) AS TBL
+                                  SELECT ROW_NUMBER() OVER(ORDER BY $orderField) AS NUMBER, * FROM $table  $criteria) AS TBL
                                     WHERE NUMBER BETWEEN (($page- 1) * $offset + 1) AND ($page * $offset)
                                     ORDER BY $orderField");
     }

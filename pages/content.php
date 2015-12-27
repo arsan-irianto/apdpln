@@ -40,7 +40,7 @@ switch($modules){
     case "logsheet":
         switch($act){
             default:
-                include('modules/view_logsheet.php');break;
+                include('modules/logsheet.php');break;
             case "addnew":
                 include('modules/add_logsheet.php');break;
             case "edit":

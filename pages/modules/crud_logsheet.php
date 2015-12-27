@@ -54,6 +54,8 @@ $KODEFGTM=isset($KODEFGTM)? $KODEFGTM : '';
 $KETFGTM=isset($KETFGTM)? $KETFGTM : '';
 $KETERANGAN=isset($KETERANGAN)? $KETERANGAN : '';
 $KORDINASI=isset($KORDINASI)? $KORDINASI : '';
+$SEGMENGANGGUAN1=isset($SEGMENGANGGUAN1)? $SEGMENGANGGUAN1 : '';
+$SEGMENGANGGUAN2=isset($SEGMENGANGGUAN2)? $SEGMENGANGGUAN2 : '';
 $SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';
 $TOTALPELANGGAN=isset($TOTALPELANGGAN)? $TOTALPELANGGAN : 0;
 $PELANGGANPADAM=isset($PELANGGANPADAM)? $PELANGGANPADAM : 0;
@@ -105,7 +107,7 @@ $formData = array('SC'=>$SC,
     'KETFGTM'=>$KETFGTM,
     'KETERANGAN'=>$KETERANGAN,
     'KORDINASI'=>$KORDINASI,
-    'SEGMENGANGGUAN'=>$SEGMENGANGGUAN,
+    'SEGMENGANGGUAN'=>"TES",
     'TOTALPELANGGAN'=>$TOTALPELANGGAN,
     'PELANGGANPADAM'=>$PELANGGANPADAM,
     'PERSENPELANGGANPADAM'=>$PERSENPELANGGANPADAM,
@@ -299,4 +301,38 @@ if(isset($_GET['qs'])=="asuhan"){
         array_push($return, $dt);
     }
     echo json_encode($return);
+}
+
+if(isset($_GET['pidsegmen1'])==1){
+    $sp = "{:retval = CALL PCDR_PELANGGAN_SEGMEN (@PKEY=:pid)}";
+    $result = $conn->prepare($sp);
+
+    $retval = null;
+    $pid = isset($_GET['id']) ? $_GET['id'] : "";
+
+    $result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4);
+    $result->bindParam('pid', $pid, PDO::PARAM_INT);
+
+    $result->execute();
+
+    $data1 = $result->fetch(PDO::FETCH_ASSOC);
+    echo $data1;
+}
+
+
+if(isset($_GET['pidsegmen2'])==2){
+
+    $sp = "{:retval = CALL PCDR_PELANGGAN_SEGMEN (@PKEY=:pid)}";
+    $result = $conn->prepare($sp);
+
+    $retval = null;
+    $pid = isset($_GET['id']) ? $_GET['id'] : "";
+
+    $result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4);
+    $result->bindParam('pid', $pid, PDO::PARAM_INT);
+
+    $result->execute();
+
+    $data2 = $result->fetch(PDO::FETCH_ASSOC);
+    echo $data2;
 }

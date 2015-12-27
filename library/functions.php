@@ -115,8 +115,17 @@ function messageAlert($message){
  */
 function convertMilisecond($parameter){
     $ms = $parameter;
-    $s = intval($ms/1000);
-    return date('H:i:s', $s);
+    //$s = intval($ms/1000);
+    if($ms==0){
+        return 0;
+    }
+    elseif(is_null($ms)){
+        return "";
+    }
+    else{
+        $s = intval($ms/10000000);
+        return date('H:i:s', $s);
+    }
 }
 
 /**
@@ -135,6 +144,11 @@ function timeDifference($old_time,$new_time){
     $mm = ( strlen($minutes)==1 ) ? "0".$minutes : $minutes;
     $ss = ( strlen($seconds)==1 ) ? "0".$seconds : $seconds;
     return $hh.":".$mm.":".$ss;
+}
+
+function convertToHIS($microsecond){
+    $seconds = $microsecond/10000000;
+    return gmdate("H:i:s", $seconds%86400);
 }
 
 /*

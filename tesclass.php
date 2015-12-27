@@ -14,7 +14,7 @@ $dbSettings['username'] = 'arsan';
 $dbSettings['password'] = 'a1254n';
 $conn = new dbConnection( $dbSettings );
 */
-
+/*
 include('config/connect.php');
 $query = $conn->getFieldList("LOGSHEET");
 $query->execute();
@@ -84,4 +84,28 @@ function navActive($modules){
 //echo "<br>";
 //echo navActive("dashboard");
 
+
+//echo date('h:i:s', "60");
+/*
+$old=new DateTime("2015-10-16 08:29:17");
+$new=new DateTime("2015-10-16 10:29:17");
+$a = $old->diff($new)->format("%Y-%m-%d %H:%i:%s");
+$b = strtotime($a)-943938000;//797930000;
+//$durasi = strtotime($b);
+$dt = "2015-10-16";
+$strdt = strtotime($dt);
+$dthasil = $strdt+$b;
+$disimpan = $b*10000000;
+
+
+echo $a."<br>";
+echo $b."<br>";
+echo date("H:i:s",$dthasil);
+echo "<br>";
+echo $disimpan;
+*/
+
+$LAMA = 83590600000;
+$seconds = $LAMA/10000000;
+echo "<br/>" . gmdate("H:i:s", $seconds%86400);
 ?>

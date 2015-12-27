@@ -23,7 +23,7 @@ while( $row = $result->fetch() )
     $session_act = ( ($_SESSION['USERNAME'] <> '') ? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
     $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
 
-    $rows['data'][$i] = array($action ,$n, $row[0],$row[2],$row[3]);
+    $rows['data'][$i] = array($action ,$n, $row[0],$row[2],$row[3],$row[4]);
     $i++;
     $n++;
 }

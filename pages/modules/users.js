@@ -90,6 +90,7 @@ function deleteUsers( id ) {
 function clearModals() {
     $("#USERNAME").val("");
     $("#TYPE").val("");
+    $("#DCCID").val("");
     $("#DESC").val("");
 }
 
@@ -98,6 +99,7 @@ function setModalData( data ){
     $("#type").val("edit");
     $("#USERNAME").val(data.USERNAME);
     $("#TYPE").val(data.TYPE.trim());
+    $("#DCCID").val(data.DCCID.trim());
     DESCR = (data.DESCR == null) ? "" : data.DESCR.trim();
     $("#DESC").val(DESCR);
     $("#myModals").modal("show");
@@ -105,5 +107,15 @@ function setModalData( data ){
 
 $(function () {
     reloadDataTable();
+    $("#TYPE").click(function(){
+        if($(this).val()!=""){
+            $("#DESC").val($("#TYPE option:selected").text()+" "+$("#DCCID option:selected").text());
+        }
+    });
+    $("#DCCID").click(function(){
+        if($(this).val()!=""){
+            $("#DESC").val($("#TYPE option:selected").text()+" "+$("#DCCID option:selected").text());
+        }
+    });
 });
 

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptUFR" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bf51c928-f11c-4213-9c27-4c8e61555294">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="New Dataset 1" uuid="4e2d57ca-1522-4ee0-9fae-fd5a88caa1e5">
+		<parameter name="bulan" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="tahun" class="java.lang.Integer">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="relay" class="java.lang.String">
+			<defaultValueExpression><![CDATA[ufr]]></defaultValueExpression>
+		</parameter>
+		<parameter name="wilayah" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString language="plsql">
+			<![CDATA[PCDR_UFR_TRANSMISI $P{bulan},$P{tahun},$P{relay},$P{wilayah}]]>
+		</queryString>
+		<field name="DCC" class="java.lang.String"/>
+		<field name="TANGGAL" class="java.sql.Timestamp"/>
+		<field name="NAMA_FEEDER" class="java.lang.String"/>
+		<field name="LOAD_AMPERE" class="java.math.BigDecimal"/>
+		<field name="WAKTU_LEPAS" class="java.sql.Timestamp"/>
+		<field name="WAKTU_MASUK" class="java.sql.Timestamp"/>
+		<field name="LAMA" class="java.lang.Long"/>
+		<field name="MW" class="java.math.BigDecimal"/>
+		<field name="KWH" class="java.math.BigDecimal"/>
+		<field name="RELAY" class="java.lang.String"/>
+	</subDataset>
+	<queryString language="plsql">
+		<![CDATA[]]>
+	</queryString>
+	<field name="DCC" class="java.lang.String"/>
+	<field name="TANGGAL" class="java.sql.Timestamp"/>
+	<field name="NAMA_FEEDER" class="java.lang.String"/>
+	<field name="LOAD_AMPERE" class="java.math.BigDecimal"/>
+	<field name="WAKTU_LEPAS" class="java.sql.Timestamp"/>
+	<field name="WAKTU_MASUK" class="java.sql.Timestamp"/>
+	<field name="LAMA" class="java.lang.Long"/>
+	<field name="MW" class="java.math.BigDecimal"/>
+	<field name="KWH" class="java.math.BigDecimal"/>
+	<field name="RELAY" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="20" uuid="1c5fd775-1e44-4aca-86be-3962e0ae39b1"/>
+				<text><![CDATA[DCC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="80" height="20" uuid="9e10aa20-4b1d-4204-a947-5ef045b8ba86"/>
+				<text><![CDATA[TANGGAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="80" height="20" uuid="6128a172-56a6-4d30-909b-e0f0c6e70b82"/>
+				<text><![CDATA[NAMA_FEEDER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="80" height="20" uuid="33274c4f-f20c-4ad2-8f61-41ca7619c325"/>
+				<text><![CDATA[LOAD_AMPERE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="80" height="20" uuid="b3079a77-714c-4f0c-9366-4a940326a72f"/>
+				<text><![CDATA[WAKTU_LEPAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="80" height="20" uuid="be79ee2a-59b3-4bab-9b84-72b8acf52ab9"/>
+				<text><![CDATA[WAKTU_MASUK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="80" height="20" uuid="0c72feaf-15f6-47e4-b066-38c0e5ee2d0e"/>
+				<text><![CDATA[LAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="0" width="80" height="20" uuid="bee159b3-c322-44fd-a94f-15618b7d0c9c"/>
+				<text><![CDATA[MW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="0" width="80" height="20" uuid="0acbf6b5-8951-4c6c-9ed0-b7dac946191c"/>
+				<text><![CDATA[KWH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="720" y="0" width="80" height="20" uuid="cc262b74-e011-48d0-8d9c-ba4e9b322cb9"/>
+				<text><![CDATA[RELAY]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="20" uuid="a3b1336f-9310-413a-9a26-d3a93f07130c"/>
+				<textFieldExpression><![CDATA[$F{DCC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="80" height="20" uuid="f092b77b-cef2-4046-a68f-18d53dac21af"/>
+				<textFieldExpression><![CDATA[$F{TANGGAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="80" height="20" uuid="a142a105-7eed-433e-9009-8345c2fb5a28"/>
+				<textFieldExpression><![CDATA[$F{NAMA_FEEDER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="80" height="20" uuid="444f4d4e-df83-420a-8540-855350f6a152"/>
+				<textFieldExpression><![CDATA[$F{LOAD_AMPERE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="80" height="20" uuid="b61e9750-a765-470b-a7cc-d28483d1a91a"/>
+				<textFieldExpression><![CDATA[$F{WAKTU_LEPAS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="80" height="20" uuid="4b9d03ad-5d60-4fdc-a447-8c789efee5f8"/>
+				<textFieldExpression><![CDATA[$F{WAKTU_MASUK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="0" width="80" height="20" uuid="510ce3d9-8f1c-4b05-a74b-22c3cde18719"/>
+				<textFieldExpression><![CDATA[$F{LAMA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="0" width="80" height="20" uuid="23b2133b-d9a3-4a91-9bcc-353fe691e9c7"/>
+				<textFieldExpression><![CDATA[$F{MW}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="640" y="0" width="80" height="20" uuid="af7890b2-847a-4c8e-87f2-888007c91c41"/>
+				<textFieldExpression><![CDATA[$F{KWH}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="720" y="0" width="80" height="20" uuid="db8278f7-5aaa-43de-9972-3cfd7ebe24a1"/>
+				<textFieldExpression><![CDATA[$F{RELAY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

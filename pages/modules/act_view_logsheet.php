@@ -79,7 +79,8 @@ include("../../library/functions.php");
 
             while ($row = $query->fetch()) {
 
-                $lama = dateDiff($row['OP'], $row['CL'], 6);
+                //$lama = dateDiff($row['OP'], $row['CL'], 6);
+                $lama = convertMilisecond($row['LAMA']);
 
                 $rowEdit = "<a href='#' onClick='showModals($row[ID])' class='btn_edit btn btn-xs btn-primary' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
                 $tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteLogsheet($row[ID])'><i class='fa fa-times'></i></a>";

@@ -15,10 +15,12 @@ extract($_POST);
 $USERNAME=isset($USERNAME)? $USERNAME : '';
 $PASSWORD=isset($PASSWORD)? $PASSWORD : '';
 $TYPE=isset($TYPE)? $TYPE : '';
+$DCCID=isset($DCCID)? $DCCID : '';
 $DESC=isset($DESC)? $DESC : '';
 
 $formData = array('USERNAME'=>$USERNAME,
     'TYPE' => $TYPE,
+    'DCCID' => $DCCID,
     '[DESCR]'=>$DESC);
 
 $type =(isset($_POST['type']) ? $_POST['type'] : '' );
@@ -27,7 +29,7 @@ switch ($type) {
     //Tampilkan Data
     case "get":
 
-        $sql = $conn->query("SELECT [USERNAME] , [PASSWORD], [TYPE],[DESCR] FROM USERS WHERE [USERNAME]='".$_POST['id']."'");
+        $sql = $conn->query("SELECT [USERNAME] , [PASSWORD], [TYPE], [DCCID],[DESCR] FROM USERS WHERE [USERNAME]='".$_POST['id']."'");
         $data = $sql->fetch(PDO::FETCH_ASSOC);
         echo json_encode($data);
 
@@ -53,8 +55,10 @@ switch ($type) {
         try{
             $conn->updateArray("USERS", "USERNAME", $USERNAME, $formData);
             //$conn->insertArray("USERS", $formData);
-            $conn->query("UPDATE [USERS] SET [PASSWORD] = HASHBYTES('md5','".$PASSWORD."')
-                          WHERE [USERNAME] = '".$USERNAME."'");
+            if($PASSWORD <> "") {
+                $conn->query("UPDATE [USERS] SET [PASSWORD] = HASHBYTES('md5','" . $PASSWORD . "')
+                          WHERE [USERNAME] = '" . $USERNAME . "'");
+            }
             echo json_encode("OK");
         }
         catch (PDOException $e){

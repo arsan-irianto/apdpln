@@ -3,11 +3,11 @@
  */
 
 function reloadDatatable(){
-    if($("#cbo_month").val()!= ''){
+    if($("#TANGGAL_LOGSHEET").val()!= ''){
         var dTable = $('#tlogsheet').DataTable({
-            ajax: "modules/json_table_logsheet.php?month="+$("#cbo_month").val()+"&year="+$("#cbo_year").val(),
+            ajax: "modules/json_table_logsheet.php?tanggal="+$("#TANGGAL_LOGSHEET").val(),
             deferRender: true,
-            processing:true,
+            //processing:true,
             pagingType: "full_numbers",
             dom: "B<'row'<'col-sm-8'l><'col-sm-4'f>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-8'><'col-sm-4'>>tipr",
             scrollX: true,
@@ -237,6 +237,12 @@ function clearModals()
     $("#KODEFGTM").val("");
     $("#KETERANGAN").val("");
     $("#KORDINASI").val("");
+    $("#PIDSEGMEN1").val("");
+    $("#PIDSEGMEN2").val("");
+    $("#JMLSEGMEN1").val("");
+    $("#JMLSEGMEN2").val("");
+    $("#SEGMENGANGGUAN1").val("");
+    $("#SEGMENGANGGUAN2").val("");
     $("#SEGMENGANGGUAN").val("");
     $("#TOTALPELANGGAN").val(0);
     $("#PELANGGANPADAM").val(0);
@@ -303,16 +309,21 @@ $(function () {
     $("#tanggal_check input").datepicker().on("changeDate", function () {
         $(this).datepicker("hide");
     });
+
+    $("#tanggal_filter input").datepicker().on("changeDate", function () {
+        $(this).datepicker("hide");
+    });
+
     $('.dttime').datetimepicker({
         format: 'yyyy-mm-dd hh:ii:ss'
     });
 
     reloadDatatable();
-    $("#cbo_month").change(function(){
-        if($(this).val()!= ''){
-            reloadDatatable();
-        }
-        else {alert("Choose Month & Year Option");}
+    $("#TANGGAL_LOGSHEET").change(function(){
+        //if($(this).val()!= ''){
+        reloadDatatable();
+        //}
+        //else {alert("Choose Month & Year Option");}
     });
 
 
@@ -391,6 +402,81 @@ $(function () {
             displayField: "NAME",
             valueField:"ID"
         }
+    });
+
+    var srcArray = ['OCR','UFR','GFR','Tidak ada indikasi','dilepas','dimasukkan','Transmisi'];
+    $('input.typeahead_relay').typeahead({
+        source: srcArray
+    });
+
+    $("#KODESIKLUS").focus(function(){
+        var rightNow = new Date();
+        var res = rightNow.toISOString().slice(0,10).replace(/-/g,"");
+        if($(this).val()==""){
+            $(this).val(res);
+        }
+    });
+
+    $("input.typeahead_segmen1").typeahead({
+        onSelect: function(item) {
+            $("#PIDSEGMEN1").val(item.value);
+            $.ajax({
+                type: "GET",
+                url: "modules/crud_logsheet.php?pidsegmen1=1",
+                dataType: 'json',
+                data1: "id=" + $("#PIDSEGMEN1").val(),
+                success: function(data1) {
+                    $("#JMLSEGMEN1").val(data1);
+                    jml = parseInt($("#JMLSEGMEN1").val()) + parseInt($("#JMLSEGMEN2").val()) ;
+                    jmlvalid = isNaN(jml) ? 0 : jml;
+                    $("#PELANGGANPADAM").val(jmlvalid);
+                }
+            });
+        },
+        ajax: {
+            url: "modules/crud_logsheet.php?ref=plbsrecgh",
+            displayField: "NAME",
+            valueField:"PID"
+        }
+    });
+
+    $("input.typeahead_segmen2").typeahead({
+        onSelect: function(item) {
+            $("#PIDSEGMEN2").val(item.value);
+            $.ajax({
+                type: "GET",
+                url: "modules/crud_logsheet.php?pidsegmen2=2",
+                dataType: 'json',
+                data2: "id=" + $("#PIDSEGMEN2").val(),
+                success: function(data2) {
+                    $("#JMLSEGMEN2").val(data2);
+                    jml = parseInt($("#JMLSEGMEN1").val()) + parseInt($("#JMLSEGMEN2").val()) ;
+                    jmlvalid = isNaN(jml) ? 0 : jml;
+                    $("#PELANGGANPADAM").val(jmlvalid);
+                }
+            });
+        },
+        ajax: {
+            url: "modules/crud_logsheet.php?ref=plbsrecgh",
+            displayField: "NAME",
+            valueField:"PID"
+        }
+    });
+
+    $("input.typeahead_segmen1").change(function(){
+        segmen1 = $("input.typeahead_segmen1").val();
+        segmen2 = $("input.typeahead_segmen2").val();
+        if( (segmen1!="") || (segmen2!="") ){
+            $("#SEGMENGANGGUAN").val(segmen1+"-"+segmen2);
+        }else{$("#SEGMENGANGGUAN").val(segmen1);}
+    });
+
+    $("input.typeahead_segmen2").change(function(){
+        segmen1 = $("input.typeahead_segmen1").val();
+        segmen2 = $("input.typeahead_segmen2").val();
+        if( (segmen1!="") || (segmen2!="") ){
+            $("#SEGMENGANGGUAN").val(segmen1+"-"+segmen2);
+        }else{$("#SEGMENGANGGUAN").val(segmen2);}
     });
 /*
     var typeaheadSource =   [{

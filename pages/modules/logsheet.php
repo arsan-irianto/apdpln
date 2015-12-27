@@ -53,11 +53,16 @@
                 <br>
                 <div class="row">
                     <div class="col-md-8"></div>
+                    <div class="col-md-2"></div>
                     <div class="col-md-2">
-                        <?php echo combonamabln(1, 12, "cbo_month", "-Month-","form-control input-sm");?>
-                    </div>
-                    <div class="col-md-2">
-                        <?php echo combothn(date("Y")-2, date("Y"), "cbo_year", "-Year-","form-control input-sm");?>
+                        <div class="form-group input-sm" id="tanggal_filter">
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input name="TANGGAL_LOGSHEET" id="TANGGAL_LOGSHEET" class="form-control input-sm" data-date-format="yyyy-mm-dd" required="" value="<?=date("Y-m-d");?>" type="text">
+                            </div><!-- /.input group -->
+                        </div>
                     </div>
                 </div>
             </div><!-- /.box-header -->
@@ -69,7 +74,7 @@
                             <th><div align="center">ACTION</div></th>
                             <th><div align="center">CHECK</div></th>
                             <th><div align="center">TANGGAL</div></th>
-                            <th><div align="center">PENYULANG</div></th>
+                            <th><div align="center">LBSRECGH</div></th>
                             <th><div align="center">ASUHAN</div></th>
                             <th><div align="center">AREA</div></th>
                             <th><div align="center">BEBAN PADAM</div></th>
@@ -323,7 +328,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Relay</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$RELAY=isset($RELAY)? $RELAY : '';?>" name="RELAY" id="RELAY" type="text">
+                                            <input class="form-control input-sm typeahead_relay" value="<?=$RELAY=isset($RELAY)? $RELAY : '';?>" name="RELAY" id="RELAY" type="text">
                                             <input class="form-control input-sm" name="LAMA" id="LAMA" type="hidden" value="<?=$LAMA=isset($LAMA)? $LAMA : '0';?>">
                                         </div>
                                     </div>
@@ -428,9 +433,27 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Segmen Gangguan</label>
+                                        <label class="col-sm-4 control-label">Segmen Gangguan 1</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';?>" name="SEGMENGANGGUAN" id="SEGMENGANGGUAN" type="text">
+                                            <input class="form-control input-sm" value="<?=$PIDSEGMEN1=isset($PIDSEGMEN1)? $PIDSEGMEN1 : '';?>" name="PIDSEGMEN1" id="PIDSEGMEN1" type="hidden">
+                                            <input class="form-control input-sm" value="<?=$PIDSEGMEN2=isset($PIDSEGMEN2)? $PIDSEGMEN2 : '';?>" name="PIDSEGMEN2" id="PIDSEGMEN2" type="hidden">
+                                            <input class="form-control input-sm" value="<?=$JMLSEGMEN1=isset($JMLSEGMEN1)? $JMLSEGMEN1 : '';?>" name="JMLSEGMEN1" id="JMLSEGMEN1" type="hidden">
+                                            <input class="form-control input-sm" value="<?=$JMLSEGMEN2=isset($JMLSEGMEN2)? $JMLSEGMEN2 : '';?>" name="JMLSEGMEN2" id="JMLSEGMEN2" type="hidden">
+                                            <input class="form-control input-sm typeahead_segmen1" value="" name="SEGMENGANGGUAN1" id="SEGMENGANGGUAN1" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group input-sm">
+                                        <label class="col-sm-4 control-label">Segmen Gangguan 2</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control input-sm typeahead_segmen2" value="" name="SEGMENGANGGUAN2" id="SEGMENGANGGUAN2" type="text">
+                                            <input class="form-control input-sm" value="<?=$SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';?>" name="SEGMENGANGGUAN" id="SEGMENGANGGUAN" type="hidden">
                                         </div>
                                     </div>
                                 </div>

@@ -11,17 +11,16 @@ session_start();
 include('../../config/connect.php');
 include('../../library/functions.php');
 
-
-$sp = "{:retval = CALL PCDR_LOGSHEET (@BULAN=:bulan,@TAHUN=:tahun)}";
+$sp = "{:retval = CALL PCDR_LOGSHEET (@DATE=:tanggal,@DCCID=:wilayah)}";
 $result = $conn->prepare($sp);
 
 $retval = null;
-$bulan = isset($_GET['month']) ? $_GET['month'] : "";
-$tahun = isset($_GET['year']) ? $_GET['year'] : "";
+$tanggal = isset($_GET['tanggal']) ? $_GET['tanggal'] : "";
+$wilayah = isset($_SESSION['DCCID']) ? $_SESSION['DCCID'] : "";
 
 $result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4);
-$result->bindParam('bulan', $bulan, PDO::PARAM_INT);
-$result->bindParam('tahun', $tahun, PDO::PARAM_INT);
+$result->bindParam('tanggal', $tanggal, PDO::PARAM_STR);
+$result->bindParam('wilayah', $wilayah, PDO::PARAM_INT);
 
 $result->execute();
 
@@ -35,10 +34,11 @@ $n = 1;
 while( $row = $result->fetch(PDO::FETCH_ASSOC) )
 {
 
-    $lama = dateDiff($row['OP'], $row['CL'], 6);
+    //$lama = dateDiff($row['OP'], $row['CL'], 6);
     //$checkData = "<div class='text-center'><input type='checkbox' id='titleCheckdel'><input type='hidden' class='deldata' name='item[$n][deldata]' value='$row[ID]' disabled></div>";
     //$rowEdit = "<a href='home.php?modules=logsheet&periode=$row[periode]&act=edit&id=$row[ID]' class='btn btn-xs btn-default' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
     //$rowDelete = "<a href='modules/action_logsheet.php?act=delete&id=$row[ID]' onclick='return confirm(\"Sure to Delete?\");' class='alertdel btn btn-xs btn-danger'><i class='fa fa-times'></i></a>";
+    if( ( $row["LAMA"]== 0 ) || (is_null($row["LAMA"]))) {$lama = 0;}else{ $lama = convertToHIS($row["LAMA"]);}
 
     $rowEdit = "<a href='#' onClick='showModals($row[ID])' class='btn_edit btn btn-xs btn-primary' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
     $tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteLogsheet($row[ID])'><i class='fa fa-times'></i></a>";

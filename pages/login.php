@@ -13,7 +13,7 @@ $user =( isset($_POST['USERNAME']) ? $_POST['USERNAME'] : '');
 $pass =( isset($_POST['PASSWORD']) ? $_POST['PASSWORD'] : '');
 $submitted_username = '';
 if(!empty($_POST)){
-    $query = "SELECT [USERNAME],[PASSWORD],[TYPE],[DESCR]
+    $query = "SELECT [USERNAME],[PASSWORD],[TYPE],[DCCID], [DESCR]
               FROM [APDPLN].[dbo].[USERS]
               WHERE [USERNAME] = :USERNAME AND [PASSWORD] = HASHBYTES('md5','".$pass."')";
 
@@ -41,6 +41,7 @@ if(!empty($_POST)){
         $_SESSION['USERNAME'] = $row['USERNAME'];
         $_SESSION['PASSWORD'] = $row['PASSWORD'];
         $_SESSION['TYPE'] = $row['TYPE'];
+        $_SESSION['DCCID'] = $row['DCCID'];
         $_SESSION['DESCR'] = $row['DESCR'];
         //header("Location: ../index.php");
         //die("Redirecting to: secret.php");

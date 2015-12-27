@@ -60,6 +60,7 @@
                                     <th width="20px"><div align="center">NO</div></th>
                                     <th width="200px"><div align="center">USERNAME</div></th>
                                     <th width="30"><div align="center">TYPE</div></th>
+                                    <th width="30"><div align="center">DCCID</div></th>
                                     <th width="250"><div align="center">DESCRIPTION</div></th>
                                 </tr>
                                 </thead>
@@ -143,9 +144,22 @@
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">DCC</label>
+                                <div class="col-sm-8">
+                                    <?php
+                                    $queryDCC = "SELECT DCCID,DCC FROM DCC";
+                                    $conn->cboFillFromTable("DCCID",$queryDCC,"DCCID","DCC", "--Choose--","form-control input-sm","addnew");
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
                                 <label class="col-sm-4 control-label">Description</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control input-sm" value="<?=$DESC=isset($DESC)? $DESC : '';?>" name="DESC" id="DESC" type="text">
+                                    <input class="form-control input-sm" value="<?=$DESC=isset($DESC)? $DESC : '';?>" name="DESC" id="DESC" type="text" readonly>
                                 </div>
                             </div>
                         </div>

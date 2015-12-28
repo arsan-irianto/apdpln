@@ -476,7 +476,7 @@ $(function () {
         segmen2 = $("input.typeahead_segmen2").val();
         if( (segmen1!="") || (segmen2!="") ){
             $("#SEGMENGANGGUAN").val(segmen1+"-"+segmen2);
-        }else{$("#SEGMENGANGGUAN").val(segmen2);}
+        }//else{$("#SEGMENGANGGUAN").val(segmen2);}
     });
 /*
     var typeaheadSource =   [{

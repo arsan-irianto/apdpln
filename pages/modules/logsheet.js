@@ -258,11 +258,20 @@ $(function () {
         $(this).removeData('bs.modal');
     })
     $("#EKSEKUTOR").focus(function(){
+        if( ($("#OP").val() != "") && ($("#CL").val() != "") ){
+            strData = "start=" + $("#OP").val() + "&end=" + $("#CL").val();
+        }
+        else if( ($("#TR").val() != "") && ($("#CL").val() != "") ) {
+            strData = "start=" + $("#TR").val() + "&end=" + $("#CL").val();
+        }
+        else if( ($("#TR").val() != "") && ($("#RC").val() != "") ){
+            strData = "start=" + $("#TR").val() + "&end=" + $("#RC").val();
+        }
         $.ajax({
             type: "GET",
             url: "modules/crud_logsheet.php?diff=yes",
             dataType: 'json',
-            data: "op=" + $("#OP").val() + "&cl=" + $("#CL").val(),
+            data: strData,//"op=" + $("#OP").val() + "&cl=" + $("#CL").val(),
             success: function(data) {
                 $("#LAMA").val(data.a1);
                 //$("#LAMAconv").val(data.a2);

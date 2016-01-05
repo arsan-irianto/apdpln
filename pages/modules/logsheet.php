@@ -329,7 +329,7 @@
                                         <label class="col-sm-4 control-label">Relay</label>
                                         <div class="col-sm-8">
                                             <input class="form-control input-sm typeahead_relay" value="<?=$RELAY=isset($RELAY)? $RELAY : '';?>" name="RELAY" id="RELAY" type="text">
-                                            <input class="form-control input-sm" name="LAMA" id="LAMA" type="hidden" value="<?=$LAMA=isset($LAMA)? $LAMA : '0';?>">
+                                            <input class="form-control input-sm" name="LAMA" id="LAMA" type="text" value="<?=$LAMA=isset($LAMA)? $LAMA : '0';?>">
                                         </div>
                                     </div>
                                 </div>

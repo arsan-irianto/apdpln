@@ -1,37 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptUFR" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bf51c928-f11c-4213-9c27-4c8e61555294">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptUFR" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="76709eda-f251-49b7-8003-a365574e0921">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<subDataset name="New Dataset 1" uuid="4e2d57ca-1522-4ee0-9fae-fd5a88caa1e5">
-		<parameter name="bulan" class="java.lang.Integer">
-			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
-		</parameter>
-		<parameter name="tahun" class="java.lang.Integer">
-			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
-		</parameter>
-		<parameter name="relay" class="java.lang.String">
-			<defaultValueExpression><![CDATA[ufr]]></defaultValueExpression>
-		</parameter>
-		<parameter name="wilayah" class="java.lang.String">
-			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
-		</parameter>
-		<queryString language="plsql">
-			<![CDATA[PCDR_UFR_TRANSMISI $P{bulan},$P{tahun},$P{relay},$P{wilayah}]]>
-		</queryString>
-		<field name="DCC" class="java.lang.String"/>
-		<field name="TANGGAL" class="java.sql.Timestamp"/>
-		<field name="NAMA_FEEDER" class="java.lang.String"/>
-		<field name="LOAD_AMPERE" class="java.math.BigDecimal"/>
-		<field name="WAKTU_LEPAS" class="java.sql.Timestamp"/>
-		<field name="WAKTU_MASUK" class="java.sql.Timestamp"/>
-		<field name="LAMA" class="java.lang.Long"/>
-		<field name="MW" class="java.math.BigDecimal"/>
-		<field name="KWH" class="java.math.BigDecimal"/>
-		<field name="RELAY" class="java.lang.String"/>
-	</subDataset>
+	<parameter name="bulan" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tahun" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="relay" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="wilayah" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString language="plsql">
-		<![CDATA[]]>
+		<![CDATA[PCDR_UFR_TRANSMISI $P{bulan}, $P{tahun}, $P{relay}, $P{wilayah}]]>
 	</queryString>
 	<field name="DCC" class="java.lang.String"/>
 	<field name="TANGGAL" class="java.sql.Timestamp"/>
@@ -43,110 +28,197 @@
 	<field name="MW" class="java.math.BigDecimal"/>
 	<field name="KWH" class="java.math.BigDecimal"/>
 	<field name="RELAY" class="java.lang.String"/>
+	<variable name="LAMA_1" class="java.lang.Long" calculation="Sum">
+		<variableExpression><![CDATA[$F{LAMA}]]></variableExpression>
+	</variable>
+	<variable name="MW_1" class="java.math.BigDecimal" resetType="Page" calculation="Sum">
+		<variableExpression><![CDATA[$F{MW}]]></variableExpression>
+	</variable>
+	<variable name="MW_2" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{MW}]]></variableExpression>
+	</variable>
+	<variable name="KWH_1" class="java.math.BigDecimal" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{KWH}]]></variableExpression>
+	</variable>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="35" splitType="Stretch"/>
 	</title>
 	<pageHeader>
 		<band height="35" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch">
+		<band height="39" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="0" width="80" height="20" uuid="1c5fd775-1e44-4aca-86be-3962e0ae39b1"/>
-				<text><![CDATA[DCC]]></text>
+				<reportElement x="38" y="0" width="162" height="39" uuid="3004fb83-1c09-469b-a2f4-1be0c8e82639"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Feeder]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="80" y="0" width="80" height="20" uuid="9e10aa20-4b1d-4204-a947-5ef045b8ba86"/>
-				<text><![CDATA[TANGGAL]]></text>
+				<reportElement x="200" y="0" width="100" height="20" uuid="b37479b9-f2ac-4769-9234-5bd5c2160074"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Load]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="160" y="0" width="80" height="20" uuid="6128a172-56a6-4d30-909b-e0f0c6e70b82"/>
-				<text><![CDATA[NAMA_FEEDER]]></text>
+				<reportElement x="300" y="19" width="100" height="20" uuid="3aea8dfb-657b-4bfe-abc8-8934dddf6028"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lepas]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="240" y="0" width="80" height="20" uuid="33274c4f-f20c-4ad2-8f61-41ca7619c325"/>
-				<text><![CDATA[LOAD_AMPERE]]></text>
+				<reportElement x="400" y="19" width="100" height="20" uuid="e4d50b23-bd52-496d-84f4-b304ad12b157"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Masuk]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="320" y="0" width="80" height="20" uuid="b3079a77-714c-4f0c-9366-4a940326a72f"/>
-				<text><![CDATA[WAKTU_LEPAS]]></text>
+				<reportElement x="500" y="0" width="100" height="20" uuid="cf8dc18e-436f-4d4e-b488-076c5fa9a6cc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lama]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="400" y="0" width="80" height="20" uuid="be79ee2a-59b3-4bab-9b84-72b8acf52ab9"/>
-				<text><![CDATA[WAKTU_MASUK]]></text>
+				<reportElement x="600" y="0" width="100" height="20" uuid="eb760950-1ec7-4446-a574-2a19e0ee023e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daya]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="480" y="0" width="80" height="20" uuid="0c72feaf-15f6-47e4-b066-38c0e5ee2d0e"/>
-				<text><![CDATA[LAMA]]></text>
+				<reportElement x="700" y="0" width="100" height="39" uuid="d09632c9-66b3-4989-8e28-0c2d70d71a29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MWH]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="560" y="0" width="80" height="20" uuid="bee159b3-c322-44fd-a94f-15618b7d0c9c"/>
-				<text><![CDATA[MW]]></text>
+				<reportElement x="0" y="0" width="38" height="39" uuid="4b076827-6c02-4612-90fb-852a4e947c4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="640" y="0" width="80" height="20" uuid="0acbf6b5-8951-4c6c-9ed0-b7dac946191c"/>
-				<text><![CDATA[KWH]]></text>
+				<reportElement x="200" y="19" width="100" height="20" uuid="0fe6e570-d09b-4e2d-802d-1f8307f99178"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(Ampere)]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="720" y="0" width="80" height="20" uuid="cc262b74-e011-48d0-8d9c-ba4e9b322cb9"/>
-				<text><![CDATA[RELAY]]></text>
+				<reportElement x="300" y="0" width="200" height="20" uuid="f92deaf6-b297-47ea-ae90-6b85f748936b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Waktu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="19" width="100" height="20" uuid="6747c2b2-a904-4033-9a16-d1245bb61aa4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(mnt)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="19" width="100" height="20" uuid="8097a16e-a02c-4f75-8de8-8b7d6bfa07a9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(MW)]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="0" y="0" width="80" height="20" uuid="a3b1336f-9310-413a-9a26-d3a93f07130c"/>
-				<textFieldExpression><![CDATA[$F{DCC}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="80" y="0" width="80" height="20" uuid="f092b77b-cef2-4046-a68f-18d53dac21af"/>
-				<textFieldExpression><![CDATA[$F{TANGGAL}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="160" y="0" width="80" height="20" uuid="a142a105-7eed-433e-9009-8345c2fb5a28"/>
+				<reportElement x="38" y="0" width="162" height="20" uuid="c8279bb7-c5b1-4679-bdde-636b06f32123"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{NAMA_FEEDER}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="240" y="0" width="80" height="20" uuid="444f4d4e-df83-420a-8540-855350f6a152"/>
+			<textField pattern="#,##0.00">
+				<reportElement x="200" y="0" width="100" height="20" uuid="e03242c9-3c4a-483a-a18f-cee3dbc34534"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{LOAD_AMPERE}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="320" y="0" width="80" height="20" uuid="b61e9750-a765-470b-a7cc-d28483d1a91a"/>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="300" y="0" width="100" height="20" uuid="3b029196-20a9-4b08-885d-2d59b833c175"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{WAKTU_LEPAS}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="400" y="0" width="80" height="20" uuid="4b9d03ad-5d60-4fdc-a447-8c789efee5f8"/>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="400" y="0" width="100" height="20" uuid="eab6b57c-56d7-4efb-8dcd-4d6fa2f7a951"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{WAKTU_MASUK}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="480" y="0" width="80" height="20" uuid="510ce3d9-8f1c-4b05-a74b-22c3cde18719"/>
+				<reportElement x="500" y="0" width="100" height="20" uuid="cd992d61-458a-46a6-a466-2c016f14c434"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{LAMA}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="560" y="0" width="80" height="20" uuid="23b2133b-d9a3-4a91-9bcc-353fe691e9c7"/>
+			<textField pattern="#,##0.00">
+				<reportElement positionType="FixRelativeToBottom" x="600" y="0" width="100" height="20" uuid="3dd968b8-cfd4-4ee0-95b4-20ebcfb4a2e0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{MW}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="640" y="0" width="80" height="20" uuid="af7890b2-847a-4c8e-87f2-888007c91c41"/>
+			<textField pattern="#,##0.00">
+				<reportElement positionType="FixRelativeToBottom" x="700" y="0" width="100" height="20" uuid="33883fc8-eee1-4c4c-95ca-d6d36d204aaa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{KWH}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="720" y="0" width="80" height="20" uuid="db8278f7-5aaa-43de-9972-3cfd7ebe24a1"/>
-				<textFieldExpression><![CDATA[$F{RELAY}]]></textFieldExpression>
+				<reportElement x="0" y="0" width="38" height="20" uuid="8f0a534d-b4d6-421d-b88b-e734dff8e02a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="45" splitType="Stretch"/>
+		<band height="20" splitType="Stretch">
+			<textField pattern="#,##0.00">
+				<reportElement x="600" y="0" width="100" height="20" uuid="f000926e-6b46-4143-8e3c-7da2ef825683"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{MW_2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="700" y="0" width="100" height="20" uuid="a056a683-1714-4967-b7e1-493e80751f1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{KWH_1}]]></textFieldExpression>
+			</textField>
+		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch"/>
+		<band height="43" splitType="Stretch"/>
 	</pageFooter>
 	<summary>
-		<band height="42" splitType="Stretch"/>
+		<band splitType="Stretch"/>
 	</summary>
 </jasperReport>

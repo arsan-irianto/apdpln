@@ -182,20 +182,20 @@ if (isset($_POST['act'])=='delete'){
 }
 
 if(isset($_GET['diff'])=="yes"){
-    $op = strtotime(isset($_GET['op']) ? $_GET['op'] : 0);
-    $cl = strtotime(isset($_GET['cl']) ? $_GET['cl'] : 0);
-    $diffInt = ($cl - $op)*10000000;
+    $start = strtotime(isset($_GET['start']) ? $_GET['start'] : 0);
+    $end = strtotime(isset($_GET['end']) ? $_GET['end'] : 0);
+    $diffInt = ($end - $start)*10000000;
 
 // Set start & end time
-    $start_time = (isset($_GET['op']) ? $_GET['op'] : 0);
-    $end_time = (isset($_GET['cl']) ? $_GET['cl'] : 0);
+    //$start_time = (isset($_GET['op']) ? $_GET['op'] : 0);
+    //$end_time = (isset($_GET['cl']) ? $_GET['cl'] : 0);
     //$diffInt = (strtotime($start_time) - strtotime($end_time))*10000000;
 
 // Run and print diff
-    $diff =  dateDiff($start_time, $end_time, 6);
+    //$diff =  dateDiff($start_time, $end_time, 6);
 
     $arr['a1'] = $diffInt;
-    $arr['a2'] = $diff;
+    //$arr['a2'] = $diff;
     echo json_encode($arr);
 }
 

@@ -45,7 +45,8 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
     $session_act = ( ($_SESSION['TYPE'] == 1) || ($_SESSION['TYPE'] == 2)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
     $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
 
-    $chk = ( $row['MC']==1 ) ? "<span class='label label-success'>Checked</span>" : "<span class='label label-warning'>Uncheked</span>";
+    $mc = ( $row['MC']==1 ) ? "<span class='label label-success'>Manual</span>" : "<span class='label label-warning'>Otomatis</span>";
+    $chk = ( $row['CHK']==1 ) ? "<span class='label label-success'>Checked</span>" : "<span class='label label-warning'>Uncheked</span>";
 
     $TANGGAL = (is_null($row['TANGGAL']) ? "" : substr($row['TANGGAL'],0,10));
     $TR = (is_null($row['TR']) ? "" : substr($row['TR'],11,8));
@@ -55,7 +56,7 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
     $CL = (is_null($row['CL']) ? "" : substr($row['CL'],11,8));
 
 
-    $rows['data'][$i] = array( $action, $chk, $TANGGAL, $row['PLBSREC'],
+    $rows['data'][$i] = array( $action, $mc, $chk, $TANGGAL, $row['PLBSREC'],
         $row['ASUHAN'], $row['AREA'], $row['BEBANPADAM'], $row['RELAY'],$TR, $EX,
         $RC, $OP, $CL, $lama,
         $row['MW'], $row['KWH'], $row['MRF'], $row['JEDARC1'], $row['KODEFGTM'],$row['KETFGTM'],$row['KODESIKLUS'],$row['KETERANGAN'],$row['KORDINASI'],

@@ -3,8 +3,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+include_once("../../config/connect.php");
 include_once("class/tcpdf/tcpdf.php");
-include_once("class/PHPJasperXML.inc.php");
+include_once("class/ModifiedJASPERCLASS/PHPJasperXML.inc.php");
 //include_once ('setting.php');
 
 $date = date("YmdHis");
@@ -13,8 +14,8 @@ switch($_GET['name']){
         $xml =  simplexml_load_file("rptFGTM.jrxml");break;
     case "saidi":
         $xml =  simplexml_load_file("rptSAIDI.jrxml");break;
-    case "sample":
-        $xml =  simplexml_load_file("report6.jrxml");break;
+    case "ufr":
+        //$xml =  simplexml_load_file("rptUFR.jrxml");break;
 }
 //$xml =  simplexml_load_file("RPT_FGTM.jrxml");
 //$xml =  simplexml_load_file("RPT_SAIDI.jrxml");
@@ -29,7 +30,12 @@ switch($_GET['type']){
         $PHPJasperXML->xml_dismantle($xml);
         //$PHPJasperXML->transferDBtoArray($server,$user,$pass,$db);
         //$odbc_name='arsan_scada';
-        $PHPJasperXML->transferDBtoArray("localhost","arsan","a1254n","arsan_scada","odbc");
+        //$PHPJasperXML->transferDBtoArray("localhost","arsan","a1254n","arsan_scada","odbc");
+        $PHPJasperXML->transferDBtoArray($dbSettings['hostname'],
+                                         $dbSettings['username'],
+                                         $dbSettings['password'],
+                                         $dbSettings['dbname'],
+                                         "odbc");
         //$PHPJasperXML->odbc_connect("Driver={SQL Server Native Client 10.0};Server=localhost;Database=reportScada;", "arsan", "a1254n");
         $PHPJasperXML->outpage("I","report_" . $GET['name'] . $date. ".pdf");    //page output method I:standard output  D:Download file
         break;

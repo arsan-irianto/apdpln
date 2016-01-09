@@ -46,6 +46,7 @@
                         <div class="btn-group" id="btnTable">
                             <?php if(($TYPE == 1) || ($TYPE == 2))  { ?>
                                 <a href="#" onClick="showModals()" class="btn btn-default">Add</a>
+                                <a href="#" onClick="exportWindow();" class="btn btn-default">Excel</a>
                             <?php }?>
                         </div>
                     </div>
@@ -72,6 +73,7 @@
                         <thead>
                         <tr>
                             <th><div align="center">ACTION</div></th>
+                            <th><div align="center">MC</div></th>
                             <th><div align="center">CHECK</div></th>
                             <th><div align="center">TANGGAL</div></th>
                             <th><div align="center">LBSRECGH</div></th>

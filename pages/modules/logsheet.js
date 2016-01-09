@@ -2,6 +2,10 @@
  * Created by Arsan Irianto on 05/12/2015.
  */
 
+function exportWindow(){
+    window.open("modules/excel_logsheet.php", "Export Logsheet to Excel", "width=1100, height=500, scrollbars=yes");
+}
+
 function reloadDatatable(){
     if($("#TANGGAL_LOGSHEET").val()!= ''){
         var dTable = $('#tlogsheet').DataTable({
@@ -12,7 +16,7 @@ function reloadDatatable(){
             dom: "B<'row'<'col-sm-8'l><'col-sm-4'f>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-8'><'col-sm-4'>>tipr",
             scrollX: true,
             buttons: [
-                'copy', 'csv', 'excel', 'print', 'colvis'
+                'copy', 'colvis'
             ],
             columnDefs: [{
                 text: "Change Columns",

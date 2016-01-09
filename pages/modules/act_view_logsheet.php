@@ -28,7 +28,7 @@ include("../../library/functions.php");
         <table class="table table-bordered table-striped table-hover" id="tlogsheet" style="font-size: 0.9em;">
             <thead>
             <tr>
-                <th><div align="center">VALIDASI</div></th>
+                <th><div align="center">MC</div></th>
                 <th><div align="center">CHECK</div></th>
                 <th><div align="center">TANGGAL</div></th>
                 <th><div align="center">PENYULANG</div></th>
@@ -82,11 +82,12 @@ include("../../library/functions.php");
                 //$lama = dateDiff($row['OP'], $row['CL'], 6);
                 $lama = convertMilisecond($row['LAMA']);
 
-                $rowEdit = "<a href='#' onClick='showModals($row[ID])' class='btn_edit btn btn-xs btn-primary' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
-                $tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteLogsheet($row[ID])'><i class='fa fa-times'></i></a>";
-                $session_act = ( isset($_SESSION['TYPE']) == 1 || isset($_SESSION['TYPE']) == 2)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" ;
-                $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
-                $chk = ( $row['MC']==1 ) ? "<span class='label label-success'>Checked</span>" : "<span class='label label-warning'>Uncheked</span>";
+                //$rowEdit = "<a href='#' onClick='showModals($row[ID])' class='btn_edit btn btn-xs btn-primary' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
+                //$tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteLogsheet($row[ID])'><i class='fa fa-times'></i></a>";
+                //$session_act = ( isset($_SESSION['TYPE']) == 1 || isset($_SESSION['TYPE']) == 2)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" ;
+                //$action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
+                $mc = ( $row['MC']==1 ) ? "<span class='label label-success'>Manual</span>" : "<span class='label label-warning'>Otomatis</span>";
+                $chk = ( $row['CHK']==1 ) ? "<span class='label label-success'>Checked</span>" : "<span class='label label-warning'>Uncheked</span>";
 
                 $TANGGAL = (is_null($row['TANGGAL']) ? "" : substr($row['TANGGAL'],0,10));
                 $TR = (is_null($row['TR']) ? "" : substr($row['TR'],11,8));
@@ -96,7 +97,7 @@ include("../../library/functions.php");
                 $CL = (is_null($row['CL']) ? "" : substr($row['CL'],11,8));
 
                 echo "<tr>";
-                echo "<td>".$action."</td>";
+                echo "<td>".$mc."</td>";
                 echo "<td>".$chk."</td>";
                 echo "<td>".$TANGGAL."</td>";
                 echo "<td>".$row['PLBSREC']."</td>";

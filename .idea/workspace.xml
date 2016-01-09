@@ -38,12 +38,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="logsheet.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.js">
+      <file leaf-file-name="logsheet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4220" max-vertical-offset="8772">
-              <caret line="259" column="4" selection-start-line="259" selection-start-column="4" selection-end-line="259" selection-end-column="4" />
-              <folding />
+            <state vertical-scroll-proportion="-11.115385" vertical-offset="442" max-vertical-offset="8806">
+              <caret line="48" column="68" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="68" />
+              <folding>
+                <marker date="1452262372932" expanded="true" signature="23769:23803" placeholder="SELECT KODE,..GANGGUANFGTM..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,54 +53,19 @@
       <file leaf-file-name="json_table_logsheet.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/modules/json_table_logsheet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21794872" vertical-offset="646" max-vertical-offset="1207">
-              <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.34249085" vertical-offset="0" max-vertical-offset="1224">
+              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crud_logsheet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/modules/crud_logsheet.php">
+      <file leaf-file-name="navigation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/navigation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.1296296" vertical-offset="2854" max-vertical-offset="5763">
-              <caret line="186" column="29" selection-start-line="186" selection-start-column="29" selection-end-line="186" selection-end-column="29" />
-              <folding>
-                <marker date="1452035003650" expanded="true" signature="3548:3664" placeholder="SELECT *,Dat..LOGSHEET..." />
-                <marker date="1452035003650" expanded="true" signature="4715:4750" placeholder="DELETE FROM ..." />
-                <marker date="1452035003650" expanded="true" signature="5765:5826" placeholder="SELECT KETFG..GANGGUANFGTM..." />
-                <marker date="1452035003650" expanded="true" signature="5982:6171" placeholder="SELECT TOP 1..." />
-                <marker date="1452035003650" expanded="true" signature="6504:6683" placeholder="SELECT TOP 1..." />
-                <marker date="1452035003650" expanded="true" signature="6985:7355" placeholder="SELECT A.[GI..PLBSRECGH..." />
-                <marker date="1452035003650" expanded="true" signature="7511:7680" placeholder="SELECT TOP 1..." />
-                <marker date="1452035003650" expanded="true" signature="7955:8215" placeholder="SELECT TOP 1..." />
-                <marker date="1452035003650" expanded="true" signature="8470:8647" placeholder="SELECT B.DCC..." />
-                <marker date="1452035003650" expanded="true" signature="8808:8991" placeholder="SELECT TOP 1..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1003">
-              <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-              <folding>
-                <marker date="1451196024299" expanded="true" signature="355:538" placeholder="SELECT [USER..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logsheet.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1851852" vertical-offset="5370" max-vertical-offset="8772">
-              <caret line="331" column="113" selection-start-line="331" selection-start-column="113" selection-end-line="331" selection-end-column="113" />
-              <folding>
-                <marker date="1452034087045" expanded="true" signature="23599:23633" placeholder="SELECT KODE,..GANGGUANFGTM..." />
-              </folding>
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1734">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,10 +83,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pages/modules/json_gi.php" />
-        <option value="$PROJECT_DIR$/pages/modules/json_asuhan.php" />
-        <option value="$PROJECT_DIR$/pages/modules/asuhan.php" />
-        <option value="$PROJECT_DIR$/pages/modules/json_plbsrecgh.php" />
         <option value="$PROJECT_DIR$/pages/modules/plbsrecgh.php" />
         <option value="$PROJECT_DIR$/pages/modules/json_pkb.php" />
         <option value="$PROJECT_DIR$/pages/modules/pkb.php" />
@@ -135,7 +98,6 @@
         <option value="$PROJECT_DIR$/pages/modules/grafik_xtt_gardu.php" />
         <option value="$PROJECT_DIR$/pages/modules/dcc.php" />
         <option value="$PROJECT_DIR$/pages/modules/json_dcc.php" />
-        <option value="$PROJECT_DIR$/pages/navigation.php" />
         <option value="$PROJECT_DIR$/pages/header.php" />
         <option value="$PROJECT_DIR$/pages/modules/json_transmisi.php" />
         <option value="$PROJECT_DIR$/pages/modules/ufr.js" />
@@ -151,10 +113,7 @@
         <option value="$PROJECT_DIR$/pages/modules/pcdr_logsheet.js" />
         <option value="$PROJECT_DIR$/pages/modules/view_logsheest.js" />
         <option value="$PROJECT_DIR$/config/connect.php" />
-        <option value="$PROJECT_DIR$/pages/modules/view_logsheet.php" />
         <option value="$PROJECT_DIR$/pages/modules/view_logsheet.js" />
-        <option value="$PROJECT_DIR$/pages/modules/act_view_logsheet.php" />
-        <option value="$PROJECT_DIR$/pages/modules/act_excel_logsheet.php" />
         <option value="$PROJECT_DIR$/pages/content.php" />
         <option value="$PROJECT_DIR$/tesclass.php" />
         <option value="$PROJECT_DIR$/library/functions.php" />
@@ -163,10 +122,18 @@
         <option value="$PROJECT_DIR$/pages/modules/users.js" />
         <option value="$PROJECT_DIR$/pages/modules/crud_users.php" />
         <option value="$PROJECT_DIR$/pages/login.php" />
-        <option value="$PROJECT_DIR$/pages/modules/json_table_logsheet.php" />
-        <option value="$PROJECT_DIR$/pages/modules/logsheet.php" />
-        <option value="$PROJECT_DIR$/pages/modules/logsheet.js" />
         <option value="$PROJECT_DIR$/pages/modules/crud_logsheet.php" />
+        <option value="$PROJECT_DIR$/pages/reports/class/ModifiedJASPERCLASS/PHPJasperXML.inc.php" />
+        <option value="$PROJECT_DIR$/pages/reports/rpt_generator.php" />
+        <option value="$PROJECT_DIR$/pages/modules/logsheet.php" />
+        <option value="$PROJECT_DIR$/pages/modules/view_logsheet.php" />
+        <option value="$PROJECT_DIR$/pages/modules/excel_logsheet.js" />
+        <option value="$PROJECT_DIR$/pages/modules/logsheet.js" />
+        <option value="$PROJECT_DIR$/pages/modules/act_view_logsheet.php" />
+        <option value="$PROJECT_DIR$/pages/modules/excel_logsheet.php" />
+        <option value="$PROJECT_DIR$/pages/modules/act_excel_logsheet.php" />
+        <option value="$PROJECT_DIR$/pages/navigation.php" />
+        <option value="$PROJECT_DIR$/pages/modules/json_table_logsheet.php" />
       </list>
     </option>
   </component>
@@ -263,20 +230,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apdpln" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apdpln" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,7 +348,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="745" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -405,7 +358,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.215478" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2215478" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -470,41 +423,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/modules/grafik_xtpt_area.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846" vertical-offset="1717" max-vertical-offset="2839">
-          <caret line="110" column="53" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/grafik_xtpir_area.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="1887" max-vertical-offset="2992">
-          <caret line="119" column="53" selection-start-line="119" selection-start-column="53" selection-end-line="119" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/grafik_xtp_gardu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.961538" vertical-offset="1071" max-vertical-offset="2618">
-          <caret line="97" column="55" selection-start-line="97" selection-start-column="55" selection-end-line="97" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/grafik_xtpir_gardu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="1632" max-vertical-offset="3060">
-          <caret line="118" column="55" selection-start-line="118" selection-start-column="55" selection-end-line="118" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/grafik_xtpt_gardu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="1632" max-vertical-offset="2839">
-          <caret line="110" column="55" selection-start-line="110" selection-start-column="55" selection-end-line="110" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/modules/grafik_xtt_gardu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.961538" vertical-offset="1071" max-vertical-offset="2601">
@@ -516,7 +434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -548,20 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.093406595" vertical-offset="493" max-vertical-offset="2040">
-          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5604396" vertical-offset="833" max-vertical-offset="1785">
-          <caret line="67" column="17" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="1947" max-vertical-offset="8721">
@@ -580,9 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
           <caret line="32" column="13" selection-start-line="21" selection-start-column="0" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc;n#reloadDatatable#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -621,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/json_logsheet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462" vertical-offset="1921" max-vertical-offset="3026">
-          <caret line="136" column="5" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql_serverpaging.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
@@ -646,7 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="7157">
           <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,49 +598,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2193" max-vertical-offset="2822">
-          <caret line="150" column="58" selection-start-line="150" selection-start-column="58" selection-end-line="150" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/act_excel_logsheet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153" vertical-offset="1428" max-vertical-offset="2346">
-          <caret line="109" column="44" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.384615" vertical-offset="359" max-vertical-offset="1360">
           <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/act_view_logsheet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3148148" vertical-offset="1003" max-vertical-offset="2635">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/view_logsheet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.423077" vertical-offset="4635" max-vertical-offset="7803">
-          <caret line="284" column="165" selection-start-line="284" selection-start-column="28" selection-end-line="284" selection-end-column="165" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/view_logsheet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5990" max-vertical-offset="7072">
-          <caret line="383" column="8" selection-start-line="380" selection-start-column="0" selection-end-line="383" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,61 +651,167 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2159">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/crud_logsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2854" max-vertical-offset="5763">
+          <caret line="186" column="29" selection-start-line="186" selection-start-column="29" selection-end-line="186" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1003">
+        <state vertical-scroll-proportion="0.91234344" vertical-offset="136" max-vertical-offset="1003">
           <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/reports/class/ModifiedJASPERCLASS/PHPJasperXMLSubReport.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4047619" vertical-offset="0" max-vertical-offset="60707">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/reports/rpt_generator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34981686" vertical-offset="404" max-vertical-offset="986">
+          <caret line="35" column="65" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/reports/class/ModifiedJASPERCLASS/PHPJasperXML.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31135532" vertical-offset="1547" max-vertical-offset="85680">
+          <caret line="101" column="39" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
           <folding>
-            <marker date="1451196024299" expanded="true" signature="355:538" placeholder="SELECT [USER..." />
+            <marker date="1452130538740" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1452130538740" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1452130538740" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.php">
+    <entry file="file://$PROJECT_DIR$/config/connect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1851852" vertical-offset="5370" max-vertical-offset="8772">
-          <caret line="331" column="113" selection-start-line="331" selection-start-column="113" selection-end-line="331" selection-end-column="113" />
+        <state vertical-scroll-proportion="0.47069597" vertical-offset="2276" max-vertical-offset="2822">
+          <caret line="163" column="39" selection-start-line="163" selection-start-column="39" selection-end-line="163" selection-end-column="39" />
           <folding>
-            <marker date="1452034087045" expanded="true" signature="23599:23633" placeholder="SELECT KODE,..GANGGUANFGTM..." />
+            <marker date="1451053796033" expanded="true" signature="-1:-1" placeholder="SELECT * fro..table..." />
+            <marker date="1451053796033" expanded="true" signature="-1:-1" placeholder="SELECT * fro..table..." />
+            <marker date="1451053796033" expanded="true" signature="-1:-1" placeholder="SELECT COLUM..." />
+            <marker date="1451053796033" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451053796033" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..ROW_NUMBER..." />
+            <marker date="1451053796033" expanded="true" signature="-1:-1" placeholder="SELECT ROW_N..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/crud_logsheet.php">
+    <entry file="file://$PROJECT_DIR$/pages/modules/json_logsheet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.1296296" vertical-offset="2854" max-vertical-offset="5763">
-          <caret line="186" column="29" selection-start-line="186" selection-start-column="29" selection-end-line="186" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.529304" vertical-offset="2465" max-vertical-offset="3026">
+          <caret line="162" column="38" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="38" />
           <folding>
-            <marker date="1452035003650" expanded="true" signature="3548:3664" placeholder="SELECT *,Dat..LOGSHEET..." />
-            <marker date="1452035003650" expanded="true" signature="4715:4750" placeholder="DELETE FROM ..." />
-            <marker date="1452035003650" expanded="true" signature="5765:5826" placeholder="SELECT KETFG..GANGGUANFGTM..." />
-            <marker date="1452035003650" expanded="true" signature="5982:6171" placeholder="SELECT TOP 1..." />
-            <marker date="1452035003650" expanded="true" signature="6504:6683" placeholder="SELECT TOP 1..." />
-            <marker date="1452035003650" expanded="true" signature="6985:7355" placeholder="SELECT A.[GI..PLBSRECGH..." />
-            <marker date="1452035003650" expanded="true" signature="7511:7680" placeholder="SELECT TOP 1..." />
-            <marker date="1452035003650" expanded="true" signature="7955:8215" placeholder="SELECT TOP 1..." />
-            <marker date="1452035003650" expanded="true" signature="8470:8647" placeholder="SELECT B.DCC..." />
-            <marker date="1452035003650" expanded="true" signature="8808:8991" placeholder="SELECT TOP 1..." />
+            <marker date="1451002551528" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..sTable..." />
+            <marker date="1451002551528" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..sTable..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077" vertical-offset="238" max-vertical-offset="2040">
+          <caret line="38" column="93" selection-start-line="16" selection-start-column="0" selection-end-line="38" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/view_logsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="7231" max-vertical-offset="7803">
+          <caret line="433" column="73" selection-start-line="433" selection-start-column="73" selection-end-line="433" selection-end-column="73" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/view_logsheet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31643358" vertical-offset="5990" max-vertical-offset="7072">
+          <caret line="363" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="410" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4220" max-vertical-offset="8772">
-          <caret line="259" column="4" selection-start-line="259" selection-start-column="4" selection-end-line="259" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8840">
+          <caret line="5" column="113" selection-start-line="5" selection-start-column="113" selection-end-line="5" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/excel_logsheet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!doc;n#getData#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/excel_logsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="867" max-vertical-offset="1598">
+          <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/act_view_logsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.076923" vertical-offset="2106" max-vertical-offset="2652">
+          <caret line="150" column="10" selection-start-line="150" selection-start-column="10" selection-end-line="150" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/act_excel_logsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="1088" max-vertical-offset="2312">
+          <caret line="84" column="109" selection-start-line="84" selection-start-column="109" selection-end-line="84" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385" vertical-offset="442" max-vertical-offset="8806">
+          <caret line="48" column="68" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="68" />
+          <folding>
+            <marker date="1452262372932" expanded="true" signature="23769:23803" placeholder="SELECT KODE,..GANGGUANFGTM..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1734">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/modules/json_table_logsheet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21794872" vertical-offset="646" max-vertical-offset="1207">
-          <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.34249085" vertical-offset="0" max-vertical-offset="1224">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
           <folding />
         </state>
       </provider>

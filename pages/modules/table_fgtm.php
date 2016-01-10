@@ -29,6 +29,8 @@
     </section>
 
     <!-- Main content -->
+    <form id="form1" name="form1" method="get" enctype="multipart/form-data" action="modules/act_excel_fgtm.php">
+        <input type="hidden" name="modules" value="fgtm" >
     <section class="content">
 
         <!-- Your Page Content Here -->
@@ -41,6 +43,7 @@
                             <div class="col-md-8" align="right">
                                 <div class="btn-group" id="btnTable">
                                     <a href="#" id="btnPdf" target="_blank" class="btn btn-default">Pdf</a>
+                                    <a href="#" onclick="javascript:document.forms['form1'].submit();" class="btn btn-default">Excel</a>
                                 </div>
                             </div>
                         </div>
@@ -127,5 +130,6 @@
         </div><!-- /.row -->
 
     </section><!-- /.content -->
+        </form>
 </div><!-- /.content-wrapper -->
 

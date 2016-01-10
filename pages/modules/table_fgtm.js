@@ -8,7 +8,7 @@ function reloadDatatable(){
             dom: "B<'row'<'col-sm-8'l><'col-sm-4'f>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-8'><'col-sm-4'>>tipr",
             scrollX: true,
             buttons: [
-                'copy', 'csv', 'excel', 'colvis'
+                'copy', 'colvis'
             ],
             columnDefs: [{
                 text:"Change Columns",
@@ -28,7 +28,7 @@ function reloadDatatable(){
             dom: "B<'row'<'col-sm-8'l><'col-sm-4'f>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-12'>>" + "<'row'<'col-sm-8'><'col-sm-4'>>tipr",
             scrollX: true,
             buttons: [
-                'copy', 'csv', 'excel', 'colvis'
+                'copy', 'colvis'
             ],
             columnDefs: [{
                 text:"Change Columns",

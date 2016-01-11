@@ -16,7 +16,13 @@ $result = $conn->prepare($sp);
 
 $retval = null;
 $tanggal = isset($_GET['tanggal']) ? $_GET['tanggal'] : "";
-$wilayah = isset($_SESSION['DCCID']) ? $_SESSION['DCCID'] : "";
+if($_SESSION['TYPE'] == 1){
+    $wilayah = 0;
+}
+else{
+    $wilayah = isset($_SESSION['DCCID']) ? $_SESSION['DCCID'] : "";
+}
+
 
 $result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4);
 $result->bindParam('tanggal', $tanggal, PDO::PARAM_STR);

@@ -24,11 +24,12 @@ header("Expires: 0");
     <table class="table table-bordered table-striped table-hover" id="tlogsheet" style="font-size: 0.9em;">
         <thead>
         <tr>
-            <th><div align="center">MC</div></th>
+            <th><div align="center">INPUT</div></th>
             <th><div align="center">CHECK</div></th>
             <th><div align="center">TANGGAL</div></th>
             <th><div align="center">PENYULANG</div></th>
             <th><div align="center">ASUHAN</div></th>
+            <th><div align="center">GI</div></th>
             <th><div align="center">AREA</div></th>
             <th><div align="center">BEBAN PADAM</div></th>
             <th><div align="center">RELAY</div></th>
@@ -84,8 +85,8 @@ header("Expires: 0");
             $session_act = ( isset($_SESSION['TYPE']) == 1 || isset($_SESSION['TYPE']) == 2)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" ;
             $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
             $chk = ( $row['MC']==1 ) ? "<span class='label label-success'>Checked</span>" : "<span class='label label-warning'>Uncheked</span>";*/
+            $sc = ( $row['SC']==1 ) ? "TRUE" : "FALSE";
             $mc = ( $row['MC']==1 ) ? "TRUE" : "FALSE";
-            $chk = ( $row['CHK']==1 ) ? "TRUE" : "FALSE";
 
             $TANGGAL = (is_null($row['TANGGAL']) ? "" : substr($row['TANGGAL'],0,10));
             $TR = (is_null($row['TR']) ? "" : substr($row['TR'],11,8));
@@ -95,8 +96,8 @@ header("Expires: 0");
             $CL = (is_null($row['CL']) ? "" : substr($row['CL'],11,8));
 
             echo "<tr>";
+            echo "<td>".$sc."</td>";
             echo "<td>".$mc."</td>";
-            echo "<td>".$chk."</td>";
             echo "<td>".$TANGGAL."</td>";
             echo "<td>".$row['PLBSREC']."</td>";
             echo "<td>".$row['ASUHAN']."</td>";

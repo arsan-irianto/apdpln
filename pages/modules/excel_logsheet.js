@@ -46,4 +46,8 @@ $(function () {
     $('#cbo_month').change(function(){
         getData(true);
     });
+
+    $('#cbo_year').change(function(){
+        $('#cbo_month').trigger('change');
+    });
 });

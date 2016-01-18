@@ -59,9 +59,11 @@
                                     <th width="30px"><div align="center">Action</div></th>
                                     <th width="50px"><div align="center">Bulan</div></th>
                                     <th width="50px"><div align="center">Tahun</div></th>
-                                    <th width="200px"><div align="center">Total Pelanggan</div></th>
-                                    <th width="200"><div align="center">KWH Rata-rata per hari </div></th>
-                                    <th width="200"><div align="center">KWH Rata-rata per jam </div></th>
+                                    <th width="150px"><div align="center">Total Pelanggan</div></th>
+                                    <th width="50px"><div align="center">DCCID</div></th>
+                                    <th width="50px"><div align="center">AREAID</div></th>
+                                    <th width="180"><div align="center">KWH Rata-rata per hari </div></th>
+                                    <th width="180"><div align="center">KWH Rata-rata per jam </div></th>
                                 </tr>
                                 </thead>
                                 <tbody></tbody>

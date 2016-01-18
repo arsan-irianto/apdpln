@@ -24,7 +24,7 @@ while( $row = $result->fetch() )
     $session_act = ( $TYPE == 1 ? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
     $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
 
-    $rows['data'][$i] = array($action ,$row[1],$row[2],$row[3],$row[4],$row[5]);
+    $rows['data'][$i] = array($action ,$row[1],$row[2],$row[3],$row[4],$row[5],$row[6],$row[7]);
     $i++;
 }
 

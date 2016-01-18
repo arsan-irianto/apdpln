@@ -48,4 +48,20 @@ $(document).ready(function(){
         }
         else {alert("Choose Period Option");}
     });
+
+    $("#DCCID").change(function(){
+        var id=$(this).val();
+        var dataString = 'id='+ id;
+        $.ajax({
+            type: "POST",
+            url: "modules/list_area.php",
+            data: dataString,
+            cache: false,
+            success: function(html){
+                $("#AREAID").html(html);
+            }
+        })
+    });
+
+
 });

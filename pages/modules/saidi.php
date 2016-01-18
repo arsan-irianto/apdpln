@@ -44,7 +44,16 @@
                            </div>
                         <br>
                         <div class="row">
-                            <div class="col-md-8"></div>
+                            <div class="col-md-4"></div>
+                            <div class="col-md-2">
+                                <?php
+                                $queryDCC = "SELECT DCCID,DCC FROM DCC";
+                                $conn->cboFillFromTable("DCCID",$queryDCC,"DCCID","DCC", "-Wilayah-","form-control input-sm","addnew");
+                                ?>
+                            </div>
+                            <div class="col-md-2">
+                                <select name="AREAID" id="AREAID" class="form-control input-sm" required=""><option value="" selected="">-Area-</select>
+                            </div>
                             <div class="col-md-2">
                                 <?php echo combonamabln(1, 12, "cbo_month", "-Month-","form-control input-sm");?>
                             </div>

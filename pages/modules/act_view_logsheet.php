@@ -33,6 +33,7 @@ include("../../library/functions.php");
                 <th><div align="center">TANGGAL</div></th>
                 <th><div align="center">PENYULANG</div></th>
                 <th><div align="center">ASUHAN</div></th>
+                <th><div align="center">GI</div></th>
                 <th><div align="center">AREA</div></th>
                 <th><div align="center">BEBAN PADAM</div></th>
                 <th><div align="center">RELAY</div></th>
@@ -86,8 +87,8 @@ include("../../library/functions.php");
                 //$tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteLogsheet($row[ID])'><i class='fa fa-times'></i></a>";
                 //$session_act = ( isset($_SESSION['TYPE']) == 1 || isset($_SESSION['TYPE']) == 2)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" ;
                 //$action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
-                $mc = ( $row['MC']==1 ) ? "<span class='label label-success'>Manual</span>" : "<span class='label label-warning'>Otomatis</span>";
-                $chk = ( $row['CHK']==1 ) ? "<span class='label label-success'>Checked</span>" : "<span class='label label-warning'>Uncheked</span>";
+                $sc = ( $row['SC']==1 ) ? "<span class='label label-success'>Manual</span>" : "<span class='label label-warning'>Otomatis</span>";
+                $mc = ( $row['MC']==1 ) ? "<span class='label label-success'>Checked</span>" : "<span class='label label-warning'>Uncheked</span>";
 
                 $TANGGAL = (is_null($row['TANGGAL']) ? "" : substr($row['TANGGAL'],0,10));
                 $TR = (is_null($row['TR']) ? "" : substr($row['TR'],11,8));
@@ -97,11 +98,12 @@ include("../../library/functions.php");
                 $CL = (is_null($row['CL']) ? "" : substr($row['CL'],11,8));
 
                 echo "<tr>";
+                echo "<td>".$sc."</td>";
                 echo "<td>".$mc."</td>";
-                echo "<td>".$chk."</td>";
                 echo "<td>".$TANGGAL."</td>";
                 echo "<td>".$row['PLBSREC']."</td>";
                 echo "<td>".$row['ASUHAN']."</td>";
+                echo "<td>".$row['GI']."</td>";
                 echo "<td>".$row['AREA']."</td>";
                 echo "<td>".$row['BEBANPADAM']."</td>";
                 echo "<td>".$row['RELAY']."</td>";

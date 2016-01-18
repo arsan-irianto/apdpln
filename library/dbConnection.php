@@ -105,11 +105,11 @@ class dbConnection extends PDO {
      * @param string $class
      * @param string $mode
      */
-    function cboFillFromTable($var,$query,$value,$label,$default="--Choose--",$class="",$mode="add")
+    function cboFillFromTable($var,$query,$value,$label,$default="--Choose--",$class="",$mode="add", $options="")
     {
         $sqlQuery = parent::prepare($query);
         $sqlQuery->execute();
-        echo "<select name='$var' id='$var' class='$class'>";
+        echo "<select name='$var' id='$var' class='$class' $options>";
         if($mode=="add"){
             echo "<option value='' selected>$default</option>";
             while($arr = $sqlQuery->fetch())

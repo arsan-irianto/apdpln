@@ -31,12 +31,14 @@ SELECT [WILAYAH]
       ,[KECIL5]
   FROM [APDPLN].[dbo].[V_FGTM_FULL]) as a";
 */
-$sp = "{:retval = CALL PCDR_SAIDI_FULL (@BULAN=:bulan,@TAHUN=:tahun)}";
+$sp = "{:retval = CALL PCDR_SAIDI_FULL (@BULAN=:bulan,@TAHUN=:tahun, @DCCID=:dccid, @AREAID=:areaid)}";
 $result = $conn->prepare($sp);
 
 $retval = null;
 $bulan = $_GET['month'];
 $tahun = $_GET['year'];
+$dccid = $_GET['DCCID'];
+$areaid = $_GET['AREAID'];
 //$jumlah = floatval("646881.00");//$_GET['month'];
 //$kwhrata = floatval("0.968");//$_GET['year'];
 
@@ -45,6 +47,8 @@ $result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4)
 //$result->bindParam('kwhrata', $kwhrata);
 $result->bindParam('bulan', $bulan, PDO::PARAM_INT);
 $result->bindParam('tahun', $tahun, PDO::PARAM_INT);
+$result->bindParam('dccid', $bulan, PDO::PARAM_INT);
+$result->bindParam('areaid', $tahun, PDO::PARAM_INT);
 
 $result->execute();
 $i = 0;

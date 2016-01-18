@@ -6,7 +6,6 @@
  * Time: 5:54
  */
 ?>
-
 <script src="modules/logsheet.js" type="text/javascript"></script>
 <style>
     body {
@@ -73,11 +72,12 @@
                         <thead>
                         <tr>
                             <th><div align="center">ACTION</div></th>
-                            <th><div align="center">MC</div></th>
+                            <th><div align="center">INPUT</div></th>
                             <th><div align="center">CHECK</div></th>
                             <th><div align="center">TANGGAL</div></th>
                             <th><div align="center">LBSRECGH</div></th>
                             <th><div align="center">ASUHAN</div></th>
+                            <th><div align="center">GI</div></th>
                             <th><div align="center">AREA</div></th>
                             <th><div align="center">BEBAN PADAM</div></th>
                             <th><div align="center">RELAY</div></th>
@@ -140,7 +140,7 @@
 </div><!-- /.modal -->
 
 <!-- /.modal form Logsheet-->
-<div class="modal fade" id="myModals" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModals" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" style="width: 70%">
         <div class="modal-content">
             <div class="modal-header">
@@ -158,7 +158,8 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab">Gardu & Area</a></li>
                         <li><a href="#tab_2" data-toggle="tab">Detail Pemadaman</a></li>
-                        <li><a href="#tab_3" data-toggle="tab">Keterangan Gangguan</a></li>
+                        <li><a href="#tab_3" data-toggle="tab">FGTM</a></li>
+                        <li><a href="#tab_4" data-toggle="tab">SAIDI</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_1">
@@ -258,7 +259,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Trip</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm dttime" value="<?=$TR=isset($TR)? $TR : '';?>" name="TR" id="TR" type="text">
+                                            <input class="form-control input-sm dttime" value="<?=$TR=isset($TR)? $TR : '';?>" name="TR" id="TR" type="text" data-inputmask='"mask": "9999-99-99 99:99:99"' data-mask>
                                         </div>
                                     </div>
                                 </div>
@@ -266,7 +267,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Execute</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm dttime" value="<?=$EX=isset($EX)? $EX : '';?>" name="EX" id="EX" type="text">
+                                            <input class="form-control input-sm dttime" value="<?=$EX=isset($EX)? $EX : '';?>" name="EX" id="EX" type="text" data-inputmask='"mask": "9999-99-99 99:99:99"' data-mask>
                                         </div>
                                     </div>
                                 </div>
@@ -274,7 +275,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Close</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm dttime" value="<?=$CL=isset($CL)? $CL : '';?>" name="CL" id="CL" type="text">
+                                            <input class="form-control input-sm dttime" value="<?=$CL=isset($CL)? $CL : '';?>" name="CL" id="CL" type="text" data-inputmask='"mask": "9999-99-99 99:99:99"' data-mask>
                                         </div>
                                     </div>
                                 </div>
@@ -284,7 +285,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Reclose</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm dttime" value="<?=$RC=isset($RC)? $RC : '';?>" name="RC" id="RC" type="text">
+                                            <input class="form-control input-sm dttime" value="<?=$RC=isset($RC)? $RC : '';?>" name="RC" id="RC" type="text" data-inputmask='"mask": "9999-99-99 99:99:99"' data-mask>
                                         </div>
                                     </div>
                                 </div>
@@ -292,7 +293,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Open</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm dttime" value="<?=$OP=isset($OP)? $OP : '';?>" name="OP" id="OP" type="text">
+                                            <input class="form-control input-sm dttime" value="<?=$OP=isset($OP)? $OP : '';?>" name="OP" id="OP" type="text" data-inputmask='"mask": "9999-99-99 99:99:99"' data-mask>
                                         </div>
                                     </div>
                                 </div>
@@ -331,7 +332,7 @@
                                         <label class="col-sm-4 control-label">Relay</label>
                                         <div class="col-sm-8">
                                             <input class="form-control input-sm typeahead_relay" value="<?=$RELAY=isset($RELAY)? $RELAY : '';?>" name="RELAY" id="RELAY" type="text">
-                                            <input class="form-control input-sm" name="LAMA" id="LAMA" type="text" value="<?=$LAMA=isset($LAMA)? $LAMA : '0';?>">
+                                            <input class="form-control input-sm" name="LAMA" id="LAMA" type="hidden" value="<?=$LAMA=isset($LAMA)? $LAMA : '0';?>">
                                         </div>
                                     </div>
                                 </div>
@@ -339,7 +340,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">KWH</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$KWH=isset($KWH)? $KWH : '0';?>" placeholder="0.000" name="KWH" id="KWH" type="text" readonly>
+                                            <input class="form-control input-sm" value="<?=$KWH=isset($KWH)? $KWH : '0';?>" placeholder="0.000" name="KWH" id="KWH" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -361,7 +362,7 @@
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">MW</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="0" placeholder="0.000" name="MW" id="MW" type="text" readonly>
+                                            <input class="form-control input-sm" value="0" placeholder="0.000" name="MW" id="MW" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -383,37 +384,14 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">MRF</label>
-                                        <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$MRF=isset($MRF)? $MRF : '';?>" name="MRF" id="MRF" type="text">
-                                            <input class="form-control input-sm" <?=$JEDARC1=isset($JEDARC1)? $JEDARC1 : '0';?> name="JEDARC1" id="JEDARC1" placeholder="0" type="hidden">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Keterangan FGTM</label>
                                         <div class="col-sm-8">
                                             <input class="form-control input-sm" value="<?=$KETFGTM=isset($KETFGTM)? $KETFGTM : '';?>" name="KETFGTM" id="KETFGTM" type="text" readonly>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Keterangan</label>
-                                        <div class="col-sm-8">
-                                            <textarea class="form-control input-sm"  name="KETERANGAN" id="KETERANGAN" rows="2" placeholder="Masukkan Keterangan ..."><?=isset($KETERANGAN)? $KETERANGAN : '';?></textarea>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
-
                             <div class="row">
-                                <div class="col-sm-6">
-
-                                </div>
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Kode Siklus</label>
@@ -422,9 +400,26 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group input-sm">
+                                        <label class="col-sm-4 control-label">MRF</label>
+                                        <div class="col-sm-8">
+                                            <input class="form-control input-sm" value="<?=$MRF=isset($MRF)? $MRF : '';?>" name="MRF" id="MRF" type="text">
+                                            <input class="form-control input-sm" <?=$JEDARC1=isset($JEDARC1)? $JEDARC1 : '0';?> name="JEDARC1" id="JEDARC1" placeholder="0" type="hidden">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group input-sm">
+                                        <label class="col-sm-4 control-label">Keterangan</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control input-sm"  name="KETERANGAN" id="KETERANGAN" rows="2" placeholder="Masukkan Keterangan ..."><?=isset($KETERANGAN)? $KETERANGAN : '';?></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Kordinasi</label>
@@ -433,76 +428,103 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Segmen Gangguan 1</label>
-                                        <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$PIDSEGMEN1=isset($PIDSEGMEN1)? $PIDSEGMEN1 : '';?>" name="PIDSEGMEN1" id="PIDSEGMEN1" type="hidden">
-                                            <input class="form-control input-sm" value="<?=$PIDSEGMEN2=isset($PIDSEGMEN2)? $PIDSEGMEN2 : '';?>" name="PIDSEGMEN2" id="PIDSEGMEN2" type="hidden">
-                                            <input class="form-control input-sm" value="<?=$JMLSEGMEN1=isset($JMLSEGMEN1)? $JMLSEGMEN1 : '';?>" name="JMLSEGMEN1" id="JMLSEGMEN1" type="hidden">
-                                            <input class="form-control input-sm" value="<?=$JMLSEGMEN2=isset($JMLSEGMEN2)? $JMLSEGMEN2 : '';?>" name="JMLSEGMEN2" id="JMLSEGMEN2" type="hidden">
-                                            <input class="form-control input-sm typeahead_segmen1" value="" name="SEGMENGANGGUAN1" id="SEGMENGANGGUAN1" type="text">
+                            </div>
+                            </div>
+                            <div class="tab-pane" id="tab_4"><br>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group input-sm">
+                                            <label class="col-sm-4 control-label">Kelompok Gangguan</label>
+                                            <div class="col-sm-8">
+                                                <?php
+                                                $sp_kelompok = "{:retval = CALL PCDR_PILIHAN_SAIDI_KELOMPOK}";
+                                                $result = $conn->prepare($sp_kelompok);
+                                                $retval = null;
+                                                $result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4);
+                                                $result->execute();
+                                                echo "<select name='KODEKELOMPOK' id='KODEKELOMPOK' class='form-control input-sm'>";
+                                                echo "<option value='' selected>-Choose-</option>";
+                                                while($arr = $result->fetch())
+                                                {
+                                                    echo "<option value='$arr[KODEKELOMPOK]'>$arr[KETKELOMPOK]</option>";
+                                                }
+                                                echo "</select> ";
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group input-sm">
+                                            <label class="col-sm-4 control-label">Grup Gangguan</label>
+                                            <div class="col-sm-8">
+                                                <?php
+                                                    echo "<select name='KODEGRUP' id='KODEGRUP' class='form-control input-sm'>";
+                                                    echo "<option value='' selected>-Choose-</option>";
+                                                    echo "</select> ";
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group input-sm">
+                                            <label class="col-sm-4 control-label">Gangguan Saidi</label>
+                                            <div class="col-sm-8">
+                                                <?php
+                                                //echo $KODESAIDI;
+                                                //$querySAIDI = "SELECT KODE FROM PADAMSAIDI";
+                                                //$conn->cboFillFromTable("KODESAIDI",$querySAIDI,"KODE","KODE", "--Choose--","form-control input-sm","addnew");
+                                                //<input class="form-control input-sm" value="<?=$KODESAIDI=isset($KODESAIDI)? $KODESAIDI : '';" name="KODESAIDI" id="KODESAIDI" type="text" readonly>
+                                                echo "<select name='KODESAIDI' id='KODESAIDI' class='form-control input-sm' style='width: 100%'>";
+                                                echo "<option value='' selected>-Choose-</option>";
+                                                echo "</select> ";
+                                                ?>
+                                                <input class="form-control input-sm typeahead_saidi" value="<?=$KETSAIDI=isset($KETSAIDI)? $KETSAIDI : '';?>" name="KETSAIDI" id="KETSAIDI" type="hidden">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group input-sm">
+                                            <label class="col-sm-2 control-label">Segmen Gangguan</label>
+                                            <div class="col-sm-8">
+                                                <!-- /.<input class="form-control input-sm" value="<?//=$PIDSEGMEN1=isset($PIDSEGMEN1)? $PIDSEGMEN1 : '';?>" name="PIDSEGMEN1" id="PIDSEGMEN1" type="hidden"> -->
+                                                <!-- /.<input class="form-control input-sm" value="<?//=$PIDSEGMEN2=isset($PIDSEGMEN2)? $PIDSEGMEN2 : '';?>" name="PIDSEGMEN2" id="PIDSEGMEN2" type="hidden"> -->
+                                                <!-- /.<input class="form-control input-sm" value="<?//=$JMLSEGMEN1=isset($JMLSEGMEN1)? $JMLSEGMEN1 : '';?>" name="JMLSEGMEN1" id="JMLSEGMEN1" type="hidden"> -->
+                                                <!-- /.<input class="form-control input-sm" value="<?//=$JMLSEGMEN2=isset($JMLSEGMEN2)? $JMLSEGMEN2 : '';?>" name="JMLSEGMEN2" id="JMLSEGMEN2" type="hidden">-->
+                                                <!-- /.<input class="form-control input-sm typeahead_segmen1" value="" name="SEGMENGANGGUAN1" id="SEGMENGANGGUAN1" type="text">-->
+                                                <span id="sgm">
+                                                    <select name='SEGMENGANGGUAN[]' id='SEGMENGANGGUAN_auto' class='form-control input-sm' multiple='multiple' style='width: 100%'></select>
+                                                </span>
+                                                <input class="form-control input-sm" value="<?=$SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';?>" name="SEGMENGANGGUAN_manual" id="SEGMENGANGGUAN_manual" type="text">
+                                                <input class="form-control input-sm" value="<?=$SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';?>" name="SEGMENGANGGUAN" id="SEGMENGANGGUAN" type="hidden">
+                                            </div>
+                                            <div class="col-sm-2"><input type="checkbox" name="chkAuto" id="chkAuto" value="auto"> Auto</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group input-sm">
+                                            <label class="col-sm-4 control-label">Pelanggan Padam</label>
+                                            <div class="col-sm-8">
+                                                <input class="form-control input-sm" value="<?=$PELANGGANPADAM=isset($PELANGGANPADAM)? $PELANGGANPADAM : '0';?>" name="PELANGGANPADAM" id="PELANGGANPADAM" placeholder="0" type="text" >
+                                                <input class="form-control input-sm" value="<?=$PERSENPELANGGANPADAM=isset($PELANGGANPADAM)? $PERSENPELANGGANPADAM : '0';?>" name="PERSENPELANGGANPADAM" id="PERSENPELANGGANPADAM" type="hidden" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group input-sm">
+                                            <label class="col-sm-4 control-label">Penyulang</label>
+                                            <div class="col-sm-8">
+                                                <select name='penyulang[]' id='penyulang' class='form-control input-sm' multiple='multiple' style='width: 100%'></select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Segmen Gangguan 2</label>
-                                        <div class="col-sm-8">
-                                            <input class="form-control input-sm typeahead_segmen2" value="" name="SEGMENGANGGUAN2" id="SEGMENGANGGUAN2" type="text">
-                                            <input class="form-control input-sm" value="<?=$SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';?>" name="SEGMENGANGGUAN" id="SEGMENGANGGUAN" type="hidden">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Keterangan Saidi</label>
-                                        <div class="col-sm-8">
-                                            <input class="form-control input-sm typeahead_saidi" value="<?=$KETSAIDI=isset($KETSAIDI)? $KETSAIDI : '';?>" name="KETSAIDI" id="KETSAIDI" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Kode Saidi</label>
-                                        <div class="col-sm-8">
-                                            <?php
-                                            //echo $KODESAIDI;
-                                            //$querySAIDI = "SELECT KODE FROM PADAMSAIDI";
-                                            //$conn->cboFillFromTable("KODESAIDI",$querySAIDI,"KODE","KODE", "--Choose--","form-control input-sm","addnew");
-                                            ?>
-                                            <input class="form-control input-sm" value="<?=$KODESAIDI=isset($KODESAIDI)? $KODESAIDI : '';?>" name="KODESAIDI" id="KODESAIDI" type="text" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Total Pelanggan</label>
-                                        <div class="col-sm-8">
-                                            <input class="form-control input-sm" placeholder="0" value="<?=$TOTALPELANGGAN=isset($TOTALPELANGGAN)? $TOTALPELANGGAN : '0';?>" name="TOTALPELANGGAN" id="TOTALPELANGGAN" type="text">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Pelanggan Padam</label>
-                                        <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$PELANGGANPADAM=isset($PELANGGANPADAM)? $PELANGGANPADAM : '0';?>" name="PELANGGANPADAM" id="PELANGGANPADAM" placeholder="0" type="text" >
-                                            <input class="form-control input-sm" value="<?=$PERSENPELANGGANPADAM=isset($PELANGGANPADAM)? $PERSENPELANGGANPADAM : '0';?>" name="PERSENPELANGGANPADAM" id="PERSENPELANGGANPADAM" type="hidden" >
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.tab-pane -->
                     </div><!-- /.tab-content -->
                 </form>
             </div>

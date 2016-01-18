@@ -136,7 +136,8 @@ function setModalData( data ){
     $("#KETERANGAN").val(data.KETERANGAN.trim());
     $("#KORDINASI").val(data.KORDINASI.trim());
     SEGMENGANGGUAN = (data.SEGMENGANGGUAN == null) ? "" : data.SEGMENGANGGUAN;
-    $("#SEGMENGANGGUAN").val(SEGMENGANGGUAN);
+    $("#SEGMENGANGGUAN_manual").val(SEGMENGANGGUAN.trim());
+    $("#SEGMENGANGGUAN").val(SEGMENGANGGUAN.trim());
     $("#TOTALPELANGGAN").val(data.TOTALPELANGGAN);
     $("#PELANGGANPADAM").val(data.PELANGGANPADAM);
     $("#PERSENPELANGGANPADAM").val(data.PERSENPELANGGANPADAM);
@@ -197,6 +198,8 @@ function deleteLogsheet( id ) {
 
 function clearModals()
 {
+
+    $('#chkAuto').prop("checked",false);
     $("#PID").val("");
     $("#KODESIKLUS").val("");
     $("#ID").val("");
@@ -245,8 +248,8 @@ function clearModals()
     $("#PIDSEGMEN2").val("");
     $("#JMLSEGMEN1").val("");
     $("#JMLSEGMEN2").val("");
-    $("#SEGMENGANGGUAN1").val("");
-    $("#SEGMENGANGGUAN2").val("");
+    //$("#SEGMENGANGGUAN1").val("");
+    //$("#SEGMENGANGGUAN2").val("");
     $("#SEGMENGANGGUAN").val("");
     $("#TOTALPELANGGAN").val(0);
     $("#PELANGGANPADAM").val(0);
@@ -258,9 +261,36 @@ function clearModals()
 }
 
 $(function () {
+    $('#sgm').hide();
+    $('#SEGMENGANGGUAN_auto').select2();
+    $('#KODESAIDI').select2();
+    $('#penyulang').select2();
+
+
+
     $('.modal').on('hidden.bs.modal',function(e){
         $(this).removeData('bs.modal');
-    })
+    });
+
+    $("#SEGMENGANGGUAN_auto").change(function(){
+        segmen_arr = $("#SEGMENGANGGUAN_auto").val();
+        $('#SEGMENGANGGUAN').val(segmen_arr);
+    });
+
+    $("#SEGMENGANGGUAN_manual").change(function(){
+        $('#SEGMENGANGGUAN').val($(this).val());
+    });
+
+    $("#chkAuto").click(function(){
+        if( $(this).prop("checked")==true ){
+            $("#SEGMENGANGGUAN_manual").hide();
+            $("#sgm").show();
+        }else{
+            $("#SEGMENGANGGUAN_manual").show();
+            $("#sgm").hide();
+        }
+    });
+
     $("#EKSEKUTOR").focus(function(){
         if( ($("#OP").val() != "") && ($("#CL").val() != "") ){
             strData = "start=" + $("#OP").val() + "&end=" + $("#CL").val();
@@ -308,7 +338,8 @@ $(function () {
         });
     });
     $("#KODESAIDI").change(function(){
-        //$("#KETSAIDI").val($("#KODESAIDI :selected").text());
+        $("#KETSAIDI").val($("#KODESAIDI :selected").text());
+        /*
         $.ajax({
             type: "GET",
             url: "modules/crud_logsheet.php?ref=saidi",
@@ -317,7 +348,7 @@ $(function () {
             success: function(data) {
                 $("#KETSAIDI").val(data);
             }
-        });
+        });*/
     });
     $("#tanggal_check input").datepicker().on("changeDate", function () {
         $(this).datepicker("hide");
@@ -327,9 +358,18 @@ $(function () {
         $(this).datepicker("hide");
     });
 
-    $('.dttime').datetimepicker({
-        format: 'yyyy-mm-dd hh:ii:ss'
-    });
+    $("#TANGGAL").change(function(){
+        $(".dttime").val($(this).val());
+    })
+
+   // $('.dttime').datetimepicker({
+        //format: 'yyyy-mm-dd hh:ii:ss'
+    //});
+
+    //Datemask dd/mm/yyyy
+    //$(".dttime").inputmask("yyyy-mm-dd hh:mm:ss");
+    //Money Euro
+    $("[data-mask]").inputmask();
 
     reloadDatatable();
     $("#TANGGAL_LOGSHEET").change(function(){
@@ -491,6 +531,95 @@ $(function () {
             $("#SEGMENGANGGUAN").val(segmen1+"-"+segmen2);
         }//else{$("#SEGMENGANGGUAN").val(segmen2);}
     });
+
+    $("#KODEKELOMPOK").change(function(){
+        var id=$(this).val();
+        var dataString = 'id='+ id;
+        $.ajax({
+            type: "POST",
+            url: "modules/list_saidi.php?cat=grup",
+            data: dataString,
+            cache: false,
+            success: function(html){
+                $("#KODEGRUP").html(html);
+            }
+        })
+    });
+
+    $("#KODEGRUP").change(function(){
+        var id=$(this).val();
+        var dataString = 'id='+ id;
+        $.ajax({
+            type: "POST",
+            url: "modules/list_saidi.php?cat=kodesaidi",
+            data: dataString,
+            cache: false,
+            success: function(html){
+                $("#KODESAIDI").html(html);
+            }
+        })
+    });
+
+    $('#myModals').on('hide.bs.modal', function (e) {
+        $('#SEGMENGANGGUAN_auto').select2("val","");
+        $('#penyulang').select2("val","");
+    });
+
+    $('#myModals').on('shown.bs.modal', function (e) {
+        var id=$("#PID").val();
+        var plbs = $("#PLBSRECGH").val();
+        var dataString = 'id='+ id;
+        var dataStringPlgn = 'id='+ id +"&penyulang=" + plbs;
+
+        if($("#PID").val()!=""){
+            $.ajax({
+                type: "POST",
+                url: "modules/list_saidi.php?cat=segmen",
+                data: dataString,
+                cache: false,
+                success: function(html){
+                    $("#SEGMENGANGGUAN_auto").html(html);
+                }
+            })
+
+            $.ajax({
+                type: "POST",
+                url: "modules/list_saidi.php?cat=segmen_padam",
+                data: dataStringPlgn,
+                cache: false,
+                success: function(html){
+                    $("#penyulang").html(html);
+                }
+            })
+        }
+    })
+
+    $("#penyulang").change(function(){
+        function sum(input){
+
+            if (toString.call(input) !== "[object Array]")
+                return false;
+
+            var total =  0;
+            for(var i=0;i<input.length;i++)
+            {
+                if(isNaN(input[i])){
+                    continue;
+                }
+                total += Number(input[i]);
+            }
+            return total;
+        }
+
+        var plgn_arr = [];
+        $("#penyulang option:selected").each(function(i){
+            plgn_arr.push($(this).val());
+        });
+
+        $("#PELANGGANPADAM").val(sum(plgn_arr));
+    });
+
+
 /*
     var typeaheadSource =   [{
                                 PID:"400013", NAME:'Arsan'}, {
@@ -512,4 +641,5 @@ $(function () {
         ajax : "modules/crud_logsheet.php?ref=plbsrecgh",
         displayField: 'NAME'
     });*/
+
 });

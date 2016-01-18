@@ -23,7 +23,10 @@
     <!-- date picker -->
     <link href="../plugins/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
     <link href="../plugins/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <!-- Multiselect -->
+    <link  href="../plugins/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
     <!-- Theme style -->
+
     <link href="../dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
           page. However, you can choose any other skin. Make sure you
@@ -36,10 +39,13 @@
     <script src="../plugins/jQuery/jQuery-2.1.3.min.js"></script>
     <script src="../plugins/datatables/datatables.min.js" type="text/javascript"></script>
     <script src="../plugins/datatables/datatables_sum.js" type="text/javascript"></script>
+
+    <script src="../plugins/select2/dist/js/select2.min.js"></script>
     <script type="text/javascript" language="javascript" src="../dist/js/common.js"></script>
 
     <script type="text/javascript" src="../plugins/fusioncharts/js/fusioncharts.js"></script>
     <script type="text/javascript" src="../plugins/fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
+
 </head>
 <body class="skin-red">
 <div class="wrapper">

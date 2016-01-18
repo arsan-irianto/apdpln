@@ -134,6 +134,32 @@
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">DCC</label>
+                                <div class="col-sm-8">
+                                    <?php
+                                    $queryDCC = "SELECT DCCID,DCC FROM DCC";
+                                    $conn->cboFillFromTable("DCCID",$queryDCC,"DCCID","DCC", "--Choose--","form-control input-sm","addnew");
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">AREA</label>
+                                <div class="col-sm-8">
+                                    <?php
+                                    $queryAREA = "SELECT AREAID, AREA FROM AREA";
+                                    $conn->cboFillFromTable("AREAID",$queryAREA,"AREAID","AREA", "--Choose--","form-control input-sm","addnew");
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
                                 <label class="col-sm-4 control-label">Total Pelanggan</label>
                                 <div class="col-sm-4">
                                     <input class="form-control input-sm" value="<?=$TOTALPELANGGAN=isset($TOTALPELANGGAN)? $TOTALPELANGGAN : 0;?>" name="TOTALPELANGGAN" id="TOTALPELANGGAN" type="text">

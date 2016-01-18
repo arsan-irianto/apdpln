@@ -267,14 +267,22 @@ $(function () {
     $('#penyulang').select2();
 
 
+    $("#KODEKELOMPOK").select2();
+    $("#KODEGRUP").select2();
 
     $('.modal').on('hidden.bs.modal',function(e){
         $(this).removeData('bs.modal');
     });
 
     $("#SEGMENGANGGUAN_auto").change(function(){
-        segmen_arr = $("#SEGMENGANGGUAN_auto").val();
-        $('#SEGMENGANGGUAN').val(segmen_arr);
+        //segmen_arr = $("#SEGMENGANGGUAN_auto").val();
+        //$('#SEGMENGANGGUAN').val(segmen_arr);
+        var segmen_arr = [];
+        $("#SEGMENGANGGUAN_auto option:selected").each(function(i){
+            segmen_arr.push($(this).val());
+        });
+
+        $('#SEGMENGANGGUAN').val($.map(segmen_arr, $.trim));
     });
 
     $("#SEGMENGANGGUAN_manual").change(function(){

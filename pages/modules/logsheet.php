@@ -442,7 +442,7 @@
                                                 $retval = null;
                                                 $result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4);
                                                 $result->execute();
-                                                echo "<select name='KODEKELOMPOK' id='KODEKELOMPOK' class='form-control input-sm'>";
+                                                echo "<select name='KODEKELOMPOK' id='KODEKELOMPOK' class='form-control input-sm' style='width: 100%'>";
                                                 echo "<option value='' selected>-Choose-</option>";
                                                 while($arr = $result->fetch())
                                                 {
@@ -460,7 +460,7 @@
                                             <label class="col-sm-4 control-label">Grup Gangguan</label>
                                             <div class="col-sm-8">
                                                 <?php
-                                                    echo "<select name='KODEGRUP' id='KODEGRUP' class='form-control input-sm'>";
+                                                    echo "<select name='KODEGRUP' id='KODEGRUP' class='form-control input-sm' style='width: 100%'>";
                                                     echo "<option value='' selected>-Choose-</option>";
                                                     echo "</select> ";
                                                 ?>
@@ -517,7 +517,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group input-sm">
-                                            <label class="col-sm-4 control-label">Penyulang</label>
+                                            <label class="col-sm-4 control-label">Segmen</label>
                                             <div class="col-sm-8">
                                                 <select name='penyulang[]' id='penyulang' class='form-control input-sm' multiple='multiple' style='width: 100%'></select>
                                             </div>

@@ -93,6 +93,8 @@ function deletePkb( id ) {
 function clearModals() {
     $("#BULAN").val("");
     $("#TAHUN").val("");
+    $("#DCCID").val("");
+    $("#AREAID").val("");
     $("#TOTALPELANGGAN").val(0);
     $("#KWHRATARATAHARIANPELANGGAN").val(0);
     $("#KWHRATARATAJAMPELANGGAN").val(0);
@@ -104,6 +106,8 @@ function setModalData( data ){
     $("#PKEY").val(data.PKEY);
     $("#BULAN").val(data.BULAN);
     $("#TAHUN").val(data.TAHUN);
+    $("#DCCID").val(data.DCCID);
+    $("#AREAID").val(data.AREAID);
     $("#TOTALPELANGGAN").val(data.TOTALPELANGGAN);
     $("#KWHRATARATAHARIANPELANGGAN").val(data.KWHRATARATAHARIANPELANGGAN);
     $("#KWHRATARATAJAMPELANGGAN").val(data.KWHRATARATAJAMPELANGGAN);

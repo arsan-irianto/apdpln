@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2799465348">
+  <component name="DataSourceManagerImpl" format="xml" hash="480718089">
     <data-source source="LOCAL" name="SQL Server - APDPLN@localhost" uuid="d35d14f8-cb3a-410d-bc9c-29b5bb1dad1b">
       <driver-ref>sqlserver.ms</driver-ref>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>

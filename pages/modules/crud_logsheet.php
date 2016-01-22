@@ -70,8 +70,27 @@ $KETSAIDI=isset($KETSAIDI)? $KETSAIDI : '';
 $EKSEKUTOR=isset($EKSEKUTOR)? $EKSEKUTOR : '';
 $SHIFT=isset($SHIFT)? $SHIFT : '';
 
+$MC_REQUIRED = array($KODESAIDI, $KETSAIDI, $KODEFGTM, $KETFGTM, $KODESIKLUS);
+$MC_CHECK = (in_array(null, $MC_REQUIRED)) ? 0 : 1;
+
+// Check LAMA PADAM
+$diffInt=isset($diffInt)? $diffInt : '';
+if( ($OP != "") && ( $CL != "") ){
+    $diffInt = (strtotime($CL) - strtotime($OP))*10000000;
+}
+else if( ($TR != "") && ( $CL != "") ) {
+    $diffInt = (strtotime($CL) - strtotime($TR))*10000000;
+}
+else if( ($TR != "") && ( $RC != "") ){
+    $diffInt = (strtotime($RC) - strtotime($TR))*10000000;
+}
+/*
+$start = strtotime(isset($_GET['start']) ? $_GET['start'] : 0);
+$end = strtotime(isset($_GET['end']) ? $_GET['end'] : 0);
+$diffInt = ($end - $start)*10000000;*/
+
 $formData = array('SC'=>$SC,
-    'MC'=>$MC,
+    'MC'=>$MC_CHECK,
     'CHK'=>$CHK,
     'PID'=>$PID,
     'GIPID'=>$GIPID,
@@ -103,7 +122,7 @@ $formData = array('SC'=>$SC,
     'WIL'=>$WILAYAH,
     'BEBANPADAM'=>$BEBANPADAM,
     'RELAY'=>$RELAY,
-    'LAMA'=>$LAMA,
+    'LAMA'=>$diffInt,
     'KWH'=>$KWH,
     'MRF'=>$MRF,
     'JEDARC1'=>$JEDARC1,
@@ -185,23 +204,15 @@ if (isset($_POST['act'])=='delete'){
     }
 }
 
+/*
 if(isset($_GET['diff'])=="yes"){
     $start = strtotime(isset($_GET['start']) ? $_GET['start'] : 0);
     $end = strtotime(isset($_GET['end']) ? $_GET['end'] : 0);
     $diffInt = ($end - $start)*10000000;
-
-// Set start & end time
-    //$start_time = (isset($_GET['op']) ? $_GET['op'] : 0);
-    //$end_time = (isset($_GET['cl']) ? $_GET['cl'] : 0);
-    //$diffInt = (strtotime($start_time) - strtotime($end_time))*10000000;
-
-// Run and print diff
-    //$diff =  dateDiff($start_time, $end_time, 6);
-
     $arr['a1'] = $diffInt;
     //$arr['a2'] = $diff;
     echo json_encode($arr);
-}
+}*/
 
 
 if(isset($_GET['c'])=="persen"){

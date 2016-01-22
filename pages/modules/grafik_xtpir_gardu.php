@@ -141,7 +141,7 @@ if ($result) {
                                 </div>
                                 <div class="col-md-5">
                                     <?php
-                                    echo combothn(2013, 2015, "cbo_year", "-Year-","form-control input-sm")
+                                    echo combothn(2013, date("Y"), "cbo_year", "-Year-","form-control input-sm")
                                     ?>
                                 </div>
                                 </form>

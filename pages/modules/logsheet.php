@@ -5,6 +5,8 @@
  * Date: 10/12/2015
  * Time: 5:54
  */
+//session_start();
+if($USERNAME != ''){
 ?>
 <script src="modules/logsheet.js" type="text/javascript"></script>
 <style>
@@ -73,7 +75,7 @@
                         <tr>
                             <th><div align="center">ACTION</div></th>
                             <th><div align="center">INPUT</div></th>
-                            <th><div align="center">CHECK</div></th>
+                            <th><div align="center">MANUAL CHECK</div></th>
                             <th><div align="center">TANGGAL</div></th>
                             <th><div align="center">LBSRECGH</div></th>
                             <th><div align="center">ASUHAN</div></th>
@@ -149,6 +151,7 @@
             </div>
             <div class="modal-body">
                 <form role="form" id="form_logsheet" name="form_logsheet" class="form-horizontal">
+                    <input name="usertype" id="usertype" value="<?php echo $TYPE;?>" type="hidden">
                     <input name="periode" id="periode" value="" type="hidden">
                     <input type="hidden" id="type" name="type">
                     <input name="ID" id="ID" value="" type="hidden">
@@ -536,5 +539,11 @@
     </div>
 </div>
 
+
 </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
+<?php }
+else {
+    include("../pages/404.php");
+}
+?>

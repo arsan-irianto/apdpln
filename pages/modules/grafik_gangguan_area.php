@@ -21,14 +21,17 @@
 /**
  * Created by PhpStorm.
  * User: Arsan Irianto
- * Date: 16/12/2015
- * Time: 23:51
+ * Date: 22/01/2016
+ * Time: 10:50
  */
 
-$sp = "{:retval = CALL PCDR_AREA_TRIP (@BULAN=:bulan,@TAHUN=:tahun)}";
+$sp = "{:retval = CALL PCDR_AREA_GANGGUAN (@BULAN=:bulan,@TAHUN=:tahun)}";
 $result = $conn->prepare($sp);
 
 $retval = null;
+//$bulan = 10;
+//$tahun = 2015;
+
 $bulan = isset($_GET['cbo_month']) ? $_GET['cbo_month'] : "";
 $tahun = isset($_GET['cbo_year']) ? $_GET['cbo_year'] : "";
 
@@ -43,7 +46,7 @@ if ($result) {
     // The `$arrData` array holds the chart attributes and data
     $arrData = array(
         "chart" => array(
-            "caption" => "Jumlah Gangguan Penyulang < 5 menit Per Area Dist",
+            "caption" => "Grafik Gangguan (FGTM) Per AREA",
             "bgColor" => "#ffffff",
             "borderAlpha"=> "20",
             "canvasBorderAlpha"=> "0",
@@ -58,16 +61,45 @@ if ($result) {
         )
     );
 
-    $arrData["data"] = array();
+    // Define Chart DataSource
+    $category = array();
+    $seriesname = array();
+    $data_E1 = array();
+    $data_E2 = array();
+    $data_E3 = array();
+    $data_E4 = array();
+    $data_L1 = array();
+    $data_L2 = array();
+    $data_L3 = array();
+    $data_L4 = array();
 
-    // Push the data into the array
     while( $row = $result->fetch() ) {
-        array_push($arrData["data"], array(
-                "label" => $row["AREA"],
-                "value" => $row["TEMPORER"]
-            )
-        );
+        array_push($category, array("label" => $row["AREA"]));
+        array_push($data_E1, array("value" => $row["E_1"]));
+        array_push($data_E2, array("value" => $row["E_2"], "linkAction"=> "google.com"));
+        array_push($data_E3, array("value" => $row["E_3"]));
+        array_push($data_E4, array("value" => $row["E_4"]));
+        array_push($data_L1, array("value" => $row["I_1"]));
+        array_push($data_L2, array("value" => $row["I_2"]));
+        array_push($data_L3, array("value" => $row["I_3"]));
+        array_push($data_L4, array("value" => $row["I_4"]));
     }
+
+    // Plotting Categories
+    $arrData["categories"][] = array("category" => $category);
+
+    // Plotting Series & Data
+    array_push($seriesname, array("seriesname"=>"POHON", "data" => $data_E1));
+    array_push($seriesname, array("seriesname"=>"BENCANA ALAM", "data" => $data_E2));
+    array_push($seriesname, array("seriesname"=>"PEKERJAAN PIHAK III/BINATANG", "data" => $data_E3));
+    array_push($seriesname, array("seriesname"=>"LAYANG-2 / UMBUL-2, DLL", "data" => $data_E4));
+    array_push($seriesname, array("seriesname"=>"KOMPONEN JTM", "data" => $data_L1));
+    array_push($seriesname, array("seriesname"=>"PERALATAN JTM", "data" => $data_L2));
+    array_push($seriesname, array("seriesname"=>"TRAFO DAN LAINNYA", "data" => $data_L3));
+    array_push($seriesname, array("seriesname"=>"TIANG", "data" => $data_L4));
+
+    // Plotting Series & Data to Dataset
+    $arrData["dataset"] = $seriesname;
 
     /*JSON Encode the data to retrieve the string containing the JSON representation of the data in the array. */
 
@@ -75,7 +107,7 @@ if ($result) {
 
     /*Create an object for the column chart using the FusionCharts PHP class constructor. Syntax for the constructor is ` FusionCharts("type of chart", "unique chart id", width of the chart, height of the chart, "div id to render the chart", "data format", "data source")`. Because we are using JSON data to render the chart, the data format will be `json`. The variable `$jsonEncodeData` holds all the JSON data for the chart, and will be passed as the value for the data source parameter of the constructor.*/
 
-    $columnChart = new FusionCharts("column2D", "myFirstChart" , 700, 350, "chartContainer", "json", $jsonEncodedData);
+    $columnChart = new FusionCharts("mscolumn2d", "myFirstChart" , 800, 350, "chartContainer", "json", $jsonEncodedData);
 
     // Render the chart
     $columnChart->render();
@@ -85,18 +117,17 @@ if ($result) {
 }
 ?>
 
-
-<title> Kali Trip Temporer</title>
+<title> Gangguan (FGTM)</title>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
             Grafik Per Area
-            <small>Kali Trip Temporer</small>
+            <small>Gangguan (FGTM)</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-pie-chart"></i> Grafik Per Area</a></li>
-            <li class="active">Kali Trip Temporer</li>
+            <li class="active">Gangguan (FGTM)</li>
         </ol>
     </section>
 
@@ -113,7 +144,7 @@ if ($result) {
                             <div class="row">
                                 <div class="col-md-7">
                                     <form name="period" id="period" method="get" >
-                                        <input type="hidden" name="modules" id="modules" value="xtt_area">
+                                        <input type="hidden" name="modules" id="modules" value="gg_area">
                                         <?php
                                         echo combonamabln(1, 12, "cbo_month", "-Month-","form-control input-sm");
                                         ?>

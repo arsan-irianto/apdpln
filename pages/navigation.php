@@ -70,7 +70,7 @@ $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
             </li>
 
             <li <?php if( ($_GET['modules']=='xtp_area') || ($_GET['modules']=='xtt_area') ||
-                ($_GET['modules']=='xtpt_area') || ($_GET['modules']=='xtpir_area') ) echo "class='treeview active'";?>>
+                ($_GET['modules']=='xtpt_area') || ($_GET['modules']=='xtpir_area') || ($_GET['modules']=='gg_area') ) echo "class='treeview active'";?>>
                 <a href="#">
                     <i class="fa fa-pie-chart"></i> <span>Grafik Per Area</span>
                     <i class="fa fa-angle-left pull-right"></i>
@@ -80,6 +80,8 @@ $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
                     <li <?php if($_GET['modules']=='xtt_area') echo "class='active'";?>><a href="?modules=xtt_area"><i class="fa fa-angle-double-right"></i> X Trip Temporer</a></li>
                     <li <?php if($_GET['modules']=='xtpt_area') echo "class='active'";?>><a href="?modules=xtpt_area"><i class="fa fa-angle-double-right"></i> X Trip Permanen & Temporer</a></li>
                     <li <?php if($_GET['modules']=='xtpir_area') echo "class='active'";?>><a href="?modules=xtpir_area"><i class="fa fa-angle-double-right"></i> X Trip Per Indikasi Relay</a></li>
+                    <li <?php if($_GET['modules']=='xtpir_area') echo "class='active'";?>><a href="?modules=xtpir_area"><i class="fa fa-angle-double-right"></i> X Trip Per Indikasi Relay</a></li>
+                    <li <?php if($_GET['modules']=='gg_area') echo "class='active'";?>><a href="?modules=gg_area"><i class="fa fa-angle-double-right"></i> Gangguan (FGTM)</a></li>
                 </ul>
             </li>
 

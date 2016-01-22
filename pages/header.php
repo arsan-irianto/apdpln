@@ -45,7 +45,6 @@
 
     <script type="text/javascript" src="../plugins/fusioncharts/js/fusioncharts.js"></script>
     <script type="text/javascript" src="../plugins/fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
-
 </head>
 <body class="skin-red">
 <div class="wrapper">

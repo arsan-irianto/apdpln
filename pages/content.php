@@ -14,6 +14,7 @@ include('../library/fusioncharts.php');
 $modules = ( isset($_GET['modules']) ? $_GET['modules'] : '' );
 $act    = ( isset($_GET['act']) ? $_GET['act'] : '' );
 
+$USERNAME = isset($_SESSION['USERNAME']) ? $_SESSION['USERNAME'] : "";
 $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
 
 switch($modules){
@@ -63,6 +64,8 @@ switch($modules){
         include('modules/grafik_xtpt_area.php');break;
     case "xtpir_area":
         include('modules/grafik_xtpir_area.php');break;
+    case "gg_area":
+        include('modules/grafik_gangguan_area.php');break;
 
     // Grafik Gardu Induk//
     case "xtp_gardu":

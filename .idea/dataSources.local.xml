@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="SQL Server - APDPLN@localhost" uuid="d35d14f8-cb3a-410d-bc9c-29b5bb1dad1b">
-      <secret-storage>master_key</secret-storage>
-      <domain-auth>true</domain-auth>
-      <first-sync>true</first-sync>
-      <schema-pattern>APDPLN.*</schema-pattern>
-      <default-schemas>APDPLN.*</default-schemas>
-    </data-source>
+    <data-source name="SQL Server - APDPLN@localhost" uuid="d35d14f8-cb3a-410d-bc9c-29b5bb1dad1b" />
   </component>
 </project>
 

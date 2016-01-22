@@ -32,8 +32,9 @@ function reloadDatatable(){
         /*
         $('#tlogsheet tbody').on( 'click', '.btn_edit', function () {
             var data = dTable.row( $(this).parents('tr') ).data();
-            $("#LAMAconv").val(data[12]);
+            alert(data[2]);
         });*/
+
     }
     else{
         $('#tlogsheet').DataTable({
@@ -53,6 +54,12 @@ function reloadDatatable(){
         $("#tlogsheet_wrapper > .dt-buttons").appendTo("#btnTable");
     }
 }
+
+function disabledInput(){
+    $("#tab_1").find("input").prop('disabled', true);
+    $("#tab_2").find("input").prop('disabled', true);
+}
+
 
 function showModals( id ){
     waitingDialog.show();
@@ -78,6 +85,9 @@ function showModals( id ){
         //$("#myModalLabel").html("New User");
         $("#type").val("new");
         waitingDialog.hide();
+    }
+    if($("#usertype").val()==2){
+        disabledInput();
     }
 }
 
@@ -178,8 +188,6 @@ function submitDelete() {
             waitingDialog.hide();
         }
     });
-    //clearModals();
-
 }
 
 function deleteLogsheet( id ) {
@@ -198,7 +206,6 @@ function deleteLogsheet( id ) {
 
 function clearModals()
 {
-
     $('#chkAuto').prop("checked",false);
     $("#PID").val("");
     $("#KODESIKLUS").val("");
@@ -261,6 +268,7 @@ function clearModals()
 }
 
 $(function () {
+
     $('#sgm').hide();
     $('#SEGMENGANGGUAN_auto').select2();
     $('#KODESAIDI').select2();
@@ -275,13 +283,11 @@ $(function () {
     });
 
     $("#SEGMENGANGGUAN_auto").change(function(){
-        //segmen_arr = $("#SEGMENGANGGUAN_auto").val();
-        //$('#SEGMENGANGGUAN').val(segmen_arr);
+
         var segmen_arr = [];
         $("#SEGMENGANGGUAN_auto option:selected").each(function(i){
             segmen_arr.push($(this).val());
         });
-
         $('#SEGMENGANGGUAN').val($.map(segmen_arr, $.trim));
     });
 
@@ -298,7 +304,7 @@ $(function () {
             $("#sgm").hide();
         }
     });
-
+/*
     $("#EKSEKUTOR").focus(function(){
         if( ($("#OP").val() != "") && ($("#CL").val() != "") ){
             strData = "start=" + $("#OP").val() + "&end=" + $("#CL").val();
@@ -320,7 +326,7 @@ $(function () {
             }
         });
     });
-
+*/
     $("#PELANGGANPADAM").change(function(){
         $.ajax({
             type: "GET",
@@ -381,10 +387,7 @@ $(function () {
 
     reloadDatatable();
     $("#TANGGAL_LOGSHEET").change(function(){
-        //if($(this).val()!= ''){
         reloadDatatable();
-        //}
-        //else {alert("Choose Month & Year Option");}
     });
 
 

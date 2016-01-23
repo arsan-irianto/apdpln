@@ -74,15 +74,16 @@ if ($result) {
     $data_L4 = array();
 
     while( $row = $result->fetch() ) {
+        //$linkparams = "areaid=".$row["AREA"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=".$row["E_2"]."&lama=&relay=";
         array_push($category, array("label" => $row["AREA"]));
-        array_push($data_E1, array("value" => $row["E_1"]));
-        array_push($data_E2, array("value" => $row["E_2"], "linkAction"=> "google.com"));
-        array_push($data_E3, array("value" => $row["E_3"]));
-        array_push($data_E4, array("value" => $row["E_4"]));
-        array_push($data_L1, array("value" => $row["I_1"]));
-        array_push($data_L2, array("value" => $row["I_2"]));
-        array_push($data_L3, array("value" => $row["I_3"]));
-        array_push($data_L4, array("value" => $row["I_4"]));
+        array_push($data_E1, array("value" => $row["E_1"], "link"=> "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=ggarea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=E-1&lama=&relay="));
+        array_push($data_E2, array("value" => $row["E_2"], "link"=> "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=ggarea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=E-2&lama=&relay="));
+        array_push($data_E3, array("value" => $row["E_3"], "link"=> "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=ggarea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=E-3&lama=&relay="));
+        array_push($data_E4, array("value" => $row["E_4"], "link"=> "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=ggarea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=E-4&lama=&relay="));
+        array_push($data_L1, array("value" => $row["I_1"], "link"=> "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=ggarea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=E-5&lama=&relay="));
+        array_push($data_L2, array("value" => $row["I_2"], "link"=> "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=ggarea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=E-6&lama=&relay="));
+        array_push($data_L3, array("value" => $row["I_3"], "link"=> "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=ggarea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=E-7&lama=&relay="));
+        array_push($data_L4, array("value" => $row["I_4"], "link"=> "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=ggarea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=E-8&lama=&relay="));
     }
 
     // Plotting Categories

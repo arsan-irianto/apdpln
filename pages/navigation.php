@@ -58,7 +58,7 @@ $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li <?php if($_GET['modules']=='pkb') echo "class='active'";?>><a href="?modules=pkb"><i class="fa fa-angle-double-right"></i> Pelanggan KWH Bulanan</a></li>
+                    <li <?php if($_GET['modules']=='pkb') echo "class='active'";?>><a href="?modules=pkb"><i class="fa fa-angle-double-right"></i> Parameter Hitung Saidi</a></li>
                     <li <?php if($_GET['modules']=='fgtm') echo "class='active'";?>><a href="?modules=fgtm"><i class="fa fa-angle-double-right"></i> Rekap FGTM</a></li>
                     <li <?php if($_GET['modules']=='saidi') echo "class='active'";?>><a href="?modules=saidi"><i class="fa fa-angle-double-right"></i> Rekap Saidi</a></li>
                     <?php if($_SESSION['USERNAME']!=""){ ?>
@@ -79,7 +79,6 @@ $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
                     <li <?php if($_GET['modules']=='xtp_area') echo "class='active'";?>><a href="?modules=xtp_area"><i class="fa fa-angle-double-right"></i> X Trip Permanen</a></li>
                     <li <?php if($_GET['modules']=='xtt_area') echo "class='active'";?>><a href="?modules=xtt_area"><i class="fa fa-angle-double-right"></i> X Trip Temporer</a></li>
                     <li <?php if($_GET['modules']=='xtpt_area') echo "class='active'";?>><a href="?modules=xtpt_area"><i class="fa fa-angle-double-right"></i> X Trip Permanen & Temporer</a></li>
-                    <li <?php if($_GET['modules']=='xtpir_area') echo "class='active'";?>><a href="?modules=xtpir_area"><i class="fa fa-angle-double-right"></i> X Trip Per Indikasi Relay</a></li>
                     <li <?php if($_GET['modules']=='xtpir_area') echo "class='active'";?>><a href="?modules=xtpir_area"><i class="fa fa-angle-double-right"></i> X Trip Per Indikasi Relay</a></li>
                     <li <?php if($_GET['modules']=='gg_area') echo "class='active'";?>><a href="?modules=gg_area"><i class="fa fa-angle-double-right"></i> Gangguan (FGTM)</a></li>
                 </ul>

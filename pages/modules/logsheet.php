@@ -18,6 +18,7 @@ if($USERNAME != ''){
     }
     td{white-space: nowrap}
     .datepicker{z-index:1200 !important;}
+    select#KODEFGTM{width: 230px;}
 </style>
 <title> LogSheet</title>
 <div class="content-wrapper">
@@ -376,20 +377,22 @@ if($USERNAME != ''){
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Kode FGTM</label>
+                                        <label class="col-sm-4 control-label">Keterangan FGTM</label>
                                         <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="KFGTM">&nbsp;</span>
                                             <?php
-                                            $queryFGTM = "SELECT KODE,KODE FROM GANGGUANFGTM";
-                                            $conn->cboFillFromTable("KODEFGTM",$queryFGTM,"KODE","KODE", "--Choose--","form-control input-sm","addnew");
+                                            $queryFGTM = "SELECT KODE,KETFGTM FROM GANGGUANFGTM";
+                                            $conn->cboFillFromTable("KODEFGTM",$queryFGTM,"KODE","KETFGTM", "--Choose--","form-control input-sm","addnew");
                                             ?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Keterangan FGTM</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$KETFGTM=isset($KETFGTM)? $KETFGTM : '';?>" name="KETFGTM" id="KETFGTM" type="text" readonly>
+                                            <input class="form-control input-sm" value="<?=$KETFGTM=isset($KETFGTM)? $KETFGTM : '';?>" name="KETFGTM" id="KETFGTM" type="hidden" >
                                         </div>
                                     </div>
                                 </div>
@@ -439,6 +442,8 @@ if($USERNAME != ''){
                                         <div class="form-group input-sm">
                                             <label class="col-sm-4 control-label">Kelompok Gangguan</label>
                                             <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="KKELOMPOK">&nbsp;</span>
                                                 <?php
                                                 $sp_kelompok = "{:retval = CALL PCDR_PILIHAN_SAIDI_KELOMPOK}";
                                                 $result = $conn->prepare($sp_kelompok);
@@ -453,6 +458,7 @@ if($USERNAME != ''){
                                                 }
                                                 echo "</select> ";
                                                 ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -462,11 +468,14 @@ if($USERNAME != ''){
                                         <div class="form-group input-sm">
                                             <label class="col-sm-4 control-label">Grup Gangguan</label>
                                             <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="KGRUP">&nbsp;</span>
                                                 <?php
                                                     echo "<select name='KODEGRUP' id='KODEGRUP' class='form-control input-sm' style='width: 100%'>";
                                                     echo "<option value='' selected>-Choose-</option>";
                                                     echo "</select> ";
                                                 ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -474,15 +483,18 @@ if($USERNAME != ''){
                                         <div class="form-group input-sm">
                                             <label class="col-sm-4 control-label">Gangguan Saidi</label>
                                             <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="KSAIDI">&nbsp;</span>
                                                 <?php
                                                 //echo $KODESAIDI;
                                                 //$querySAIDI = "SELECT KODE FROM PADAMSAIDI";
                                                 //$conn->cboFillFromTable("KODESAIDI",$querySAIDI,"KODE","KODE", "--Choose--","form-control input-sm","addnew");
                                                 //<input class="form-control input-sm" value="<?=$KODESAIDI=isset($KODESAIDI)? $KODESAIDI : '';" name="KODESAIDI" id="KODESAIDI" type="text" readonly>
-                                                echo "<select name='KODESAIDI' id='KODESAIDI' class='form-control input-sm' style='width: 100%'>";
+                                                echo "<select name='KODESAIDI' id='KODESAIDI' class='form-control input-sm' style='width: 240px'>";
                                                 echo "<option value='' selected>-Choose-</option>";
                                                 echo "</select> ";
                                                 ?>
+                                                </div>
                                                 <input class="form-control input-sm typeahead_saidi" value="<?=$KETSAIDI=isset($KETSAIDI)? $KETSAIDI : '';?>" name="KETSAIDI" id="KETSAIDI" type="hidden">
                                             </div>
                                         </div>

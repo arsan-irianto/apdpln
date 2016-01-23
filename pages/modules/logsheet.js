@@ -270,6 +270,7 @@ function clearModals()
 $(function () {
 
     $('#sgm').hide();
+    $('#KODEFGTM').select2();
     $('#SEGMENGANGGUAN_auto').select2();
     $('#KODESAIDI').select2();
     $('#penyulang').select2();
@@ -350,8 +351,18 @@ $(function () {
                 $("#KETFGTM").val(data);
             }
         });
+        $("#KFGTM").text($("#KODEFGTM").val());
     });
+
+    $("#KODEKELOMPOK").change(function(){
+        $("#KKELOMPOK").text($(this).val());
+    });
+    $("#KODEGRUP").change(function(){
+        $("#KGRUP").text($(this).val());
+    });
+
     $("#KODESAIDI").change(function(){
+        $("#KSAIDI").text($(this).val());
         $("#KETSAIDI").val($("#KODESAIDI :selected").text());
         /*
         $.ajax({

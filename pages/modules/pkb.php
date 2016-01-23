@@ -23,11 +23,11 @@
     <section class="content-header">
         <h1>
             Rekap Laporan
-            <small>Pelanggan KWH Bulanan</small>
+            <small>Parameter Hitung Saidi</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-book"></i> Rekap Laporan</a></li>
-            <li class="active">Pelanggan KWH Bulanan</li>
+            <li class="active">Parameter Hitung Saidi</li>
         </ol>
     </section>
 
@@ -40,7 +40,7 @@
                 <div class="box box-warning">
                     <div class="box-header">
                         <div class="row">
-                            <div class="col-md-4"><h3 class="box-title">Data Pelanggan KWH Bulanan</h3></div>
+                            <div class="col-md-4"><h3 class="box-title">Data Parameter Hitung Saidi</h3></div>
                             <div class="col-md-8" align="right">
                                 <div class="btn-group" id="btnTable">
                                     <?php if ($TYPE == 1) { ?>

@@ -64,7 +64,8 @@ if ($result) {
     while( $row = $result->fetch() ) {
         array_push($arrData["data"], array(
                 "label" => $row["GARDUINDUK"],
-                "value" => $row["TEMPORER"]
+                "value" => $row["TEMPORER"],
+				"link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xttgardu"."&giid=".$row["GIID"]."&areaid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=&lama=2&relay="
             )
         );
     }

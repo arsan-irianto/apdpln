@@ -9,30 +9,18 @@ session_start();
 include_once("../../config/connect.php");
 include_once("../../library/functions.php");
 ?>
+<html>
     <link href="../../plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
-    <!-- Font Awesome Icons -->
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="../../font-awesome/css/fonts.googleapis.css" rel="stylesheet" type="text/css" />
-    <!-- Ionicons -->
     <link href="../../font-awesome/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-    <!-- date picker -->
     <link href="../../plugins/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
     <link href="../../plugins/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
-    <!-- Theme style -->
     <link href="../../dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
-    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-          page. However, you can choose any other skin. Make sure you
-          apply the skin class to the body tag so the changes take effect.
-    -->
     <link href="../../dist/css/skins/skin-red.min.css" rel="stylesheet" type="text/css" />
-
-    <!-- <script src="../../plugins/datatables/jQuery-2.1.4/jquery-2.1.4.min.js" type="text/javascript"></script> -->
-    <!-- jQuery 2.1.3 -->
     <script src="../../plugins/jQuery/jQuery-2.1.3.min.js"></script>
     <script src="../../plugins/datatables/datatables.min.js" type="text/javascript"></script>
-    <script src="../../plugins/datatables/datatables_sum.js" type="text/javascript"></script>
     <script src="../../dist/js/common.js" type="text/javascript"></script>
-
     <script src="../modules/charts_details.js" type="text/javascript"></script>
     <style>
         body {
@@ -68,6 +56,7 @@ include_once("../../library/functions.php");
                                 <div class="col-md-8" align="right">
                                     <div class="btn-group" id="btnTable">
                                         <a href="#" onclick="javascript:document.forms['form1'].submit();" class="btn btn-default">Excel</a>
+                                        <a href="#" onclick="window.close();" class="btn btn-default">Close</a>
                                     </div>
                                 </div>
                             </div>
@@ -111,3 +100,4 @@ include_once("../../library/functions.php");
 <?php
 include_once("../footer.php");
 ?>
+</html>

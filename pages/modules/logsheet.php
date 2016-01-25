@@ -18,7 +18,7 @@ if($USERNAME != ''){
     }
     td{white-space: nowrap}
     .datepicker{z-index:1200 !important;}
-    select#KODEFGTM{width: 230px;}
+
 </style>
 <title> LogSheet</title>
 <div class="content-wrapper">
@@ -379,20 +379,19 @@ if($USERNAME != ''){
                                     <div class="form-group input-sm">
                                         <label class="col-sm-4 control-label">Keterangan FGTM</label>
                                         <div class="col-sm-8">
-                                            <div class="input-group">
-                                                <span class="input-group-addon" id="KFGTM">&nbsp;</span>
                                             <?php
                                             $queryFGTM = "SELECT KODE,KETFGTM FROM GANGGUANFGTM";
                                             $conn->cboFillFromTable("KODEFGTM",$queryFGTM,"KODE","KETFGTM", "--Choose--","form-control input-sm","addnew");
                                             ?>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
+                                        <label class="col-sm-4 control-label">Kode FGTM</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$KETFGTM=isset($KETFGTM)? $KETFGTM : '';?>" name="KETFGTM" id="KETFGTM" type="hidden" >
+                                            <input class="form-control input-sm" value="<?=$KETFGTM=isset($KETFGTM)? $KETFGTM : '';?>" name="KETFGTM" id="KETFGTM" type="text" readonly >
+                                            <input class="form-control input-sm" value="<?=$KFGTM=isset($KFGTM)? $KETFGTM : '';?>" name="KFGTM" id="KFGTM" type="hidden" >
                                         </div>
                                     </div>
                                 </div>

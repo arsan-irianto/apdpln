@@ -45,10 +45,11 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
     //$rowEdit = "<a href='home.php?modules=logsheet&periode=$row[periode]&act=edit&id=$row[ID]' class='btn btn-xs btn-default' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
     //$rowDelete = "<a href='modules/action_logsheet.php?act=delete&id=$row[ID]' onclick='return confirm(\"Sure to Delete?\");' class='alertdel btn btn-xs btn-danger'><i class='fa fa-times'></i></a>";
     if( ( $row["LAMA"]== 0 ) || (is_null($row["LAMA"]))) {$lama = 0;}else{ $lama = convertToHIS($row["LAMA"]);}
+    if( ( $row["JEDARC1"]== 0 ) || (is_null($row["JEDARC1"]))) {$jedarc1 = 0;}else{ $jedarc1 = convertToHIS($row["JEDARC1"]);}
 
     $rowEdit = "<a href='#' onClick='showModals($row[ID])' class='btn_edit btn btn-xs btn-primary' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
     $tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteLogsheet($row[ID])'><i class='fa fa-times'></i></a>";
-    $session_act = ( ($_SESSION['TYPE'] == 1) || ($_SESSION['TYPE'] == 2)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
+    $session_act = ( ($_SESSION['TYPE'] == 1) || ($_SESSION['TYPE'] == 2) || ($_SESSION['TYPE'] == 3)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
     $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
 
 
@@ -66,7 +67,7 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
     $rows['data'][$i] = array( $action, $sc, $mc, $TANGGAL, $row['PLBSREC'],
         $row['ASUHAN'], $row['GI'], $row['AREA'], $row['BEBANPADAM'], $row['RELAY'],$TR, $EX,
         $RC, $OP, $CL, $lama,
-        $row['MW'], $row['KWH'], $row['MRF'], $row['JEDARC1'], $row['KODEFGTM'],$row['KETFGTM'],$row['KODESIKLUS'],$row['KETERANGAN'],$row['KORDINASI'],
+        $row['MW'], $row['KWH'], $row['MRF'], $jedarc1, $row['KODEFGTM'],$row['KODESIKLUS'],$row['KETFGTM'],$row['KETERANGAN'],$row['KORDINASI'],
         $row['SEGMENGANGGUAN'], $row['TOTALPELANGGAN'],$row['PELANGGANPADAM'],$row['PERSENPELANGGANPADAM'],
         $row['KODESAIDI'], $row['KETSAIDI'], $row['EKSEKUTOR'], $row['SHIFT']
     );

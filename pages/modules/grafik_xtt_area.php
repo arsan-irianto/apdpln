@@ -64,7 +64,8 @@ if ($result) {
     while( $row = $result->fetch() ) {
         array_push($arrData["data"], array(
                 "label" => $row["AREA"],
-                "value" => $row["TEMPORER"]
+                "value" => $row["TEMPORER"],
+				"link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xttarea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=&lama=2&relay="
             )
         );
     }

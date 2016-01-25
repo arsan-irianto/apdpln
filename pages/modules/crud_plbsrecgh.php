@@ -20,6 +20,7 @@ $ANPOINTNAME    = isset($ANPOINTNAME)? $ANPOINTNAME : "";
 $RTUID          = !empty($RTUID) ? $RTUID : NULL ;
 $RTUNAME        = isset($RTUNAME) ? $RTUNAME : "";
 $NAME           = isset($NAME) ? $NAME : "";
+$POINTTYPE      = isset($POINTTYPE) ? $POINTTYPE : "";
 $NORMALLYCLOSED = isset($NORMALLYCLOSED) ? $NORMALLYCLOSED : 0;
 $ASUHANID1      = !empty($ASUHANID1) ? $ASUHANID1 : NULL;
 $ASUHANID2      = !empty($ASUHANID2) ? $ASUHANID2 : NULL;
@@ -34,6 +35,7 @@ $formData = array('PID' => $PID,
                     'RTUID' => $RTUID,
                     'RTUNAME' => $RTUNAME,
                     'NAME' => $NAME,
+                    'POINTTYPE' => $POINTTYPE,
                     'NORMALLYCLOSED' => $NORMALLYCLOSED,
                     'ASUHANID1' => $ASUHANID1,
                     'ASUHANID2' => $ASUHANID2,
@@ -47,20 +49,28 @@ switch ($type) {
     //Tampilkan Data
     case "get":
 
-        $sql = $conn->query("SELECT [PID]
-                                  ,[STPOINTNAME]
-                                  ,[ANALOGID]
-                                  ,[ANPOINTNAME]
-                                  ,[RTUID]
-                                  ,[RTUNAME]
-                                  ,[NAME]
-                                  ,[NORMALLYCLOSED]
-                                  ,[ASUHANID1]
-                                  ,[ASUHANID2]
-                                  ,[GIID]
-                                  ,[AREAID]
-                                  ,[DESC] AS DESCR
-                              FROM [APDPLN].[dbo].[PLBSRECGH] WHERE [PID]='".$_POST['id']."'");
+        $sql = $conn->query("SELECT A.[PID]
+                                  ,A.[STPOINTNAME]
+                                  ,A.[ANALOGID]
+                                  ,A.[ANPOINTNAME]
+                                  ,A.[RTUID]
+                                  ,A.[RTUNAME]
+                                  ,A.[NAME]
+                                  ,A.[POINTTYPE]
+                                  ,A.[NORMALLYCLOSED]
+                                  ,A.[ASUHANID1]
+                                  ,A.[ASUHANID2]
+                                  ,A.[GIID]
+                                  ,A.[AREAID]
+                                  ,A.[DESC] AS DESCR
+                                  ,B.[NAME] AS ASUHANNAME1
+                                  ,C.[NAME] AS ASUHANNAME2
+                                  ,D.[GI]
+                              FROM [APDPLN].[dbo].[PLBSRECGH] A
+                              LEFT JOIN [APDPLN].[dbo].[ASUHAN] B ON A.ASUHANID1 = B.ASUHANID
+                              LEFT JOIN [APDPLN].[dbo].[ASUHAN] C ON A.ASUHANID2 = C.ASUHANID
+                              LEFT JOIN [APDPLN].[dbo].[GI] D ON A.GIID = D.GIID
+                              WHERE A.[PID]='".$_POST['id']."'");
         $data = $sql->fetch(PDO::FETCH_ASSOC);
         echo json_encode($data);
 

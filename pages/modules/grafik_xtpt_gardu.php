@@ -69,8 +69,12 @@ if ($result) {
 
     while( $row = $result->fetch() ) {
         array_push($category, array("label" => $row["GARDUINDUK"]));
-        array_push($data_permanen, array("value" => $row["PERMANEN"]));
-        array_push($data_temporer, array("value" => $row["TEMPORER"]));
+        array_push($data_permanen, array("value" => $row["PERMANEN"],
+				"link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xtptgardu"."&giid=".$row["GIID"]."&areaid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=&lama=1&relay="
+		));
+        array_push($data_temporer, array("value" => $row["TEMPORER"],
+				"link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xtptgardu"."&giid=".$row["GIID"]."&areaid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=&lama=2&relay="
+		));
     }
 
     // Plotting Categories

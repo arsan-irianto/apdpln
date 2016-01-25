@@ -56,8 +56,8 @@ function reloadDatatable(){
 }
 
 function disabledInput(){
-    $("#tab_1").find("input").prop('disabled', true);
-    $("#tab_2").find("input").prop('disabled', true);
+    $("#tab_1").find("input").prop('readonly', true);
+    $("#tab_2").find("input").prop('readonly', true);
 }
 
 
@@ -86,7 +86,7 @@ function showModals( id ){
         $("#type").val("new");
         waitingDialog.hide();
     }
-    if($("#usertype").val()==2){
+    if($("#usertype").val()==3){
         disabledInput();
     }
 }
@@ -142,7 +142,8 @@ function setModalData( data ){
     $("#MRF").val(data.MRF.trim());
     $("#JEDARC1").val(data.JEDARC1);
     $("#KODEFGTM").val(data.KODEFGTM);
-    $("#KETFGTM").val(data.KETFGTM.trim());
+    $("#KFGTM").val(data.KETFGTM.trim());
+    $("#KETFGTM").val(data.KODEFGTM.trim());
     $("#KETERANGAN").val(data.KETERANGAN.trim());
     $("#KORDINASI").val(data.KORDINASI.trim());
     SEGMENGANGGUAN = (data.SEGMENGANGGUAN == null) ? "" : data.SEGMENGANGGUAN;
@@ -173,6 +174,7 @@ function submitLogsheet() {
             waitingDialog.hide();
         }
     });
+    //clearModals();
 }
 
 function submitDelete() {
@@ -249,6 +251,7 @@ function clearModals()
     $("#MRF").val("");
     $("#JEDARC1").val("");
     $("#KODEFGTM").val("");
+    $("#KFGTM").val("");
     $("#KETERANGAN").val("");
     $("#KORDINASI").val("");
     $("#PIDSEGMEN1").val("");
@@ -270,7 +273,7 @@ function clearModals()
 $(function () {
 
     $('#sgm').hide();
-    $('#KODEFGTM').select2();
+    //$('#KODEFGTM').select2();
     $('#SEGMENGANGGUAN_auto').select2();
     $('#KODESAIDI').select2();
     $('#penyulang').select2();
@@ -341,7 +344,9 @@ $(function () {
     })
 
     $("#KODEFGTM").change(function(){
-        //$("#KETFGTM").val($("#KODEFGTM :selected").text());
+        $("#KETFGTM").val($("#KODEFGTM").val());
+        $("#KFGTM").text($("#KODEFGTM").val());
+        /*
         $.ajax({
             type: "GET",
             url: "modules/crud_logsheet.php?rf=fgtm",
@@ -350,8 +355,8 @@ $(function () {
             success: function(data) {
                 $("#KETFGTM").val(data);
             }
-        });
-        $("#KFGTM").text($("#KODEFGTM").val());
+        });*/
+        //$("#KFGTM").text($("#KODEFGTM").val());
     });
 
     $("#KODEKELOMPOK").change(function(){

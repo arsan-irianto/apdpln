@@ -65,7 +65,7 @@ if ($result) {
         array_push($arrData["data"], array(
                 "label" => $row["AREA"],
                 "value" => $row["PERMANEN"],
-                "link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xtparea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=&lama=&relay="
+                "link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xtparea"."&areaid=".$row["AREAID"]."&giid=&bulan=".$bulan."&tahun=".$tahun."&kodefgtm=&lama=1&relay="
             )
         );
     }

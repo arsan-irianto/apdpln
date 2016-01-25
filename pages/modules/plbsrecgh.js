@@ -126,12 +126,18 @@ function setModalData( data ){
     NORMALLYCLOSED = (data.NORMALLYCLOSED == null) ? 0 : data.NORMALLYCLOSED;
     ASUHANID1 = (data.ASUHANID1 == null) ? "" : data.ASUHANID1;
     ASUHANID2 = (data.ASUHANID2 == null) ? "" : data.ASUHANID2;
+    ASUHANNAME1 = (data.ASUHANNAME1 == null) ? "" : data.ASUHANNAME1;
+    ASUHANNAME2 = (data.ASUHANNAME2 == null) ? "" : data.ASUHANNAME2;
     GIID = (data.GIID == null) ? "" : data.GIID;
+    GI = (data.GI == null) ? "" : data.GI;
     AREAID = (data.AREAID == null) ? "" : data.AREAID;
     $("#NORMALLYCLOSED").val(NORMALLYCLOSED);
     $("#ASUHANID1").val(ASUHANID1);
     $("#ASUHANID2").val(ASUHANID2);
+    $("#ASUHANNAME1").val(ASUHANNAME1.trim());
+    $("#ASUHANNAME2").val(ASUHANNAME2.trim());
     $("#GIID").val(GIID);
+    $("#GI").val(GI.trim());
     $("#AREAID").val(AREAID);
 
     DESCR = (data.DESCR == null) ? "" : data.DESCR.trim();
@@ -141,6 +147,10 @@ function setModalData( data ){
 
 $(document).ready(function(){
     reloadDataTable();
+
+    $("#POINTTYPE").change(function(){
+        $("#DESC").val($("#POINTTYPE option:selected").text());
+    });
 
     $('input.typeahead_asuhan1').typeahead({
         onSelect: function(item) {

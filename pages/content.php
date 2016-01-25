@@ -32,6 +32,8 @@ switch($modules){
         include('modules/asuhan.php');break;
     case "plbsrecgh":
         include('modules/plbsrecgh.php');break;
+    case "pelanggan":
+        include('modules/pelanggan.php');break;
     case "pkb":
         include('modules/pkb.php');break;
     case "fgtm":
@@ -52,6 +54,8 @@ switch($modules){
         include('modules/ufr.php');break;
     case "transmisi":
         include('modules/transmisi.php');break;
+    case "bhp"://beban harian penyulang
+        include('modules/bhp.php');break;
     case "test":
         include('modules/alert_test.php');break;
 

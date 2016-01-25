@@ -70,6 +70,7 @@
                                     <th><div align="center">RTUID</div></th>
                                     <th><div align="center">RTUNAME</div></th>
                                     <th><div align="center">NAME</div></th>
+                                    <th><div align="center">POINTYPE</div></th>
                                     <th><div align="center">NORMALLYCLOSED</div></th>
                                     <th><div align="center">ASUHANID1</div></th>
                                     <th><div align="center">ASUHANID2</div></th>
@@ -113,7 +114,7 @@
 </div><!-- /.modal -->
 
 <div class="modal fade" id="myModals" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="width: 60%">
+    <div class="modal-dialog" style="width: 65%">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -195,11 +196,11 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">NORMALLYCLOSED</label>
+                                        <label class="col-sm-4 control-label">POINT TYPE</label>
                                         <div class="col-sm-8">
                                             <?php
-                                            $items = array(0=>"NORMALLY OPEN", 1=>"NORMALLY CLOSED");
-                                            echo cboFillFromArray("NORMALLYCLOSED", $items, "--Choose--", "form-control input-sm");
+                                            //$items = array(0=>"NORMALLY OPEN", 1=>"NORMALLY CLOSED");
+                                            echo cboFillFromArray("POINTTYPE", $list_pointtype, "--Choose--", "form-control input-sm");
                                             ?>
                                         </div>
                                     </div>
@@ -276,9 +277,13 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group input-sm">
-                                        <label class="col-sm-4 control-label">Description</label>
+                                        <label class="col-sm-4 control-label">NORMALLY CLOSED</label>
                                         <div class="col-sm-8">
-                                            <input class="form-control input-sm" value="<?=$DESC=isset($DESC)? $DESC : '';?>" name="DESC" id="DESC" type="text">
+                                            <?php
+                                            $items = array(0=>"NORMALLY OPEN", 1=>"NORMALLY CLOSED");
+                                            echo cboFillFromArray("NORMALLYCLOSED", $items, "--Choose--", "form-control input-sm");
+                                            ?>
+                                            <input class="form-control input-sm" value="<?=$DESC=isset($DESC)? $DESC : '';?>" name="DESC" id="DESC" type="hidden">
                                         </div>
                                     </div>
                                 </div>

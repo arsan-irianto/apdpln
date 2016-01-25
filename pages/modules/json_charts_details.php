@@ -41,7 +41,7 @@ $result->bindParam('relay', $relay, PDO::PARAM_STR);
 $result->execute();
 
 $i = 0;
-$n = 1;
+//$n = 1;
 while( $row = $result->fetch(PDO::FETCH_ASSOC) )
 {
 
@@ -60,7 +60,7 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
         $row['KELOMPOKGANGGUAN'],$row['KETERANGANGANGGUAN']
     );
     $i++;
-    $n++;
+    //$n++;
 }
 
 print json_encode($rows, JSON_NUMERIC_CHECK);

@@ -6,6 +6,19 @@
  * Time: 21:19
  */
 
+$list_pointtype = array(1=>"PENYULANG",
+                        2=>"RECLOSER",
+                        3=>"LBS",
+                        4=>"GH (GARDU HUBUNG)",
+                        5=>"GB (GARDU BESAR)",
+                        6=>" FI (FAULT INDICATOR)",
+                        7=>"INC",
+                        8=>"KOPEL",
+                        9=>"VCB",
+                        10=>"FAI",
+                        11=>"CO",
+                        100=>"NO DEFINITION");
+
 /**
  * @param $time1
  * @param $time2

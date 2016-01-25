@@ -23,7 +23,7 @@ while( $row = $result->fetch() )
     $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
 
     $rows['data'][$i] = array($action ,$row[0],$row[1],$row[2],$row[3],$row[4],$row[5],$row[6]
-                                        ,$row[7],$row[8],$row[9],$row[10],$row[11],$row[12]);
+                                        ,$row[7],$row[8],$row[9],$row[10],$row[11],$row[12],$row[13]);
     $i++;
 }
 

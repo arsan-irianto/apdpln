@@ -35,7 +35,7 @@ $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
             </li>
             <?php } ?>
             <li <?php if( ($_GET['modules']=='dcc') || ($_GET['modules']=='area') ||
-                    ($_GET['modules']=='gi') || ($_GET['modules']=='asuhan') || ($_GET['modules']=='plbsrecgh') ) echo "class='treeview active'";?>>
+                    ($_GET['modules']=='gi') || ($_GET['modules']=='asuhan') || ($_GET['modules']=='plbsrecgh') || ($_GET['modules']=='pelanggan') ) echo "class='treeview active'";?>>
                 <a href="#">
                     <i class="fa fa-edit"></i> <span>Data Master</span>
                     <i class="fa fa-angle-left pull-right"></i>
@@ -46,12 +46,13 @@ $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
                     <li <?php if($_GET['modules']=='gi') echo "class='active'";?>><a href="?modules=gi"><i class="fa fa-angle-double-right"></i> GI</a></li>
                     <li <?php if($_GET['modules']=='asuhan') echo "class='active'";?>><a href="?modules=asuhan"><i class="fa fa-angle-double-right"></i> Asuhan</a></li>
                     <li <?php if($_GET['modules']=='plbsrecgh') echo "class='active'";?>><a href="?modules=plbsrecgh"><i class="fa fa-angle-double-right"></i> PLBSRECGH</a></li>
+                    <li <?php if($_GET['modules']=='pelanggan') echo "class='active'";?>><a href="?modules=pelanggan"><i class="fa fa-angle-double-right"></i> Pelanggan</a></li>
                 </ul>
             </li>
 
             <li <?php if( ($_GET['modules']=='fgtm') || ($_GET['modules']=='saidi') ||
                 ($_GET['modules']=='logsheet') || ($_GET['modules']=='pkb') ||
-                ($_GET['modules']=='ufr') || ($_GET['modules']=='transmisi'))
+                ($_GET['modules']=='ufr') || ($_GET['modules']=='transmisi') || ($_GET['modules']=='bhp'))
                 echo "class='treeview active'";?>>
                 <a href="#">
                     <i class="fa fa-book"></i> <span>Rekap Laporan</span>
@@ -66,6 +67,7 @@ $TYPE = isset($_SESSION['TYPE']) ? $_SESSION['TYPE'] : "";
                     <?php } ?>
                     <li <?php if($_GET['modules']=='ufr') echo "class='active'";?>><a href="?modules=ufr"><i class="fa fa-angle-double-right"></i> Report UFR</a></li>
                     <li <?php if($_GET['modules']=='transmisi') echo "class='active'";?>><a href="?modules=transmisi"><i class="fa fa-angle-double-right"></i> Report Transmisi</a></li>
+                    <li <?php if($_GET['modules']=='bhp') echo "class='active'";?>><a href="?modules=bhp"><i class="fa fa-angle-double-right"></i> Beban Harian Penyulang</a></li>
                 </ul>
             </li>
 

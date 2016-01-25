@@ -2,12 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: Arsan Irianto
- * Date: 21/12/2015
- * Time: 10:27
+ * Date: 24/01/2016
+ * Time: 5:33
  */
 ?>
-
-<script src="modules/users.js" type="text/javascript"></script>
+<script src="modules/pelanggan.js" type="text/javascript"></script>
 <style>
     body {
         padding-right: 0px !important
@@ -22,12 +21,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Users
-            <small>Data User</small>
+            Pelanggan
+            <small>Master Pelanggan</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-users"></i> Users</a></li>
-            <li class="active">Data User</li>
+            <li><a href="#"><i class="fa fa-edit"></i> Master</a></li>
+            <li class="active">Pelanggan</li>
         </ol>
     </section>
 
@@ -40,10 +39,10 @@
                 <div class="box box-warning">
                     <div class="box-header">
                         <div class="row">
-                            <div class="col-md-4"><h3 class="box-title">Data User</h3></div>
+                            <div class="col-md-4"><h3 class="box-title">Data Pelanggan</h3></div>
                             <div class="col-md-8" align="right">
                                 <div class="btn-group" id="btnTable">
-                                    <?php if ($_SESSION['USERNAME'] != "") { ?>
+                                    <?php if ($TYPE == 1) { ?>
                                         <a href="#" onClick="showModals()" class="btn btn-default">Add</a>
                                     <?php }?>
                                 </div>
@@ -53,15 +52,18 @@
                     </div><!-- /.box-header -->
                     <div class="box-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover" id="tusers" style="font-size: 0.9em;">
+                            <table class="table table-bordered table-striped table-hover" id="tpelanggan" style="font-size: 0.9em;">
                                 <thead>
                                 <tr>
                                     <th width="30px"><div align="center">ACTION</div></th>
-                                    <th width="20px"><div align="center">NO</div></th>
-                                    <th width="200px"><div align="center">USERNAME</div></th>
-                                    <th width="30"><div align="center">TYPE</div></th>
-                                    <th width="30"><div align="center">DCCID</div></th>
-                                    <th width="250"><div align="center">DESCRIPTION</div></th>
+                                    <th width="30px"><div align="center">ID</div></th>
+                                    <th width="30px"><div align="center">Area ID</div></th>
+                                    <th width="30"><div align="center">Kode Order</div></th>
+                                    <th width="50"><div align="center">PID Feeder</div></th>
+                                    <th width="100"><div align="center">Feeder</div></th>
+                                    <th width="200"><div align="center">Segmen</div></th>
+                                    <th width="60"><div align="center">Pelanggan</div></th>
+                                    <th width="170"><div align="center">Keterangan</div></th>
                                 </tr>
                                 </thead>
                                 <tbody></tbody>
@@ -103,39 +105,20 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Form Users</h4>
+                <h4 class="modal-title" id="myModalLabel">Form Pelanggan</h4>
             </div>
             <div class="modal-body">
-                <form role="form" id="form_users" name="form_users" class="form-horizontal">
+                <form role="form" id="form_pelanggan" name="form_pelanggan" class="form-horizontal">
                     <input type="hidden" id="type" name="type">
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">
-                                <label class="col-sm-4 control-label">Username</label>
+                                <label class="col-sm-4 control-label">Area</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control input-sm" value="<?=$USERNAME=isset($USERNAME)? $USERNAME : '';?>" name="USERNAME" id="USERNAME" type="text" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-10">
-                            <div class="form-group input-sm">
-                                <label class="col-sm-4 control-label">Password</label>
-                                <div class="col-sm-8">
-                                    <input class="form-control input-sm" value="<?=$PASSWORD=isset($PASSWORD)? $PASSWORD : '';?>" name="PASSWORD" id="PASSWORD" type="text" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-10">
-                            <div class="form-group input-sm">
-                                <label class="col-sm-4 control-label">Type</label>
-                                <div class="col-sm-8">
+                                    <input class="form-control input-sm" value="<?=$PKEY=isset($PKEY)? $PKEY : '';?>" name="PKEY" id="PKEY" type="hidden" readonly>
                                     <?php
-                                    $items = array(1=>"Administrator", 2=>"Operator", 3=>"Operator Area");
-                                    echo cboFillFromArray("TYPE", $items, "--Choose--", "form-control input-sm");
+                                    $queryAREA = "SELECT AREAID,AREA FROM AREA";
+                                    $conn->cboFillFromTable("AREAID",$queryAREA,"AREAID","AREA", "--Choose--","form-control input-sm","addnew");
                                     ?>
                                 </div>
                             </div>
@@ -144,12 +127,9 @@
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">
-                                <label class="col-sm-4 control-label">DCC</label>
+                                <label class="col-sm-4 control-label">Kode Order</label>
                                 <div class="col-sm-8">
-                                    <?php
-                                    $queryDCC = "SELECT DCCID,DCC FROM DCC";
-                                    $conn->cboFillFromTable("DCCID",$queryDCC,"DCCID","DCC", "--Choose--","form-control input-sm","addnew");
-                                    ?>
+                                    <input class="form-control input-sm" value="<?=$KODEORDER=isset($KODEORDER)? $KODEORDER : '';?>" name="KODEORDER" id="KODEORDER" type="text">
                                 </div>
                             </div>
                         </div>
@@ -157,9 +137,49 @@
                     <div class="row">
                         <div class="col-sm-10">
                             <div class="form-group input-sm">
-                                <label class="col-sm-4 control-label">Description</label>
+                                <label class="col-sm-4 control-label">PID Feeder</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control input-sm" value="<?=$DESC=isset($DESC)? $DESC : '';?>" name="DESC" id="DESC" type="text" readonly>
+                                    <input class="form-control input-sm" value="<?=$PIDFEEDER=isset($PIDFEEDER)? $PIDFEEDER : '';?>" name="PIDFEEDER" id="PIDFEEDER" type="text" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">Feeder</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm typeahead" value="<?=$FEEDER=isset($FEEDER)? $FEEDER : '';?>" name="FEEDER" id="FEEDER" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">Segmen</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm typeahead1" value="<?=$SEGMEN=isset($SEGMEN)? $SEGMEN : '';?>" name="SEGMEN" id="SEGMEN" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">Pelanggan</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm" value="<?=$PELANGGAN=isset($PELANGGAN)? $PELANGGAN : '';?>" name="PELANGGAN" id="PELANGGAN" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group input-sm">
+                                <label class="col-sm-4 control-label">Keterangan</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control input-sm" value="<?=$KET=isset($KET)? $KET : '';?>" name="KET" id="KET" type="text">
                                 </div>
                             </div>
                         </div>
@@ -167,7 +187,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" onClick="submitUsers()" class="btn btn-sm btn-primary" data-dismiss="modal">Submit</button>
+                <button type="button" onClick="submitPelanggan()" class="btn btn-sm btn-primary" data-dismiss="modal">Submit</button>
                 <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
             </div>
         </div>

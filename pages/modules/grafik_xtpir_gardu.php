@@ -71,11 +71,16 @@ if ($result) {
 
     while( $row = $result->fetch() ) {
         array_push($category, array("label" => $row["GARDUINDUK"]));
-        array_push($data_ocr, array("value" => $row["OCR"]));
-        array_push($data_gfr, array("value" => $row["GFR"]));
-        array_push($data_ufr, array("value" => $row["UFR"]));
-        array_push($data_ocr_gfr, array("value" => $row["OCR-GFR"]));
-        array_push($data_ufr_gfr, array("value" => $row["UFR-GFR"]));
+        array_push($data_ocr, array("value" => $row["OCR"],
+            "link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xtpirgardu"."&areaid=&giid=".$row["GIID"]."&bulan=".$bulan."&tahun=".$tahun."&relay=OCR&kodefgtm=&lama="));
+        array_push($data_gfr, array("value" => $row["GFR"],
+            "link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xtpirgardu"."&areaid=&giid=".$row["GIID"]."&bulan=".$bulan."&tahun=".$tahun."&relay=GFR&kodefgtm=&lama="));
+        array_push($data_ufr, array("value" => $row["UFR"],
+            "link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xtpirgardu"."&areaid=&giid=".$row["GIID"]."&bulan=".$bulan."&tahun=".$tahun."&relay=UFR&kodefgtm=&lama="));
+        array_push($data_ocr_gfr, array("value" => $row["OCR-GFR"],
+            "link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xtpirgardu"."&areaid=&giid=".$row["GIID"]."&bulan=".$bulan."&tahun=".$tahun."&relay=OCR-GFR&kodefgtm=&lama="));
+        array_push($data_ufr_gfr, array("value" => $row["UFR-GFR"],
+            "link"  => "P-detailsWin,width=1100,height=500,toolbar=no,scrollbars=yes, resizable=no-modules/charts_details.php?modules=xtpirgardu"."&areaid=&giid=".$row["GIID"]."&bulan=".$bulan."&tahun=".$tahun."&relay=UFR-GFR&kodefgtm=&lama="));
     }
 
     // Plotting Categories

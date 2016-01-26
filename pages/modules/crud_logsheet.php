@@ -205,6 +205,23 @@ if (isset($_POST['act'])=='delete'){
     }
 }
 
+if(isset($_POST['act'])=='multidelete'){
+    if ($totaldata != "0"){
+        $itemdel = $item;
+        //$tabledel = new PoTable('post');
+        foreach ($itemdel as $item){
+            $id = $item['deldata'];
+            $sql = "DELETE FROM LOGSHEET WHERE ID = :ID";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':ID', $id, PDO::PARAM_INT);
+            $stmt->execute();
+        }
+        header('location:../../pages/home.php?modules=logsheet');
+    }else{
+        header('location:../../pages/home.php?modules=logsheet');
+    }
+}
+
 /*
 if(isset($_GET['diff'])=="yes"){
     $start = strtotime(isset($_GET['start']) ? $_GET['start'] : 0);

@@ -25,6 +25,41 @@ function reloadDatatable(){
             destroy: true,
             language: {
                 zeroRecords: "Records Not Found"
+            },
+            drawCallback: function( settings ) {
+                $("#titleCheck").click(function() {
+                    var checkedStatus = this.checked;
+                    $("table tbody tr td div:first-child input[type=checkbox]").each(function() {
+                        this.checked = checkedStatus;
+                        if (checkedStatus == this.checked) {
+                            $(this).closest('table tbody tr').removeClass('danger');
+                            $(this).closest('table tbody tr').find('input:hidden').attr('disabled', !this.checked);
+                            $('#totaldata').val($('form input[type=checkbox]:checked').size());
+                        }
+                        if (this.checked) {
+                            $(this).closest('table tbody tr').addClass('danger');
+                            $(this).closest('table tbody tr').find('input:hidden').attr('disabled', !this.checked);
+                            $('#totaldata').val($('form input[type=checkbox]:checked').size());
+                        }
+                    });
+                });
+                $('table tbody tr td div:first-child input[type=checkbox]').on('click', function () {
+                    var checkedStatus = this.checked;
+                    this.checked = checkedStatus;
+                    if (checkedStatus == this.checked) {
+                        $(this).closest('table tbody tr').removeClass('danger');
+                        $(this).closest('table tbody tr').find('input:hidden').attr('disabled', !this.checked);
+                        $('#totaldata').val($('form input[type=checkbox]:checked').size());
+                    }
+                    if (this.checked) {
+                        $(this).closest('table tbody tr').addClass('danger');
+                        $(this).closest('table tbody tr').find('input:hidden').attr('disabled', !this.checked);
+                        $('#totaldata').val($('form input[type=checkbox]:checked').size());
+                    }
+                });
+                $('table tbody tr td div:first-child input[type=checkbox]').change(function() {
+                    $(this).closest('tr').toggleClass("danger", this.checked);
+                });
             }
         });
         $("#tlogsheet_wrapper > .dt-buttons").appendTo("#btnTable");
@@ -170,7 +205,12 @@ function submitLogsheet() {
         dataType: 'json',
         data: formData,
         success: function(data) {
-            reloadDatatable();
+            if(data=="OK") {
+                reloadDatatable();
+            }
+            else{
+                alert(data);
+            }
             waitingDialog.hide();
         }
     });
@@ -388,9 +428,16 @@ $(function () {
         $(this).datepicker("hide");
     });
 
+    /*
     $("#TANGGAL").change(function(){
         $(".dttime").val($(this).val());
-    })
+    })*/
+
+    $("#TR").focus(function(){$(this).val($("#TANGGAL").val())});
+    $("#EX").focus(function(){$(this).val($("#TANGGAL").val())});
+    $("#CL").focus(function(){$(this).val($("#TANGGAL").val())});
+    $("#RC").focus(function(){$(this).val($("#TANGGAL").val())});
+    $("#OP").focus(function(){$(this).val($("#TANGGAL").val())});
 
    // $('.dttime').datetimepicker({
         //format: 'yyyy-mm-dd hh:ii:ss'

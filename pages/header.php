@@ -45,6 +45,18 @@
 
     <script type="text/javascript" src="../plugins/fusioncharts/js/fusioncharts.js"></script>
     <script type="text/javascript" src="../plugins/fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#alertalldel").on("show.bs.modal", function (e) {
+                var form = $(e.relatedTarget).closest('form');
+                $(this).find('.modal-footer #confirmdel').data('form', form);
+            });
+
+            $("#alertalldel").find(".modal-footer #confirmdel").on('click', function(){
+                $(this).data('form').submit();
+            });
+        })
+    </script>
 </head>
 <body class="skin-red">
 <div class="wrapper">

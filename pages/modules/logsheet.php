@@ -71,9 +71,13 @@ if($USERNAME != ''){
             </div><!-- /.box-header -->
             <div class="box-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped table-hover" id="tlogsheet" style="font-size: 0.9em;">
+                    <form method="post" action="modules/crud_logsheet.php">
+                        <input type="hidden" name="act" value="multidelete">
+                        <input type="hidden" value="0" name="totaldata" id="totaldata">
+                        <table class="table table-bordered table-striped table-hover" id="tlogsheet" style="font-size: 0.9em;">
                         <thead>
                         <tr>
+                            <th style="width:30px;" class="text-center"><i class="fa fa-check-circle-o"></i></th>
                             <th><div align="center">ACTION</div></th>
                             <th><div align="center">INPUT</div></th>
                             <th><div align="center">MANUAL CHECK</div></th>
@@ -112,8 +116,16 @@ if($USERNAME != ''){
                         </tr>
                         </thead>
                         <tbody></tbody>
-
+                        <tfoot>
+                        <tr>
+                            <td style="width:30px;" class="text-center"><input type="checkbox" id="titleCheck" data-toggle="tooltip" title="" /></td>
+                            <td colspan="33">
+                                <button class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#alertalldel"><i class="fa fa-trash-o"></i> Delete Selected Item</button>
+                            </td>
+                        </tr>
+                        </tfoot>
                     </table>
+                    </form>
                 </div><!-- /.box-body -->
             </div>
         </div><!-- /.box -->

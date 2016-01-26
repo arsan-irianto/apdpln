@@ -47,11 +47,11 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
     if( ( $row["LAMA"]== 0 ) || (is_null($row["LAMA"]))) {$lama = 0;}else{ $lama = convertToHIS($row["LAMA"]);}
     if( ( $row["JEDARC1"]== 0 ) || (is_null($row["JEDARC1"]))) {$jedarc1 = 0;}else{ $jedarc1 = convertToHIS($row["JEDARC1"]);}
 
+    $checkdata = "<div class='text-center'><input type='checkbox' id='titleCheckdel' /><input type='hidden' class='deldata' name='item[$n][deldata]' value='$row[ID]' disabled></div>";
     $rowEdit = "<a href='#' onClick='showModals($row[ID])' class='btn_edit btn btn-xs btn-primary' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
     $tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteLogsheet($row[ID])'><i class='fa fa-times'></i></a>";
     $session_act = ( ($_SESSION['TYPE'] == 1) || ($_SESSION['TYPE'] == 2) || ($_SESSION['TYPE'] == 3)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
     $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
-
 
     $sc = ( $row['SC']==1 ) ? "<span class='label label-warning'>Manual</span>" : "<span class='label label-success'>Otomatis</span>";
     $mc = ( $row['MC']==1 ) ? "<a href='#' class='mc'><span class='label label-primary'>Checked</span></a>" : "<a href='#' class='mc'><span class='label label-default'>Unchecked</span></a>";
@@ -64,7 +64,7 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
     $CL = (is_null($row['CL']) ? "" : substr($row['CL'],11,8));
 
 
-    $rows['data'][$i] = array( $action, $sc, $mc, $TANGGAL, $row['PLBSREC'],
+    $rows['data'][$i] = array($checkdata, $action, $sc, $mc, $TANGGAL, $row['PLBSREC'],
         $row['ASUHAN'], $row['GI'], $row['AREA'], $row['BEBANPADAM'], $row['RELAY'],$TR, $EX,
         $RC, $OP, $CL, $lama,
         $row['MW'], $row['KWH'], $row['MRF'], $jedarc1, $row['KODEFGTM'],$row['KODESIKLUS'],$row['KETFGTM'],$row['KETERANGAN'],$row['KORDINASI'],

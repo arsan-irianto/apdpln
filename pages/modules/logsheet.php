@@ -6,7 +6,12 @@
  * Time: 5:54
  */
 //session_start();
-if($USERNAME != ''){
+if(($TYPE == 1) || ($TYPE == 2) || ($TYPE == 3)){
+    $stsLogin = "";
+}
+else{
+    $stsLogin = "disabled";
+}
 ?>
 <script src="modules/logsheet.js" type="text/javascript"></script>
 <style>
@@ -118,9 +123,9 @@ if($USERNAME != ''){
                         <tbody></tbody>
                         <tfoot>
                         <tr>
-                            <td style="width:30px;" class="text-center"><input type="checkbox" id="titleCheck" data-toggle="tooltip" title="" /></td>
+                            <td style="width:30px;" class="text-center"><input type="checkbox" id="titleCheck" data-toggle="tooltip" <?=$stsLogin;?> title="" /></td>
                             <td colspan="33">
-                                <button class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#alertalldel"><i class="fa fa-trash-o"></i> Delete Selected Item</button>
+                                <button class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#alertalldel" <?=$stsLogin;?>><i class="fa fa-trash-o"></i> Delete Selected Item</button>
                             </td>
                         </tr>
                         </tfoot>
@@ -565,8 +570,3 @@ if($USERNAME != ''){
 
 </section><!-- /.content -->
 </div><!-- /.content-wrapper -->
-<?php }
-else {
-    include("../pages/404.php");
-}
-?>

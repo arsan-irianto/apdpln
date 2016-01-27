@@ -206,7 +206,8 @@ function submitLogsheet() {
         data: formData,
         success: function(data) {
             if(data=="OK") {
-                reloadDatatable();
+                //reloadDatatable();
+                $("#tlogsheet").DataTable().ajax.reload( null, false );
             }
             else{
                 alert(data);
@@ -230,6 +231,9 @@ function submitDelete() {
             waitingDialog.hide();
         }
     });
+    //reloadDatatable();
+    $("#tlogsheet").DataTable().ajax.reload( null, false );
+    waitingDialog.hide();
 }
 
 function deleteLogsheet( id ) {
@@ -480,7 +484,7 @@ $(function () {
     });
 
     //var typeaheadSource = [{ id: 1, name: 'John'}, { id: 2, name: 'Alex'}, { id: 3, name: 'Terry'}];
-
+    /*
     $('input.typeahead_saidi').typeahead({
         onSelect: function(item) {
             $("#KODESAIDI").val(item.value);
@@ -491,7 +495,7 @@ $(function () {
             valueField:"ID"
         }
     });
-
+    */
     $("input.typeahead_gi").typeahead({
         onSelect: function(item) {
             $("#GIPID").val(item.value);

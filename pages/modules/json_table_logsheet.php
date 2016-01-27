@@ -39,15 +39,12 @@ $i = 0;
 $n = 1;
 while( $row = $result->fetch(PDO::FETCH_ASSOC) )
 {
-
+    $stsLogin = ( ($_SESSION['TYPE'] == 1) || ($_SESSION['TYPE'] == 2) || ($_SESSION['TYPE'] == 3)) ? "": "disabled";
     //$lama = dateDiff($row['OP'], $row['CL'], 6);
-    //$checkData = "<div class='text-center'><input type='checkbox' id='titleCheckdel'><input type='hidden' class='deldata' name='item[$n][deldata]' value='$row[ID]' disabled></div>";
-    //$rowEdit = "<a href='home.php?modules=logsheet&periode=$row[periode]&act=edit&id=$row[ID]' class='btn btn-xs btn-default' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
-    //$rowDelete = "<a href='modules/action_logsheet.php?act=delete&id=$row[ID]' onclick='return confirm(\"Sure to Delete?\");' class='alertdel btn btn-xs btn-danger'><i class='fa fa-times'></i></a>";
     if( ( $row["LAMA"]== 0 ) || (is_null($row["LAMA"]))) {$lama = 0;}else{ $lama = convertToHIS($row["LAMA"]);}
     if( ( $row["JEDARC1"]== 0 ) || (is_null($row["JEDARC1"]))) {$jedarc1 = 0;}else{ $jedarc1 = convertToHIS($row["JEDARC1"]);}
 
-    $checkdata = "<div class='text-center'><input type='checkbox' id='titleCheckdel' /><input type='hidden' class='deldata' name='item[$n][deldata]' value='$row[ID]' disabled></div>";
+    $checkdata = "<div class='text-center'><input type='checkbox' id='titleCheckdel' $stsLogin /><input type='hidden' class='deldata' name='item[$n][deldata]' value='$row[ID]' disabled></div>";
     $rowEdit = "<a href='#' onClick='showModals($row[ID])' class='btn_edit btn btn-xs btn-primary' id='$row[ID]'><i class='fa fa-pencil'></i></a>";
     $tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteLogsheet($row[ID])'><i class='fa fa-times'></i></a>";
     $session_act = ( ($_SESSION['TYPE'] == 1) || ($_SESSION['TYPE'] == 2) || ($_SESSION['TYPE'] == 3)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
@@ -62,7 +59,6 @@ while( $row = $result->fetch(PDO::FETCH_ASSOC) )
     $RC = (is_null($row['RC']) ? "" : substr($row['RC'],11,8));
     $OP = (is_null($row['OP']) ? "" : substr($row['OP'],11,8));
     $CL = (is_null($row['CL']) ? "" : substr($row['CL'],11,8));
-
 
     $rows['data'][$i] = array($checkdata, $action, $sc, $mc, $TANGGAL, $row['PLBSREC'],
         $row['ASUHAN'], $row['GI'], $row['AREA'], $row['BEBANPADAM'], $row['RELAY'],$TR, $EX,

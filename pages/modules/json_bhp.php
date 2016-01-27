@@ -34,6 +34,11 @@ $i = 0;
 //$n = 1;
 while( $row = $result->fetch(PDO::FETCH_ASSOC) )
 {
+    $rowEdit = "<a href='#' onClick='showModals($row[PID])' class='btn_edit btn btn-xs btn-primary' id='$row[PID]'><i class='fa fa-pencil'></i></a>";
+    $tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteBhp($row[PID])'><i class='fa fa-times'></i></a>";
+    $session_act = ( ($_SESSION['TYPE'] == 1) || ($_SESSION['TYPE'] == 2) || ($_SESSION['TYPE'] == 3)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
+    $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
+
     $rows['data'][$i] = array($row["DCC"],$row["AREA"],$row["GI"],$row["FEEDERNAME"],
         number_format($row["H0"],2,".",","),
         number_format($row["H1"],2,".",","),

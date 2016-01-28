@@ -218,6 +218,34 @@ function submitLogsheet() {
     //clearModals();
 }
 
+function submitMultiDelete() {
+    var formData = $("#form_multidelete").serialize();
+    waitingDialog.show();
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_logsheet.php",
+        dataType: 'json',
+        data: formData,
+        success: function(data) {
+            if(data=="OK") {
+                reloadDatatable();
+                //$("#tlogsheet").DataTable().ajax.reload( null, false );
+				waitingDialog.hide();				
+				$('#alertalldel').modal('hide');
+            }
+            else{
+                alert(data);
+            }
+        }
+    });
+    //clearModals();
+}
+
+function multiDelConfirm(){
+	$('#alertalldel').modal('show');
+}
+	
+
 function submitDelete() {
     var formData = $("#form_delete").serialize();
     waitingDialog.show();
@@ -228,12 +256,13 @@ function submitDelete() {
         data: formData,
         success: function(data){
             reloadDatatable();
+			//$("#tlogsheet").DataTable().ajax.reload( null, false );
             waitingDialog.hide();
         }
     });
     //reloadDatatable();
-    $("#tlogsheet").DataTable().ajax.reload( null, false );
-    waitingDialog.hide();
+    //$("#tlogsheet").DataTable().ajax.reload( null, false );
+    //waitingDialog.hide();
 }
 
 function deleteLogsheet( id ) {
@@ -315,6 +344,17 @@ function clearModals()
 }
 
 $(function () {
+	/*
+	$("#alertalldel").on("show.bs.modal", function (e) {
+		var form = $(e.relatedTarget).closest('form_multidelete');
+		$(this).find('.modal-footer #confirmdel').data('form_multidelete', form);
+	});
+	*/
+
+	/*
+	$("#alertalldel").find(".modal-footer #confirmdel").on('click', function(){
+		$(this).data('form_multidelete').submit();
+	});	*/
 
     $('#sgm').hide();
     //$('#KODEFGTM').select2();

@@ -76,8 +76,8 @@ else{
             </div><!-- /.box-header -->
             <div class="box-body">
                 <div class="table-responsive">
-                    <form method="post" action="modules/crud_logsheet.php">
-                        <input type="hidden" name="act" value="multidelete">
+                    <form method="post" name="form_multidelete" id="form_multidelete" action="">
+                        <input type="hidden" name="chk" value="multidelete">
                         <input type="hidden" value="0" name="totaldata" id="totaldata">
                         <table class="table table-bordered table-striped table-hover" id="tlogsheet" style="font-size: 0.9em;">
                         <thead>
@@ -125,7 +125,7 @@ else{
                         <tr>
                             <td style="width:30px;" class="text-center"><input type="checkbox" id="titleCheck" data-toggle="tooltip" <?=$stsLogin;?> title="" /></td>
                             <td colspan="33">
-                                <button class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#alertalldel" <?=$stsLogin;?>><i class="fa fa-trash-o"></i> Delete Selected Item</button>
+                                <button onClick="multiDelConfirm()" class="btn btn-sm btn-danger" type="button" <?=$stsLogin;?>><i class="fa fa-trash-o"></i> Delete Selected Item</button>
                             </td>
                         </tr>
                         </tfoot>
@@ -136,6 +136,22 @@ else{
         </div><!-- /.box -->
     </div><!-- /.col -->
 </div><!-- /.row -->
+
+<div id="alertalldel" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Delete Confirmation</h4>
+            </div>
+            <div class="modal-body">Yakin akan menghapus data ? </div>
+            <div class="modal-footer">
+                <button type="button" onClick="submitMultiDelete()" class="btn btn-sm btn-danger" id="confirmdel"><i class="fa fa-trash-o"></i> Ya</button>
+                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal" aria-hidden="true"><i class="fa fa-sign-out"></i> Tidak</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="modal fade" id="delModal" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
     <div class="modal-dialog">

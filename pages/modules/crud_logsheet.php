@@ -205,7 +205,7 @@ if (isset($_POST['act'])=='delete'){
     }
 }
 
-if(isset($_POST['act'])=='multidelete'){
+if(isset($_POST['chk'])=='multidelete'){
     if ($totaldata != "0"){
         $itemdel = $item;
         //$tabledel = new PoTable('post');
@@ -216,9 +216,7 @@ if(isset($_POST['act'])=='multidelete'){
             $stmt->bindParam(':ID', $id, PDO::PARAM_INT);
             $stmt->execute();
         }
-        header('location:../../pages/home.php?modules=logsheet');
-    }else{
-        header('location:../../pages/home.php?modules=logsheet');
+        echo json_encode("OK");
     }
 }
 

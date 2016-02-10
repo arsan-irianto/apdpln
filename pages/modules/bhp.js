@@ -1,11 +1,10 @@
 /**
- * Created by Arsan Irianto on 24/01/2016.
+ * Created by Arsan Irianto on 30/01/2016.
  */
-
-function reloadDatatable(){
-    if($("#TANGGAL").val()!= ''){
+function reloadDataTable(){
+    if($("#TANGGAL_BHP").val()!= ''){
         var dTable = $('#tbhp').DataTable({
-            ajax: "modules/json_bhp.php?tanggal="+$("#TANGGAL").val(),
+            ajax: "modules/json_bhp.php?tanggal="+$("#TANGGAL_BHP").val(),
             deferRender: true,
             //processing:true,
             pagingType: "full_numbers",
@@ -24,13 +23,6 @@ function reloadDatatable(){
             }
         });
         $("#tbhp_wrapper > .dt-buttons").appendTo("#btnTable");
-
-        /*
-         $('#tbhp tbody').on( 'click', '.btn_edit', function () {
-         var data = dTable.row( $(this).parents('tr') ).data();
-         alert(data[2]);
-         });*/
-
     }
     else{
         $('#tbhp').DataTable({
@@ -51,16 +43,15 @@ function reloadDatatable(){
     }
 }
 
-function showModals( id ){
+function showModals( pid,tgl,hour ){
     waitingDialog.show();
-    //clearModals();
     // Untuk Eksekusi Data Yang Ingin di Edit
-    if( id ){
+    if( pid && tgl && hour ){
         $.ajax({
             type: "POST",
             url: "modules/crud_bhp.php",
             dataType: 'json',
-            data: {id:id,type:"get"},
+            data: {pid:pid,tgl:tgl,hour:hour,type:"get"},
             success: function(res) {
                 waitingDialog.hide();
                 setModalData( res );
@@ -70,7 +61,7 @@ function showModals( id ){
     }
     // Form Add new
     else{
-        //clearModals();
+        clearModals();
         $("#myModals").modal("show");
         //$("#myModalLabel").html("New User");
         $("#type").val("new");
@@ -78,18 +69,101 @@ function showModals( id ){
     }
 }
 
-$(function () {
-
-    $("#tanggal_check input").datepicker().on("changeDate", function () {
-        $(this).datepicker("hide");
+function submitBHP() {
+    var formData = $("#form_bhp").serialize();
+    waitingDialog.show();
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_bhp.php",
+        dataType: 'json',
+        data: formData,
+        success: function(data) {
+            if(data=="OK"){
+                reloadDataTable();
+            }
+            else{alert(data);}
+            waitingDialog.hide();
+        }
     });
+}
 
+function deleteBHP( pid,tgl,hour ) {
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_bhp.php",
+        dataType: 'json',
+        data: {pid:pid,tgl:tgl,hour:hour,type:"get"},
+        success: function(data) {
+            $('#delModal').modal('show');
+            $('#delpid').val(pid);
+            $('#deltanggal').val(tgl);
+            $('#delhour').val(hour);
+            waitingDialog.hide();
+        }
+    });
+}
+
+function submitDelete() {
+    var formData = $("#form_delete").serialize();
+    waitingDialog.show();
+    $.ajax({
+        type: "POST",
+        url: "modules/crud_bhp.php",
+        dataType: 'json',
+        data: formData,
+        success: function(data){
+            reloadDataTable();
+            waitingDialog.hide();
+        }
+    });
+    //clearModals();
+}
+
+function clearModals() {
+    $("#PID").val("");
+    $("#FEEDERNAME").val("");
+    $("#GIPID").val("");
+    $("#GI").val("");
+    $("#AREAID").val("");
+    $("#AREA").val("");
+    $("#DCCID").val("");
+    $("#DCC").val("");
+    //$("#TANGGAL").val("");
+    $("#HOUR").val("");
+    $("#VALUE").val(0);
+}
+
+//Show Data to edit
+function setModalData( data ){
+    $("#type").val("edit");
+    $("#PID").val(data.PID);
+    FEEDERNAME = (data.FEEDERNAME == null) ? "" : data.FEEDERNAME.trim();
+    $("#FEEDERNAME").val(data.FEEDERNAME);
+    $("#GIID").val(data.GIID);
+    GI = (data.GI == null) ? "" : data.GI.trim();
+    $("#GI").val(GI);
+    $("#AREAID").val(data.AREAID);
+    AREA = (data.AREA == null) ? "" : data.AREA.trim();
+    $("#AREA").val(AREA);
+    $("#DCCID").val("");
+    DCC = (data.DCC == null) ? "" : data.DCC.trim();
+    $("#DCC").val(DCC);
+    $("#TANGGAL").val(data.TANGGAL);
+    $("#HOUR").val(data.HOUR);
+    $("#VALUE").val(data.VALUE);
+    $("#myModals").modal("show");
+}
+
+$(function () {
     $("#tanggal_filter input").datepicker().on("changeDate", function () {
         $(this).datepicker("hide");
     });
-    reloadDatatable();
-    $("#TANGGAL").change(function(){
-        reloadDatatable();
+    $("#tanggal_check input").datepicker().on("changeDate", function () {
+        $(this).datepicker("hide");
+    });
+    reloadDataTable();
+    $("#TANGGAL_BHP").change(function(){
+        reloadDataTable();
     });
 
     $("input.typeahead").typeahead({
@@ -97,11 +171,11 @@ $(function () {
             $("#PID").val(item.value);
             $.ajax({
                 type: "GET",
-                url: "modules/crud_bhp.php?plb=garea",
+                url: "modules/crud_logsheet.php?plb=garea",
                 dataType: 'json',
                 data: "id=" + $("#PID").val(),
                 success: function(data) {
-                    $("#GIPID").val(data.GIID);
+                    $("#GIID").val(data.GIID);
                     $("#GI").val(data.GI.trim());
                     $("#AREAID").val(data.AREAID);
                     $("#AREA").val(data.AREA.trim());
@@ -111,40 +185,9 @@ $(function () {
             });
         },
         ajax: {
-            url: "modules/crud_bhp.php?ref=feeder",
+            url: "modules/crud_logsheet.php?ref=plbsrecgh",
             displayField: "NAME",
             valueField:"PID"
-        }
-    });
-
-    $("input.typeahead_gi").typeahead({
-        onSelect: function(item) {
-            $("#GIPID").val(item.value);
-        },
-        ajax: {
-            url: "modules/crud_bhp.php?r=gi",
-            displayField: "NAME",
-            valueField:"ID"
-        }
-    });
-
-    $("input.typeahead_area").typeahead({
-        onSelect: function(item) {
-            $("#AREAID").val(item.value);
-            $.ajax({
-                type: "GET",
-                url: "modules/crud_bhp.php?g=dcc",
-                dataType: 'json',
-                data: "id=" + $("#AREAID").val(),
-                success: function(data) {
-                    $("#DCC").val(data.DCC.trim());
-                }
-            });
-        },
-        ajax: {
-            url: "modules/crud_bhp.php?a=area",
-            displayField: "NAME",
-            valueField:"ID"
         }
     });
 })

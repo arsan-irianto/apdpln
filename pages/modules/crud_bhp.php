@@ -2,86 +2,116 @@
 /**
  * Created by PhpStorm.
  * User: Arsan Irianto
- * Date: 26/01/2016
- * Time: 15:19
+ * Date: 30/01/2016
+ * Time: 10:51
  */
 
 include('../../config/connect.php');
 include('../../library/functions.php');
 
-$_GET['id'] = isset($_GET['id']) ? $_GET['id'] : "";
-$_GET['query'] = isset($_GET['query']) ? $_GET['query'] : "";
+//$_GET['id'] = isset($_GET['id']) ? $_GET['id'] : "";
 extract($_POST);
 
-$sp = "{:retval = CALL PCDR_LOGSHEET (@DATE=:tanggal,@DCCID=:wilayah)}";
-$result = $conn->prepare($sp);
+$PID=isset($PID)? $PID : '';
+$FEEDERNAME=isset($FEEDERNAME)? $FEEDERNAME : '';
+$TANGGAL=isset($TANGGAL)? $TANGGAL : '';
+$HOUR=isset($HOUR)? $HOUR : '';
+$VALUE=isset($VALUE)? $VALUE : '';
+$GIID=isset($GIID)? $GIID : '';
+$GI=isset($GI)? $GI : '';
+$AREAID=isset($AREAID)? $AREAID : '';
+$AREA=isset($AREA)? $AREA : '';
+$DCCID=isset($DCCID)? $DCCID : '';
+$DCC=isset($DCC)? $DCC : '';
 
-$result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4);
-$result->bindParam('tanggal', $tanggal, PDO::PARAM_STR);
-$result->bindParam('wilayah', $wilayah, PDO::PARAM_INT);
+$formData = array('PID'=>$PID,
+    'FEEDERNAME'=>$FEEDERNAME,
+    'TANGGAL'=>$TANGGAL,
+    'HOUR'=>$HOUR,
+    'VALUE'=>$VALUE,
+    'GIID'=>$GIID,
+    'GI'=>$GI,
+    'AREAID'=>$AREAID,
+    'AREA'=>$AREA,
+    'DCCID'=>$DCCID,
+    'DCC'=>$DCC
+    );
 
-$result->execute();
+$type =(isset($_POST['type']) ? $_POST['type'] : '' );
+switch ($type) {
 
+    //Tampilkan Data
+    case "get":
 
-if(isset($_GET['plb'])=="garea"){
-    $sql = $conn->query("SELECT	A.[GIID], B.[GI], A.[AREAID], C.[AREA], D.[DCCID], D.[DCC]
-            FROM PLBSRECGH A
-            LEFT JOIN GI B ON A.GIID = B.GIID
-            LEFT JOIN AREA C ON A.AREAID = C.AREAID
-            LEFT JOIN DCC D ON D.DCCID =D.DCCID
-            WHERE A.PID = '".$_GET['id']."'");
-    $data = $sql->fetch(PDO::FETCH_ASSOC);
-    echo json_encode($data);
+        $sql = $conn->query("SELECT * FROM BEBANHARIANPENYULANG WHERE PID='".$_POST['pid']."'
+                             AND TANGGAL='".$_POST['tgl']."' AND HOUR='".$_POST['hour']."'");
+        $data = $sql->fetch(PDO::FETCH_ASSOC);
+        echo json_encode($data);
+
+        break;
+
+    //Tambah Data
+    case "new":
+        try{
+            $conn->insertArray("BEBANHARIANPENYULANG", $formData);
+            echo json_encode("OK");
+        }
+        catch (PDOException $e){
+            echo json_encode( "Failed to get DB handle : " . $e->getMessage());
+        }
+        break;
+
+    //Edit Data
+    case "edit":
+
+        try{
+            //$conn->updateArray("DCC", "DCCID", $DCCID, $formData);
+            //echo json_encode("OK");
+            $sql = "UPDATE BEBANHARIANPENYULANG
+                          SET FEEDERNAME  =   :FEEDERNAME,
+                              VALUE       =   :VALUE,
+                              GIID        =   :GIID,
+                              GI          =   :GI,
+                              AREAID      =   :AREAID,
+                              AREA        =   :AREA,
+                              DCCID       =   :DCCID,
+                              DCC         =   :DCC
+                          WHERE PID       =   :PID AND
+                                TANGGAL   =   :TANGGAL AND
+                                [HOUR]    =   :HOUR";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':PID', $PID, PDO::PARAM_INT);
+            $stmt->bindParam(':FEEDERNAME', $FEEDERNAME, PDO::PARAM_STR);
+            $stmt->bindParam(':TANGGAL', $TANGGAL, PDO::PARAM_STR);
+            $stmt->bindParam(':HOUR', $HOUR, PDO::PARAM_INT);
+            $stmt->bindParam(':VALUE', $VALUE, PDO::PARAM_STR);
+            $stmt->bindParam(':GIID', $GIID, PDO::PARAM_INT);
+            $stmt->bindParam(':GI', $GI, PDO::PARAM_STR);
+            $stmt->bindParam(':AREAID', $AREAID, PDO::PARAM_INT);
+            $stmt->bindParam(':AREA', $AREA, PDO::PARAM_STR);
+            $stmt->bindParam(':DCCID', $DCCID, PDO::PARAM_INT);
+            $stmt->bindParam(':DCC', $DCC, PDO::PARAM_STR);
+            $stmt->execute();
+            if($stmt){
+                echo json_encode("OK");
+            }
+        }
+        catch (PDOException $e){
+            echo json_encode( "Failed to get DB handle : " . $e->getMessage());
+        }
+        break;
 }
 
-if(isset($_GET['ref'])=="feeder"){
-    $return = array();
-    $sql = $conn->query("SELECT	TOP 10 [NAME]
-                                ,[PID]
-                                FROM PLBSRECGH
-                                WHERE [NAME] LIKE '%".$_GET['query']."%'");
-    //$data = $sql->fetch(PDO::FETCH_ASSOC);
-    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-        $dt = array('PID'=>$row['PID'],'NAME'=>rtrim($row['NAME'])) ;
-        array_push($return, $dt);
+
+if (isset($_POST['act'])=='delete'){
+    $sql = "DELETE FROM BEBANHARIANPENYULANG WHERE PID = :PID AND TANGGAL = :TANGGAL AND HOUR = :HOUR ";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':PID', $_POST['delpid'], PDO::PARAM_INT);
+    $stmt->bindParam(':TANGGAL', $_POST['deltanggal'], PDO::PARAM_STR);
+    $stmt->bindParam(':HOUR', $_POST['delhour'], PDO::PARAM_INT);
+    $stmt->execute();
+
+    if($stmt){
+        echo json_encode("OK");
     }
-    echo json_encode($return);
 }
-
-if(isset($_GET['r'])=="gi"){
-    $return = array();
-    $sql = $conn->query("SELECT	TOP 10 [GIID]
-                                ,[GI]
-                                FROM GI
-                                WHERE [GI] LIKE '%".$_GET['query']."%'");
-    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-        $dt = array('ID'=>$row['GIID'],'NAME'=>rtrim($row['GI'])) ;
-        array_push($return, $dt);
-    }
-    echo json_encode($return);
-}
-
-if(isset($_GET['a'])=="area"){
-    $return = array();
-    $sql = $conn->query("SELECT TOP 10 A.AREAID
-                          ,A.AREA
-                          ,B.DCC
-                      FROM [AREA] A
-                      INNER JOIN [DCC] B ON A.DCCID = B.DCCID
-                                WHERE [AREA] LIKE '%".$_GET['query']."%'");
-    while($row = $sql->fetch(PDO::FETCH_ASSOC)) {
-        $dt = array('ID'=>$row['AREAID'],'NAME'=>rtrim($row['AREA'])) ;
-        array_push($return, $dt);
-    }
-    echo json_encode($return);
-}
-
-if(isset($_GET['g'])=="dcc"){
-    $sql = $conn->query("SELECT B.DCC
-                          FROM [AREA] A
-                          INNER JOIN [DCC] B ON A.DCCID = B.DCCID
-                          WHERE AREAID = '".$_GET['id']."'");
-    $data = $sql->fetch(PDO::FETCH_ASSOC);
-    echo json_encode($data);
-}
-?>

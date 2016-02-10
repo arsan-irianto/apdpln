@@ -736,16 +736,6 @@ $(function () {
 
         $("#PELANGGANPADAM").val(sum(plgn_arr));
     });
-
-
-/*
-    var typeaheadSource =   [{
-                                PID:"400013", NAME:'Arsan'}, {
-                                PID:"400022", NAME:'Anung'},{
-                                PID:"400031", NAME:'Armawi'},{
-                                PID:"400041", NAME:'Asrul'},{
-                                PID:"400042", NAME:'Arjun'
-                            }];*/
     /*
     var typeaheadSource = [{
         id: 1, NAME: 'John'}, {

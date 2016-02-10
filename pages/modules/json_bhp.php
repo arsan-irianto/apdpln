@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Arsan Irianto
- * Date: 24/01/2016
- * Time: 9:46
+ * Date: 30/01/2016
+ * Time: 10:51
  */
 
 error_reporting(0);
@@ -11,60 +11,40 @@ session_start();
 include('../../config/connect.php');
 include('../../library/functions.php');
 
-$sp = "{:retval = CALL PCDR_BEBANHARIANPENYULANG (@DATE=:tanggal,@DCCID=:wilayah)}";
-$result = $conn->prepare($sp);
-
-$retval = null;
 $tanggal = isset($_GET['tanggal']) ? $_GET['tanggal'] : "";
 if($_SESSION['TYPE'] == 1){
     $wilayah = 0;
+    $query = "select * from BEBANHARIANPENYULANG WHERE TANGGAL='".$tanggal."'";
 }
 else{
     $wilayah = isset($_SESSION['DCCID']) ? $_SESSION['DCCID'] : "";
+    $query = "select * from BEBANHARIANPENYULANG WHERE DCCID='".$wilayah."'";
 }
-
-
-$result->bindParam('retval', $retval, PDO::PARAM_INT|PDO::PARAM_INPUT_OUTPUT, 4);
-$result->bindParam('tanggal', $tanggal, PDO::PARAM_STR);
-$result->bindParam('wilayah', $wilayah, PDO::PARAM_INT);
-
+$result = $conn->prepare($query);
 $result->execute();
 
 $i = 0;
 //$n = 1;
 while( $row = $result->fetch(PDO::FETCH_ASSOC) )
 {
-    $rowEdit = "<a href='#' onClick='showModals($row[PID])' class='btn_edit btn btn-xs btn-primary' id='$row[PID]'><i class='fa fa-pencil'></i></a>";
-    $tbldelete = "<a class='btn btn-xs btn-danger' onclick='deleteBhp($row[PID])'><i class='fa fa-times'></i></a>";
+    $rowEdit = "<a href='#' onClick=showModals($row[PID],'$row[TANGGAL]',$row[HOUR]) class='btn_edit btn btn-xs btn-primary' id='$row[PID]'><i class='fa fa-pencil'></i></a>";
+    $tbldelete = "<a class='btn btn-xs btn-danger' onclick=deleteBHP($row[PID],'$row[TANGGAL]',$row[HOUR])><i class='fa fa-times'></i></a>";
     $session_act = ( ($_SESSION['TYPE'] == 1) || ($_SESSION['TYPE'] == 2) || ($_SESSION['TYPE'] == 3)? $rowEdit.$tbldelete : "<i class='fa fa-pencil'></i><i class='fa fa-times'></i>" );
     $action ="<div class='text-center'><div class='btn-group btn-group-xs'>$session_act</div></div>";
 
-    $rows['data'][$i] = array($row["DCC"],$row["AREA"],$row["GI"],$row["FEEDERNAME"],
-        number_format($row["H0"],2,".",","),
-        number_format($row["H1"],2,".",","),
-        number_format($row["H2"],2,".",","),
-        number_format($row["H3"],2,".",","),
-        number_format($row["H4"],2,".",","),
-        number_format($row["H5"],2,".",","),
-        number_format($row["H6"],2,".",","),
-        number_format($row["H7"],2,".",","),
-        number_format($row["H8"],2,".",","),
-        number_format($row["H9"],2,".",","),
-        number_format($row["H10"],2,".",","),
-        number_format($row["H11"],2,".",","),
-        number_format($row["H12"],2,".",","),
-        number_format($row["H13"],2,".",","),
-        number_format($row["H14"],2,".",","),
-        number_format($row["H15"],2,".",","),
-        number_format($row["H16"],2,".",","),
-        number_format($row["H17"],2,".",","),
-        number_format($row["H18"],2,".",","),
-        number_format($row["H19"],2,".",","),
-        number_format($row["H20"],2,".",","),
-        number_format($row["H21"],2,".",","),
-        number_format($row["H22"],2,".",","),
-        number_format($row["H23"],2,".",",")
-);
+    $rows['data'][$i] = array($action,
+        $row['PID'],
+        $row['FEEDERNAME'],
+        $row['TANGGAL'],
+        $row['HOUR'],
+        number_format($row['VALUE'],2,".",","),
+        $row['GIID'],
+        $row['GI'],
+        $row['AREAID'],
+        $row['AREA'],
+        $row['DCCID'],
+        $row['DCC']
+    );
     $i++;
     //$n++;
 }

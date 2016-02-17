@@ -171,7 +171,7 @@ $(function () {
             $("#PID").val(item.value);
             $.ajax({
                 type: "GET",
-                url: "modules/crud_logsheet.php?plb=garea",
+                url: "modules/crud_bhp.php?plb=garea",
                 dataType: 'json',
                 data: "id=" + $("#PID").val(),
                 success: function(data) {

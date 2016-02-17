@@ -115,3 +115,16 @@ if (isset($_POST['act'])=='delete'){
         echo json_encode("OK");
     }
 }
+
+if(isset($_GET['plb'])=="garea"){
+    $sql = $conn->query("SELECT	A.[GIID], B.[GI], A.[AREAID], C.[AREA], E.[DCCID], E.[DCC]
+		                ,D.[NAME] AS ASUHAN
+            FROM PLBSRECGH A
+            LEFT JOIN GI B ON A.GIID = B.GIID
+            LEFT JOIN AREA C ON A.AREAID = C.AREAID
+            LEFT JOIN ASUHAN D ON A.ASUHANID1 = D.ASUHANID
+            LEFT JOIN DCC E ON C.DCCID =E.DCCID
+            WHERE A.PID = '".$_GET['id']."'");
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+    echo json_encode($data);
+}

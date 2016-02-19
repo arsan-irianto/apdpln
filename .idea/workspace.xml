@@ -38,61 +38,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bhp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/modules/bhp.js">
+      <file leaf-file-name="logsheet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2768" max-vertical-offset="3349">
-              <caret line="173" column="38" selection-start-line="173" selection-start-column="38" selection-end-line="173" selection-end-column="38" />
+            <state vertical-scroll-proportion="-16.115385" vertical-offset="8778" max-vertical-offset="9639">
+              <caret line="549" column="169" selection-start-line="549" selection-start-column="169" selection-end-line="549" selection-end-column="169" />
               <folding>
-                <element signature="n#!!doc;n#reloadDataTable#0" expanded="false" />
+                <marker date="1455762884325" expanded="true" signature="26300:26337" placeholder="SELECT KODE,..GANGGUANFGTM..." />
+                <marker date="1455762884325" expanded="false" signature="31528:31539" placeholder="..." />
+                <marker date="1455762884325" expanded="false" signature="33022:33033" placeholder="..." />
+                <marker date="1455762884325" expanded="false" signature="34656:34668" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bhp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/modules/bhp.php">
+      <file leaf-file-name="crud_logsheet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/modules/crud_logsheet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="4165">
-              <caret line="192" column="144" selection-start-line="192" selection-start-column="144" selection-end-line="192" selection-end-column="144" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="6375">
+              <caret line="63" column="67" selection-start-line="63" selection-start-column="67" selection-end-line="63" selection-end-column="67" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
+                <marker date="1455701807092" expanded="true" signature="4495:4611" placeholder="SELECT *,Dat..LOGSHEET..." />
+                <marker date="1455701807092" expanded="true" signature="5662:5697" placeholder="DELETE FROM ..." />
+                <marker date="1455701807092" expanded="true" signature="6106:6141" placeholder="DELETE FROM ..." />
+                <marker date="1455701807092" expanded="true" signature="6873:6934" placeholder="SELECT KETFG..GANGGUANFGTM..." />
+                <marker date="1455701807092" expanded="true" signature="7090:7279" placeholder="SELECT TOP 1..." />
+                <marker date="1455701807092" expanded="true" signature="7612:7791" placeholder="SELECT TOP 1..." />
+                <marker date="1455701807092" expanded="true" signature="8093:8463" placeholder="SELECT A.[GI..PLBSRECGH..." />
+                <marker date="1455701807092" expanded="true" signature="8619:8788" placeholder="SELECT TOP 1..." />
+                <marker date="1455701807092" expanded="true" signature="9063:9323" placeholder="SELECT TOP 1..." />
+                <marker date="1455701807092" expanded="true" signature="9578:9755" placeholder="SELECT B.DCC..." />
+                <marker date="1455701807092" expanded="true" signature="9916:10099" placeholder="SELECT TOP 1..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="json_bhp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/modules/json_bhp.php">
+      <file leaf-file-name="logsheet.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="969">
-              <caret line="29" column="83" selection-start-line="29" selection-start-column="83" selection-end-line="29" selection-end-column="83" />
-              <folding>
-                <element signature="e#6#95#0#PHP" expanded="true" />
-                <marker date="1455071609188" expanded="true" signature="332:382" placeholder="select * fro..BEBANHARIANPENYULANG..." />
-                <marker date="1455071609188" expanded="true" signature="332:395" placeholder="select * fro..BEBANHARIANPENYULANG..." />
-                <marker date="1455071609188" expanded="true" signature="488:549" placeholder="select * fro..BEBANHARIANPENYULANG..." />
-              </folding>
+            <state vertical-scroll-proportion="0.74698794" vertical-offset="2677" max-vertical-offset="12937">
+              <caret line="183" column="78" selection-start-line="183" selection-start-column="78" selection-end-line="183" selection-end-column="78" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crud_bhp.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/modules/crud_bhp.php">
+      <file leaf-file-name="list_saidi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/modules/list_saidi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74823946" vertical-offset="1547" max-vertical-offset="2295">
-              <caret line="116" column="1" selection-start-line="116" selection-start-column="1" selection-end-line="116" selection-end-column="1" />
-              <folding>
-                <element signature="e#6#95#0#PHP" expanded="true" />
-                <marker date="1455686533236" expanded="true" signature="1016:1080" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-                <marker date="1455686533236" expanded="true" signature="1016:1123" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-                <marker date="1455686533236" expanded="true" signature="1016:1141" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-                <marker date="1455686533236" expanded="true" signature="1016:1152" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-                <marker date="1455686533236" expanded="true" signature="1016:1171" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-                <marker date="1455686533236" expanded="true" signature="1745:2368" placeholder="UPDATE BEBAN..." />
-                <marker date="1455686533236" expanded="true" signature="3421:3510" placeholder="DELETE FROM ..." />
-                <marker date="1455686533236" expanded="true" signature="3888:4269" placeholder="SELECT A.[GI..PLBSRECGH..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="724" max-vertical-offset="1292">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,11 +145,8 @@
         <option value="$PROJECT_DIR$/pages/modules/grafik_xtpt_gardu.php" />
         <option value="$PROJECT_DIR$/pages/modules/grafik_xtt_gardu.php" />
         <option value="$PROJECT_DIR$/pages/footer.php" />
-        <option value="$PROJECT_DIR$/pages/modules/crud_logsheet.php" />
         <option value="$PROJECT_DIR$/pages/header.php" />
-        <option value="$PROJECT_DIR$/pages/modules/logsheet.php" />
         <option value="$PROJECT_DIR$/pages/modules/json_table_logsheet.php" />
-        <option value="$PROJECT_DIR$/pages/modules/logsheet.js" />
         <option value="$PROJECT_DIR$/pages/modules/json_rbhp.php" />
         <option value="$PROJECT_DIR$/pages/modules/rbhp.js" />
         <option value="$PROJECT_DIR$/pages/modules/rbhp.php" />
@@ -161,6 +157,9 @@
         <option value="$PROJECT_DIR$/pages/modules/bhp.php" />
         <option value="$PROJECT_DIR$/pages/modules/bhp.js" />
         <option value="$PROJECT_DIR$/pages/modules/crud_bhp.php" />
+        <option value="$PROJECT_DIR$/pages/modules/crud_logsheet.php" />
+        <option value="$PROJECT_DIR$/pages/modules/logsheet.php" />
+        <option value="$PROJECT_DIR$/pages/modules/logsheet.js" />
       </list>
     </option>
   </component>
@@ -210,6 +209,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -262,7 +262,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,20 +307,17 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
       <option name="VM_PARAMETERS" value="" />
       <option name="USER_CFG_CLASS" />
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="c42f10c9-f405-4ba7-9305-f9c0ceab298b" server_name="apdpln">
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -330,6 +326,9 @@
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="c42f10c9-f405-4ba7-9305-f9c0ceab298b" server_name="apdpln">
       <method />
     </configuration>
     <list size="1">
@@ -376,7 +375,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -386,7 +385,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2806354" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29425114" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -398,9 +397,9 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -414,8 +413,8 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18361153" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -423,9 +422,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25569043" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -451,13 +450,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/modules/crud_asuhan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45574388" vertical-offset="1237" max-vertical-offset="1768">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="103" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/modules/asuhan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33204633" vertical-offset="2463" max-vertical-offset="3536">
@@ -728,6 +720,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -742,12 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="969">
           <caret line="29" column="83" selection-start-line="29" selection-start-column="83" selection-end-line="29" selection-end-column="83" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-            <marker date="1455071609188" expanded="true" signature="332:382" placeholder="select * fro..BEBANHARIANPENYULANG..." />
-            <marker date="1455071609188" expanded="true" signature="332:395" placeholder="select * fro..BEBANHARIANPENYULANG..." />
-            <marker date="1455071609188" expanded="true" signature="488:549" placeholder="select * fro..BEBANHARIANPENYULANG..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -772,34 +759,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8466" max-vertical-offset="12886">
-          <caret line="523" column="7" selection-start-line="500" selection-start-column="0" selection-end-line="523" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87747747" vertical-offset="618" max-vertical-offset="9945">
-          <caret line="70" column="183" selection-start-line="70" selection-start-column="164" selection-end-line="70" selection-end-column="183" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/modules/bhp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="4165">
           <caret line="192" column="144" selection-start-line="192" selection-start-column="144" selection-end-line="192" selection-end-column="144" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/modules/crud_logsheet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33206832" vertical-offset="4381" max-vertical-offset="6290">
-          <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="284" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -807,9 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2768" max-vertical-offset="3349">
           <caret line="173" column="38" selection-start-line="173" selection-start-column="38" selection-end-line="173" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc;n#reloadDataTable#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,17 +777,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74823946" vertical-offset="1547" max-vertical-offset="2295">
           <caret line="116" column="1" selection-start-line="116" selection-start-column="1" selection-end-line="116" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/crud_logsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="6375">
+          <caret line="63" column="67" selection-start-line="63" selection-start-column="67" selection-end-line="63" selection-end-column="67" />
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
-            <marker date="1455686533236" expanded="true" signature="1016:1080" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-            <marker date="1455686533236" expanded="true" signature="1016:1123" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-            <marker date="1455686533236" expanded="true" signature="1016:1141" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-            <marker date="1455686533236" expanded="true" signature="1016:1152" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-            <marker date="1455686533236" expanded="true" signature="1016:1171" placeholder="SELECT * FRO..BEBANHARIANPENYULANG..." />
-            <marker date="1455686533236" expanded="true" signature="1745:2368" placeholder="UPDATE BEBAN..." />
-            <marker date="1455686533236" expanded="true" signature="3421:3510" placeholder="DELETE FROM ..." />
-            <marker date="1455686533236" expanded="true" signature="3888:4269" placeholder="SELECT A.[GI..PLBSRECGH..." />
+            <marker date="1455701807092" expanded="true" signature="4495:4611" placeholder="SELECT *,Dat..LOGSHEET..." />
+            <marker date="1455701807092" expanded="true" signature="5662:5697" placeholder="DELETE FROM ..." />
+            <marker date="1455701807092" expanded="true" signature="6106:6141" placeholder="DELETE FROM ..." />
+            <marker date="1455701807092" expanded="true" signature="6873:6934" placeholder="SELECT KETFG..GANGGUANFGTM..." />
+            <marker date="1455701807092" expanded="true" signature="7090:7279" placeholder="SELECT TOP 1..." />
+            <marker date="1455701807092" expanded="true" signature="7612:7791" placeholder="SELECT TOP 1..." />
+            <marker date="1455701807092" expanded="true" signature="8093:8463" placeholder="SELECT A.[GI..PLBSRECGH..." />
+            <marker date="1455701807092" expanded="true" signature="8619:8788" placeholder="SELECT TOP 1..." />
+            <marker date="1455701807092" expanded="true" signature="9063:9323" placeholder="SELECT TOP 1..." />
+            <marker date="1455701807092" expanded="true" signature="9578:9755" placeholder="SELECT B.DCC..." />
+            <marker date="1455701807092" expanded="true" signature="9916:10099" placeholder="SELECT TOP 1..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/list_saidi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="724" max-vertical-offset="1292">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.115385" vertical-offset="8778" max-vertical-offset="9639">
+          <caret line="549" column="169" selection-start-line="549" selection-start-column="169" selection-end-line="549" selection-end-column="169" />
+          <folding>
+            <marker date="1455762884325" expanded="true" signature="26300:26337" placeholder="SELECT KODE,..GANGGUANFGTM..." />
+            <marker date="1455762884325" expanded="false" signature="31528:31539" placeholder="..." />
+            <marker date="1455762884325" expanded="false" signature="33022:33033" placeholder="..." />
+            <marker date="1455762884325" expanded="false" signature="34656:34668" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/modules/logsheet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74698794" vertical-offset="2677" max-vertical-offset="12937">
+          <caret line="183" column="78" selection-start-line="183" selection-start-column="78" selection-end-line="183" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>

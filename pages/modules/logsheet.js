@@ -65,10 +65,10 @@ function reloadDatatable(){
         $("#tlogsheet_wrapper > .dt-buttons").appendTo("#btnTable");
 
         /*
-        $('#tlogsheet tbody').on( 'click', '.btn_edit', function () {
-            var data = dTable.row( $(this).parents('tr') ).data();
-            alert(data[2]);
-        });*/
+         $('#tlogsheet tbody').on( 'click', '.btn_edit', function () {
+         var data = dTable.row( $(this).parents('tr') ).data();
+         alert(data[2]);
+         });*/
 
     }
     else{
@@ -230,8 +230,8 @@ function submitMultiDelete() {
             if(data=="OK") {
                 reloadDatatable();
                 //$("#tlogsheet").DataTable().ajax.reload( null, false );
-				waitingDialog.hide();				
-				$('#alertalldel').modal('hide');
+                waitingDialog.hide();
+                $('#alertalldel').modal('hide');
             }
             else{
                 alert(data);
@@ -242,9 +242,9 @@ function submitMultiDelete() {
 }
 
 function multiDelConfirm(){
-	$('#alertalldel').modal('show');
+    $('#alertalldel').modal('show');
 }
-	
+
 
 function submitDelete() {
     var formData = $("#form_delete").serialize();
@@ -256,7 +256,7 @@ function submitDelete() {
         data: formData,
         success: function(data){
             reloadDatatable();
-			//$("#tlogsheet").DataTable().ajax.reload( null, false );
+            //$("#tlogsheet").DataTable().ajax.reload( null, false );
             waitingDialog.hide();
         }
     });
@@ -344,17 +344,17 @@ function clearModals()
 }
 
 $(function () {
-	/*
-	$("#alertalldel").on("show.bs.modal", function (e) {
-		var form = $(e.relatedTarget).closest('form_multidelete');
-		$(this).find('.modal-footer #confirmdel').data('form_multidelete', form);
-	});
-	*/
+    /*
+     $("#alertalldel").on("show.bs.modal", function (e) {
+     var form = $(e.relatedTarget).closest('form_multidelete');
+     $(this).find('.modal-footer #confirmdel').data('form_multidelete', form);
+     });
+     */
 
-	/*
-	$("#alertalldel").find(".modal-footer #confirmdel").on('click', function(){
-		$(this).data('form_multidelete').submit();
-	});	*/
+    /*
+     $("#alertalldel").find(".modal-footer #confirmdel").on('click', function(){
+     $(this).data('form_multidelete').submit();
+     });	*/
 
     $('#sgm').hide();
     //$('#KODEFGTM').select2();
@@ -392,29 +392,29 @@ $(function () {
             $("#sgm").hide();
         }
     });
-/*
-    $("#EKSEKUTOR").focus(function(){
-        if( ($("#OP").val() != "") && ($("#CL").val() != "") ){
-            strData = "start=" + $("#OP").val() + "&end=" + $("#CL").val();
-        }
-        else if( ($("#TR").val() != "") && ($("#CL").val() != "") ) {
-            strData = "start=" + $("#TR").val() + "&end=" + $("#CL").val();
-        }
-        else if( ($("#TR").val() != "") && ($("#RC").val() != "") ){
-            strData = "start=" + $("#TR").val() + "&end=" + $("#RC").val();
-        }
-        $.ajax({
-            type: "GET",
-            url: "modules/crud_logsheet.php?diff=yes",
-            dataType: 'json',
-            data: strData,//"op=" + $("#OP").val() + "&cl=" + $("#CL").val(),
-            success: function(data) {
-                $("#LAMA").val(data.a1);
-                //$("#LAMAconv").val(data.a2);
-            }
-        });
-    });
-*/
+    /*
+     $("#EKSEKUTOR").focus(function(){
+     if( ($("#OP").val() != "") && ($("#CL").val() != "") ){
+     strData = "start=" + $("#OP").val() + "&end=" + $("#CL").val();
+     }
+     else if( ($("#TR").val() != "") && ($("#CL").val() != "") ) {
+     strData = "start=" + $("#TR").val() + "&end=" + $("#CL").val();
+     }
+     else if( ($("#TR").val() != "") && ($("#RC").val() != "") ){
+     strData = "start=" + $("#TR").val() + "&end=" + $("#RC").val();
+     }
+     $.ajax({
+     type: "GET",
+     url: "modules/crud_logsheet.php?diff=yes",
+     dataType: 'json',
+     data: strData,//"op=" + $("#OP").val() + "&cl=" + $("#CL").val(),
+     success: function(data) {
+     $("#LAMA").val(data.a1);
+     //$("#LAMAconv").val(data.a2);
+     }
+     });
+     });
+     */
     $("#PELANGGANPADAM").change(function(){
         $.ajax({
             type: "GET",
@@ -431,15 +431,15 @@ $(function () {
         $("#KETFGTM").val($("#KODEFGTM").val());
         $("#KFGTM").text($("#KODEFGTM").val());
         /*
-        $.ajax({
-            type: "GET",
-            url: "modules/crud_logsheet.php?rf=fgtm",
-            dataType: 'html',
-            data: "id=" + $(this).val(),
-            success: function(data) {
-                $("#KETFGTM").val(data);
-            }
-        });*/
+         $.ajax({
+         type: "GET",
+         url: "modules/crud_logsheet.php?rf=fgtm",
+         dataType: 'html',
+         data: "id=" + $(this).val(),
+         success: function(data) {
+         $("#KETFGTM").val(data);
+         }
+         });*/
         //$("#KFGTM").text($("#KODEFGTM").val());
     });
 
@@ -454,15 +454,15 @@ $(function () {
         $("#KSAIDI").text($(this).val());
         $("#KETSAIDI").val($("#KODESAIDI :selected").text());
         /*
-        $.ajax({
-            type: "GET",
-            url: "modules/crud_logsheet.php?ref=saidi",
-            dataType: 'html',
-            data: "id=" + $(this).val(),
-            success: function(data) {
-                $("#KETSAIDI").val(data);
-            }
-        });*/
+         $.ajax({
+         type: "GET",
+         url: "modules/crud_logsheet.php?ref=saidi",
+         dataType: 'html',
+         data: "id=" + $(this).val(),
+         success: function(data) {
+         $("#KETSAIDI").val(data);
+         }
+         });*/
     });
     $("#tanggal_check input").datepicker().on("changeDate", function () {
         $(this).datepicker("hide");
@@ -473,9 +473,9 @@ $(function () {
     });
 
     /*
-    $("#TANGGAL").change(function(){
-        $(".dttime").val($(this).val());
-    })*/
+     $("#TANGGAL").change(function(){
+     $(".dttime").val($(this).val());
+     })*/
 
     $("#TR").focus(function(){$(this).val($("#TANGGAL").val())});
     $("#EX").focus(function(){$(this).val($("#TANGGAL").val())});
@@ -483,8 +483,8 @@ $(function () {
     $("#RC").focus(function(){$(this).val($("#TANGGAL").val())});
     $("#OP").focus(function(){$(this).val($("#TANGGAL").val())});
 
-   // $('.dttime').datetimepicker({
-        //format: 'yyyy-mm-dd hh:ii:ss'
+    // $('.dttime').datetimepicker({
+    //format: 'yyyy-mm-dd hh:ii:ss'
     //});
 
     //Datemask dd/mm/yyyy
@@ -525,17 +525,17 @@ $(function () {
 
     //var typeaheadSource = [{ id: 1, name: 'John'}, { id: 2, name: 'Alex'}, { id: 3, name: 'Terry'}];
     /*
-    $('input.typeahead_saidi').typeahead({
-        onSelect: function(item) {
-            $("#KODESAIDI").val(item.value);
-        },
-        ajax: {
-            url: "modules/crud_logsheet.php?q=saidi",
-            displayField: "NAME",
-            valueField:"ID"
-        }
-    });
-    */
+     $('input.typeahead_saidi').typeahead({
+     onSelect: function(item) {
+     $("#KODESAIDI").val(item.value);
+     },
+     ajax: {
+     url: "modules/crud_logsheet.php?q=saidi",
+     displayField: "NAME",
+     valueField:"ID"
+     }
+     });
+     */
     $("input.typeahead_gi").typeahead({
         onSelect: function(item) {
             $("#GIPID").val(item.value);
@@ -730,24 +730,27 @@ $(function () {
         }
 
         var plgn_arr = [];
+        var segmen_arr = [];
         $("#penyulang option:selected").each(function(i){
             plgn_arr.push($(this).val());
+            segmen_arr.push($(this).text());
         });
 
+        $('#SEGMENGANGGUAN').val($.map(segmen_arr, $.trim));
         $("#PELANGGANPADAM").val(sum(plgn_arr));
     });
     /*
-    var typeaheadSource = [{
-        id: 1, NAME: 'John'}, {
-        id: 2, NAME: 'Alex'}, {
-        id: 3, NAME: 'Terry'
-    }];*/
+     var typeaheadSource = [{
+     id: 1, NAME: 'John'}, {
+     id: 2, NAME: 'Alex'}, {
+     id: 3, NAME: 'Terry'
+     }];*/
     //var srcArray = [{"PID":"400013","NAME":"REC KOSTRAD "},{"PID":"400022","NAME":"REC UVRI "},{"PID":"400031","NAME":"INC TRAFO #2 GI SOPPENG "},{"PID":"400041","NAME":"P_CABENGE "},{"PID":"400042","NAME":"REC MAKKIO BAJI "}];
     /*
-    $('input.typeahead').typeahead({
-        //source: "modules/crud_logsheet.php?ref=plbsrecgh",
-        ajax : "modules/crud_logsheet.php?ref=plbsrecgh",
-        displayField: 'NAME'
-    });*/
+     $('input.typeahead').typeahead({
+     //source: "modules/crud_logsheet.php?ref=plbsrecgh",
+     ajax : "modules/crud_logsheet.php?ref=plbsrecgh",
+     displayField: 'NAME'
+     });*/
 
 });

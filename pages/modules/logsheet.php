@@ -532,26 +532,7 @@ else{
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="form-group input-sm">
-                                            <label class="col-sm-2 control-label">Segmen Gangguan</label>
-                                            <div class="col-sm-8">
-                                                <!-- /.<input class="form-control input-sm" value="<?//=$PIDSEGMEN1=isset($PIDSEGMEN1)? $PIDSEGMEN1 : '';?>" name="PIDSEGMEN1" id="PIDSEGMEN1" type="hidden"> -->
-                                                <!-- /.<input class="form-control input-sm" value="<?//=$PIDSEGMEN2=isset($PIDSEGMEN2)? $PIDSEGMEN2 : '';?>" name="PIDSEGMEN2" id="PIDSEGMEN2" type="hidden"> -->
-                                                <!-- /.<input class="form-control input-sm" value="<?//=$JMLSEGMEN1=isset($JMLSEGMEN1)? $JMLSEGMEN1 : '';?>" name="JMLSEGMEN1" id="JMLSEGMEN1" type="hidden"> -->
-                                                <!-- /.<input class="form-control input-sm" value="<?//=$JMLSEGMEN2=isset($JMLSEGMEN2)? $JMLSEGMEN2 : '';?>" name="JMLSEGMEN2" id="JMLSEGMEN2" type="hidden">-->
-                                                <!-- /.<input class="form-control input-sm typeahead_segmen1" value="" name="SEGMENGANGGUAN1" id="SEGMENGANGGUAN1" type="text">-->
-                                                <span id="sgm">
-                                                    <select name='SEGMENGANGGUAN[]' id='SEGMENGANGGUAN_auto' class='form-control input-sm' multiple='multiple' style='width: 100%'></select>
-                                                </span>
-                                                <input class="form-control input-sm" value="<?=$SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';?>" name="SEGMENGANGGUAN_manual" id="SEGMENGANGGUAN_manual" type="text">
-                                                <input class="form-control input-sm" value="<?=$SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';?>" name="SEGMENGANGGUAN" id="SEGMENGANGGUAN" type="hidden">
-                                            </div>
-                                            <div class="col-sm-2"><input type="checkbox" name="chkAuto" id="chkAuto" value="auto"> Auto</div>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group input-sm">
@@ -567,6 +548,7 @@ else{
                                             <label class="col-sm-4 control-label">Segmen</label>
                                             <div class="col-sm-8">
                                                 <select name='penyulang[]' id='penyulang' class='form-control input-sm' multiple='multiple' style='width: 100%'></select>
+                                                <input class="form-control input-sm" value="<?=$SEGMENGANGGUAN=isset($SEGMENGANGGUAN)? $SEGMENGANGGUAN : '';?>" name="SEGMENGANGGUAN" id="SEGMENGANGGUAN" type="hidden">
                                             </div>
                                         </div>
                                     </div>
